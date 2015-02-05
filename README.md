@@ -1,0 +1,2 @@
+# sarine.viewer.templates
+templates
