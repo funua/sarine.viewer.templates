@@ -1,0 +1,7 @@
+﻿{
+    "instance": "SarineImage",
+    "name" : "sarine.viewer.image",
+    "args": {
+		"imagesArr" : ["cut2d.png"]
+    }
+}

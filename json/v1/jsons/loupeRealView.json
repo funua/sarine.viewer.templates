@@ -1,0 +1,10 @@
+﻿{
+    "instance": "Sprite",
+    "name" : "sarine.viewer.dynamic.sprite",
+    "args": {
+        "jsonFileName": "/Jsons/impression.json",
+        "firstImagePath": "/Images/Impression/img0.jpg",
+        "spritesPath": "/ImpressionSprites/sprite_",
+        "oneSprite": false
+    }
+}

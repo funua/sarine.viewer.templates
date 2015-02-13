@@ -1,0 +1,10 @@
+﻿{
+    "instance": "Sprite",
+    "name" : "sarine.viewer.dynamic.sprite",
+    "args": {
+        "jsonFileName": "/Jsons/iview.json",
+        "firstImagePath": "/Images/Eyeview/img0.jpg",
+        "spritesPath": "/EyeViewSprites/sprite",
+        "oneSprite": true
+    }
+}
