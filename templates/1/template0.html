@@ -1,52 +1,21 @@
 ﻿<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-<style>
-    .viewer canvas {
-        margin: auto;
-        display: block;
-    }
-
-    .cutHeartsAndArrows > canvas {
-        float: left;
-    }
-
-    .viewer.light canvas {
-        height: 100%;
-    }
-
-    .viewer.externalPdf {
-        width: 100%;
-    }
-
-    .viewer.lightViewer {
-        background: #000;
-    }
-
-    .bx-viewport {
-        min-height: 600px;
-    }
-</style>
-
-
 <link href="css/jquery.bxslider.css" rel="stylesheet" />
+<link href="css/base.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 <div class="slider5">
-    <div class="slide">
-        <h1>Data attributes:</h1>
-        <p>
-            stoneProperties.carat:
-            <span data-sarine-info="stoneProperties.carat"></span>
-        </p>
-        <p>
-            stoneProperties.clarity:
-            <span data-sarine-info="stoneProperties.clarity"></span>
-        </p>
-        <p>
-            stoneProperties.color:
-            <span data-sarine-info="stoneProperties.color"></span>
-        </p>
-        <p>
-            stoneProperties.cutGrade:
-            <span data-sarine-info="stoneProperties.cutGrade"></span>
-        </p>
+    <div class="slide bg-pict-1">
+        <!-- content slider -->
+		<div class="cont-slider">
+			<div class="cont-slider_header">
+				<h1>Diamond Story</h1>
+				<h2>Sarine Loupe™ Imaging <span class="info-ico ico-small"></span></h2>
+			</div>
+			<div class="cont-slider_body">
+				<div class="test-img"></div>
+			</div>
+			<div class="cont-slider_footer"></div>
+		</div>
+		<!-- / content slid -->
     </div>
     <div class="slide">
         <h1>RealView:</h1>
@@ -64,46 +33,14 @@
         <h1>TopInspectionImage:</h1>
         <sarine-viewer viewer="loupeTopInspectionImage"></sarine-viewer>
     </div>
-    <div class="slide">
-        <h1>LightViewer:</h1>
-        <sarine-viewer viewer="lightViewer"></sarine-viewer>
-    </div>
-    <div class="slide">
-        <h1>LightViewerImage:</h1>
-        <sarine-viewer viewer="lightViewerImage"></sarine-viewer>
-    </div>
-    <div class="slide">
-        <h1>LightReportViewer:</h1>
-        <sarine-viewer viewer="lightReportViewer"></sarine-viewer>
-    </div>
-    <div class="slide">
-        <h1>LightReportViewerImage:</h1>
-        <sarine-viewer viewer="lightReportViewerImage"></sarine-viewer>
-    </div>
-    <div class="slide">
-        <h1>ExternalImage:</h1>
-        <sarine-viewer viewer="externalImage"></sarine-viewer>
-    </div>
-    <div class="slide">
-        <h1>ExternalPdf:</h1>
-        <sarine-viewer viewer="externalPdf"></sarine-viewer>
-    </div>
-    <div class="slide">
-        <h1>Cut2DView:</h1>
-        <sarine-viewer viewer="cut2DView"></sarine-viewer>
-    </div>
-    <div class="slide">
-        <h1>CutHeartsAndArrows:</h1>
-        <sarine-viewer viewer="cutHeartsAndArrows"></sarine-viewer>
-    </div>
 </div>
 <script src="js/jquery.bxslider.js"></script>
 <script>
     $(function () {
         $('.slider5').bxSlider({
             slideWidth: 600,
-            minSlides: 2,
-            maxSlides: 2,
+            minSlides: 1,
+            maxSlides: 1,
             moveSlides: 2,
             slideMargin: 10
         });

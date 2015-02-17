@@ -16,7 +16,7 @@
 
 .bx-wrapper {
 	position: relative;
-	margin: 0 auto 60px;
+	margin: 0 auto;
 	padding: 0;
 	*zoom: 1;
 }
@@ -30,13 +30,10 @@
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-	-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;
 	left: -5px;
 	background: #fff;
-	
+	border: 1px solid #e5e5e5;
+
 	/*fix other elements on the page moving (on Chrome)*/
 	-webkit-transform: translatez(0);
 	-moz-transform: translatez(0);
@@ -48,8 +45,8 @@
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
 	position: absolute;
-	bottom: -30px;
 	width: 100%;
+	bottom: 0;
 }
 
 /* LOADER */
@@ -73,7 +70,11 @@
 	font-family: Arial;
 	font-weight: bold;
 	color: #666;
-	padding-top: 20px;
+	padding-top: 0;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item {
+	width: 20%;
 }
 
 .bx-wrapper .bx-pager .bx-pager-item,
@@ -105,20 +106,24 @@
 
 .bx-wrapper .bx-prev {
 	left: 10px;
-	background: url(images/controls.png) no-repeat 0 -32px;
+	background: url("images/big-arrows.png") no-repeat -5px 0;
+	opacity: 0.6;
 }
 
 .bx-wrapper .bx-next {
 	right: 10px;
-	background: url(images/controls.png) no-repeat -43px -32px;
+	background: url("images/big-arrows.png") no-repeat -70px 0;
+	opacity: 0.6;
 }
 
 .bx-wrapper .bx-prev:hover {
-	background-position: 0 0;
+	background-position: -5px 0;
+	opacity: 1;
 }
 
 .bx-wrapper .bx-next:hover {
-	background-position: -43px 0;
+	background-position: -70px 0;
+	opacity: 1;
 }
 
 .bx-wrapper .bx-controls-direction a {
@@ -127,7 +132,7 @@
 	margin-top: -16px;
 	outline: 0;
 	width: 32px;
-	height: 32px;
+	height: 45px;
 	text-indent: -9999px;
 	z-index: 9999;
 }
