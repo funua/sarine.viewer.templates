@@ -32,7 +32,8 @@
   margin: 0 auto; }
 
 .cont-slider .cont-slider_body {
-  padding-top: 15px; }
+  padding-top: 15px;
+  text-align: center; }
 
 .info-ico {
   background: url("/templates/1/css/images/icon-info.png") no-repeat center;
