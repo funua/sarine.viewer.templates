@@ -390,10 +390,23 @@ h1, h2 {
   margin-top: 0; }
 
 .test-img {
-  width: 380px;
+  max-width: 380px;
   height: 290px;
-  background: url("/templates/1/css/images/test-img.png") no-repeat center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.test-img.img-1 {
+  background-image: url("/templates/1/css/images/test-img-1.png"); }
+
+.test-img.img-2 {
+  background-image: url("/templates/1/css/images/test-img-2.png"); }
+
+.test-img.img-3 {
+  background-image: url("/templates/1/css/images/test-img-3.png"); }
+
+.test-img.img-4 {
+  background-image: url("/templates/1/css/images/test-img-4.png"); }
 
 .cont-slider .cont-slider_body {
   text-align: center; }
@@ -512,6 +525,12 @@ body {
 
 .bg-pict-1 {
   background: url("/templates/1/css/images/bg-pict-1.png") no-repeat right top; }
+
+.bg-pict-2 {
+  background: url("/templates/1/css/images/bg-pict-2.png") no-repeat right top; }
+
+.bg-pict-3 {
+  background: url("/templates/1/css/images/bg-pict-3.png") no-repeat right top; }
 
 .top-title-param,
 .top-title-info,
@@ -657,14 +676,13 @@ body {
 .popup .p-body .p-text {
   font-size: 10.5pt;
   line-height: 16pt;
-  padding: 0 45px;
-  margin-bottom: 40px; }
+  padding: 0 45px; }
 
 .popup .p-body .p-text .light-color {
   color: #b7b7b7; }
 
 .perfomance-table {
-  padding: 0 15px; }
+  padding: 40px 15px 0; }
 
 .perfomance-table table {
   width: 100%; }
@@ -694,5 +712,48 @@ body {
 
 .perfomance-table table .align-middle td {
   vertical-align: middle; }
+
+.popup.popup-dark .p-top {
+  background: url("/templates/1/css/images/top-popup-2.png") no-repeat 0 top; }
+
+.popup.popup-dark .p-content {
+  background: #000000 url("/templates/1/css/images/popup-grad.png") no-repeat 0 top; }
+
+.popup.popup-dark .p-header h1 {
+  color: #fff;
+  font-family: "Conv_UtopiaStd-Italic_0", Georgia, serif;
+  font-size: 27pt;
+  padding-top: 4px; }
+
+.popup.popup-dark .close-popup {
+  background: url("/templates/1/css/images/close-popup-white.png") no-repeat 0 0; }
+
+.popup.popup-dark .p-body .p-text {
+  color: #535353; }
+
+.diamant-pict {
+  background: url("/templates/1/css/images/diamant-pict-popup.png") no-repeat 0 0;
+  width: 207px;
+  height: 216px;
+  margin: 0 auto; }
+
+.scale-base td {
+  position: relative; }
+
+.scale-base .grad-bg {
+  background: url("/templates/1/css/images/scale-gradient.png") no-repeat 0 bottom;
+  width: 7px;
+  bottom: 1px;
+  left: 50%;
+  margin-left: -4px;
+  position: absolute; }
+
+.scale-base .grad-bg .diamond-scale {
+  background: url("/templates/1/css/images/diamant-scale.png") repeat-y 0 bottom;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 /*# sourceMappingURL=base.css.map */
