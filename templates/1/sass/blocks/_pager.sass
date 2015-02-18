@@ -1,5 +1,62 @@
 //Pager
 .pager
-  padding-top: 10px
+  padding: 0
+  margin: 0
 
+.pager ul
+  list-style: none
+  margin: 0
+  padding: 0
 
+.pager ul li
+  float: left
+  width: 20%
+  text-align: center
+  border-top: 1px solid #dddddd
+  padding-top: 12px
+  position: relative
+  font-size: 13pt
+  
+.pager ul li a
+  display: block
+  color: #dddddd
+  font-family: "Conv_UtopiaStd-Regular_0", Georgia, serif
+  text-decoration: none
+
+.pager ul li a:hover
+  color: #7d7d7d
+
+.pager ul li span
+  position: relative
+  z-index: 3
+
+.pager ul li a i
+  position: absolute
+  background: url("/templates/1/css/images/icon-pager.png") no-repeat 0 0
+  height: 11px
+  width: 11px
+  top: -6px
+  margin-left: -6px
+  left: 50%
+  z-index: 2
+
+.pager ul li a.active
+  color: #000000
+
+.pager ul li a.active i
+  background-position: -11px 0
+
+.pager ul li .hide-line
+  position: absolute
+  background: #fff
+  z-index: 1
+  width: 50%
+  bottom: 0
+
+.pager ul li.first-elem .hide-line
+  top: -6px
+  left: 0
+
+.pager ul li.last-elem .hide-line
+  top: -6px
+  right: 0
