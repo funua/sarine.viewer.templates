@@ -2,6 +2,6 @@
     "instance": "SarineImage",
     "name" : "sarine.viewer.image",
     "args": {
-		"imagesArr" : ["hearts.png","arrows.png"]
+		"imagesArr" : ["hearts.png"]
     }
 }
