@@ -6,10 +6,10 @@
     <!--Popup 1 start-->
     <!--Popup 1 need to user with overlay -->
     <div class="popup-overlay" style="display: none"></div>
-    <div class="popup" style="display: none">
+    <div class="popup" style="display: none" id="popup1">
         <div class="p-top"></div>
         <div class="p-content">
-            <a href="" class="close-popup"></a>
+            <a href="#" class="close-popup"></a>
             <div class="p-header">
                 <h1>Sarine Light Perfomance Results</h1>
             </div>
@@ -89,10 +89,10 @@
     <!--Popup 1 end-->
     <!--Popup 2 need to user without overlay -->
     <!--Popup 2 start-->
-    <div class="popup popup-dark" style="display: none">
+    <div class="popup popup-dark" style="display: none" id="popup2">
         <div class="p-top"></div>
         <div class="p-content">
-            <a href="" class="close-popup"></a>
+            <a href="#" class="close-popup"></a>
             <div class="p-header">
                 <h1>Sparkle</h1>
             </div>
@@ -107,7 +107,7 @@
     <!--Popup 2 end-->
 
     <div class="slider5">
-        <div class="slide">
+        <div class="slide" id="slide1">
             <!-- content slider -->
             <div class="cont-slider">
                 <div class="cont-slider_header">
@@ -149,7 +149,7 @@
             </div>
             <!-- / content slide -->
         </div>
-        <div class="slide bg-pict-1">
+        <div class="slide bg-pict-1" id="slide2">
             <!-- content slider -->
             <div class="cont-slider">
                 <div class="cont-slider_header">
@@ -343,6 +343,25 @@
                 speed: 1000,
                 pagerCustom: '#bx-pager'
             });
+        });
+
+        $('#slide1 span.info-ico-small').click(function () {
+            $('#popup1').show('slow');
+            $('.popup-overlay').fadeIn('slow');
+        });
+
+        $('#slide2 span.info-ico-small').click(function () {
+            $('#popup2').show('slow');
+        });
+
+
+        $('#popup1 a.close-popup').click(function () {
+            $('#popup1').hide('slow');
+            $('.popup-overlay').fadeOut('slow');
+        });
+
+        $('#popup2 a.close-popup').click(function () {
+            $('#popup2').hide('slow');
         });
     })(window.jQuery);
 </script>
