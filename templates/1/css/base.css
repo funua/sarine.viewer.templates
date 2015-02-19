@@ -496,7 +496,7 @@ body {
 
 .pager ul li a i {
   position: absolute;
-  background: url("css/images/icon-pager.png") no-repeat 0 0;
+  background: url("images/icon-pager.png") no-repeat 0 0;
   height: 11px;
   width: 11px;
   top: -6px;
