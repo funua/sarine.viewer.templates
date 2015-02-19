@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -496,7 +496,7 @@ body {
 
 .pager ul li a i {
   position: absolute;
-  background: url("/templates/1/css/images/icon-pager.png") no-repeat 0 0;
+  background: url("css/images/icon-pager.png") no-repeat 0 0;
   height: 11px;
   width: 11px;
   top: -6px;
