@@ -14,7 +14,7 @@
         (function (window, ViewerManger) {
             'use strict';
 
-            window.template = "templates/1/template0.html";
+            window.template = "templates/1/v1/index.html";
             window.stones = [{
                 "viewers": {
                     //"light" : "http://rawdata.prod.sarinlight.com.s3.amazonaws.com/7222fc29-2ccf-463a-8f7d-5f0cfff58bfc/Dlight/509559/Viewer/",
@@ -30,8 +30,31 @@
                     "cut3DView": "http://dhvtgnmv8a4vr.cloudfront.net/7222fc29-2ccf-463a-8f7d-5f0cfff58bfc/Cut/1/Viewer/",
                     //"cut2DView": "http://dhvtgnmv8a4vr.cloudfront.net/7222fc29-2ccf-463a-8f7d-5f0cfff58bfc/Cut/1/Viewer/",
                     "cutHeartsAndArrows": "http://dhvtgnmv8a4vr.cloudfront.net/7222fc29-2ccf-463a-8f7d-5f0cfff58bfc/Cut/1/Viewer/",
-                    //"externalImage": "http://dhvtgnmv8a4vr.cloudfront.net/7222fc29-2ccf-463a-8f7d-5f0cfff58bfc/UserData/ExternalResources/Viewer/",
+                    "externalImage": "http://dhvtgnmv8a4vr.cloudfront.net/7222fc29-2ccf-463a-8f7d-5f0cfff58bfc/UserData/ExternalResources/Viewer/",
                     //"externalPdf": "http://dhvtgnmv8a4vr.cloudfront.net/7222fc29-2ccf-463a-8f7d-5f0cfff58bfc/UserData/ExternalResources/Viewer/"
+                },
+                "lightGrades": {
+                    "brilliance": {
+                        "value": 1,
+                        "name": "MIN"
+                    },
+                    "symmetry": {
+                        "value": 2,
+                        "name": "STD"
+                    },
+                    "fire": {
+                        "value": 4,
+                        "name": "VH"
+                    },
+                    "totalGrade": {
+                        "value": 3,
+                        "name": "Classic1"
+                    },
+                    "scintillation": {
+                        "value": 2,
+                        "name": "STD"
+                    },
+                    "rotationAngle": 15.0
                 },
                 stoneProperties: {
                     GIA: 1126903926,
@@ -43,6 +66,182 @@
                 },
                 viewersBaseUrl: "/json/"
             }];
+
+            window.gradeScales = {
+                "symmetry": [
+                    {
+                        "order": 1,
+                        "Name": "MIN",
+                        "default-display": "Minimum"
+                    },
+                    {
+                        "order": 2,
+                        "Name": "STD",
+                        "default-display": "Standard"
+                    },
+                    {
+                        "order": 3,
+                        "Name": "HIGH",
+                        "default-display": "High"
+                    },
+                    {
+                        "order": 4,
+                        "Name": "VH",
+                        "default-display": "Very high"
+                    },
+                    {
+                        "order": 5,
+                        "Name": "EXC",
+                        "default-display": "Exceptional"
+                    }
+                ],
+                "fire": [
+                    {
+                        "order": 1,
+                        "Name": "MIN",
+                        "default-display": "Minimum"
+                    },
+                    {
+                        "order": 2,
+                        "Name": "STD",
+                        "default-display": "Standard"
+                    },
+                    {
+                        "order": 3,
+                        "Name": "HIGH",
+                        "default-display": "High"
+                    },
+                    {
+                        "order": 4,
+                        "Name": "VH",
+                        "default-display": "Very high"
+                    },
+                    {
+                        "order": 5,
+                        "Name": "EXC",
+                        "default-display": "Exceptional"
+                    }
+                ],
+                "scintillation": [
+                    {
+                        "order": 1,
+                        "Name": "MIN",
+                        "default-display": "Minimum"
+                    },
+                    {
+                        "order": 2,
+                        "Name": "STD",
+                        "default-display": "Standard"
+                    },
+                    {
+                        "order": 3,
+                        "Name": "HIGH",
+                        "default-display": "High"
+                    },
+                    {
+                        "order": 4,
+                        "Name": "VH",
+                        "default-display": "Very high"
+                    },
+                    {
+                        "order": 5,
+                        "Name": "EXC",
+                        "default-display": "Exceptional"
+                    }
+                ],
+                "brilliance": [
+                    {
+                        "order": 1,
+                        "Name": "MIN",
+                        "default-display": "Minimum"
+                    },
+                    {
+                        "order": 2,
+                        "Name": "STD",
+                        "default-display": "Standard"
+                    },
+                    {
+                        "order": 3,
+                        "Name": "HIGH",
+                        "default-display": "High"
+                    },
+                    {
+                        "order": 4,
+                        "Name": "VH",
+                        "default-display": "Very high"
+                    },
+                    {
+                        "order": 5,
+                        "Name": "EXC",
+                        "default-display": "Exceptional"
+                    }
+                ],
+                "totalGrade": [
+                    {
+                        "order": 1,
+                        "value": "Low1",
+                        "min": 0,
+                        "max": 6,
+                        "default-display": "Low 1"
+                    },
+                    {
+                        "order": 2,
+                        "value": "Low2",
+                        "min": 6,
+                        "max": 9,
+                        "default-display": "Low 2"
+                    },
+                    {
+                        "order": 3,
+                        "value": "Classic1",
+                        "min": 9,
+                        "max": 12,
+                        "default-display": "Classic 1"
+                    },
+                    {
+                        "order": 4,
+                        "value": "Classic2",
+                        "min": 12,
+                        "max": 14,
+                        "default-display": "Classic 2"
+                    },
+                    {
+                        "order": 5,
+                        "value": "Premium1",
+                        "min": 14,
+                        "max": 16,
+                        "default-display": "Premium 1"
+                    },
+                    {
+                        "order": 6,
+                        "value": "Premium2",
+                        "min": 16,
+                        "max": 20,
+                        "default-display": "Premium 2"
+                    },
+                    {
+                        "order": 7,
+                        "value": "Ultimate1",
+                        "min": 20,
+                        "max": 24,
+                        "default-display": "Ultimate 1"
+                    },
+                    {
+                        "order": 8,
+                        "value": "Ultimate2",
+                        "min": 24,
+                        "max": 28,
+                        "default-display": "Ultimate 2"
+                    },
+                    {
+                        "order": 9,
+                        "value": "Ultimate3",
+                        "min": 28,
+                        "max": 30,
+                        "default-display": "Ultimate 3"
+                    }
+                ]
+            }
 
             var vm = new ViewerManger({ fromTag: "sarine-viewer", toTag: "div", stoneViews: window.stones[0], template: window.template })
             vm.bind("body")

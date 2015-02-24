@@ -6,7 +6,7 @@
     <!--Popup 1 start-->
     <!--Popup 1 need to user with overlay -->
     <div class="popup-overlay" style="display: none"></div>
-    <div class="popup" style="display: none" id="popup1">
+    <div class="popup" style="display: none" id="popup-slide1">
         <div class="p-top"></div>
         <div class="p-content">
             <a href="#" class="close-popup"></a>
@@ -51,34 +51,34 @@
                             <td class="level-label">Minimum</td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 320%"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 320%" data-field="brilliance"><div class="diamond-scale"></div></div>
                             </td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 430%"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 430%" data-field="scintillation"><div class="diamond-scale"></div></div>
                             </td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 500%"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 500%" data-field="fire"><div class="diamond-scale"></div></div>
                             </td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 430%"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 430%" data-field="symmetry"><div class="diamond-scale"></div></div>
                             </td>
                         </tr>
                         <tr class="align-middle">
                             <td></td>
                             <td class="hor-line-dark">
-                                <div class="quality-item">Brilliance <span class="info-ico-small icon-btn"></span></div>
+                                <div class="quality-item">Brilliance <span class="info-ico-small icon-btn" data-popup-id="popup-slide1-brilliance"></span></div>
                             </td>
                             <td class="hor-line-dark">
-                                <div class="quality-item">Sparkle <span class="info-ico-small icon-btn"></span></div>
+                                <div class="quality-item">Sparkle <span class="info-ico-small icon-btn" data-popup-id="popup-slide1-sparkle"></span></div>
                             </td>
                             <td class="hor-line-dark">
-                                <div class="quality-item">Fire <span class="info-ico-small icon-btn"></span></div>
+                                <div class="quality-item">Fire <span class="info-ico-small icon-btn" data-popup-id="popup-slide1-fire"></span></div>
                             </td>
                             <td class="hor-line-dark">
-                                <div class="quality-item">Symmetry <span class="info-ico-small icon-btn"></span></div>
+                                <div class="quality-item">Symmetry <span class="info-ico-small icon-btn" data-popup-id="popup-slide1-symmetry"></span></div>
                             </td>
                         </tr>
                     </table>
@@ -86,10 +86,8 @@
             </div>
         </div>
     </div>
-    <!--Popup 1 end-->
-    <!--Popup 2 need to user without overlay -->
-    <!--Popup 2 start-->
-    <div class="popup popup-dark" style="display: none" id="popup2">
+
+    <div class="popup popup-dark" style="display: none" id="popup-slide2">
         <div class="p-top"></div>
         <div class="p-content">
             <a href="#" class="close-popup"></a>
@@ -104,7 +102,134 @@
             </div>
         </div>
     </div>
-    <!--Popup 2 end-->
+
+    <div class="popup popup-dark" style="display: none" id="popup-slide2-sub">
+        <div class="p-top"></div>
+        <div class="p-content">
+            <a href="#" class="close-popup"></a>
+            <div class="p-header">
+                <h1>Sub Slide 2</h1>
+            </div>
+            <div class="p-body">
+                <div class="p-text">
+                    <span class="light-color">Some text</span>
+                </div>
+                <div class="diamant-pict"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup-dark" style="display: none" id="popup-slide3">
+        <div class="p-top"></div>
+        <div class="p-content">
+            <a href="#" class="close-popup"></a>
+            <div class="p-header">
+                <h1>Slide 3</h1>
+            </div>
+            <div class="p-body">
+                <div class="p-text">
+                    <span class="light-color">Some text</span>
+                </div>
+                <div class="diamant-pict"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup-dark" style="display: none" id="popup-slide4">
+        <div class="p-top"></div>
+        <div class="p-content">
+            <a href="#" class="close-popup"></a>
+            <div class="p-header">
+                <h1>Slide 4</h1>
+            </div>
+            <div class="p-body">
+                <div class="p-text">
+                    <span class="light-color">Some text</span>
+                </div>
+                <div class="diamant-pict"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup-dark" style="display: none" id="popup-slide4-sub">
+        <div class="p-top"></div>
+        <div class="p-content">
+            <a href="#" class="close-popup"></a>
+            <div class="p-header">
+                <h1>Sub Slide 4</h1>
+            </div>
+            <div class="p-body">
+                <div class="p-text">
+                    <span class="light-color">Some text</span>
+                </div>
+                <div class="diamant-pict"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup-dark" style="display: none" id="popup-slide1-brilliance">
+        <div class="p-top"></div>
+        <div class="p-content">
+            <a href="#" class="close-popup"></a>
+            <div class="p-header">
+                <h1>Sub Slide 1 Brilliance</h1>
+            </div>
+            <div class="p-body">
+                <div class="p-text">
+                    <span class="light-color">Some text</span>
+                </div>
+                <div class="diamant-pict"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup-dark" style="display: none" id="popup-slide1-sparkle">
+        <div class="p-top"></div>
+        <div class="p-content">
+            <a href="#" class="close-popup"></a>
+            <div class="p-header">
+                <h1>Sub Slide 1 Sparkle</h1>
+            </div>
+            <div class="p-body">
+                <div class="p-text">
+                    <span class="light-color">Some text</span>
+                </div>
+                <div class="diamant-pict"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup-dark" style="display: none" id="popup-slide1-fire">
+        <div class="p-top"></div>
+        <div class="p-content">
+            <a href="#" class="close-popup"></a>
+            <div class="p-header">
+                <h1>Sub Slide 1 Fire</h1>
+            </div>
+            <div class="p-body">
+                <div class="p-text">
+                    <span class="light-color">Some text</span>
+                </div>
+                <div class="diamant-pict"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup-dark" style="display: none" id="popup-slide1-symmetry">
+        <div class="p-top"></div>
+        <div class="p-content">
+            <a href="#" class="close-popup"></a>
+            <div class="p-header">
+                <h1>Sub Slide 1 Symmetry</h1>
+            </div>
+            <div class="p-body">
+                <div class="p-text">
+                    <span class="light-color">Some text</span>
+                </div>
+                <div class="diamant-pict"></div>
+            </div>
+        </div>
+    </div>
 
     <div class="slider5">
         <div class="slide" id="slide1">
@@ -112,20 +237,22 @@
             <div class="cont-slider">
                 <div class="cont-slider_header">
                     <h1>Diamond Story</h1>
-                    <h2>Sarine Light Perfomance Results <span class="info-ico-small icon-btn"></span></h2>
+                    <h2>Sarine Light Perfomance Results <span class="info-ico-small icon-btn" data-popup-id="popup-slide1"></span></h2>
                 </div>
                 <div class="cont-slider_body">
-					<table cellpadding="0" cellspacing="0" border="0" class="media-container">
-						<tr>
-							<td>
-                    			<sarine-viewer viewer="lightReportViewer"></sarine-viewer>
-							</td>
-						</tr>
-					</table>
+                    <table cellpadding="0" cellspacing="0" border="0" class="media-container">
+                        <tr>
+                            <td>
+                                <sarine-viewer viewer="lightReportViewer" order="1" version="v1"></sarine-viewer>
+                            </td>
+                        </tr>
+                    </table>
                     <div class="top-title top-title-param">
                         <div class="top-title_up">Total Grade</div>
                         <div class="div-line"></div>
-                        <div class="top-title_down">Ultimate <span class="ultimate-stars"></span></div>
+                        <div class="top-title_down">
+                            <span data-replace-title=""></span> <!--<span class="ultimate-stars"></span>-->
+                        </div>
                     </div>
                     <div class="product-info">
                         <div>
@@ -160,18 +287,18 @@
             <div class="cont-slider">
                 <div class="cont-slider_header">
                     <h1>Diamond Story</h1>
-                    <h2>Sarine Loupe™ Imaging <span class="info-ico-small icon-btn"></span></h2>
+                    <h2>Sarine Loupe™ Imaging <span class="info-ico-small icon-btn" data-popup-id="popup-slide2"></span></h2>
                 </div>
                 <div class="cont-slider_body">
-					<table cellpadding="0" cellspacing="0" border="0" class="media-container">
-						<tr>
-							<td>
-                    			<sarine-viewer viewer="loupeRealView"></sarine-viewer>
-							</td>
-						</tr>
-					</table>
+                    <table cellpadding="0" cellspacing="0" border="0" class="media-container">
+                        <tr>
+                            <td>
+                                <sarine-viewer viewer="loupeRealView" order="2" version="v1"></sarine-viewer>
+                            </td>
+                        </tr>
+                    </table>
                     <div class="top-title-info top-title-param">
-                        <div class="top-title-name">Conditions <span class="info-ico icon-btn"></span></div>
+                        <div class="top-title-name">Conditions <span class="info-ico icon-btn" data-popup-id="popup-slide2-sub"></span></div>
                     </div>
                     <div class="product-info">
                         <div>
@@ -206,16 +333,16 @@
             <div class="cont-slider">
                 <div class="cont-slider_header">
                     <h1>Diamond Story</h1>
-                    <h2>Hearts & Arrows <span class="info-ico-small icon-btn"></span></h2>
+                    <h2>Hearts & Arrows <span class="info-ico-small icon-btn" data-popup-id="popup-slide3"></span></h2>
                 </div>
                 <div class="cont-slider_body">
-					<table cellpadding="0" cellspacing="0" border="0" class="media-container">
-						<tr>
-							<td>
-                    			<sarine-viewer viewer="cutHeartsAndArrows"></sarine-viewer>
-							</td>
-						</tr>
-					</table>
+                    <table cellpadding="0" cellspacing="0" border="0" class="media-container">
+                        <tr>
+                            <td>
+                                <sarine-viewer viewer="cutHeartsAndArrows" order="3" version="v1"></sarine-viewer>
+                            </td>
+                        </tr>
+                    </table>
                     <div class="top-two-title-info top-title-param clearfix">
                         <div class="pull-left">
                             <div class="top-title-name">Hearts <span class="info-ico icon-btn"></span></div>
@@ -259,18 +386,18 @@
             <div class="cont-slider">
                 <div class="cont-slider_header">
                     <h1>Diamond Story</h1>
-                    <h2>Cut and Symmetry Grading <span class="info-ico-small icon-btn"></span></h2>
+                    <h2>Cut and Symmetry Grading <span class="info-ico-small icon-btn" data-popup-id="popup-slide4"></span></h2>
                 </div>
                 <div class="cont-slider_body">
-					<table cellpadding="0" cellspacing="0" border="0" class="media-container">
-						<tr>
-							<td>
-                    			<sarine-viewer viewer="cut3DView"></sarine-viewer>
-							</td>
-						</tr>
-					</table>
+                    <table cellpadding="0" cellspacing="0" border="0" class="media-container">
+                        <tr>
+                            <td>
+                                <sarine-viewer viewer="externalImage" order="4" version="v1"></sarine-viewer>
+                            </td>
+                        </tr>
+                    </table>
                     <div class="top-title-info top-title-param">
-                        <div class="top-title-name">Profile to actual proportions <span class="info-ico icon-btn"></span></div>
+                        <div class="top-title-name">Profile to actual proportions <span class="info-ico icon-btn" data-popup-id="popup-slide4-sub"></span></div>
                     </div>
                     <div class="product-info">
                         <div>
@@ -303,9 +430,9 @@
     </div>
     <!--Pager-->
     <div id="bx-pager" class="pager">
-        <ul class="clearfix">          
+        <ul class="clearfix">
             <li class="first-elem">
-				<div class="hide-line"></div>
+                <div class="hide-line"></div>
                 <a data-slide-index="0" href="">
                     <i class="romb-icon"></i>
                     <span>Light</span>
@@ -341,6 +468,9 @@
 <script>
     (function ($) {
         $(function () {
+            'use strict'
+
+
             $('.slider5').bxSlider({
                 slideWidth: 500,
                 minSlides: 1,
@@ -350,25 +480,46 @@
                 speed: 1000,
                 pagerCustom: '#bx-pager'
             });
-        });
 
-        $('#slide1 span.info-ico-small').click(function () {
-            $('#popup1').show('slow');
-            $('.popup-overlay').fadeIn('slow');
-        });
+            var scaleTable = { "MIN": 100, "STD": 200, "HIGH": 300, "VH": 400, "EXC": 500 };
+            var stone = window.stones && window.stones[0];
 
-        $('#slide2 span.info-ico-small').click(function () {
-            $('#popup2').show('slow');
-        });
+            if (window.gradeScales) {
+                var totalGradeName = stone.lightGrades && stone.lightGrades.totalGrade && stone.lightGrades.totalGrade.name;
+                var totalGrade = window.gradeScales.totalGrade || [];
+                totalGrade.some(function (obj) {
+                    if (obj.value === totalGradeName) {
+                        $('#slide1 .top-title_down span[data-replace-title]').text(obj["default-display"]);
+                        return true;
+                    }
+                    return false;
+                });
+            };
 
 
-        $('#popup1 a.close-popup').click(function () {
-            $('#popup1').hide('slow');
-            $('.popup-overlay').fadeOut('slow');
-        });
+            $('#slide1 span.icon-btn').click(function () {
+                $('#popup-slide1').find('.perfomance-table tr.scale-base .grad-bg').each(function (idx, el) {
+                    var $el = $(el);
+                    var lg = stone && stone.lightGrades && stone.lightGrades[$el.attr('data-field')];
+                    var height = lg && scaleTable[lg.name];
+                    $el.css({ height: height + '%' });
+                });
+                $('.popup-overlay').fadeIn('slow');
+            });
 
-        $('#popup2 a.close-popup').click(function () {
-            $('#popup2').hide('slow');
+            $('span.icon-btn').click(function () {
+                var id = $(this).attr('data-popup-id');
+                if (id) $('#' + id).show('slow');
+            });
+
+
+            $('#popup-slide1 a.close-popup').click(function () {
+                $('.popup-overlay').fadeOut('slow');
+            });
+
+            $('.popup a.close-popup').click(function () {
+                $(this).parentsUntil('div.popup').parent().hide('slow');
+            });
         });
     })(window.jQuery);
 </script>
