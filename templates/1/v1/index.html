@@ -1,7 +1,7 @@
 ﻿<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">-->
 <link href="css/jquery.bxslider.css" rel="stylesheet" />
 <link href="css/base.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,600,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,600,700' rel='stylesheet' type='text/css'>
 <div class="carousel-section">
     <!--Popup 1 start-->
     <!--Popup 1 need to user with overlay -->
@@ -51,19 +51,19 @@
                             <td class="level-label">Minimum</td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 320%" data-field="brilliance"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 0" data-field="brilliance"><div class="diamond-scale"></div></div>
                             </td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 430%" data-field="scintillation"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 0" data-field="scintillation"><div class="diamond-scale"></div></div>
                             </td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 500%" data-field="fire"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 0" data-field="fire"><div class="diamond-scale"></div></div>
                             </td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 430%" data-field="symmetry"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 0" data-field="symmetry"><div class="diamond-scale"></div></div>
                             </td>
                         </tr>
                         <tr class="align-middle">
@@ -303,10 +303,7 @@
                             Clarity: <span data-sarine-info="stoneProperties.clarity"></span>
                         </div>
                         <div>
-                            Cut: <span data-sarine-info="stoneProperties.cut"></span>
-                        </div>
-                        <div>
-                            Carat: <span data-sarine-info="stoneProperties.carat"></span>
+                            Cut: <span data-sarine-info="stoneProperties.cutGrade"></span>
                         </div>
                     </div>
                 </div>
@@ -349,10 +346,7 @@
                             Clarity: <span data-sarine-info="stoneProperties.clarity"></span>
                         </div>
                         <div>
-                            Cut: <span data-sarine-info="stoneProperties.cut"></span>
-                        </div>
-                        <div>
-                            Carat: <span data-sarine-info="stoneProperties.carat"></span>
+                            Cut: <span data-sarine-info="stoneProperties.cutGrade"></span>
                         </div>
                     </div>
                 </div>
@@ -378,11 +372,11 @@
                     <div class="top-two-title-info top-title-param clearfix">
                         <div class="pull-left">
                             <div class="top-title-name">Hearts <span class="info-ico icon-btn" data-popup-id="popup-slide3-hearts"></span></div>
-                            <div class="perf-level">Perfection Level: <b>A++</b></div>
+                            <!--<div class="perf-level">Perfection Level: <b>A++</b></div>-->
                         </div>
                         <div class="pull-right">
                             <div class="top-title-name">Arrows <span class="info-ico icon-btn" data-popup-id="popup-slide3-arrows"></span></div>
-                            <div class="perf-level">Perfection Level: <b>A++</b></div>
+                            <!--<div class="perf-level">Perfection Level: <b>A++</b></div>-->
                         </div>
                     </div>
                     <div class="product-info">
@@ -402,10 +396,7 @@
                             Clarity: <span data-sarine-info="stoneProperties.clarity"></span>
                         </div>
                         <div>
-                            Cut: <span data-sarine-info="stoneProperties.cut"></span>
-                        </div>
-                        <div>
-                            Carat: <span data-sarine-info="stoneProperties.carat"></span>
+                            Cut: <span data-sarine-info="stoneProperties.cutGrade"></span>
                         </div>
                     </div>
                 </div>
@@ -448,10 +439,7 @@
                             Clarity: <span data-sarine-info="stoneProperties.clarity"></span>
                         </div>
                         <div>
-                            Cut: <span data-sarine-info="stoneProperties.cut"></span>
-                        </div>
-                        <div>
-                            Carat: <span data-sarine-info="stoneProperties.carat"></span>
+                            Cut: <span data-sarine-info="stoneProperties.cutGrade"></span>
                         </div>
                     </div>
                 </div>
@@ -516,6 +504,16 @@
             var scaleTable = { "MIN": 100, "STD": 200, "HIGH": 300, "VH": 400, "EXC": 500 };
             var stone = window.stones && window.stones[0];
 
+            function recurse(o, props) {
+                if (props.length === 0) {
+                    return o;
+                }
+                if (!o) {
+                    return void 0;
+                }
+                return recurse(o[props.shift()], props);
+            };
+
             if (window.gradeScales) {
                 var totalGradeName = stone.lightGrades && stone.lightGrades.totalGrade && stone.lightGrades.totalGrade.name;
                 var totalGrade = window.gradeScales.totalGrade || [];
@@ -527,6 +525,14 @@
                     return false;
                 });
             };
+
+            $('span[data-sarine-info]').each(function (i, el) {
+                var field = $(el).attr('data-sarine-info');
+                var value = recurse(stone, field.split('.'));
+                if (value === (void 0) || value === null) {
+                    $(el).parent().hide();
+                }
+            });
 
 
             $('#slide1 span.icon-btn').click(function () {
@@ -552,6 +558,8 @@
             $('.popup a.close-popup').click(function () {
                 $(this).parentsUntil('div.popup').parent().hide('slow');
             });
+
+
         });
     })(window.jQuery);
 </script>
