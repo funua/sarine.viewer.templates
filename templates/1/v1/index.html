@@ -514,7 +514,7 @@
 <script>
     (function ($) {
         $(function () {
-            'use strict'           
+            'use strict'
 
             var scaleTable = { "MIN": 100, "STD": 200, "HIGH": 300, "VH": 400, "EXC": 500 };
             var stone = window.stones && window.stones[0];
@@ -580,6 +580,7 @@
                     moveSlides: 2,
                     slideMargin: 10,
                     speed: 1000,
+                    infiniteLoop: false,
                     pagerCustom: '#bx-pager',
                     onSliderLoad: function () {
                         $('.carousel-preloader').hide();
