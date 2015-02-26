@@ -263,6 +263,9 @@
         </div>
     </div>
 
+
+    <div class="carousel-preloader" />
+
     <div class="slider5" style="display:none;">
         <div class="slide" id="slide1">
             <!-- content slider -->
@@ -480,7 +483,7 @@
         </ul>
     </div>
     <!--Copyright-->
-    <div class="powered-by">
+    <div class="powered-by" style="display:none;">
         <div class="powered-pict"></div>
     </div>
 </div>
@@ -490,43 +493,8 @@
         $(function () {
             'use strict'
 
-
-            $('.slider5').bxSlider({
-                slideWidth: 500,
-                minSlides: 1,
-                maxSlides: 1,
-                moveSlides: 2,
-                slideMargin: 10,
-                speed: 1000,
-                pagerCustom: '#bx-pager'
-            }).show();
-
-            $('#bx-pager').show();
-
             var scaleTable = { "MIN": 100, "STD": 200, "HIGH": 300, "VH": 400, "EXC": 500 };
             var stone = window.stones && window.stones[0];
-
-            function recurse(o, props) {
-                if (props.length === 0) {
-                    return o;
-                }
-                if (!o) {
-                    return void 0;
-                }
-                return recurse(o[props.shift()], props);
-            };
-
-            if (window.gradeScales) {
-                var totalGradeName = stone.lightGrades && stone.lightGrades.totalGrade && stone.lightGrades.totalGrade.name;
-                var totalGrade = window.gradeScales.totalGrade || [];
-                totalGrade.some(function (obj) {
-                    if (obj.value === totalGradeName) {
-                        $('#slide1 .top-title_down span[data-replace-title]').text(obj["default-display"]);
-                        return true;
-                    }
-                    return false;
-                });
-            };
 
             $('span[data-sarine-info]').each(function (i, el) {
                 var field = $(el).attr('data-sarine-info');
@@ -535,7 +503,6 @@
                     $(el).parent().hide();
                 }
             });
-
 
             $('#slide1 span.icon-btn').click(function () {
                 $('#popup-slide1').find('.perfomance-table tr.scale-base .grad-bg').each(function (idx, el) {
@@ -552,7 +519,6 @@
                 if (id) $('#' + id).show('slow');
             });
 
-
             $('#popup-slide1 a.close-popup').click(function () {
                 $('.popup-overlay').fadeOut('slow');
             });
@@ -561,7 +527,49 @@
                 $(this).parentsUntil('div.popup').parent().hide('slow');
             });
 
+            function recurse(o, props) {
+                if (props.length === 0) {
+                    return o;
+                }
+                if (!o) {
+                    return void 0;
+                }
+                return recurse(o[props.shift()], props);
+            };
 
+            function init() {
+                if (window.gradeScales) {
+                    var totalGradeName = stone.lightGrades && stone.lightGrades.totalGrade && stone.lightGrades.totalGrade.name;
+                    var totalGrade = window.gradeScales.totalGrade || [];
+                    totalGrade.some(function (obj) {
+                        if (obj.value === totalGradeName) {
+                            $('#slide1 .top-title_down span[data-replace-title]').text(obj["default-display"]);
+                            return true;
+                        }
+                        return false;
+                    });
+                };
+
+                $('.slider5').bxSlider({
+                    slideWidth: 500,
+                    minSlides: 1,
+                    maxSlides: 1,
+                    moveSlides: 1,
+                    slideMargin: 10,
+                    speed: 1000,
+                    startSlide: 0,
+                    pagerCustom: '#bx-pager',
+                    infiniteLoop: false,
+                    onSliderLoad: function () {
+                        $('.carousel-preloader').hide();
+                        $('.slider5').show();
+                        $('.powered-by').show();
+                        $('#bx-pager').show();
+                    }
+                });
+            };
+
+            init();
         });
     })(window.jQuery);
 </script>
