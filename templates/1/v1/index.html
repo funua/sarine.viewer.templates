@@ -287,7 +287,7 @@
         </div>
     </div>
 
-    <div class="slider5" style="display: none">
+    <div class="slider5" style="visibility: hidden">
         <div class="slide" id="slide1">
             <!-- content slider -->
             <div class="cont-slider">
@@ -473,7 +473,7 @@
         </div>
     </div>
     <!--Pager-->
-    <div id="bx-pager" class="pager" style="display: none">
+    <div id="bx-pager" class="pager" style="visibility: hidden">
         <ul class="clearfix">
             <li class="first-elem">
                 <div class="hide-line"></div>
@@ -515,17 +515,20 @@
             'use strict'
 
 
-            $('.slider5').show().bxSlider({
+            $('.slider5').bxSlider({
                 slideWidth: 500,
                 minSlides: 1,
                 maxSlides: 1,
                 moveSlides: 2,
                 slideMargin: 10,
                 speed: 1000,
-                pagerCustom: '#bx-pager'
+                pagerCustom: '#bx-pager',
+                onSliderLoad: function () {
+                    $('.slider5').css('visibility', 'visible');
+                }
             });
 
-            $('#bx-pager').show();
+            $('#bx-pager').css('visibility', 'visible');
 
             var scaleTable = { "MIN": 100, "STD": 200, "HIGH": 300, "VH": 400, "EXC": 500 };
             var stone = window.stones && window.stones[0];
