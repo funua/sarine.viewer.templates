@@ -263,7 +263,7 @@
         </div>
     </div>
 
-    <div class="slider5">
+    <div class="slider5" style="display:none;">
         <div class="slide" id="slide1">
             <!-- content slider -->
             <div class="cont-slider">
@@ -449,7 +449,7 @@
         </div>
     </div>
     <!--Pager-->
-    <div id="bx-pager" class="pager">
+    <div id="bx-pager" class="pager" style="display:none;">
         <ul class="clearfix">
             <li class="first-elem">
                 <div class="hide-line"></div>
@@ -499,7 +499,9 @@
                 slideMargin: 10,
                 speed: 1000,
                 pagerCustom: '#bx-pager'
-            });
+            }).show();
+
+            $('#bx-pager').show();
 
             var scaleTable = { "MIN": 100, "STD": 200, "HIGH": 300, "VH": 400, "EXC": 500 };
             var stone = window.stones && window.stones[0];
