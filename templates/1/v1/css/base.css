@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -490,6 +490,10 @@ h1, h2 {
   vertical-align: middle;
 }
 
+.quality-item .info-ico-small {
+  padding: 0;
+}
+
 .info-ico {
   background: url("images/icon-info.png") no-repeat center;
   width: 20px;
@@ -719,6 +723,18 @@ body {
   position: relative;
 }
 
+.carousel-preloader {
+  background: url("images/dark_preloader.gif") no-repeat 0 0;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  margin-top: -16px;
+  margin-left: -16px;
+}
+
 .cont-slider {
   width: 410px;
   margin: 0 auto;
@@ -758,6 +774,7 @@ body {
 .popup .p-top {
   width: 494px;
   height: 90px;
+  margin-bottom: -1px;
 }
 
 .popup .p-content {
@@ -940,18 +957,4 @@ body {
   right: 0;
 }
 
-.carousel-preloader {
-	background: url("images/dark_preloader.gif") no-repeat 0 0;
-	width: 32px;
-	height: 32px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -16px;
-	margin-left: -16px;
-}
-
-
 /*# sourceMappingURL=base.css.map */
-
-

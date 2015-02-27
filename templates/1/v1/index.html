@@ -11,7 +11,7 @@
         <div class="p-content">
             <a href="#" class="close-popup"></a>
             <div class="p-header">
-                <h1>Sarine Light Perfomance Results</h1>
+                <h1>Sarine Light Performance Results</h1>
             </div>
             <div class="p-body">
                 <div class="p-text">
@@ -289,13 +289,13 @@
 
     <div class="carousel-preloader"></div>
 
-    <div class="slider5" style="visibility: hidden">
+    <div class="slider5" style="display:none;">
         <div class="slide" id="slide1">
             <!-- content slider -->
             <div class="cont-slider">
                 <div class="cont-slider_header">
                     <h1>Diamond Story</h1>
-                    <h2>Sarine Light Perfomance Results <span class="info-ico-small icon-btn" data-popup-id="popup-slide1"></span></h2>
+                    <h2>Sarine Light Performance Results <span class="info-ico-small icon-btn" data-popup-id="popup-slide1"></span></h2>
                 </div>
                 <div class="cont-slider_body">
                     <table cellpadding="0" cellspacing="0" border="0" class="media-container">
@@ -475,7 +475,7 @@
         </div>
     </div>
     <!--Pager-->
-    <div id="bx-pager" class="pager" style="visibility: hidden">
+    <div id="bx-pager" class="pager" style="display:none;">
         <ul class="clearfix">
             <li class="first-elem">
                 <div class="hide-line"></div>
@@ -580,16 +580,17 @@
                     moveSlides: 2,
                     slideMargin: 10,
                     speed: 1000,
-                    infiniteLoop: false,
+                    startSlide: 0,
                     pagerCustom: '#bx-pager',
+                    infiniteLoop: false,
                     onSliderLoad: function () {
                         $('.carousel-preloader').hide();
+                        $('.slider5').show();
                         $('.powered-by').show();
-                        $('.slider5').css('visibility', 'visible');
-                        $('#bx-pager').css('visibility', 'visible');
+                        $('#bx-pager').show();
                     }
                 });
-            }
+            };
 
             init();
         });
