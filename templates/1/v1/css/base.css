@@ -940,11 +940,11 @@ body {
 }
 
 .scale-base .grad-bg {
-  background: url("images/scale-gradient.png") no-repeat 0 bottom;
-  width: 7px;
-  bottom: 1px;
+  background: url("images/diamant-scale.png"), url("images/scale-gradient.png") no-repeat 0 bottom;
+  width: 9px;
+  bottom: 0;
   left: 50%;
-  margin-left: -4px;
+  margin-left: -6px;
   position: absolute;
 }
 

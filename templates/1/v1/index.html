@@ -51,19 +51,27 @@
                             <td class="level-label">Minimum</td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 0" data-field="brilliance"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 0" data-field="brilliance">
+                                    <!--<div class="diamond-scale"></div>-->
+                                </div>
                             </td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 0" data-field="scintillation"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 0" data-field="scintillation">
+                                    <!--<div class="diamond-scale"></div>-->
+                                </div>
                             </td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 0" data-field="fire"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 0" data-field="fire">
+                                    <!--<div class="diamond-scale"></div>-->
+                                </div>
                             </td>
                             <td>
                                 <div class="hor-line"></div>
-                                <div class="grad-bg" style="height: 0" data-field="symmetry"><div class="diamond-scale"></div></div>
+                                <div class="grad-bg" style="height: 0" data-field="symmetry">
+                                    <!--<div class="diamond-scale"></div>-->
+                                </div>
                             </td>
                         </tr>
                         <tr class="align-middle">
@@ -531,8 +539,8 @@
                 $('#popup-slide1').find('.perfomance-table tr.scale-base .grad-bg').each(function (idx, el) {
                     var $el = $(el);
                     var lg = stone && stone.lightGrades && stone.lightGrades[$el.attr('data-field')];
-                    var height = lg && scaleTable[lg.name];
-                    $el.css({ height: height + '%' });
+                    var height = lg && $el.parent().height() * (scaleTable[lg.name] / 100);
+                    $el.css({ height: height + 'px' });
                 });
                 $('.popup-overlay').fadeIn('slow');
             });
