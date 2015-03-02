@@ -477,6 +477,10 @@ h1, h2 {
   text-align: center;
 }
 
+.bx-wrapper .bx-controls-direction a {
+  margin-top: -50px;
+}
+
 .icon-btn {
   cursor: pointer;
 }
