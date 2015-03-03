@@ -552,6 +552,8 @@
                     $('#' + id).show('slow');
                     $('.popup-overlay-dark').fadeIn('slow');
                 }
+
+                return false;
             });
 
             $('#popup-slide1 a.close-popup').click(function () {
@@ -561,6 +563,8 @@
             $('.popup a.close-popup').click(function () {
                 $(this).parentsUntil('div.popup').parent().hide('slow');
                 $('.popup-overlay-dark').fadeOut('slow');
+
+                return false;
             });
 
             function recurse(o, props) {
