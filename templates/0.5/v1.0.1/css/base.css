@@ -428,6 +428,10 @@ h1, h2 {
   padding-left: 10px;
 }
 
+.cutHeartsAndArrows canvas.Arrows {
+  float: right;
+}
+
 .cont-slider .cont-slider_header h1 {
   color: #000000;
   font-size: 24pt;
@@ -441,6 +445,13 @@ h1, h2 {
   font-size: 13pt;
   font-family: "Conv_UtopiaStd-SemiboldIt_0", Georgia, serif;
   margin-top: 0;
+}
+
+.cont-slider .cont-slider_header h2 > sup {
+  font-style: normal;
+  font-family: Georgia, serif;
+  font-weight: 600;
+  font-size: 8pt;
 }
 
 .test-img {
@@ -545,6 +556,10 @@ body {
 
 .pull-right {
   float: right;
+}
+
+#preload_images {
+  background: url("images/top-popup-dark-no-grad.png"), url("images/top-popup-1.png"), url("images/top-popup-2.png") no-repeat -9999px -9999px;
 }
 
 .pager {
@@ -813,10 +828,10 @@ body {
 
 .close-popup {
   background: url("images/close-popup.png") no-repeat 0 0;
-  width: 17px;
-  height: 17px;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  right: 20px;
+  right: 0;
   top: 14px;
   display: block;
   opacity: 0.8;
@@ -889,6 +904,13 @@ body {
   font-family: "Conv_UtopiaStd-Italic_0", Georgia, serif;
   font-size: 27pt;
   padding-top: 4px;
+}
+
+.popup.popup-dark .p-header h1 > sup {
+  font-style: normal;
+  font-family: Georgia, serif;
+  font-weight: 600;
+  font-size: 14pt;
 }
 
 .popup.popup-dark .close-popup {
