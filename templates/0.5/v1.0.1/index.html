@@ -526,7 +526,6 @@
         $(function () {
             'use strict'
 
-            var scaleTable = { "MIN": 100, "STD": 200, "HIGH": 300, "VH": 400, "EXC": 500 };
             var stone = window.stones && window.stones[0];
 
             $('span[data-sarine-info]').each(function (i, el) {
@@ -541,7 +540,7 @@
                 $('#popup-slide1').find('.perfomance-table tr.scale-base .grad-bg').each(function (idx, el) {
                     var $el = $(el);
                     var lg = stone && stone.lightGrades && stone.lightGrades[$el.attr('data-field')];
-                    var height = lg && $el.parent().height() * (scaleTable[lg.name] / 100);
+                    var height = lg && $el.parent().height() * parseFloat(lg.value);
                     $el.css({ height: height + 'px' });
                 });
                 $('.popup-overlay').fadeIn('slow');
