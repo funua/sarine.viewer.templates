@@ -1,8 +1,7 @@
 //popup
 .popup-overlay
   position: absolute
-  background-color: #260326
-  opacity: .45
+  background-color: rgba(#260326, 0.45)
   top: 0
   bottom: 0
   left: 0
@@ -11,13 +10,20 @@
 
 .popup-overlay-dark
   position: absolute
-  background-color: #222
-  opacity: .45
+  background-color: rgba(#222, 0.45)
   top: 0
   bottom: 0
   left: 0
   right: 0
   z-index: 6
+
+// Hack for old WebKit browsers
+.popup-overlay.visible
+  background-color: rgba(#260326, 0.449)
+
+.popup-overlay-dark.visible
+  background-color: rgba(#222, 0.449)
+//
 
 .popup
   position: absolute

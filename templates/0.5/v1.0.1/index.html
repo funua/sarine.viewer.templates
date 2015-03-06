@@ -543,26 +543,34 @@
                     var height = lg && $el.parent().height() * parseFloat(lg.value);
                     $el.css({ height: height + 'px' });
                 });
-                $('.popup-overlay').fadeIn('slow');
+                $('.popup-overlay').fadeIn('slow', function () {
+                    $(this).addClass('visible');
+                });
             });
 
             $('span.icon-btn').click(function () {
                 var id = $(this).attr('data-popup-id');
                 if (id) {
                     $('#' + id).show('slow');
-                    $('.popup-overlay-dark').fadeIn('slow');
+                    $('.popup-overlay-dark').fadeIn('slow', function () {
+                        $(this).addClass('visible');
+                    });
                 }
 
                 return false;
             });
 
             $('#popup-slide1 a.close-popup').click(function () {
-                $('.popup-overlay').fadeOut('slow');
+                $('.popup-overlay').fadeOut('slow', function () {
+                    $(this).removeClass('visible');
+                });
             });
 
             $('.popup a.close-popup').click(function () {
                 $(this).parentsUntil('div.popup').parent().hide('slow');
-                $('.popup-overlay-dark').fadeOut('slow');
+                $('.popup-overlay-dark').fadeOut('slow', function () {
+                    $(this).removeClass('visible');
+                });
 
                 return false;
             });

@@ -769,8 +769,7 @@ body {
 
 .popup-overlay {
   position: absolute;
-  background-color: #260326;
-  opacity: 0.45;
+  background-color: rgba(38, 3, 38, 0.45);
   top: 0;
   bottom: 0;
   left: 0;
@@ -780,13 +779,20 @@ body {
 
 .popup-overlay-dark {
   position: absolute;
-  background-color: #222;
-  opacity: 0.45;
+  background-color: rgba(34, 34, 34, 0.45);
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 6;
+}
+
+.popup-overlay.visible {
+  background-color: rgba(38, 3, 38, 0.449);
+}
+
+.popup-overlay-dark.visible {
+  background-color: rgba(34, 34, 34, 0.449);
 }
 
 .popup {
