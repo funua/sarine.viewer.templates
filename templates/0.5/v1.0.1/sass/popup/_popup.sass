@@ -27,23 +27,24 @@
 
 .popup
   position: absolute
-  overflow: hidden
   z-index: 15
   bottom: 4px
   left: 4px
   right: 4px
 
-.popup .p-top
-  background: url("images/top-popup-1.png") no-repeat 0 0
-
-.popup .p-top
-  height: 91px
-  margin-bottom: -1px
-
 .popup .p-content
   background-color: #ffffff
   position: relative
+  margin-top: 90px
   padding-bottom: 20px
+  border-top: 1px solid transparent
+
+.popup .p-content:before
+  content: ''
+  display: block
+  height: 90px
+  margin-top: -90px
+  background: url("images/top-popup-1.png") no-repeat 0 0
 
 .popup .p-content .p-header
   text-align: center
@@ -111,11 +112,11 @@
   vertical-align: middle
 
 //popup 2
-.popup.popup-dark .p-top
-  background: url("images/top-popup-2.png") no-repeat 0 top
+.popup.popup-dark .p-content:before
+  background: url("images/top-popup-3.png") no-repeat 0 0
 
 .popup.popup-dark .p-content
-  background: #000000 url("images/popup-grad.png") no-repeat 0 top
+  background: #000000 url("images/popup-grad.png") no-repeat 0 0
 
 .popup.popup-dark .p-header h1
   color: #fff
@@ -135,7 +136,7 @@
 .popup.popup-dark .p-body .p-text
   color: #535353
 
-.popup.popup-dark.popup-grad-bottom .p-top
+.popup.popup-dark.popup-grad-bottom .p-content:before
   background: url("images/top-popup-dark-no-grad.png") no-repeat 0 top
 
 .popup.popup-dark.popup-grad-bottom .p-content
