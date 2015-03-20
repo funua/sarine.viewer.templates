@@ -1,32 +1,30 @@
-/*.slide--light {
+.slide--light {
 
   &.slide--show-next {
-
-    .slide__heading {
-      @include seq-animation(slideFromRight, 2, ease, 4, 800ms);
-    }
-
-    .slide__img-wrap {
-      @include seq-animation(slideFromRight, 3, ease, 4, 800ms);
-    }
 
     .specs {
       @include seq-animation(slideFromRight, 4, ease, 4, 800ms);
     }
   }
 
+  &.slide--show-previous {
+
+    .specs {
+      @include seq-animation(slideFromLeft, 4, ease, 4, 800ms);
+    }
+  }
+
   &.slide--hide-previous {
-
-    .slide__heading {
-      @include seq-animation(slideToLeft, 2, ease-in);
-    }
-
-    .slide__img-wrap {
-      @include seq-animation(slideToLeft, 3, ease-in);
-    }
 
     .specs {
       @include seq-animation(slideToLeft, 4, ease-in);
     }
   }
-}*/
+
+  &.slide--hide-next {
+
+    .specs {
+      @include seq-animation(slideToRight, 4, ease-in);
+    }
+  }
+}

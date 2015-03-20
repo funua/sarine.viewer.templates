@@ -1,26 +1,24 @@
 .slide--summary {
 
-  &.slide--current {
-    .summary {
-      &__img {
-        @include animation(slideFromBottom 0.5s 10ms ease both);
-      }
+  .summary {
+    &__img {
+      @include animation(slideFromBottom 0.5s 10ms ease both);
+    }
 
-      &__specs {
-        @include animation(slideFromBottom 0.5s 310ms ease both);
-      }
+    &__specs {
+      @include animation(slideFromBottom 0.5s 310ms ease both);
+    }
 
-      &__heading {
-        @include animation(slideFromBottom 0.5s 710ms ease both);
-      }
+    &__heading {
+      @include animation(slideFromBottom 0.5s 710ms ease both);
+    }
 
-      &__stories {
-        @include animation(slideFromRight 0.5s 1s ease both);
-      }
+    &__stories {
+      @include animation(slideFromRight 0.5s 1s ease both);
     }
   }
 
-  /*&.slide--hide-previous {
+  &.slide--hide-previous {
     .summary {
       &__img-wrap {
         @include seq-animation(slideToLeft, 1, ease-in);
@@ -38,5 +36,25 @@
         @include seq-animation(slideToLeft, 4, ease-in);
       }
     }
-  }*/
+  }
+
+  &.slide--show-previous {
+    .summary {
+      &__img-wrap {
+        @include seq-animation(slideFromLeft, 1.5, ease, 4, 800ms);
+      }
+
+      &__specs {
+        @include seq-animation(slideFromLeft, 2, ease, 4, 800ms);
+      }
+
+      &__heading {
+        @include seq-animation(slideFromLeft, 3, ease, 4, 800ms);
+      }
+
+      &__stories {
+        @include seq-animation(slideFromLeft, 4, ease, 4, 800ms);
+      }
+    }
+  }
 }

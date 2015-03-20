@@ -18,7 +18,7 @@ $slide-padding: 24px;
     visibility: visible;
   }
 
-  &--show-previous {
+  /*&--show-previous {
     @include animation(slideFromLeft 0.5s 10ms ease-in-out both);
   }
 
@@ -32,7 +32,7 @@ $slide-padding: 24px;
 
   &--hide-next {
     @include animation(slideToRight 0.5s 10ms ease-in-out both);
-  }
+  }*/
 
   &__heading {
     overflow: hidden;

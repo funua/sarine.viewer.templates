@@ -123,85 +123,85 @@ h3 {
 
 @-moz-keyframes slideFromLeft {
   0% {
-    -moz-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-540px, 0, 0);
+    transform: translate3d(-540px, 0, 0);
   }
 }
 @-webkit-keyframes slideFromLeft {
   0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-540px, 0, 0);
+    transform: translate3d(-540px, 0, 0);
   }
 }
 @keyframes slideFromLeft {
   0% {
-    -moz-transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate3d(-100%, 0, 0);
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-540px, 0, 0);
+    -ms-transform: translate3d(-540px, 0, 0);
+    -webkit-transform: translate3d(-540px, 0, 0);
+    transform: translate3d(-540px, 0, 0);
   }
 }
 @-moz-keyframes slideFromRight {
   0% {
     opacity: 0;
-    -moz-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(540px, 0, 0);
+    transform: translate3d(540px, 0, 0);
   }
 }
 @-webkit-keyframes slideFromRight {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(540px, 0, 0);
+    transform: translate3d(540px, 0, 0);
   }
 }
 @keyframes slideFromRight {
   0% {
     opacity: 0;
-    -moz-transform: translate3d(100%, 0, 0);
-    -ms-transform: translate3d(100%, 0, 0);
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(540px, 0, 0);
+    -ms-transform: translate3d(540px, 0, 0);
+    -webkit-transform: translate3d(540px, 0, 0);
+    transform: translate3d(540px, 0, 0);
   }
 }
 @-moz-keyframes slideToLeft {
   100% {
-    -moz-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-540px, 0, 0);
+    transform: translate3d(-540px, 0, 0);
   }
 }
 @-webkit-keyframes slideToLeft {
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-540px, 0, 0);
+    transform: translate3d(-540px, 0, 0);
   }
 }
 @keyframes slideToLeft {
   100% {
-    -moz-transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate3d(-100%, 0, 0);
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-540px, 0, 0);
+    -ms-transform: translate3d(-540px, 0, 0);
+    -webkit-transform: translate3d(-540px, 0, 0);
+    transform: translate3d(-540px, 0, 0);
   }
 }
 @-moz-keyframes slideToRight {
   100% {
-    -moz-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(540px, 0, 0);
+    transform: translate3d(540px, 0, 0);
   }
 }
 @-webkit-keyframes slideToRight {
   100% {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(540px, 0, 0);
+    transform: translate3d(540px, 0, 0);
   }
 }
 @keyframes slideToRight {
   100% {
-    -moz-transform: translate3d(100%, 0, 0);
-    -ms-transform: translate3d(100%, 0, 0);
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(540px, 0, 0);
+    -ms-transform: translate3d(540px, 0, 0);
+    -webkit-transform: translate3d(540px, 0, 0);
+    transform: translate3d(540px, 0, 0);
   }
 }
 @-moz-keyframes slideFromBottom {
@@ -313,6 +313,21 @@ h3 {
   top: 0;
   left: 0;
   width: 100%;
+  /*&--show-previous {
+    @include animation(slideFromLeft 0.5s 10ms ease-in-out both);
+  }
+
+  &--show-next {
+    @include animation(slideFromRight 0.5s 10ms ease-in-out both);
+  }
+
+  &--hide-previous {
+    @include animation(slideToLeft 0.5s 10ms ease-in-out both);
+  }
+
+  &--hide-next {
+    @include animation(slideToRight 0.5s 10ms ease-in-out both);
+  }*/
 }
 /* line 12, ../sass/partials/_slide.scss */
 .slide--current {
@@ -322,30 +337,6 @@ h3 {
 /* line 17, ../sass/partials/_slide.scss */
 .slide--hide-previous, .slide--hide-next {
   visibility: visible;
-}
-/* line 21, ../sass/partials/_slide.scss */
-.slide--show-previous {
-  -moz-animation: slideFromLeft 0.5s 10ms ease-in-out both;
-  -webkit-animation: slideFromLeft 0.5s 10ms ease-in-out both;
-  animation: slideFromLeft 0.5s 10ms ease-in-out both;
-}
-/* line 25, ../sass/partials/_slide.scss */
-.slide--show-next {
-  -moz-animation: slideFromRight 0.5s 10ms ease-in-out both;
-  -webkit-animation: slideFromRight 0.5s 10ms ease-in-out both;
-  animation: slideFromRight 0.5s 10ms ease-in-out both;
-}
-/* line 29, ../sass/partials/_slide.scss */
-.slide--hide-previous {
-  -moz-animation: slideToLeft 0.5s 10ms ease-in-out both;
-  -webkit-animation: slideToLeft 0.5s 10ms ease-in-out both;
-  animation: slideToLeft 0.5s 10ms ease-in-out both;
-}
-/* line 33, ../sass/partials/_slide.scss */
-.slide--hide-next {
-  -moz-animation: slideToRight 0.5s 10ms ease-in-out both;
-  -webkit-animation: slideToRight 0.5s 10ms ease-in-out both;
-  animation: slideToRight 0.5s 10ms ease-in-out both;
 }
 /* line 37, ../sass/partials/_slide.scss */
 .slide__heading {
@@ -727,84 +718,187 @@ h3 {
   height: 200px;
 }
 
-/* line 1, ../sass/partials/transitions/_summary.scss */
-.slide--summary {
-  /*&.slide--hide-previous {
-    .summary {
-      &__img-wrap {
-        @include seq-animation(slideToLeft, 1, ease-in);
-      }
-
-      &__specs {
-        @include seq-animation(slideToLeft, 2, ease-in);
-      }
-
-      &__heading {
-        @include seq-animation(slideToLeft, 3, ease-in);
-      }
-
-      &__stories {
-        @include seq-animation(slideToLeft, 4, ease-in);
-      }
-    }
-  }*/
+/* line 3, ../sass/partials/transitions/_common.scss */
+.slide--hide-previous {
+  -moz-animation: slideToLeft 105ms 385ms ease-in both;
+  -webkit-animation: slideToLeft 105ms 385ms ease-in both;
+  animation: slideToLeft 105ms 385ms ease-in both;
 }
-/* line 5, ../sass/partials/transitions/_summary.scss */
-.slide--summary.slide--current .summary__img {
+/* line 6, ../sass/partials/transitions/_common.scss */
+.slide--hide-previous .slide__heading {
+  -moz-animation: slideToLeft 355ms 135ms ease-in both;
+  -webkit-animation: slideToLeft 355ms 135ms ease-in both;
+  animation: slideToLeft 355ms 135ms ease-in both;
+}
+/* line 10, ../sass/partials/transitions/_common.scss */
+.slide--hide-previous .slide__img-wrap {
+  -moz-animation: slideToLeft 230ms 260ms ease-in both;
+  -webkit-animation: slideToLeft 230ms 260ms ease-in both;
+  animation: slideToLeft 230ms 260ms ease-in both;
+}
+/* line 14, ../sass/partials/transitions/_common.scss */
+.slide--hide-previous .slide__caption {
+  -moz-animation: slideToLeft 105ms 385ms ease-in both;
+  -webkit-animation: slideToLeft 105ms 385ms ease-in both;
+  animation: slideToLeft 105ms 385ms ease-in both;
+}
+/* line 22, ../sass/partials/transitions/_common.scss */
+.slide--show-next .slide__heading {
+  -moz-animation: slideFromRight 580ms 210ms ease both;
+  -webkit-animation: slideFromRight 580ms 210ms ease both;
+  animation: slideFromRight 580ms 210ms ease both;
+}
+/* line 26, ../sass/partials/transitions/_common.scss */
+.slide--show-next .slide__img-wrap {
+  -moz-animation: slideFromRight 380ms 410ms ease both;
+  -webkit-animation: slideFromRight 380ms 410ms ease both;
+  animation: slideFromRight 380ms 410ms ease both;
+}
+/* line 30, ../sass/partials/transitions/_common.scss */
+.slide--show-next .slide__caption {
+  -moz-animation: slideFromRight 180ms 610ms ease both;
+  -webkit-animation: slideFromRight 180ms 610ms ease both;
+  animation: slideFromRight 180ms 610ms ease both;
+}
+/* line 38, ../sass/partials/transitions/_common.scss */
+.slide--show-previous .slide__heading {
+  -moz-animation: slideFromLeft 580ms 210ms ease both;
+  -webkit-animation: slideFromLeft 580ms 210ms ease both;
+  animation: slideFromLeft 580ms 210ms ease both;
+}
+/* line 42, ../sass/partials/transitions/_common.scss */
+.slide--show-previous .slide__img-wrap {
+  -moz-animation: slideFromLeft 380ms 410ms ease both;
+  -webkit-animation: slideFromLeft 380ms 410ms ease both;
+  animation: slideFromLeft 380ms 410ms ease both;
+}
+/* line 46, ../sass/partials/transitions/_common.scss */
+.slide--show-previous .slide__caption {
+  -moz-animation: slideFromLeft 180ms 610ms ease both;
+  -webkit-animation: slideFromLeft 180ms 610ms ease both;
+  animation: slideFromLeft 180ms 610ms ease both;
+}
+/* line 51, ../sass/partials/transitions/_common.scss */
+.slide--hide-next {
+  -moz-animation: slideToRight 105ms 385ms ease-in both;
+  -webkit-animation: slideToRight 105ms 385ms ease-in both;
+  animation: slideToRight 105ms 385ms ease-in both;
+}
+/* line 54, ../sass/partials/transitions/_common.scss */
+.slide--hide-next .slide__heading {
+  -moz-animation: slideToRight 355ms 135ms ease-in both;
+  -webkit-animation: slideToRight 355ms 135ms ease-in both;
+  animation: slideToRight 355ms 135ms ease-in both;
+}
+/* line 58, ../sass/partials/transitions/_common.scss */
+.slide--hide-next .slide__img-wrap {
+  -moz-animation: slideToRight 230ms 260ms ease-in both;
+  -webkit-animation: slideToRight 230ms 260ms ease-in both;
+  animation: slideToRight 230ms 260ms ease-in both;
+}
+/* line 62, ../sass/partials/transitions/_common.scss */
+.slide--hide-next .slide__caption {
+  -moz-animation: slideToRight 105ms 385ms ease-in both;
+  -webkit-animation: slideToRight 105ms 385ms ease-in both;
+  animation: slideToRight 105ms 385ms ease-in both;
+}
+
+/* line 4, ../sass/partials/transitions/_summary.scss */
+.slide--summary .summary__img {
   -moz-animation: slideFromBottom 0.5s 10ms ease both;
   -webkit-animation: slideFromBottom 0.5s 10ms ease both;
   animation: slideFromBottom 0.5s 10ms ease both;
 }
-/* line 9, ../sass/partials/transitions/_summary.scss */
-.slide--summary.slide--current .summary__specs {
+/* line 8, ../sass/partials/transitions/_summary.scss */
+.slide--summary .summary__specs {
   -moz-animation: slideFromBottom 0.5s 310ms ease both;
   -webkit-animation: slideFromBottom 0.5s 310ms ease both;
   animation: slideFromBottom 0.5s 310ms ease both;
 }
-/* line 13, ../sass/partials/transitions/_summary.scss */
-.slide--summary.slide--current .summary__heading {
+/* line 12, ../sass/partials/transitions/_summary.scss */
+.slide--summary .summary__heading {
   -moz-animation: slideFromBottom 0.5s 710ms ease both;
   -webkit-animation: slideFromBottom 0.5s 710ms ease both;
   animation: slideFromBottom 0.5s 710ms ease both;
 }
-/* line 17, ../sass/partials/transitions/_summary.scss */
-.slide--summary.slide--current .summary__stories {
+/* line 16, ../sass/partials/transitions/_summary.scss */
+.slide--summary .summary__stories {
   -moz-animation: slideFromRight 0.5s 1s ease both;
   -webkit-animation: slideFromRight 0.5s 1s ease both;
   animation: slideFromRight 0.5s 1s ease both;
 }
+/* line 23, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--hide-previous .summary__img-wrap {
+  -moz-animation: slideToLeft 480ms 10ms ease-in both;
+  -webkit-animation: slideToLeft 480ms 10ms ease-in both;
+  animation: slideToLeft 480ms 10ms ease-in both;
+}
+/* line 27, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--hide-previous .summary__specs {
+  -moz-animation: slideToLeft 355ms 135ms ease-in both;
+  -webkit-animation: slideToLeft 355ms 135ms ease-in both;
+  animation: slideToLeft 355ms 135ms ease-in both;
+}
+/* line 31, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--hide-previous .summary__heading {
+  -moz-animation: slideToLeft 230ms 260ms ease-in both;
+  -webkit-animation: slideToLeft 230ms 260ms ease-in both;
+  animation: slideToLeft 230ms 260ms ease-in both;
+}
+/* line 35, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--hide-previous .summary__stories {
+  -moz-animation: slideToLeft 105ms 385ms ease-in both;
+  -webkit-animation: slideToLeft 105ms 385ms ease-in both;
+  animation: slideToLeft 105ms 385ms ease-in both;
+}
+/* line 43, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--show-previous .summary__img-wrap {
+  -moz-animation: slideFromLeft 680ms 110ms ease both;
+  -webkit-animation: slideFromLeft 680ms 110ms ease both;
+  animation: slideFromLeft 680ms 110ms ease both;
+}
+/* line 47, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--show-previous .summary__specs {
+  -moz-animation: slideFromLeft 580ms 210ms ease both;
+  -webkit-animation: slideFromLeft 580ms 210ms ease both;
+  animation: slideFromLeft 580ms 210ms ease both;
+}
+/* line 51, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--show-previous .summary__heading {
+  -moz-animation: slideFromLeft 380ms 410ms ease both;
+  -webkit-animation: slideFromLeft 380ms 410ms ease both;
+  animation: slideFromLeft 380ms 410ms ease both;
+}
+/* line 55, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--show-previous .summary__stories {
+  -moz-animation: slideFromLeft 180ms 610ms ease both;
+  -webkit-animation: slideFromLeft 180ms 610ms ease both;
+  animation: slideFromLeft 180ms 610ms ease both;
+}
 
-/*.slide--light {
-
-  &.slide--show-next {
-
-    .slide__heading {
-      @include seq-animation(slideFromRight, 2, ease, 4, 800ms);
-    }
-
-    .slide__img-wrap {
-      @include seq-animation(slideFromRight, 3, ease, 4, 800ms);
-    }
-
-    .specs {
-      @include seq-animation(slideFromRight, 4, ease, 4, 800ms);
-    }
-  }
-
-  &.slide--hide-previous {
-
-    .slide__heading {
-      @include seq-animation(slideToLeft, 2, ease-in);
-    }
-
-    .slide__img-wrap {
-      @include seq-animation(slideToLeft, 3, ease-in);
-    }
-
-    .specs {
-      @include seq-animation(slideToLeft, 4, ease-in);
-    }
-  }
-}*/
+/* line 5, ../sass/partials/transitions/_light.scss */
+.slide--light.slide--show-next .specs {
+  -moz-animation: slideFromRight 180ms 610ms ease both;
+  -webkit-animation: slideFromRight 180ms 610ms ease both;
+  animation: slideFromRight 180ms 610ms ease both;
+}
+/* line 12, ../sass/partials/transitions/_light.scss */
+.slide--light.slide--show-previous .specs {
+  -moz-animation: slideFromLeft 180ms 610ms ease both;
+  -webkit-animation: slideFromLeft 180ms 610ms ease both;
+  animation: slideFromLeft 180ms 610ms ease both;
+}
+/* line 19, ../sass/partials/transitions/_light.scss */
+.slide--light.slide--hide-previous .specs {
+  -moz-animation: slideToLeft 105ms 385ms ease-in both;
+  -webkit-animation: slideToLeft 105ms 385ms ease-in both;
+  animation: slideToLeft 105ms 385ms ease-in both;
+}
+/* line 26, ../sass/partials/transitions/_light.scss */
+.slide--light.slide--hide-next .specs {
+  -moz-animation: slideToRight 105ms 385ms ease-in both;
+  -webkit-animation: slideToRight 105ms 385ms ease-in both;
+  animation: slideToRight 105ms 385ms ease-in both;
+}
 
 /*# sourceMappingURL=main.css.map */

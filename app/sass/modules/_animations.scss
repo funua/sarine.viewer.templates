@@ -3,26 +3,26 @@
 
 @include keyframes(slideFromLeft) {
   0% {
-    @include transform(translate3d(-100%, 0, 0));
+    @include transform(translate3d(-540px, 0, 0));
   }
 }
 
 @include keyframes(slideFromRight) {
   0% {
     opacity: 0;
-    @include transform(translate3d(100%, 0, 0));
+    @include transform(translate3d(540px, 0, 0));
   }
 }
 
 @include keyframes(slideToLeft) {
   100% {
-    @include transform(translate3d(-100%, 0, 0));
+    @include transform(translate3d(-540px, 0, 0));
   }
 }
 
 @include keyframes(slideToRight) {
   100% {
-    @include transform(translate3d(100%, 0, 0));
+    @include transform(translate3d(540px, 0, 0));
   }
 }
 
@@ -45,10 +45,16 @@ $animation-default-timing-function: ease;
   $animation-name, $step,
   $timing-function : $animation-default-timing-function,
   $total-steps : $animation-default-steps-count,
-  $total-duration : $animation-default-duration) {
+  $total-duration : $animation-default-duration,
+  $after-all : false,
+  $fill-mode : both) {
 
   $delay: (($total-duration * (($step - 1) / $total-steps)) + $animation-default-delay);
   $duration: ($total-duration - $delay - $animation-default-delay);
 
-  @include animation($animation-name $duration $delay $timing-function both);
+  @if $after-all == true {
+    $delay: $total-duration + $animation-default-delay;
+  }
+
+  @include animation($animation-name $duration $delay $timing-function $fill-mode);
 }
