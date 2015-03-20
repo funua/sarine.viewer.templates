@@ -1,0 +1,810 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700");
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../sass/base/_reset.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Utopia Std";
+  src: url('../fonts/UtopiaStd-Regular_0.eot?1424738568');
+  src: url('../fonts/UtopiaStd-Regular_0.eot?&1424738568#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Regular_0.woff?1424738568') format('woff'), url('../fonts/UtopiaStd-Regular_0.ttf?1424738568') format('truetype'), url('../fonts/UtopiaStd-Regular_0.svg?1424738568') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Utopia Std";
+  src: url('../fonts/UtopiaStd-Italic_0.eot?1424738568');
+  src: url('../fonts/UtopiaStd-Italic_0.eot?&1424738568#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Italic_0.woff?1424738568') format('woff'), url('../fonts/UtopiaStd-Italic_0.ttf?1424738568') format('truetype'), url('../fonts/UtopiaStd-Italic_0.svg?1424738568') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Utopia Std";
+  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?1424738568');
+  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?&1424738568#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-SemiboldIt_0.woff?1424738568') format('woff'), url('../fonts/UtopiaStd-SemiboldIt_0.ttf?1424738568') format('truetype'), url('../fonts/UtopiaStd-SemiboldIt_0.svg?1424738568') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 27, ../sass/base/_typography.scss */
+html {
+  font: 1em "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+}
+
+/* line 31, ../sass/base/_typography.scss */
+h1 {
+  font: italic 2em "Utopia Std", "Garamond", "Georgia", serif;
+  line-height: 48px;
+  text-align: center;
+  color: #010101;
+}
+
+/* line 38, ../sass/base/_typography.scss */
+h2 {
+  font: italic 1.5em "Utopia Std", "Garamond", "Georgia", serif;
+  line-height: 36px;
+  text-align: center;
+  color: #413f41;
+}
+
+/* line 45, ../sass/base/_typography.scss */
+h3 {
+  font: italic 600 1.5em "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+  line-height: 36px;
+  text-align: center;
+  color: #04228a;
+}
+
+@-moz-keyframes slideFromLeft {
+  0% {
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@-webkit-keyframes slideFromLeft {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@-moz-keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@-webkit-keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@-moz-keyframes slideToLeft {
+  100% {
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@-webkit-keyframes slideToLeft {
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes slideToLeft {
+  100% {
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@-moz-keyframes slideToRight {
+  100% {
+    -moz-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@-webkit-keyframes slideToRight {
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes slideToRight {
+  100% {
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@-moz-keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 200px, 0);
+    transform: translate3d(0, 200px, 0);
+  }
+}
+@-webkit-keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 200px, 0);
+    transform: translate3d(0, 200px, 0);
+  }
+}
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 200px, 0);
+    -ms-transform: translate3d(0, 200px, 0);
+    -webkit-transform: translate3d(0, 200px, 0);
+    transform: translate3d(0, 200px, 0);
+  }
+}
+@-moz-keyframes loupeBackground {}
+@-webkit-keyframes loupeBackground {}
+/* line 9, ../sass/partials/_slider.scss */
+.slider-wrap {
+  overflow: hidden;
+  max-width: 570px;
+  height: 720px;
+  padding: 3px;
+  margin: 20px auto;
+  border: 2px solid #e5e5e5;
+}
+/* line 17, ../sass/partials/_slider.scss */
+.slider-wrap--hide {
+  display: none;
+}
+
+/* line 22, ../sass/partials/_slider.scss */
+.slider {
+  position: relative;
+  height: 100%;
+  padding: 24px 0;
+  -moz-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  -webkit-transition: background-color 0.5s ease-in;
+  transition: background-color 0.5s ease-in;
+}
+/* line 29, ../sass/partials/_slider.scss */
+.slider__list {
+  position: relative;
+}
+/* line 33, ../sass/partials/_slider.scss */
+.slider__btn {
+  position: absolute;
+  top: 320px;
+}
+/* line 37, ../sass/partials/_slider.scss */
+.slider__btn[disabled] {
+  display: none;
+}
+/* line 41, ../sass/partials/_slider.scss */
+.slider__btn--previous {
+  left: 24px;
+}
+/* line 45, ../sass/partials/_slider.scss */
+.slider__btn--next {
+  right: 24px;
+}
+/* line 50, ../sass/partials/_slider.scss */
+.slider__heading {
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+/* line 56, ../sass/partials/_slider.scss */
+.slider__header {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 24px 0 24px;
+}
+/* line 65, ../sass/partials/_slider.scss */
+.slider__header--show {
+  display: block;
+  -moz-animation: slideFromRight 0.5s 10ms ease-in-out both;
+  -webkit-animation: slideFromRight 0.5s 10ms ease-in-out both;
+  animation: slideFromRight 0.5s 10ms ease-in-out both;
+}
+/* line 70, ../sass/partials/_slider.scss */
+.slider__header--hide {
+  display: block;
+  -moz-animation: slideToRight 0.5s 10ms ease-in-out both;
+  -webkit-animation: slideToRight 0.5s 10ms ease-in-out both;
+  animation: slideToRight 0.5s 10ms ease-in-out both;
+}
+
+/* line 4, ../sass/partials/_slide.scss */
+.slide {
+  visibility: hidden;
+  position: absolute;
+  padding: 152px 24px 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* line 12, ../sass/partials/_slide.scss */
+.slide--current {
+  visibility: visible;
+  position: static;
+}
+/* line 17, ../sass/partials/_slide.scss */
+.slide--hide-previous, .slide--hide-next {
+  visibility: visible;
+}
+/* line 21, ../sass/partials/_slide.scss */
+.slide--show-previous {
+  -moz-animation: slideFromLeft 0.5s 10ms ease-in-out both;
+  -webkit-animation: slideFromLeft 0.5s 10ms ease-in-out both;
+  animation: slideFromLeft 0.5s 10ms ease-in-out both;
+}
+/* line 25, ../sass/partials/_slide.scss */
+.slide--show-next {
+  -moz-animation: slideFromRight 0.5s 10ms ease-in-out both;
+  -webkit-animation: slideFromRight 0.5s 10ms ease-in-out both;
+  animation: slideFromRight 0.5s 10ms ease-in-out both;
+}
+/* line 29, ../sass/partials/_slide.scss */
+.slide--hide-previous {
+  -moz-animation: slideToLeft 0.5s 10ms ease-in-out both;
+  -webkit-animation: slideToLeft 0.5s 10ms ease-in-out both;
+  animation: slideToLeft 0.5s 10ms ease-in-out both;
+}
+/* line 33, ../sass/partials/_slide.scss */
+.slide--hide-next {
+  -moz-animation: slideToRight 0.5s 10ms ease-in-out both;
+  -webkit-animation: slideToRight 0.5s 10ms ease-in-out both;
+  animation: slideToRight 0.5s 10ms ease-in-out both;
+}
+/* line 37, ../sass/partials/_slide.scss */
+.slide__heading {
+  overflow: hidden;
+  height: 36px;
+  margin-bottom: 10px;
+}
+/* line 43, ../sass/partials/_slide.scss */
+.slide__content {
+  padding: 0 48px;
+}
+/* line 47, ../sass/partials/_slide.scss */
+.slide__img-wrap {
+  overflow: hidden;
+}
+/* line 51, ../sass/partials/_slide.scss */
+.slide__img {
+  width: 190px;
+  height: 190px;
+  background: url("http://placehold.it/190x190");
+}
+/* line 57, ../sass/partials/_slide.scss */
+.slide__caption {
+  color: #535353;
+  line-height: 1.5;
+}
+
+/* line 9, ../sass/partials/_storyline.scss */
+.storyline {
+  position: relative;
+  height: 64px;
+  margin-bottom: 20px;
+}
+/* line 14, ../sass/partials/_storyline.scss */
+.storyline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: #ddd;
+}
+/* line 24, ../sass/partials/_storyline.scss */
+.storyline__item {
+  position: relative;
+  float: left;
+  width: 20%;
+  padding-top: 12px;
+  text-align: center;
+  font: 1.125em "Utopia Std", "Garamond", "Georgia", serif;
+}
+/* line 32, ../sass/partials/_storyline.scss */
+.storyline__item:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  background-color: #ddd;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  -webkit-transition: background-color 0.5s ease-in;
+  transition: background-color 0.5s ease-in;
+}
+/* line 45, ../sass/partials/_storyline.scss */
+.storyline__item--active:before {
+  background-color: #032289;
+}
+
+/* line 9, ../sass/partials/_specs-table.scss */
+.specs {
+  padding-top: 40px;
+}
+/* line 12, ../sass/partials/_specs-table.scss */
+.specs__row {
+  position: relative;
+  height: 33px;
+}
+/* line 16, ../sass/partials/_specs-table.scss */
+.specs__row--line:before {
+  content: '';
+  position: absolute;
+  left: 16%;
+  top: 50%;
+  right: 0;
+  height: 1px;
+  background-color: #e3e3e3;
+}
+/* line 26, ../sass/partials/_specs-table.scss */
+.specs__row--foot {
+  margin-top: 5px;
+}
+/* line 31, ../sass/partials/_specs-table.scss */
+.specs__item {
+  float: left;
+  width: 21%;
+  height: 33px;
+  line-height: 33px;
+}
+/* line 37, ../sass/partials/_specs-table.scss */
+.specs__item--value {
+  width: 16%;
+  font-size: 0.75em;
+  color: #9c9b9a;
+}
+/* line 43, ../sass/partials/_specs-table.scss */
+.specs__item--foot {
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  color: #04218a;
+  border-top: 1px solid #7d7d7d;
+}
+/* line 51, ../sass/partials/_specs-table.scss */
+.specs__item--points-wrap {
+  position: relative;
+}
+/* line 56, ../sass/partials/_specs-table.scss */
+.specs__points {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  bottom: 5.5px;
+  width: 12px;
+  margin-left: -10px;
+}
+/* line 64, ../sass/partials/_specs-table.scss */
+.specs__points:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 12px;
+  height: 154px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC41Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.5)));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+/* line 75, ../sass/partials/_specs-table.scss */
+.specs__points--minimum {
+  height: 22px;
+}
+/* line 79, ../sass/partials/_specs-table.scss */
+.specs__points--standard {
+  height: 66px;
+}
+/* line 83, ../sass/partials/_specs-table.scss */
+.specs__points--high {
+  height: 88px;
+}
+/* line 87, ../sass/partials/_specs-table.scss */
+.specs__points--very-high {
+  height: 132px;
+}
+/* line 91, ../sass/partials/_specs-table.scss */
+.specs__points--exceptional {
+  height: 154px;
+}
+/* line 96, ../sass/partials/_specs-table.scss */
+.specs__point {
+  position: relative;
+  height: 22px;
+  margin: 0 auto;
+}
+/* line 101, ../sass/partials/_specs-table.scss */
+.specs__point:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background-color: #3d54a8;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 3, ../sass/partials/slides/_summary.scss */
+.slider--summary {
+  background-color: #e3e3e3;
+}
+
+/* line 7, ../sass/partials/slides/_summary.scss */
+.slide--summary {
+  padding-top: 0;
+}
+
+/* line 13, ../sass/partials/slides/_summary.scss */
+.summary__img-wrap {
+  padding: 80px 0 60px;
+}
+/* line 17, ../sass/partials/slides/_summary.scss */
+.summary__img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+/* line 24, ../sass/partials/slides/_summary.scss */
+.summary__specs-row {
+  height: 28px;
+  font-size: 0.875em;
+  text-align: center;
+}
+/* line 30, ../sass/partials/slides/_summary.scss */
+.summary__spec {
+  display: inline-block;
+  padding: 0 10px;
+}
+/* line 34, ../sass/partials/slides/_summary.scss */
+.summary__spec__title {
+  font-weight: 300;
+  color: #818181;
+}
+/* line 39, ../sass/partials/slides/_summary.scss */
+.summary__spec__value {
+  font-weight: 600;
+}
+/* line 44, ../sass/partials/slides/_summary.scss */
+.summary__story-wrap {
+  padding-top: 80px;
+}
+/* line 48, ../sass/partials/slides/_summary.scss */
+.summary__heading {
+  margin-bottom: 20px;
+}
+/* line 52, ../sass/partials/slides/_summary.scss */
+.summary__stories {
+  height: 110px;
+}
+/* line 56, ../sass/partials/slides/_summary.scss */
+.summary__story {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  font: italic bold 1.125em "Utopia Std", "Garamond", "Georgia", serif;
+  color: #04218a;
+}
+/* line 65, ../sass/partials/slides/_summary.scss */
+.summary__story:before {
+  content: '';
+  display: block;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 10px;
+  background: url("http://placehold.it/55&text=55");
+}
+/* line 74, ../sass/partials/slides/_summary.scss */
+.summary__story:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 20px;
+  width: 1px;
+  background-color: #d8d3d6;
+}
+/* line 84, ../sass/partials/slides/_summary.scss */
+.summary__story:last-child:after {
+  display: none;
+}
+
+/* line 1, ../sass/partials/slides/_light.scss */
+.slide__img--light {
+  float: left;
+}
+
+/* line 5, ../sass/partials/slides/_light.scss */
+.total-grade {
+  overflow: hidden;
+  margin-top: 60px;
+  text-align: center;
+}
+/* line 10, ../sass/partials/slides/_light.scss */
+.total-grade__title {
+  color: #413f41;
+  font: italic 1.25em "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+  line-height: 32px;
+}
+/* line 16, ../sass/partials/slides/_light.scss */
+.total-grade__grade {
+  color: #04218a;
+  font: italic 2em "Utopia Std", "Garamond", "Georgia", serif;
+  line-height: 32px;
+}
+/* line 22, ../sass/partials/slides/_light.scss */
+.total-grade__stars-wrap {
+  position: relative;
+}
+/* line 25, ../sass/partials/slides/_light.scss */
+.total-grade__stars-wrap:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  display: block;
+  left: 15%;
+  top: 50%;
+  height: 2px;
+  width: 70%;
+  margin-top: -1px;
+  background-color: #a5a5a5;
+}
+/* line 39, ../sass/partials/slides/_light.scss */
+.total-grade__stars {
+  display: inline;
+  padding: 0 8px;
+  background-color: #fff;
+  color: #04218a;
+  font: 1em "Utopia Std", "Garamond", "Georgia", serif;
+  word-spacing: 3px;
+}
+
+/* line 3, ../sass/partials/slides/_loupe.scss */
+.slider--loupe {
+  background-color: #e3e3e3;
+}
+
+/* line 7, ../sass/partials/slides/_loupe.scss */
+.slide__img-wrap--loupe {
+  padding: 30px 0 96px;
+  text-align: center;
+}
+
+/* line 12, ../sass/partials/slides/_loupe.scss */
+.slide__img--loupe {
+  width: 220px;
+  height: 220px;
+}
+
+/* line 3, ../sass/partials/slides/_hna.scss */
+.slide__img-wrap--hna {
+  height: 320px;
+}
+
+/* line 7, ../sass/partials/slides/_hna.scss */
+.hna {
+  float: left;
+  width: 190px;
+}
+/* line 11, ../sass/partials/slides/_hna.scss */
+.hna__img {
+  display: block;
+  width: 190px;
+  height: 190px;
+}
+/* line 17, ../sass/partials/slides/_hna.scss */
+.hna__caption {
+  padding-top: 20px;
+}
+/* line 21, ../sass/partials/slides/_hna.scss */
+.hna--arrows {
+  float: right;
+}
+
+/* line 1, ../sass/partials/slides/_cut.scss */
+.slide__img-wrap--cut {
+  height: 320px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* line 7, ../sass/partials/slides/_cut.scss */
+.slide__img--cut {
+  width: auto;
+  height: 200px;
+}
+
+/* line 1, ../sass/partials/transitions/_summary.scss */
+.slide--summary {
+  /*&.slide--hide-previous {
+    .summary {
+      &__img-wrap {
+        @include seq-animation(slideToLeft, 1, ease-in);
+      }
+
+      &__specs {
+        @include seq-animation(slideToLeft, 2, ease-in);
+      }
+
+      &__heading {
+        @include seq-animation(slideToLeft, 3, ease-in);
+      }
+
+      &__stories {
+        @include seq-animation(slideToLeft, 4, ease-in);
+      }
+    }
+  }*/
+}
+/* line 5, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--current .summary__img {
+  -moz-animation: slideFromBottom 0.5s 10ms ease both;
+  -webkit-animation: slideFromBottom 0.5s 10ms ease both;
+  animation: slideFromBottom 0.5s 10ms ease both;
+}
+/* line 9, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--current .summary__specs {
+  -moz-animation: slideFromBottom 0.5s 310ms ease both;
+  -webkit-animation: slideFromBottom 0.5s 310ms ease both;
+  animation: slideFromBottom 0.5s 310ms ease both;
+}
+/* line 13, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--current .summary__heading {
+  -moz-animation: slideFromBottom 0.5s 710ms ease both;
+  -webkit-animation: slideFromBottom 0.5s 710ms ease both;
+  animation: slideFromBottom 0.5s 710ms ease both;
+}
+/* line 17, ../sass/partials/transitions/_summary.scss */
+.slide--summary.slide--current .summary__stories {
+  -moz-animation: slideFromRight 0.5s 1s ease both;
+  -webkit-animation: slideFromRight 0.5s 1s ease both;
+  animation: slideFromRight 0.5s 1s ease both;
+}
+
+/*.slide--light {
+
+  &.slide--show-next {
+
+    .slide__heading {
+      @include seq-animation(slideFromRight, 2, ease, 4, 800ms);
+    }
+
+    .slide__img-wrap {
+      @include seq-animation(slideFromRight, 3, ease, 4, 800ms);
+    }
+
+    .specs {
+      @include seq-animation(slideFromRight, 4, ease, 4, 800ms);
+    }
+  }
+
+  &.slide--hide-previous {
+
+    .slide__heading {
+      @include seq-animation(slideToLeft, 2, ease-in);
+    }
+
+    .slide__img-wrap {
+      @include seq-animation(slideToLeft, 3, ease-in);
+    }
+
+    .specs {
+      @include seq-animation(slideToLeft, 4, ease-in);
+    }
+  }
+}*/
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,48 @@
+.slide__img--light {
+  float: left;
+}
+
+.total-grade {
+  overflow: hidden;
+  margin-top: 60px;
+  text-align: center;
+
+  &__title {
+    color: #413f41;
+    font: italic 1.25em $font-family-sans-serif;
+    line-height: 32px;
+  }
+
+  &__grade {
+    color: #04218a;
+    font: italic 2em $font-family-serif;
+    line-height: 32px;
+  }
+
+  &__stars-wrap {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      display: block;
+      left: 15%;
+      top: 50%;
+      height: 2px;
+      width: 70%;
+      margin-top: -1px;
+      background-color: #a5a5a5;
+    }
+  }
+
+  &__stars {
+    display: inline;
+    padding: 0 8px;
+    background-color: #fff;
+    color: #04218a;
+    font: 1em $font-family-serif;
+    word-spacing: 3px;
+  }
+}
+

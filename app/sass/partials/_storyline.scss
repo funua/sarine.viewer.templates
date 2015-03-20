@@ -1,0 +1,49 @@
+@import 'compass/css3';
+
+$storyline-height: 64px;
+$storyline-point-disabled-color: #ddd;
+$storyline-point-active-color: #032289;
+$storyline-point-size: 8px;
+$storyline-line-height: 2px;
+
+.storyline {
+  position: relative;
+  height: $storyline-height;
+  margin-bottom: 20px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: $storyline-line-height;
+    background-color: $storyline-point-disabled-color;
+  }
+
+  &__item {
+    position: relative;
+    float: left;
+    width: 20%;
+    padding-top: 12px;
+    text-align: center;
+    font: 1.125em $font-family-serif;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -($storyline-point-size / 2 - $storyline-line-height / 2);
+      left: 50%;
+      width: $storyline-point-size;
+      height: $storyline-point-size;
+      margin-left: -($storyline-point-size / 2);
+      background-color: $storyline-point-disabled-color;
+      @include transform(rotate(45deg));
+      @include transition(background-color 0.5s ease-in);
+    }
+
+    &--active:before {
+      background-color: $storyline-point-active-color;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+$specs-item-height: 33px;
+$specs-first-col-width: 16%;
+$specs-point-size: 6px;
+$specs-points-wrap-width: 20px;
+
+$specs-point-height: 2 * $specs-item-height / 3;
+$specs-col-width: ((100% - $specs-first-col-width) / 4);
+
+.specs {
+  padding-top: 40px;
+
+  &__row {
+    position: relative;
+    height: $specs-item-height;
+    
+    &--line:before {
+      content: '';
+      position: absolute;
+      left: $specs-first-col-width;
+      top: 50%;
+      right: 0;
+      height: 1px;
+      background-color: #e3e3e3;
+    }
+    
+    &--foot {
+      margin-top: 5px;
+    }
+  }
+  
+  &__item {
+    float: left;
+    width: $specs-col-width;
+    height: $specs-item-height;
+    line-height: $specs-item-height;
+    
+    &--value {
+      width: $specs-first-col-width;
+      font-size: 0.75em;
+      color: #9c9b9a;
+    }
+    
+    &--foot {
+      text-align: center;
+      font-style: italic;
+      font-weight: 600;
+      color: #04218a;
+      border-top: 1px solid #7d7d7d;
+    }
+    
+    &--points-wrap {
+      position: relative;
+    }
+  }
+  
+  &__points {
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    bottom: $specs-item-height / 6;
+    width: $specs-point-size * 2;
+    margin-left: (-$specs-points-wrap-width / 2);
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: $specs-point-size * 2;
+      height: $specs-point-height * 7;
+
+      @include background(linear-gradient(to bottom, rgba(#fff, 0) 0%, rgba(#fff, 0.5) 100%));
+    }
+
+    &--minimum {
+      height: $specs-point-height;
+    }
+
+    &--standard {
+      height: $specs-point-height * 3;
+    }
+
+    &--high {
+      height: $specs-point-height * 4;
+    }
+
+    &--very-high {
+      height: $specs-point-height * 6;
+    }
+
+    &--exceptional {
+      height: $specs-point-height * 7;
+    }
+  }
+  
+  &__point {
+    position: relative;
+    height: $specs-point-height;
+    margin: 0 auto;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: $specs-point-size;
+      height: $specs-point-size;
+      margin: (-$specs-point-size / 2) 0 0 (-$specs-point-size / 2);
+      background-color: #3d54a8;
+
+      @include transform(rotate(45deg));
+    }
+  }
+}

@@ -1,0 +1,24 @@
+$hna-image-width: 190px;
+
+.slide__img-wrap--hna {
+  height: 320px;
+}
+
+.hna {
+  float: left;
+  width: $hna-image-width;
+
+  &__img {
+    display: block;
+    width: $hna-image-width;
+    height: $hna-image-width;
+  }
+
+  &__caption {
+    padding-top: 20px;
+  }
+
+  &--arrows {
+    float: right;
+  }
+}

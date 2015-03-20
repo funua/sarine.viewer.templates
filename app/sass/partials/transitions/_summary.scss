@@ -1,0 +1,42 @@
+.slide--summary {
+
+  &.slide--current {
+    .summary {
+      &__img {
+        @include animation(slideFromBottom 0.5s 10ms ease both);
+      }
+
+      &__specs {
+        @include animation(slideFromBottom 0.5s 310ms ease both);
+      }
+
+      &__heading {
+        @include animation(slideFromBottom 0.5s 710ms ease both);
+      }
+
+      &__stories {
+        @include animation(slideFromRight 0.5s 1s ease both);
+      }
+    }
+  }
+
+  /*&.slide--hide-previous {
+    .summary {
+      &__img-wrap {
+        @include seq-animation(slideToLeft, 1, ease-in);
+      }
+
+      &__specs {
+        @include seq-animation(slideToLeft, 2, ease-in);
+      }
+
+      &__heading {
+        @include seq-animation(slideToLeft, 3, ease-in);
+      }
+
+      &__stories {
+        @include seq-animation(slideToLeft, 4, ease-in);
+      }
+    }
+  }*/
+}
