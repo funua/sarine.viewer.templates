@@ -1,0 +1,36 @@
+@import 'compass/css3';
+
+$preloader-dot-size: 16px;
+$preloader-anim-duration: 500ms;
+
+.preloader {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 300px;
+  text-align: center;
+  background-color: #fff;
+
+  &__heading {
+    color: #04218a;
+  }
+
+  &__dot {
+    display: inline-block;
+    background-color: #04218a;
+    width: $preloader-dot-size;
+    height: $preloader-dot-size;
+    padding: 0 4px;
+    @include border-radius(50%);
+    @include animation(preloader $preloader-anim-duration ease-out infinite alternate);
+
+    @for $i-index from 1 through 3 {
+      &:nth-child(#{$i-index}) {
+        @include animation-delay((1 - $i-index) * ($preloader-anim-duration / 3));
+      }
+    }
+  }
+}

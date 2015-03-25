@@ -1,0 +1,34 @@
+@import 'compass/css3';
+
+$footer-padding: 32px;
+
+.footer {
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  width: 100%;
+  padding: 0 $footer-padding;
+
+  &__disclaimer {
+    float: left;
+    color: #c2c2c2;
+    font-weight: 600;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+
+    &:hover, &:active {
+      color: #222;
+    }
+  }
+
+  &__powered {
+    float: right;
+    color: #c2c2c2;
+    font-size: 0.65em;
+
+    &:hover, &:active {
+      color: #222;
+    }
+  }
+}

@@ -1,7 +1,31 @@
 @import 'compass/css3';
 
 .slider--loupe {
-  background-color: #e3e3e3;
+  background-color: #898989;
+
+  .slider__heading {
+    color: #fff;
+  }
+
+  .slide {
+    &__heading {
+      color: #fff;
+    }
+  }
+
+  .storyline__item {
+    color: #ddd;
+  }
+
+  .slider__btn {
+    &:before, &:after {
+      background-color: #eee;
+    }
+  }
+
+  .storyline__item--active {
+    color: #fff;
+  }
 }
 
 .slide__img-wrap--loupe {

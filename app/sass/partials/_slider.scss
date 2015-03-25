@@ -7,6 +7,7 @@ $slider-heading-line-height: 48px;
 $slider-heading-bottom-margin: 20px;
 
 .slider-wrap {
+  position: relative;
   overflow: hidden;
   max-width: $slider-max-width;
   height: $slider-height;
@@ -23,27 +24,91 @@ $slider-heading-bottom-margin: 20px;
   position: relative;
   height: 100%;
   padding: $slider-padding 0;
-
   @include transition(background-color 0.5s ease-in);
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 300px;
+    @include background-image(
+      linear-gradient(
+        to top,
+        #fff 0%,
+        #fff 200px,
+        rgba(#fff, 0) 300px
+      )
+    );
+    @include transition(background-position 0.5s ease-in);
+  }
 
   &__list {
     position: relative;
   }
 
   &__btn {
+    overflow: hidden;
     position: absolute;
-    top: 320px;
+    top: 300px;
+    font-size: 24px;
+    width: 24px;
+    height: 48px;
 
     &[disabled] {
       display: none;
     }
 
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 1px;
+      background-color: #403e40;
+      @include transition(background-color 0.5s ease-in);
+    }
+
     &--previous {
       left: $slider-padding;
+
+      &:before, &:after {
+        right: 0;
+        @include transform-origin(100%, 0);
+      }
+
+      &:before {
+        top: 0;
+        @include transform(rotate(-45deg));
+      }
+
+      &:after {
+        bottom: 0;
+        @include transform(rotate(45deg));
+      }
     }
 
     &--next {
       right: $slider-padding;
+
+      &:before, &:after {
+        left: 0;
+        @include transform-origin(0, 0);
+      }
+
+      &:before {
+        top: 0;
+        @include transform(rotate(45deg));
+      }
+
+      &:after {
+        bottom: 0;
+        @include transform(rotate(-45deg));
+      }
     }
   }
 
@@ -51,6 +116,8 @@ $slider-heading-bottom-margin: 20px;
     height: $slider-heading-line-height;
     line-height: $slider-heading-line-height;
     margin-bottom: $slider-heading-bottom-margin;
+
+    @include transition(color 0.5s ease-in);
   }
 
   &__header {

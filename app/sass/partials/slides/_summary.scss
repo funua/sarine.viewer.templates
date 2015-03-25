@@ -2,9 +2,18 @@
 
 .slider--summary {
   background-color: #e3e3e3;
+
+  &:before {
+    background-position: 0 0;
+  }
+
+  .slider__btn {
+    display: none;
+  }
 }
 
 .slide--summary {
+  height: 100%;
   padding-top: 0;
 }
 
@@ -61,6 +70,7 @@
     text-align: center;
     font: italic bold 1.125em $font-family-serif;
     color: #04218a;
+    cursor: pointer;
 
     &:before {
       content: '';

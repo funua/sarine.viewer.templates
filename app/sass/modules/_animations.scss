@@ -1,28 +1,27 @@
-@import 'compass/css3/animation';
-@import 'compass/css3/transform';
+@import 'compass/css3';
 
 @include keyframes(slideFromLeft) {
   0% {
-    @include transform(translate3d(-540px, 0, 0));
+    @include transform(translate3d(-600px, 0, 0));
   }
 }
 
 @include keyframes(slideFromRight) {
   0% {
     opacity: 0;
-    @include transform(translate3d(540px, 0, 0));
+    @include transform(translate3d(600px, 0, 0));
   }
 }
 
 @include keyframes(slideToLeft) {
   100% {
-    @include transform(translate3d(-540px, 0, 0));
+    @include transform(translate3d(-600px, 0, 0));
   }
 }
 
 @include keyframes(slideToRight) {
   100% {
-    @include transform(translate3d(540px, 0, 0));
+    @include transform(translate3d(600px, 0, 0));
   }
 }
 
@@ -33,7 +32,37 @@
   }
 }
 
-@include keyframes(loupeBackground) {
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+}
+
+@include keyframes(summaryBackground) {
+  0% {
+    background-position: 0 300px;
+  }
+}
+
+@include keyframes(openPopup) {
+  0% {
+    opacity: 0;
+    @include transform(translate3d(0, 100%, 0));
+  }
+}
+
+@include keyframes(closePopup) {
+  100% {
+    opacity: 0;
+    @include transform(translate3d(0, 100%, 0));
+  }
+}
+
+@include keyframes(preloader) {
+  100% {
+    opacity: 0.2;
+    @include transform(scale(0.4));
+  }
 }
 
 $animation-default-duration: 500ms;
@@ -46,15 +75,13 @@ $animation-default-timing-function: ease;
   $timing-function : $animation-default-timing-function,
   $total-steps : $animation-default-steps-count,
   $total-duration : $animation-default-duration,
-  $after-all : false,
+  $additional-delay : 0ms,
   $fill-mode : both) {
 
   $delay: (($total-duration * (($step - 1) / $total-steps)) + $animation-default-delay);
   $duration: ($total-duration - $delay - $animation-default-delay);
 
-  @if $after-all == true {
-    $delay: $total-duration + $animation-default-delay;
-  }
+  $delay: $delay + $additional-delay;
 
   @include animation($animation-name $duration $delay $timing-function $fill-mode);
 }

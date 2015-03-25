@@ -1,0 +1,35 @@
+@import 'compass/css3/font-face';
+
+@include font-face(
+  'Icons',
+  font-files('fontello.woff',
+    'fontello.ttf',
+    'fontello.svg'),
+  'fontello.eot', normal, normal);
+
+$icons: (
+  close: '\e802',
+  chevron-left: '\e800',
+  chevron-right: '\e801'
+);
+
+@mixin icon($position: before, $icon: false, $styles: true) {
+  @if $position == both {
+    $position: 'before, &:after';
+  }
+
+  &:#{$position} {
+    @if $icon {
+      content: '#{map-get($icons, $icon)}';
+    }
+
+    @if $styles {
+      font-style: normal;
+      font-weight: normal;
+      font-family: 'Icons';
+      line-height: 1;
+    }
+
+    @content;
+  }
+}

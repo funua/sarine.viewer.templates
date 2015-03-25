@@ -45,13 +45,36 @@ module.exports = function (grunt) {
     },
 
     cssmin: {
+      target: {
+        options: {
+          report: 'min',
+          roundingPrecision: -1
+        },
+        files: {
+          'app/css/main.min.css': 'app/css/main.css'
+        }
+      }
+    },
+
+    jshint: {
       options: {
-        aggressiveMerging: true,
-        roundingPrecision: -1
+        ignores: ['app/js/vendor/*.js', '**/*.min.js'],
+        devel: true,
+        browser: true
+      },
+      files: ['Gruntfile.js', 'app/js/**/*.js']
+    },
+
+    uglify: {
+      options: {
+        screwIE8: true
       },
       target: {
         files: {
-          'app/css/main.min.css': 'app/css/main.css'
+          'app/js/app.bundle.min.js': ['app/js/vendor/classie.js', 'app/js/vendor/fastclick.js',
+            'app/js/vendor/imagesloaded.pkgd.js',
+            'app/js/vendor/WallopSlider.js', 'app/js/PopupService.js',
+            'app/js/BulletNavigation.js', 'app/js/app.js']
         }
       }
     },
@@ -66,7 +89,11 @@ module.exports = function (grunt) {
           livereload: false
         },
         files: 'app/sass/**/*.scss',
-        tasks: ['compass:dev']
+        tasks: ['compass:dev', 'cssmin']
+      },
+      js: {
+        files: ['app/js/**/*.js', '!**/*.min.js'],
+        tasks: ['jshint', 'uglify']
       }
     }
   });

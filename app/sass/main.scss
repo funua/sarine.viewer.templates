@@ -1,5 +1,6 @@
 @import 'base/reset',
-        'base/typography';
+        'base/typography',
+        'base/icons';
 
 @import 'modules/animations';
 
@@ -7,6 +8,10 @@
         'partials/slide',
         'partials/storyline',
         'partials/specs-table',
+        'partials/popup',
+        'partials/q-mark',
+        'partials/preloader',
+        'partials/footer',
         'partials/slides/summary',
         'partials/slides/light',
         'partials/slides/loupe',

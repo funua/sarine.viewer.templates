@@ -18,26 +18,12 @@ $slide-padding: 24px;
     visibility: visible;
   }
 
-  /*&--show-previous {
-    @include animation(slideFromLeft 0.5s 10ms ease-in-out both);
-  }
-
-  &--show-next {
-    @include animation(slideFromRight 0.5s 10ms ease-in-out both);
-  }
-
-  &--hide-previous {
-    @include animation(slideToLeft 0.5s 10ms ease-in-out both);
-  }
-
-  &--hide-next {
-    @include animation(slideToRight 0.5s 10ms ease-in-out both);
-  }*/
-
   &__heading {
     overflow: hidden;
     height: $slide-heading-height;
     margin-bottom: 10px;
+
+    @include transition(color 0.5s ease-in);
   }
 
   &__content {

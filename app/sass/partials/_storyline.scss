@@ -28,6 +28,8 @@ $storyline-line-height: 2px;
     padding-top: 12px;
     text-align: center;
     font: 1.125em $font-family-serif;
+    cursor: pointer;
+    @include transition(color 0.5s ease-in);
 
     &:before {
       content: '';
@@ -42,8 +44,14 @@ $storyline-line-height: 2px;
       @include transition(background-color 0.5s ease-in);
     }
 
-    &--active:before {
-      background-color: $storyline-point-active-color;
+    &:hover:before {
+      background-color: lighten($storyline-point-active-color, 20%);
+    }
+
+    &--active {
+      &:before, &:hover:before {
+        background-color: $storyline-point-active-color;
+      }
     }
   }
 }
