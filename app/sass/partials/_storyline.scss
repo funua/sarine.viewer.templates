@@ -2,9 +2,9 @@
 
 $storyline-height: 64px;
 $storyline-point-disabled-color: #ddd;
-$storyline-point-active-color: #032289;
+$storyline-point-active-color: $theme-accent-color;
 $storyline-point-size: 8px;
-$storyline-line-height: 2px;
+$storyline-line-height: 1px;
 
 .storyline {
   position: relative;

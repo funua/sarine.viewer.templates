@@ -116,7 +116,7 @@
     // Check if it's a carousel and if so, change index to be last item when clicking previous on first item
     if (this.options.carousel && index === -1) {
       index = this.allItemsArrayLength - 1;
-    } else if (index > this.allItemsArrayLength || index < 0) { return; }
+    } else if (index > this.allItemsArrayLength || index < 0 || index === this.currentItemIndex) { return; }
 
 
     this.removeAllHelperSettings();

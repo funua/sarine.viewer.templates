@@ -69,7 +69,7 @@
     height: 100%;
     text-align: center;
     font: italic bold 1.125em $font-family-serif;
-    color: #04218a;
+    color: $theme-accent-color;
     cursor: pointer;
 
     &:before {
@@ -78,7 +78,8 @@
       width: 55px;
       height: 55px;
       margin: 0 auto 10px;
-      background: url('http://placehold.it/55&text=55');
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     &:after {
@@ -93,6 +94,22 @@
 
     &:last-child:after {
       display: none;
+    }
+
+    &--light:before {
+      background-image: url('../img/summary-light.png');
+    }
+
+    &--loupe:before {
+      background-image: url('../img/summary-loupe.png');
+    }
+
+    &--hna:before {
+      background-image: url('../img/summary-hna.png');
+    }
+
+    &--cut:before {
+      background-image: url('../img/summary-cut.png');
     }
   }
 }

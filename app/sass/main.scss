@@ -1,4 +1,5 @@
 @import 'base/reset',
+        'base/theme',
         'base/typography',
         'base/icons';
 
@@ -19,4 +20,5 @@
         'partials/slides/cut',
         'partials/transitions/common',
         'partials/transitions/summary',
-        'partials/transitions/light';
+        'partials/transitions/light',
+        'partials/sarine-viewer';

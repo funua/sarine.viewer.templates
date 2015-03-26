@@ -37,6 +37,11 @@ $popup-skew-angle: 9deg;
     @include transform-origin(0, 100%);
     @include transform(skewY($popup-skew-angle));
     @include backface-visibility(hidden);
+    @include transform-style(preserve-3d);
+  }
+
+  &--cut:before {
+    @include background-image(radial-gradient(350px bottom, #012467 25%, #000 80%));
   }
 
   &--open, &--close {

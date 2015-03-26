@@ -29,6 +29,15 @@ $footer-padding: 32px;
 
     &:hover, &:active {
       color: #222;
+
+      .footer__powered__logo {
+        opacity: 1;
+      }
+    }
+
+    &__logo {
+      opacity: 0.4;
+      vertical-align: middle;
     }
   }
 }

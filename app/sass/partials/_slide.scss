@@ -2,7 +2,7 @@ $slide-heading-height: 36px;
 $slide-padding: 24px;
 
 .slide {
-  visibility: hidden;
+  display: none;
   position: absolute;
   padding: 152px $slide-padding 0;
   top: 0;
@@ -10,12 +10,12 @@ $slide-padding: 24px;
   width: 100%;
 
   &--current {
-    visibility: visible;
+    display: block;
     position: static;
   }
 
   &--hide-previous, &--hide-next {
-    visibility: visible;
+    display: block;
   }
 
   &__heading {
@@ -37,7 +37,6 @@ $slide-padding: 24px;
   &__img {
     width: 190px;
     height: 190px;
-    background: url('http://placehold.it/190x190');
   }
 
   &__caption {

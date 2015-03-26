@@ -15,12 +15,12 @@ $preloader-anim-duration: 500ms;
   background-color: #fff;
 
   &__heading {
-    color: #04218a;
+    color: $theme-accent-color;
   }
 
   &__dot {
     display: inline-block;
-    background-color: #04218a;
+    background-color: $theme-accent-color;
     width: $preloader-dot-size;
     height: $preloader-dot-size;
     padding: 0 4px;

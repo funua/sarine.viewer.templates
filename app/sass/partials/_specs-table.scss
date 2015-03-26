@@ -2,7 +2,7 @@ $specs-item-height: 33px;
 $specs-first-col-width: 16%;
 $specs-point-size: 6px;
 $specs-points-wrap-width: 20px;
-$specs-point-color: #3d54a8;
+$specs-point-color: $theme-spec-point-color;
 
 $specs-point-height: 2 * $specs-item-height / 3;
 $specs-col-width: ((100% - $specs-first-col-width) / 4);
@@ -50,7 +50,7 @@ $specs-col-width: ((100% - $specs-first-col-width) / 4);
       text-align: center;
       font-style: italic;
       font-weight: 600;
-      color: #04218a;
+      color: $theme-accent-color;
       border-top: 1px solid #7d7d7d;
     }
 

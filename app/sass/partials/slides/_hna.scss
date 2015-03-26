@@ -4,6 +4,10 @@ $hna-image-width: 190px;
   height: 320px;
 }
 
+.slide__img--hna {
+  width: 100%;
+}
+
 .hna {
   float: left;
   width: $hna-image-width;
@@ -15,7 +19,7 @@ $hna-image-width: 190px;
   }
 
   &__caption {
-    padding-top: 20px;
+    margin-top: 20px;
   }
 
   &--arrows {
