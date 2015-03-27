@@ -10,6 +10,10 @@
     @include align-items(center);
   }
 
+  &.loupe3DFullInspection {
+    cursor: move;
+  }
+
   &.cutHeartsAndArrows {
 
     canvas.Arrows {
@@ -32,6 +36,6 @@
 .loupe3DFullInspection .viewport #main-image,
 .inspect-stone.large .viewport,
 .loupe3DFullInspection .inspect-stone {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }

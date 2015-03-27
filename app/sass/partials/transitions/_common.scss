@@ -8,6 +8,10 @@ $slide-transition-show-duration: 800ms;
   &--hide-previous {
     @include seq-animation(slideToLeft, 4, $slide-transition-hide-function);
 
+    &:before {
+      opacity: 0;
+    }
+
     .slide__heading {
       @include seq-animation(slideToLeft, 2, $slide-transition-hide-function);
     }
@@ -25,6 +29,10 @@ $slide-transition-show-duration: 800ms;
   &--hide-next {
     @include seq-animation(slideToRight, 4, $slide-transition-hide-function);
 
+    &:before {
+      opacity: 0;
+    }
+
     .slide__heading {
       @include seq-animation(slideToRight, 2, $slide-transition-hide-function);
     }
@@ -41,6 +49,10 @@ $slide-transition-show-duration: 800ms;
 
   &--show-next {
 
+    &:before {
+      @include animation(fadeIn 0.5s ease-in 10ms backwards);
+    }
+
     .slide__heading {
       @include seq-animation(slideFromRight, 2, $slide-transition-show-function, 4, $slide-transition-show-duration);
     }
@@ -56,6 +68,10 @@ $slide-transition-show-duration: 800ms;
 
 
   &--show-previous {
+
+    &:before {
+      @include animation(fadeIn 0.5s ease-in 10ms backwards);
+    }
 
     .slide__heading {
       @include seq-animation(slideFromLeft, 2, $slide-transition-show-function, 4, $slide-transition-show-duration);

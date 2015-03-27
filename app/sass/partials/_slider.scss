@@ -1,9 +1,9 @@
 @import 'compass/css3';
 
-$slider-max-width: 570px;
-$slider-height: 720px;
+$slider-max-width: 500px;
+$slider-height: 640px;
 $slider-padding: 24px;
-$slider-heading-line-height: 48px;
+$slider-heading-line-height: 36px;
 $slider-heading-bottom-margin: 20px;
 
 .slider-wrap {
@@ -11,7 +11,6 @@ $slider-heading-bottom-margin: 20px;
   overflow: hidden;
   max-width: $slider-max-width;
   height: $slider-height;
-  padding: 3px;
   margin: 20px auto;
   border: 2px solid #e5e5e5;
 
@@ -23,7 +22,8 @@ $slider-heading-bottom-margin: 20px;
 .slider {
   position: relative;
   height: 100%;
-  padding: $slider-padding 0;
+  padding: 20px 0;
+  border: 3px solid rgba(#fff, 0);
   @include transition(background-color 0.5s ease-in);
 
   &:before {
@@ -54,7 +54,7 @@ $slider-heading-bottom-margin: 20px;
   &__btn {
     overflow: hidden;
     position: absolute;
-    top: 290px;
+    top: 260px;
     font-size: 24px;
     width: 24px;
     height: 48px;

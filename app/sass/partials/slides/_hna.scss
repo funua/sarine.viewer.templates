@@ -1,7 +1,13 @@
-$hna-image-width: 190px;
+$hna-image-width: 150px;
+
+.slide--hna {
+  &:before {
+    background-image: url('../img/bg-hna.png');
+  }
+}
 
 .slide__img-wrap--hna {
-  height: 320px;
+  height: 260px;
 }
 
 .slide__img--hna {
@@ -19,7 +25,8 @@ $hna-image-width: 190px;
   }
 
   &__caption {
-    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 24px;
   }
 
   &--arrows {

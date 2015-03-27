@@ -1,21 +1,20 @@
 @import 'compass/css3';
 
-$footer-padding: 32px;
+$footer-padding: 40px;
 
 .footer {
   z-index: 3;
   position: absolute;
   left: 0;
-  bottom: 16px;
+  bottom: 20px;
   width: 100%;
   padding: 0 $footer-padding;
 
   &__disclaimer {
     float: left;
-    color: #c2c2c2;
+    color: #c0c0c0;
     font-weight: 600;
-    font-size: 0.75em;
-    letter-spacing: 1px;
+    font-size: 12px;
 
     &:hover, &:active {
       color: #222;
@@ -24,8 +23,8 @@ $footer-padding: 32px;
 
   &__powered {
     float: right;
-    color: #c2c2c2;
-    font-size: 0.65em;
+    color: #c0c0c0;
+    font-size: 9px;
 
     &:hover, &:active {
       color: #222;

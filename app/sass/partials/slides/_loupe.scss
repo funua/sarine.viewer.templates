@@ -30,25 +30,38 @@
   }
 }
 
+.slide--loupe {
+  &:before {
+    background-image: url('../img/bg-loupe.png');
+    top: -50px;
+    @include background-size(200px);
+    opacity: 0.1;
+  }
+}
+
 .slide__content--loupe {
   text-align: center;
 }
 
 .slide__img-wrap--loupe {
-  padding: 0 0 24px;
+  padding-bottom: 20px;
 }
 
 .slide__img--loupe {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin: 0 auto;
+}
+
+.slide__caption--loupe {
+  text-align: center;
 }
 
 .buttons {
   display: inline-block;
   height: 75px;
   border-color: rgba(#fff, 0.25);
-  border-width: 2px 0 2px 0;
+  border-width: 1px 0 1px;
   border-style: solid;
 
   li {
@@ -142,8 +155,9 @@
 }
 
 .stone_number {
-  padding-top: 24px;
+  padding-top: 38px;
+  text-align: center;
   color: #d2d2d2;
   font-weight: 300;
-  font-size: 0.9em;
+  font-size: 12px;
 }

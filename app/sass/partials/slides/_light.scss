@@ -1,21 +1,25 @@
+.slide__img-wrap--light {
+  padding-left: 24px;
+}
+
 .slide__img--light {
   float: left;
 }
 
 .total-grade {
   overflow: hidden;
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
 
   &__title {
     color: #413f41;
-    font: italic 1.25em $font-family-sans-serif;
-    line-height: 32px;
+    font: italic 18px $font-family-sans-serif;
+    line-height: 24px;
   }
 
   &__grade {
     color: $theme-accent-color;
-    font: italic 2em $font-family-serif;
+    font: italic 30px $font-family-serif;
     line-height: 32px;
   }
 
@@ -29,7 +33,7 @@
       display: block;
       left: 15%;
       top: 50%;
-      height: 2px;
+      height: 1px;
       width: 70%;
       margin-top: -1px;
       background-color: #a5a5a5;
@@ -41,7 +45,7 @@
     padding: 0 8px;
     background-color: #fff;
     color: $theme-accent-color;
-    font: 1em $font-family-serif;
+    font: 16px $font-family-serif;
     word-spacing: 3px;
   }
 }

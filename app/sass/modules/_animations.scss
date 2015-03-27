@@ -38,6 +38,12 @@
   }
 }
 
+@include keyframes(fadeOut) {
+  100% {
+    opacity: 0;
+  }
+}
+
 @include keyframes(summaryBackground) {
   0% {
     background-position: 0 300px;

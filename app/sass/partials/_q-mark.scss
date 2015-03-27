@@ -1,10 +1,10 @@
-$q-mark-big-size: 18px;
-$q-mark-small-size: 16px;
-$q-mark-big-font-size: 14px;
-$q-mark-small-font-size: 12px;
+$q-mark-big-size: 16px;
+$q-mark-small-size: 14px;
+$q-mark-big-font-size: 12px;
+$q-mark-small-font-size: 10px;
 $q-mark-color: $theme-accent-color;
-$q-mark-background-color: #eee;
-$q-mark-border-color: #ddd;
+$q-mark-background-color: #ededed;
+$q-mark-border-color: #dfdfdf;
 
 .q-mark {
   position: relative;
@@ -28,6 +28,7 @@ $q-mark-border-color: #ddd;
   &--small {
     width: $q-mark-small-size;
     height: $q-mark-small-size;
+    margin: 0 2px;
     line-height: $q-mark-small-size;
     font-size: $q-mark-small-font-size;
   }

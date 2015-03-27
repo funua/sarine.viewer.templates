@@ -60,7 +60,7 @@ $popup-skew-angle: 9deg;
 .popup {
   position: relative;
   height: 100%;
-  padding: 90px 54px 36px;
+  padding: 80px 54px 36px;
 
   &--cut {
     padding-bottom: 186px;
@@ -68,8 +68,9 @@ $popup-skew-angle: 9deg;
   }
 
   &__heading {
+    font-size: 28px;
     color: #fff;
-    margin: 20px auto 5px;
+    margin: 16px auto;
   }
 
   &__caption {
@@ -125,7 +126,7 @@ $popup-skew-angle: 9deg;
   &__close-btn {
     position: absolute;
     right: 0;
-    top: 90px;
+    top: 80px;
     width: 54px;
     height: 54px;
     color: #fff;

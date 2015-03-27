@@ -25,26 +25,26 @@ $font-family-sans-serif: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
 $font-family-serif: 'Utopia Std', 'Garamond', 'Georgia', serif;
 
 html {
-  font: 1em $font-family-sans-serif;
+  font: 14px $font-family-sans-serif;
 }
 
 h1 {
-  font: italic 2em $font-family-serif;
-  line-height: 48px;
+  font: italic 30px $font-family-serif;
+  line-height: 36px;
   text-align: center;
   color: #010101;
 }
 
 h2 {
-  font: italic 1.5em $font-family-serif;
-  line-height: 36px;
+  font: italic 20px $font-family-serif;
+  line-height: 28px;
   text-align: center;
   color: #413f41;
 }
 
 h3 {
-  font: italic 600 1.5em $font-family-sans-serif;
-  line-height: 36px;
+  font: italic 600 20px $font-family-sans-serif;
+  line-height: 28px;
   text-align: center;
   color: $theme-accent-color;
 }

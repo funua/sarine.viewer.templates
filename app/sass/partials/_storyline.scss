@@ -1,7 +1,8 @@
 @import 'compass/css3';
 
-$storyline-height: 64px;
+$storyline-height: 54px;
 $storyline-point-disabled-color: #ddd;
+$storyline-text-disabled-color: #666;
 $storyline-point-active-color: $theme-accent-color;
 $storyline-point-size: 8px;
 $storyline-line-height: 1px;
@@ -9,7 +10,7 @@ $storyline-line-height: 1px;
 .storyline {
   position: relative;
   height: $storyline-height;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   &:before {
     content: '';
@@ -27,7 +28,8 @@ $storyline-line-height: 1px;
     width: 20%;
     padding-top: 12px;
     text-align: center;
-    font: 1.125em $font-family-serif;
+    font: 16px $font-family-serif;
+    color: $storyline-text-disabled-color;
     cursor: pointer;
     @include transition(color 0.5s ease-in);
 
@@ -44,11 +46,17 @@ $storyline-line-height: 1px;
       @include transition(background-color 0.5s ease-in);
     }
 
+    &:hover {
+      color: #000;
+    }
+
     &:hover:before {
       background-color: lighten($storyline-point-active-color, 20%);
     }
 
     &--active {
+      color: #000;
+
       &:before, &:hover:before {
         background-color: $storyline-point-active-color;
       }
