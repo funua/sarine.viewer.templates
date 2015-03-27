@@ -861,21 +861,66 @@ h3 {
   padding: 90px 54px 36px;
 }
 /* line 65, ../sass/partials/_popup.scss */
+.popup--cut {
+  padding-bottom: 186px;
+  background: url("../img/popup-cut.png") no-repeat center bottom;
+}
+/* line 70, ../sass/partials/_popup.scss */
 .popup__heading {
   color: #fff;
   margin: 20px auto 5px;
 }
-/* line 70, ../sass/partials/_popup.scss */
+/* line 75, ../sass/partials/_popup.scss */
 .popup__caption {
   color: #ccc;
   margin-bottom: 24px;
 }
-/* line 75, ../sass/partials/_popup.scss */
+/* line 80, ../sass/partials/_popup.scss */
 .popup__media {
+  position: relative;
   display: block;
   margin: 0 auto;
+  text-align: center;
 }
-/* line 80, ../sass/partials/_popup.scss */
+/* line 86, ../sass/partials/_popup.scss */
+.popup__media--video {
+  min-height: 180px;
+}
+/* line 90, ../sass/partials/_popup.scss */
+.popup__media__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+/* line 101, ../sass/partials/_popup.scss */
+.popup__media__play:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -7px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid #fff;
+}
+/* line 114, ../sass/partials/_popup.scss */
+.popup__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -90px 0 0 -135px;
+  height: 180px;
+  width: 270px;
+}
+/* line 125, ../sass/partials/_popup.scss */
 .popup__close-btn {
   position: absolute;
   right: 0;
@@ -893,7 +938,7 @@ h3 {
   font-family: 'Icons';
   line-height: 1;
 }
-/* line 91, ../sass/partials/_popup.scss */
+/* line 136, ../sass/partials/_popup.scss */
 .popup__close-btn:before {
   display: block;
 }
@@ -1674,6 +1719,16 @@ h3 {
 .viewer canvas {
   max-width: 100%;
   max-height: 100%;
+}
+
+/* line 30, ../sass/partials/_sarine-viewer.scss */
+.loupe3DFullInspection,
+.loupe3DFullInspection .viewport,
+.loupe3DFullInspection .viewport #main-image,
+.inspect-stone.large .viewport,
+.loupe3DFullInspection .inspect-stone {
+  width: 300px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=main.css.map */

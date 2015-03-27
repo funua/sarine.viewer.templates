@@ -1,7 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<style type="text/css">[data-hidden]{display: none;}</style>
 <div class="slider-wrap">
-  <div class="slider slider--summary" data-hidden>
+  <div class="slider slider--summary" style="display:none">
     <header class="slider__header">
       <h1 class="slider__heading">Diamond Story</h1>
       <ul class="storyline">
@@ -272,7 +271,12 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Light Performance Results</h1>
       <p class="popup__caption">As light enters and exits a diamond, the rare allure of the unique gemstone is revealed. Light performance is the combined grading of the four light qualities that define the diamond's individual beauty: Brilliance, Sparkle, Fire and Symmetry.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
+      <div class="popup__media popup__media--video">
+        <video class="popup__video" id="video_light">
+          <source src="video/loup.mp4" type="video/mp4">
+        </video>
+        <button class="popup__media__play video-play" data-video-id="video_light"></button>
+      </div>
     </div>
   </div>
 
@@ -281,7 +285,12 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Brilliance</h1>
       <p class="popup__caption">The diamond's luster is determined by two components: brightness and contrast. Brightness refers to the intensity of light that radiates from the stone, and contrast is a result of alternating dark and light facets, which create an optical sensation of increased brilliance.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
+      <div class="popup__media popup__media--video">
+        <video class="popup__video" id="video_brilliance">
+          <source src="video/brillinace.mp4" type="video/mp4">
+        </video>
+        <button class="popup__media__play video-play" data-video-id="video_brilliance"></button>
+      </div>
     </div>
   </div>
 
@@ -290,7 +299,12 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Fire</h1>
       <p class="popup__caption">When light enters and exits the dense structure of the diamond, it refracts, or bends. This refraction radiates vivid flares of rainbow colors that are commonly described as the diamond's 'fire'. Diamonds with intense fire are appreciated for their fascinating play of color and beauty at different angles.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
+      <div class="popup__media popup__media--video">
+        <video class="popup__video" id="video_fire">
+          <source src="video/fire.mp4" type="video/mp4">
+        </video>
+        <button class="popup__media__play video-play" data-video-id="video_fire"></button>
+      </div>
     </div>
   </div>
 
@@ -299,7 +313,12 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Sparkle</h1>
       <p class="popup__caption">As a diamond moves, the play of light inside the stone creates dramatic, luminous flashes that are ever changing in their beauty. The diamond's sparkle reflects the quality of the cut, a direct result of the skill and craftsmanship of the professional diamond cutter.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
+      <div class="popup__media popup__media--video">
+        <video class="popup__video" id="video_sparkle">
+          <source src="video/sparkle.mp4" type="video/mp4">
+        </video>
+        <button class="popup__media__play video-play" data-video-id="video_sparkle"></button>
+      </div>
     </div>
   </div>
 
@@ -308,7 +327,12 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Symmetry</h1>
       <p class="popup__caption">During the diamond's formation process, the stone may develop inclusions or blemishes. A well-cut diamond features optimal symmetry and proportions, in order to maximize light distribution and minimize the visual impact of the stone's natural defects.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
+      <div class="popup__media popup__media--video">
+        <video class="popup__video" id="video_symmetry">
+          <source src="video/symmetry.mp4" type="video/mp4">
+        </video>
+        <button class="popup__media__play video-play" data-video-id="video_symmetry"></button>
+      </div>
     </div>
   </div>
 
@@ -317,7 +341,12 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Sarine Loupe™ Imaging</h1>
       <p class="popup__caption">The Sarine Loupe knits together thousands of individual images to present a precise, instant picture of the actual diamond, viewable in 3D magnified form. The intuitive imaging function allows you to explore the diamond in virtual detail from every possible aspect, for a superb viewing experience.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
+      <div class="popup__media popup__media--video">
+        <video class="popup__video" id="video_loupe">
+          <source src="video/loup.mp4" type="video/mp4">
+        </video>
+        <button class="popup__media__play video-play" data-video-id="video_loupe"></button>
+      </div>
     </div>
   </div>
 
@@ -340,11 +369,10 @@
   </div>
 
   <div class="popup-wrap popup-wrap--cut" id="popup_cut_n_sym">
-    <div class="popup">
+    <div class="popup popup--cut">
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Cut and Symmetry Grading</h1>
       <p class="popup__caption">Cut grade is determined by the quality and beauty of the diamond's craftsmanship. In the hands of the professional cutter, the rough stone is transformed into a polished diamond featuring optimal proportion, symmetry and light refraction. The cut is the diamond's unique signature, reflecting its individual character and properties.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
     </div>
   </div>
 
@@ -353,7 +381,7 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Color</h1>
       <p class="popup__caption">Color is the measure of a diamond’s natural hue. The grading spectrum ranges from colorless to yellow. Colorless diamonds are rare, and are prized for their natural beauty and value.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
+      <!--<img class="popup__media" src="http://placehold.it/340x190">-->
     </div>
   </div>
 
@@ -362,7 +390,6 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Clarity</h1>
       <p class="popup__caption">Clarity is the measure of a diamond’s inclusions (defects), which occur naturally inside the stone or on the stone's surface. Flawless diamonds are considered the most desirable for their rare perfection.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
     </div>
   </div>
 
@@ -371,7 +398,6 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Cut</h1>
       <p class="popup__caption">Cut is the measure of a diamond’s beauty and craftsmanship. A diamond's cut grade is determined by its geometrical proportions and symmetry, which affect the play of light reflected in the diamond.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
     </div>
   </div>
 
@@ -380,7 +406,6 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Carat</h1>
       <p class="popup__caption">Carat is the measure of a diamond’s mass or weight. For the past century, the carat unit has been set at a standard 200 milligrams. Diamonds are often measured in increments of 1/4 carat.</p>
-      <img class="popup__media" src="http://placehold.it/340x190">
     </div>
   </div>
 </div>

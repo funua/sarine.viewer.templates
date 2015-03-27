@@ -1,4 +1,4 @@
-(function (window, document, $, FastClick, classie, WallopSlider, PopupService, BulletNavigation) {
+(function (window, document, $, FastClick, classie, WallopSlider, PopupService, BulletNavigation, videoPlay) {
   $(function () {
     'use strict';
 
@@ -40,7 +40,8 @@
           4: 'very-high',
           5: 'exceptional'
         },
-        totalViewers = 4;
+        totalViewers = 4,
+        playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0);
 
     FastClick.attach(document.body);
 
@@ -64,12 +65,21 @@
       }
     });
 
+    $(document).on("full_init_end", function(event, data) {
+      console.log(data);
+      totalViewers--;
+      if (totalViewers <= 0) {
+        document.querySelector('.slider').style.display = '';
+        document.querySelector('.preloader').style.display = 'none';
+      }
+    });
+
     sarineInfos.forEach(function (element) {
       var field = element.getAttribute('data-sarine-info'),
           value = recurse(stone, field.split('.'));
 
       if (value === (void 0) || value === null) {
-        element.parentNode.setAttribute('data-hidden', true);
+        element.parentNode.style.display = 'none';
       }
     });
 
@@ -100,13 +110,8 @@
       });
     });
 
-    $(document).on("full_init_end", function(event, data) {
-      console.log(data);
-      totalViewers--;
-      if (totalViewers <= 0) {
-        document.querySelector('.slider').removeAttribute('data-hidden');
-        document.querySelector('.preloader').setAttribute('data-hidden', true);
-      }
+    playTriggers.forEach(function (element) {
+      videoPlay.initButton(element);
     });
 
     function recurse(o, props) {
@@ -137,4 +142,4 @@
       }
     }
   });
-})(window, window.document, window.jQuery, window.FastClick, window.classie, window.WallopSlider, window.PopupService, window.BulletNavigation);
+})(window, window.document, window.jQuery, window.FastClick, window.classie, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
