@@ -931,10 +931,14 @@ h3 {
   text-align: center;
 }
 /* line 87, ../sass/partials/_popup.scss */
+.popup__media--blank {
+  height: 190px;
+}
+/* line 91, ../sass/partials/_popup.scss */
 .popup__media--video {
   min-height: 180px;
 }
-/* line 91, ../sass/partials/_popup.scss */
+/* line 95, ../sass/partials/_popup.scss */
 .popup__media__play {
   position: absolute;
   top: 50%;
@@ -948,7 +952,7 @@ h3 {
   border-radius: 50%;
   border: 2px solid #fff;
 }
-/* line 102, ../sass/partials/_popup.scss */
+/* line 106, ../sass/partials/_popup.scss */
 .popup__media__play:after {
   content: '';
   position: absolute;
@@ -959,7 +963,7 @@ h3 {
   border-bottom: 12px solid transparent;
   border-left: 20px solid #fff;
 }
-/* line 115, ../sass/partials/_popup.scss */
+/* line 119, ../sass/partials/_popup.scss */
 .popup__video {
   position: absolute;
   top: 50%;
@@ -968,7 +972,7 @@ h3 {
   height: 180px;
   width: 270px;
 }
-/* line 126, ../sass/partials/_popup.scss */
+/* line 130, ../sass/partials/_popup.scss */
 .popup__close-btn {
   position: absolute;
   right: 0;
@@ -986,7 +990,7 @@ h3 {
   font-family: 'Icons';
   line-height: 1;
 }
-/* line 137, ../sass/partials/_popup.scss */
+/* line 141, ../sass/partials/_popup.scss */
 .popup__close-btn:before {
   display: block;
 }

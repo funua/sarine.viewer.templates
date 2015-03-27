@@ -84,6 +84,10 @@ $popup-skew-angle: 9deg;
     margin: 0 auto;
     text-align: center;
 
+    &--blank {
+      height: 190px;
+    }
+
     &--video {
       min-height: 180px;
     }
