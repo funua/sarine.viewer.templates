@@ -85,8 +85,12 @@
     setTotalGrade();
 
     lightGrades.forEach(function (element) {
-      var grade = stone && stone.lightGrades && stone.lightGrades[element.getAttribute('data-light-grade')];
-      var value = grade && grade.value;
+      var grade = stone && stone.lightGrades && stone.lightGrades[element.getAttribute('data-light-grade')],
+          value = grade && grade.value;
+
+      /*if (value) {
+        classie.add(element, 'specs__points--value-' + Math.ceil(7 * value / 5));
+      }*/
 
       if (value && lightGradesMap[value]) {
         classie.add(element, 'specs__points--' + lightGradesMap[value]);
@@ -137,7 +141,7 @@
         totalGradeScales.some(function (item) {
           if (item.value === name) {
             displayVal = item['default-display'];
-            totalGrade.innerHTML = displayVal;
+            totalGrade.innerHTML = displayVal.split(' ')[0];
             totalGradeStars.innerHTML = new Array(parseInt(displayVal[displayVal.length - 1]) + 1).join('★');
             return true;
           }

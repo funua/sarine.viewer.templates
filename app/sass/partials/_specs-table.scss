@@ -68,6 +68,12 @@ $specs-col-width: ((100% - $specs-first-col-width) / 4);
     width: $specs-point-size * 2;
     margin-left: (-$specs-point-size);
 
+    @for $i-index from 1 through 7 {
+      &--value-#{$i-index} {
+        height: $specs-point-height * $i-index;
+      }
+    }
+
     &--minimum {
       height: $specs-point-height;
     }

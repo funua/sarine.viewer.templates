@@ -9,7 +9,7 @@ $slider-heading-bottom-margin: 20px;
 .slider-wrap {
   position: relative;
   overflow: hidden;
-  max-width: $slider-max-width;
+  width: $slider-max-width;
   height: $slider-height;
   margin: 20px auto;
   border: 2px solid #e5e5e5;
