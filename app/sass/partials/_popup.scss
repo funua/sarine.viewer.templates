@@ -61,6 +61,7 @@ $popup-skew-angle: 9deg;
   position: relative;
   height: 100%;
   padding: 80px 54px 36px;
+  @include backface-visibility(hidden);
 
   &--cut {
     padding-bottom: 186px;
@@ -85,7 +86,7 @@ $popup-skew-angle: 9deg;
     text-align: center;
 
     &--blank {
-      height: 190px;
+      height: 165px;
     }
 
     &--video {
@@ -137,9 +138,5 @@ $popup-skew-angle: 9deg;
     font-size: 40px;
 
     @include icon(before, close);
-
-    &:before {
-      display: block;
-    }
   }
 }

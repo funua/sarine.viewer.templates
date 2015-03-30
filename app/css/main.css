@@ -560,7 +560,6 @@ h3 {
 /* line 14, ../sass/partials/_slide.scss */
 .slide:before {
   content: '';
-  z-index: -1;
   position: absolute;
   right: -50px;
   top: -20px;
@@ -578,16 +577,16 @@ h3 {
   -webkit-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in;
 }
-/* line 29, ../sass/partials/_slide.scss */
+/* line 28, ../sass/partials/_slide.scss */
 .slide--current {
   display: block;
   position: relative;
 }
-/* line 34, ../sass/partials/_slide.scss */
+/* line 33, ../sass/partials/_slide.scss */
 .slide--hide-previous, .slide--hide-next {
   display: block;
 }
-/* line 38, ../sass/partials/_slide.scss */
+/* line 37, ../sass/partials/_slide.scss */
 .slide__heading {
   overflow: hidden;
   height: 28px;
@@ -597,20 +596,20 @@ h3 {
   -webkit-transition: color 0.5s ease-in;
   transition: color 0.5s ease-in;
 }
-/* line 46, ../sass/partials/_slide.scss */
+/* line 45, ../sass/partials/_slide.scss */
 .slide__content {
   padding: 0 48px;
 }
-/* line 50, ../sass/partials/_slide.scss */
+/* line 49, ../sass/partials/_slide.scss */
 .slide__img-wrap {
   overflow: hidden;
 }
-/* line 54, ../sass/partials/_slide.scss */
+/* line 53, ../sass/partials/_slide.scss */
 .slide__img {
   width: 150px;
   height: 150px;
 }
-/* line 59, ../sass/partials/_slide.scss */
+/* line 58, ../sass/partials/_slide.scss */
 .slide__caption {
   color: #535353;
   line-height: 1.5;
@@ -906,39 +905,42 @@ h3 {
   position: relative;
   height: 100%;
   padding: 80px 54px 36px;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
-/* line 65, ../sass/partials/_popup.scss */
+/* line 66, ../sass/partials/_popup.scss */
 .popup--cut {
   padding-bottom: 186px;
   background: url("../img/popup-cut.png") no-repeat center bottom;
 }
-/* line 70, ../sass/partials/_popup.scss */
+/* line 71, ../sass/partials/_popup.scss */
 .popup__heading {
   font-size: 28px;
   color: #fff;
   margin: 16px auto;
 }
-/* line 76, ../sass/partials/_popup.scss */
+/* line 77, ../sass/partials/_popup.scss */
 .popup__caption {
   color: #ccc;
   margin-bottom: 24px;
 }
-/* line 81, ../sass/partials/_popup.scss */
+/* line 82, ../sass/partials/_popup.scss */
 .popup__media {
   position: relative;
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-/* line 87, ../sass/partials/_popup.scss */
+/* line 88, ../sass/partials/_popup.scss */
 .popup__media--blank {
-  height: 190px;
+  height: 165px;
 }
-/* line 91, ../sass/partials/_popup.scss */
+/* line 92, ../sass/partials/_popup.scss */
 .popup__media--video {
   min-height: 180px;
 }
-/* line 95, ../sass/partials/_popup.scss */
+/* line 96, ../sass/partials/_popup.scss */
 .popup__media__play {
   position: absolute;
   top: 50%;
@@ -952,7 +954,7 @@ h3 {
   border-radius: 50%;
   border: 2px solid #fff;
 }
-/* line 106, ../sass/partials/_popup.scss */
+/* line 107, ../sass/partials/_popup.scss */
 .popup__media__play:after {
   content: '';
   position: absolute;
@@ -963,7 +965,7 @@ h3 {
   border-bottom: 12px solid transparent;
   border-left: 20px solid #fff;
 }
-/* line 119, ../sass/partials/_popup.scss */
+/* line 120, ../sass/partials/_popup.scss */
 .popup__video {
   position: absolute;
   top: 50%;
@@ -972,7 +974,7 @@ h3 {
   height: 180px;
   width: 270px;
 }
-/* line 130, ../sass/partials/_popup.scss */
+/* line 131, ../sass/partials/_popup.scss */
 .popup__close-btn {
   position: absolute;
   right: 0;
@@ -989,10 +991,6 @@ h3 {
   font-weight: normal;
   font-family: 'Icons';
   line-height: 1;
-}
-/* line 141, ../sass/partials/_popup.scss */
-.popup__close-btn:before {
-  display: block;
 }
 
 /* line 9, ../sass/partials/_q-mark.scss */
@@ -1789,14 +1787,14 @@ h3 {
   animation: fadeIn 780ms 1510ms ease both;
 }
 
-/* line 5, ../sass/partials/transitions/_loupe.scss */
-.slide--loupe.slide--hide-previous, .slide--loupe.slide--hide-next {
+/* line 6, ../sass/partials/transitions/_loupe.scss */
+.slide--loupe.slide--hide-previous .stone_number, .slide--loupe.slide--hide-next .stone_number {
   -moz-animation: fadeOut 105ms 385ms ease-in both;
   -webkit-animation: fadeOut 105ms 385ms ease-in both;
   animation: fadeOut 105ms 385ms ease-in both;
 }
-/* line 9, ../sass/partials/transitions/_loupe.scss */
-.slide--loupe.slide--show-previous, .slide--loupe.slide--show-next {
+/* line 12, ../sass/partials/transitions/_loupe.scss */
+.slide--loupe.slide--show-previous .stone_number, .slide--loupe.slide--show-next .stone_number {
   -moz-animation: fadeIn 105ms 385ms ease-in both;
   -webkit-animation: fadeIn 105ms 385ms ease-in both;
   animation: fadeIn 105ms 385ms ease-in both;
@@ -1830,27 +1828,37 @@ h3 {
   cursor: move;
 }
 /* line 19, ../sass/partials/_sarine-viewer.scss */
+.viewer.cutHeartsAndArrows canvas {
+  width: 150px;
+}
+/* line 23, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas.Arrows {
   float: right;
 }
-/* line 23, ../sass/partials/_sarine-viewer.scss */
+/* line 27, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas.Hearts {
   float: left;
 }
-/* line 28, ../sass/partials/_sarine-viewer.scss */
+/* line 32, ../sass/partials/_sarine-viewer.scss */
 .viewer canvas {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 34, ../sass/partials/_sarine-viewer.scss */
+/* line 38, ../sass/partials/_sarine-viewer.scss */
 .loupe3DFullInspection,
 .loupe3DFullInspection .viewport,
 .loupe3DFullInspection .viewport #main-image,
 .inspect-stone.large .viewport,
 .loupe3DFullInspection .inspect-stone {
-  width: 250px;
-  height: 250px;
+  width: 250px !important;
+  height: 250px !important;
+}
+
+/* line 47, ../sass/partials/_sarine-viewer.scss */
+.loupe3DFullInspection .mglass_viewer {
+  width: 210px !important;
+  height: 210px !important;
 }
 
 /*# sourceMappingURL=main.css.map */

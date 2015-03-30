@@ -3,10 +3,14 @@
 .slide--loupe {
 
   &.slide--hide-previous, &.slide--hide-next {
-    @include seq-animation(fadeOut, 4, $slide-transition-hide-function);
+    .stone_number {
+      @include seq-animation(fadeOut, 4, $slide-transition-hide-function);
+    }
   }
 
   &.slide--show-previous, &.slide--show-next {
-    @include seq-animation(fadeIn, 4, $slide-transition-hide-function);
+    .stone_number {
+      @include seq-animation(fadeIn, 4, $slide-transition-hide-function);
+    }
   }
 }
