@@ -1,5 +1,11 @@
+<!-- HIDE CONTENT UNTIL MAIN.CSS IS LOADED -->
+<style type="text/css">
+  [data-hidden-until-load] {display:none;}
+</style>
+<!-- END -->
+
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<div class="slider-wrap">
+<div class="slider-wrap" data-hidden-until-load>
   <div class="slider slider--summary" style="display:none">
     <header class="slider__header">
       <h1 class="slider__heading">Diamond Story</h1>
@@ -78,7 +84,7 @@
               <div class="total-grade__title">Total Grade</div>
               <div class="total-grade__grade" data-total-grade></div>
               <div class="total-grade__stars-wrap">
-                <span class="total-grade__stars">★ ★</span>
+                <span class="total-grade__stars" data-total-grade-stars>★★</span>
               </div>
             </div>
           </div>
@@ -190,24 +196,12 @@
         <div class="slide__content slide__content--loupe">
           <div class="slide__img-wrap slide__img-wrap--loupe">
             <div class="slide__img slide__img--loupe">
-              <sarine-viewer viewer="loupe3DFullInspection" menu="false" coordinates="false"></sarine-viewer>
+              <sarine-viewer viewer="loupeTopInspection" order="3"></sarine-viewer>
             </div>
           </div>
-        </div>
-        <div class="slide__caption slide__caption--loupe">
-          <ul class="buttons">
-            <li class="icon top" data-button="top_view"></li>
-            <li class="icon side" data-button="middle_view"></li>
-            <li class="icon bottom" data-button="bottom_view"></li>
-            <li class="separator"></li>
-            <li class="icon focus_in"></li>
-            <li class="icon focus_out"></li>
-            <li class="separator"></li>
-            <li class="icon magnify" data-button="magnify"></li>
-          </ul>
-        </div>
-        <div class="stone_number">
-          <i class="stone_number_text xy"></i>
+          <p class="slide__caption">
+            Get to know the diamond as if you were holding it in your hand. View the diamond from every axis and angle, and discover if it is the perfect choice for you.
+          </p>
         </div>
       </li>
 
@@ -251,8 +245,8 @@
   </div>
 
   <div class="footer">
-    <a class="footer__disclaimer" href="#">Disclaimer</a>
-    <a class="footer__powered" href="//sarine.com" target="_blank">Powered by <img class="footer__powered__logo" src="img/sarine-small.png" height="16" width="32"></a>
+    <a class="footer__disclaimer" href="https://s3.amazonaws.com/sarineplatform.com/web-sites/legal/js/LegalJsSDK/PDFViewer/PDFViewerJs.html?file=https://s3.amazonaws.com/sarineplatform.com/content/legal/Sarine%20Profile/Disclaimer/1_0f3cb78a12564b72973bfe71982c0434.pdf" target="blank">Conditions</a>
+    <a class="footer__powered" href="//sarine.com" target="_blank">Powered by <img class="footer__powered__logo" src="img/sarine-logo-small.png" height="16" width="32"></a>
   </div>
 
   <div class="preloader">
@@ -341,12 +335,7 @@
       <button class="popup__close-btn"></button>
       <h1 class="popup__heading">Sarine Loupe™ Imaging</h1>
       <p class="popup__caption">The Sarine Loupe knits together thousands of individual images to present a precise, instant picture of the actual diamond, viewable in 3D magnified form. The intuitive imaging function allows you to explore the diamond in virtual detail from every possible aspect, for a superb viewing experience.</p>
-      <div class="popup__media popup__media--video">
-        <video class="popup__video" id="video_loupe">
-          <source src="video/loup.mp4" type="video/mp4">
-        </video>
-        <button class="popup__media__play video-play" data-video-id="video_loupe"></button>
-      </div>
+      <div class="popup__media popup__media--blank"></div>
     </div>
   </div>
 

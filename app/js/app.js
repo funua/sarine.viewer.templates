@@ -32,7 +32,6 @@
         sarineInfos = Array.prototype.slice.call(document.querySelectorAll('[data-sarine-info]'), 0),
         lightGrades = Array.prototype.slice.call(document.querySelectorAll('[data-light-grade]'), 0),
         stone = window.stones && window.stones[0],
-        totalGrade = document.querySelector('[data-total-grade]'),
         lightGradesMap = {
           1: 'minimum',
           2: 'standard',
@@ -129,12 +128,17 @@
     function setTotalGrade() {
       var name = stone && stone.lightGrades && stone.lightGrades.totalGrade && stone.lightGrades.totalGrade.name,
           gradeScales = window.gradeScales || {},
-          totalGradeScales = gradeScales.totalGrade;
+          totalGradeScales = gradeScales.totalGrade,
+          totalGrade = document.querySelector('[data-total-grade]'),
+          totalGradeStars = document.querySelector('[data-total-grade-stars]'),
+          displayVal;
 
       if (name && totalGradeScales) {
         totalGradeScales.some(function (item) {
           if (item.value === name) {
-            totalGrade.innerHTML = item['default-display'];
+            displayVal = item['default-display'];
+            totalGrade.innerHTML = displayVal;
+            totalGradeStars.innerHTML = new Array(parseInt(displayVal[displayVal.length - 1]) + 1).join('★');
             return true;
           }
           return false;

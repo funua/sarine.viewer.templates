@@ -1,11 +1,1 @@
-.idea/.name
-.idea/Sarine-git.iml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/scopes/scope_settings.xml
-.idea/vcs.xml
-.idea/watcherTasks.xml
-.idea/workspace.xml
-web.config
-templates/1/css/base.css.map
+node_modules

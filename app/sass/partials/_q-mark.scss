@@ -19,6 +19,7 @@ $q-mark-border-color: #dfdfdf;
   text-align: center;
   background-color: $q-mark-background-color;
   border: 1px solid $q-mark-border-color;
+  vertical-align: middle;
   @include border-radius(50%);
 
   &:before {
@@ -31,5 +32,6 @@ $q-mark-border-color: #dfdfdf;
     margin: 0 2px;
     line-height: $q-mark-small-size;
     font-size: $q-mark-small-font-size;
+    vertical-align: baseline;
   }
 }

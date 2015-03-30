@@ -21,6 +21,10 @@ button {
   cursor: pointer;
 }
 
+[data-hidden-until-load] {
+  display: block !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;

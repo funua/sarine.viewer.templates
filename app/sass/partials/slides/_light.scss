@@ -23,29 +23,35 @@
     line-height: 32px;
   }
 
-  &__stars-wrap {
-    position: relative;
 
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      display: block;
-      left: 15%;
-      top: 50%;
-      height: 1px;
-      width: 70%;
-      margin-top: -1px;
-      background-color: #a5a5a5;
-    }
+  &__stars-wrap {
+    overflow: hidden;
+    text-align: center;
+    margin: 0 24px;
   }
 
   &__stars {
-    display: inline;
-    padding: 0 8px;
-    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 3px;
     color: $theme-accent-color;
     font: 16px $font-family-serif;
-    word-spacing: 3px;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 500px;
+      margin: 0 8px -2px;
+      border-bottom: 1px solid #a5a5a5;
+    }
+
+    &:before {
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+    }
   }
 }
