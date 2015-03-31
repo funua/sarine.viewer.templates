@@ -9,7 +9,8 @@
 
   function initButton(btn) {
     var videoId = btn.getAttribute('data-video-id'),
-        videoElement = document.getElementById(videoId || '');
+        videoElement = document.getElementById(videoId || ''),
+        forceReloaded = false;
 
     if (!videoElement) {
       return;
@@ -19,13 +20,22 @@
 
     videoElement.addEventListener('ended', showBtn);
     videoElement.addEventListener('pause', showBtn);
+    videoElement.addEventListener('canplay', function () {
+      if (forceReloaded) {
+        startPlaying();
+      }
+    });
     videoElement.addEventListener('play', function () {
       hideBtn();
     });
 
     btn.addEventListener('click', function () {
-      videoElement.play();
-      hideBtn();
+      if (videoElement.readyState < 3) {
+        videoElement.load();
+        forceReloaded = true;
+      } else {
+        startPlaying();
+      }
     });
 
     function showBtn() {
@@ -34,6 +44,11 @@
 
     function hideBtn() {
       btn.style.display = 'none';
+    }
+
+    function startPlaying() {
+      videoElement.play();
+      hideBtn();
     }
   }
 })(window, window.document);
