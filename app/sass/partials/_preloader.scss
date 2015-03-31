@@ -10,12 +10,13 @@ $preloader-anim-duration: 500ms;
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 300px;
+  padding-top: 270px;
   text-align: center;
   background-color: #fff;
 
   &__heading {
     color: $theme-accent-color;
+    fill: currentColor;
   }
 
   &__dot {
@@ -28,7 +29,7 @@ $preloader-anim-duration: 500ms;
     @include animation(preloader $preloader-anim-duration ease-out infinite alternate);
 
     @for $i-index from 1 through 3 {
-      &:nth-child(#{$i-index}) {
+      &:nth-child(#{4 - $i-index}) {
         @include animation-delay((1 - $i-index) * ($preloader-anim-duration / 3));
       }
     }

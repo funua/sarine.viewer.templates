@@ -18,15 +18,18 @@
     videoElement.addEventListener('ended', showBtn);
     videoElement.addEventListener('pause', showBtn);
     videoElement.addEventListener('play', function () {
-      btn.style.display = 'none';
+      //btn.style.display = 'none';
+      btn.setAttribute('data-hidden', true);
     });
 
     btn.addEventListener('click', function () {
       videoElement.play();
+      btn.setAttribute('data-hidden', true);
     });
 
     function showBtn() {
-      btn.style.display = '';
+      btn.removeAttribute('data-hidden');
+      //btn.style.display = '';
     }
   }
 })(window, window.document);

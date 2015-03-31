@@ -32,8 +32,11 @@ $popup-skew-angle: 9deg;
     left: 0;
     width: 100%;
     height: 100%;
+    //Hack to fix jagged edges in Mobile Safari
+    padding: 2px;
     background-color: #000;
-    @include background-image(radial-gradient(left -200px, #012467 70px, #000000 392px));
+    background-repeat: no-repeat;
+    @include background-image(linear-gradient(160deg, #002369, #000 200px));
     @include transform-origin(0, 100%);
     @include transform(skewY($popup-skew-angle));
     @include backface-visibility(hidden);
@@ -41,7 +44,7 @@ $popup-skew-angle: 9deg;
   }
 
   &--cut:before {
-    @include background-image(radial-gradient(350px bottom, #012467 120px, #000 392px));
+    @include background-image(linear-gradient(-25deg, #002369, #000 400px));
   }
 
   &--open, &--close {

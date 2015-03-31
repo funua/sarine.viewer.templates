@@ -58,7 +58,7 @@ $slide-padding: 24px;
   &__caption {
     color: #535353;
     line-height: 1.5;
-    
+
     @include transition(color 0.5s ease-in);
   }
 }

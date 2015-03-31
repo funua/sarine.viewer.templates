@@ -22,9 +22,7 @@
   }
 
   .slider__btn {
-    &:before, &:after {
-      background-color: #eee;
-    }
+    stroke: #eee;
   }
 
   .storyline__item {
