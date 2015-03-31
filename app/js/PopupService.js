@@ -28,10 +28,17 @@
   };
 
   PopupService.prototype.close = function (element) {
+    var videoElement;
+
     this.currentElement = null;
     classie.remove(this._overlay, this._openOverlayClassName);
     classie.remove(element, this._openClassName);
     classie.add(element, this._closeClassName);
+
+    videoElement = element.querySelector('video');
+    if (videoElement) {
+      videoElement.pause();
+    }
   };
 
   window.PopupService = PopupService;
