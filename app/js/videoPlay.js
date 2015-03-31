@@ -15,6 +15,8 @@
       return;
     }
 
+    videoElement.load();
+
     videoElement.addEventListener('ended', showBtn);
     videoElement.addEventListener('pause', showBtn);
     videoElement.addEventListener('play', function () {

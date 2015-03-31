@@ -38,6 +38,7 @@
     videoElement = element.querySelector('video');
     if (videoElement) {
       videoElement.pause();
+      videoElement.currentTime = 0;
     }
   };
 
