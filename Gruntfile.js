@@ -11,7 +11,7 @@ module.exports = function (grunt) {
           port: 9003,
           base: 'app',
           hostname: '0.0.0.0',
-          protocol: 'https',
+          //protocol: 'https',
           livereload: true
         }
       }
