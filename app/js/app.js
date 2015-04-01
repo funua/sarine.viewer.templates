@@ -1,4 +1,4 @@
-(function (window, document, $, FastClick, classie, WallopSlider, PopupService, BulletNavigation, videoPlay) {
+(function (window, document, $, FastClick, classie, Hammer, WallopSlider, PopupService, BulletNavigation, videoPlay) {
   $(function () {
     'use strict';
 
@@ -40,7 +40,8 @@
           5: 'exceptional'
         },
         totalViewers = 4,
-        playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0);
+        playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0),
+        swipeRecognizer = new Hammer(document.getElementById('slider_wrap'));
 
     FastClick.attach(document.body);
 
@@ -70,6 +71,14 @@
       if (totalViewers <= 0) {
         document.querySelector('.slider').style.display = '';
         document.querySelector('.preloader').style.display = 'none';
+      }
+    });
+
+    swipeRecognizer.on('swipeleft swiperight', function (e) {
+      if (e.type === 'swipeleft') {
+        slider.next();
+      } else {
+        slider.previous();
       }
     });
 
@@ -117,6 +126,8 @@
       videoPlay.initButton(element);
     });
 
+
+
     function recurse(o, props) {
       if (props.length === 0) {
         return o;
@@ -139,7 +150,7 @@
 
       if (name && totalGradeScales) {
         totalGradeScales.some(function (item) {
-          if (item.value === name) {
+          if (item.value === name || item.name === name) {
             displayVal = item['default-display'];
             totalGrade.innerHTML = displayVal.split(' ')[0];
             totalGradeStars.innerHTML = new Array(parseInt(displayVal[displayVal.length - 1]) + 1).join('★');
@@ -150,4 +161,4 @@
       }
     }
   });
-})(window, window.document, window.jQuery, window.FastClick, window.classie, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
+})(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
