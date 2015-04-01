@@ -1347,10 +1347,11 @@ h3 {
 }
 /* line 27, ../sass/partials/slides/_hna.scss */
 .hna__caption {
+  padding-left: 20px;
   margin-top: 30px;
   font-size: 24px;
 }
-/* line 32, ../sass/partials/slides/_hna.scss */
+/* line 35, ../sass/partials/slides/_hna.scss */
 .hna--arrows {
   float: right;
 }
