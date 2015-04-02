@@ -39,9 +39,9 @@
           4: 'very-high',
           5: 'exceptional'
         },
-        totalViewers = 4,
+        totalViewers = 1,
         playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0),
-        swipeRecognizer = new Hammer(document.getElementById('slider_wrap'));
+        swipeRecognizer = new Hammer(document.getElementById('slider'));
 
     FastClick.attach(document.body);
 

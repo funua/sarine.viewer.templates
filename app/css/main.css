@@ -554,6 +554,7 @@ h3 {
 }
 /* line 58, ../sass/partials/_slide.scss */
 .slide__caption {
+  max-height: 350px;
   color: #535353;
   line-height: 1.5;
   -moz-transition: color 0.5s ease-in;
@@ -1347,11 +1348,10 @@ h3 {
 }
 /* line 27, ../sass/partials/slides/_hna.scss */
 .hna__caption {
-  padding-left: 20px;
   margin-top: 30px;
   font-size: 24px;
 }
-/* line 35, ../sass/partials/slides/_hna.scss */
+/* line 32, ../sass/partials/slides/_hna.scss */
 .hna--arrows {
   float: right;
 }
