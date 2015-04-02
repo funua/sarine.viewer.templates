@@ -101,7 +101,7 @@
       if (value === (void 0) || value === null) {
         element.parentNode.style.display = 'none';
       } else if (field === 'stoneProperties.carat') {
-        element.innerHTML = parseFloat(value).toFixed(2);
+        element.innerHTML = parseFloat(value).toFixed(3);
       }
     });
 
