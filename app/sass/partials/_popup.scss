@@ -30,13 +30,14 @@ $popup-skew-angle: 9deg;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     //Hack to fix jagged edges in Mobile Safari
     padding: 2px;
+    //End of hack
     background-color: #000;
     background-repeat: no-repeat;
-    @include background-image(linear-gradient(160deg, #002369, #000 200px));
+    @include background-image(linear-gradient(160deg, #002369 0, #000 200px, #000 100%));
     @include transform-origin(0, 100%);
     @include transform(skewY($popup-skew-angle));
     @include backface-visibility(hidden);
@@ -44,7 +45,7 @@ $popup-skew-angle: 9deg;
   }
 
   &--cut:before {
-    @include background-image(linear-gradient(-25deg, #002369, #000 400px));
+    @include background-image(linear-gradient(-25deg, #002369 0, #000 400px, #000 100%));
   }
 
   &--open, &--close {
@@ -95,32 +96,9 @@ $popup-skew-angle: 9deg;
     &--video {
       min-height: 180px;
     }
-
-    &__play {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 60px;
-      height: 60px;
-      margin: -30px 0 0 -30px;
-      background-color: rgba(#fff, 0.4);
-      @include border-radius(50%);
-      border: 2px solid #fff;
-
-      &:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -12px 0 0 -7px;
-        border-top: 12px solid transparent;
-        border-bottom: 12px solid transparent;
-        border-left: 20px solid #fff;
-      }
-    }
   }
 
-  &__video {
+  &__video, &__thumbnail {
     // Fix video flicker on iPad 7.1.2 //
     position: absolute;
     top: 50%;
@@ -137,9 +115,37 @@ $popup-skew-angle: 9deg;
     top: 80px;
     width: 54px;
     height: 54px;
-    color: #fff;
-    font-size: 40px;
+    background: url('../img/close-ico.svg') no-repeat center center;
+  }
+}
 
-    @include icon(before, close);
+.video-play {
+  width: 270px;
+  height: 180px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 56px;
+    height: 56px;
+    margin-left: -30px;
+    margin-top: -30px;
+    background-color: rgba(#fff, 0.4);
+    @include border-radius(50%);
+    border: 2px solid #fff;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -7px;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid #fff;
   }
 }

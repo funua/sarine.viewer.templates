@@ -164,7 +164,7 @@
 
       if (name && totalGradeScales) {
         totalGradeScales.some(function (item) {
-          if (item.value === name || item.name === name) {
+          if (item.name === name) {
             displayVal = item['default-display'];
             totalGrade.innerHTML = displayVal.split(' ')[0];
             totalGradeStars.innerHTML = new Array(parseInt(displayVal[displayVal.length - 1]) + 1).join('★');
