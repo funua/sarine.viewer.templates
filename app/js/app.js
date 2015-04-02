@@ -41,6 +41,7 @@
         },
         totalViewers = 1,
         playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0),
+        canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0),
         swipeRecognizer = new Hammer(document.getElementById('slider'));
 
     FastClick.attach(document.body);
@@ -65,14 +66,25 @@
       }
     });
 
-    $(document).on("full_init_end", function(event, data) {
-      console.log(data);
-      totalViewers--;
-      if (totalViewers <= 0) {
-        document.querySelector('.slider').style.display = '';
-        document.querySelector('.preloader').style.display = 'none';
+    canvases.forEach(function (element) {
+      if (classie.has(element, 'no_stone')) {
+        totalViewers--;
       }
     });
+
+    if (totalViewers > 0) {
+      $(document).on("full_init_end", function(event, data) {
+        console.log(data);
+        totalViewers--;
+        if (totalViewers <= 0) {
+          document.querySelector('.slider').style.display = '';
+          document.querySelector('.preloader').style.display = 'none';
+        }
+      });
+    } else {
+      document.querySelector('.slider').style.display = '';
+      document.querySelector('.preloader').style.display = 'none';
+    }
 
     swipeRecognizer.on('swipeleft swiperight', function (e) {
       if (e.type === 'swipeleft') {
@@ -88,6 +100,8 @@
 
       if (value === (void 0) || value === null) {
         element.parentNode.style.display = 'none';
+      } else if (field === 'stoneProperties.carat') {
+        element.innerHTML = parseFloat(value).toFixed(2);
       }
     });
 

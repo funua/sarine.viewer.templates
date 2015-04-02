@@ -1672,7 +1672,7 @@ h3 {
   height: 100%;
 }
 /* line 7, ../sass/partials/_sarine-viewer.scss */
-.viewer.loupeRealView, .viewer.lightReportViewer, .viewer.cut2DView, .viewer.loupe3DFullInspection {
+.viewer.loupeRealView, .viewer.lightReportViewer, .viewer.cut2DView, .viewer.loupe3DFullInspection, .viewer.loupeTopInspection {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -1697,21 +1697,30 @@ h3 {
 .viewer.cutHeartsAndArrows canvas {
   width: 150px;
 }
-/* line 23, ../sass/partials/_sarine-viewer.scss */
+/* line 22, ../sass/partials/_sarine-viewer.scss */
+.viewer.cutHeartsAndArrows canvas.no_stone {
+  display: block;
+  margin: 0 auto;
+}
+/* line 28, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas.Arrows {
   float: right;
 }
-/* line 27, ../sass/partials/_sarine-viewer.scss */
+/* line 32, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas.Hearts {
   float: left;
 }
-/* line 32, ../sass/partials/_sarine-viewer.scss */
+/* line 37, ../sass/partials/_sarine-viewer.scss */
 .viewer canvas {
   max-width: 100%;
   max-height: 100%;
 }
+/* line 41, ../sass/partials/_sarine-viewer.scss */
+.viewer canvas.no_stone {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
-/* line 38, ../sass/partials/_sarine-viewer.scss */
+/* line 47, ../sass/partials/_sarine-viewer.scss */
 .loupe3DFullInspection,
 .loupe3DFullInspection .viewport,
 .loupe3DFullInspection .viewport #main-image,
@@ -1721,7 +1730,7 @@ h3 {
   height: 250px !important;
 }
 
-/* line 47, ../sass/partials/_sarine-viewer.scss */
+/* line 56, ../sass/partials/_sarine-viewer.scss */
 .loupe3DFullInspection .mglass_viewer {
   width: 210px !important;
   height: 210px !important;
