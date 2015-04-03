@@ -14,14 +14,22 @@
 }
 
 @include keyframes(slideToLeft) {
-  100% {
+  99% {
     @include transform(translate3d(-600px, 0, 0));
+  }
+
+  100% {
+    @include transform(translate3d(-5000px, 0, 0));
   }
 }
 
 @include keyframes(slideToRight) {
-  100% {
+  99% {
     @include transform(translate3d(600px, 0, 0));
+  }
+
+  100% {
+    @include transform(translate3d(5000px, 0, 0));
   }
 }
 
@@ -58,9 +66,14 @@
 }
 
 @include keyframes(closePopup) {
-  100% {
+  99% {
     opacity: 0;
     @include transform(translate3d(0, 100%, 0));
+  }
+
+  100% {
+    opacity: 0;
+    @include transform(translate3d(-1000px, 100%, 0));
   }
 }
 
