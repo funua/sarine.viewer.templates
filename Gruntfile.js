@@ -73,7 +73,7 @@ module.exports = function (grunt) {
       target: {
         files: {
           'app/js/app.bundle.min.js': ['app/js/vendor/classie.js', 'app/js/vendor/fastclick.js',
-            'app/js/vendor/hammer.js',
+            'app/js/vendor/hammer.js', 'app/js/vendor/modernizr.custom.js',
             'app/js/vendor/WallopSlider.js', 'app/js/PopupService.js',
             'app/js/BulletNavigation.js', 'app/js/videoPlay.js', 'app/js/app.js']
         }

@@ -73,7 +73,7 @@
 
   100% {
     opacity: 0;
-    @include transform(translate3d(-1000px, 100%, 0));
+    @include transform(translate3d(-5000px, 100%, 0));
   }
 }
 
