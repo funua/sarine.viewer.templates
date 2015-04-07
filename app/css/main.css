@@ -942,29 +942,30 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 }
 /* line 90, ../sass/partials/_popup.scss */
 .popup__media {
-  position: relative;
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-/* line 96, ../sass/partials/_popup.scss */
+/* line 95, ../sass/partials/_popup.scss */
 .popup__media--blank {
   height: 165px;
 }
-/* line 100, ../sass/partials/_popup.scss */
+/* line 99, ../sass/partials/_popup.scss */
 .popup__media--video {
   min-height: 180px;
 }
-/* line 105, ../sass/partials/_popup.scss */
+/* line 104, ../sass/partials/_popup.scss */
 .popup__video, .popup__thumbnail {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -90px 0 0 -135px;
+  display: block;
+  margin: 0 auto;
   height: 180px;
   width: 270px;
 }
-/* line 116, ../sass/partials/_popup.scss */
+/* line 111, ../sass/partials/_popup.scss */
+.popup__thumbnail {
+  position: relative;
+}
+/* line 115, ../sass/partials/_popup.scss */
 .popup__close-btn {
   position: absolute;
   right: 0;
@@ -974,12 +975,12 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   background: url("../img/close-ico.svg") no-repeat center center;
 }
 
-/* line 126, ../sass/partials/_popup.scss */
+/* line 125, ../sass/partials/_popup.scss */
 .video-play {
   width: 270px;
   height: 180px;
 }
-/* line 130, ../sass/partials/_popup.scss */
+/* line 129, ../sass/partials/_popup.scss */
 .video-play:before {
   content: '';
   position: absolute;
@@ -995,7 +996,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-radius: 50%;
   border: 2px solid #fff;
 }
-/* line 144, ../sass/partials/_popup.scss */
+/* line 143, ../sass/partials/_popup.scss */
 .video-play:after {
   content: '';
   position: absolute;

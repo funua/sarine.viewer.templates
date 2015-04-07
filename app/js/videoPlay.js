@@ -16,6 +16,8 @@
       return;
     }
 
+    showBtn();
+
     videoElement.addEventListener('ended', showBtn);
     videoElement.addEventListener('pause', showBtn);
     videoElement.addEventListener('canplay', function () {
@@ -39,11 +41,13 @@
     });
 
     function showBtn() {
+      videoElement.style.display = 'none';
       btn.style.display = '';
     }
 
     function hideBtn() {
       btn.style.display = 'none';
+      videoElement.style.display = '';
     }
 
     function startPlaying() {

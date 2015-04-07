@@ -88,7 +88,6 @@ $popup-skew-angle: 9deg;
   }
 
   &__media {
-    position: relative;
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -103,14 +102,14 @@ $popup-skew-angle: 9deg;
   }
 
   &__video, &__thumbnail {
-    // Fix video flicker on iPad 7.1.2 //
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -90px 0 0 -135px;
-    // End fix
+    display: block;
+    margin: 0 auto;
     height: 180px;
     width: 270px;
+  }
+
+  &__thumbnail {
+    position: relative;
   }
 
   &__close-btn {
