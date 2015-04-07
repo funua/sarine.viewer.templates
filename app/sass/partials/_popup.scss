@@ -151,4 +151,9 @@ $popup-skew-angle: 9deg;
     border-bottom: 12px solid transparent;
     border-left: 20px solid #fff;
   }
+
+  &--loading:before {
+    border-bottom-color: transparent;
+    @include animation(rotate 1s 0 linear infinite);
+  }
 }

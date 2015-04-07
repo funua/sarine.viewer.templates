@@ -84,6 +84,18 @@
   }
 }
 
+@include keyframes(rotate) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  50% {
+    @include transform(rotate(180deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
 $animation-default-duration: 500ms;
 $animation-default-steps-count: 4;
 $animation-default-delay: 10ms;

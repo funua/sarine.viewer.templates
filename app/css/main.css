@@ -436,6 +436,54 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
     transform: scale(0.4);
   }
 }
+@-moz-keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 /* line 9, ../sass/partials/_slider.scss */
 .slider-wrap {
   position: relative;
@@ -1007,6 +1055,13 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
   border-left: 20px solid #fff;
+}
+/* line 155, ../sass/partials/_popup.scss */
+.video-play--loading:before {
+  border-bottom-color: transparent;
+  -moz-animation: rotate 1s 0 linear infinite;
+  -webkit-animation: rotate 1s 0 linear infinite;
+  animation: rotate 1s 0 linear infinite;
 }
 
 /* line 9, ../sass/partials/_q-mark.scss */

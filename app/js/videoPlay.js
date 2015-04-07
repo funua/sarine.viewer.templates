@@ -1,4 +1,4 @@
-(function (window, document) {
+(function (window, document, classie) {
   'use strict';
 
   var videoPlay = {
@@ -24,6 +24,7 @@
       if (forceReloaded) {
         forceReloaded = false;
         startPlaying();
+        classie.remove(btn, 'video-play--loading');
       }
     });
     videoElement.addEventListener('play', function () {
@@ -35,6 +36,7 @@
         videoElement.src = videoElement.getAttribute('data-src');
         videoElement.load();
         forceReloaded = true;
+        classie.add(btn, 'video-play--loading');
       } else {
         startPlaying();
       }
@@ -55,4 +57,4 @@
       hideBtn();
     }
   }
-})(window, window.document);
+})(window, window.document, window.classie);
