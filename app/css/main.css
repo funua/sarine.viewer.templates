@@ -1032,6 +1032,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .video-play:before {
   content: '';
   position: absolute;
+  overflow: hidden;
   top: 50%;
   left: 50%;
   width: 56px;
@@ -1039,12 +1040,12 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   margin-left: -30px;
   margin-top: -30px;
   background-color: rgba(255, 255, 255, 0.4);
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
   border: 2px solid #fff;
 }
-/* line 143, ../sass/partials/_popup.scss */
+/* line 144, ../sass/partials/_popup.scss */
 .video-play:after {
   content: '';
   position: absolute;
@@ -1056,7 +1057,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-bottom: 12px solid transparent;
   border-left: 20px solid #fff;
 }
-/* line 155, ../sass/partials/_popup.scss */
+/* line 156, ../sass/partials/_popup.scss */
 .video-play--loading:before {
   border-bottom-color: transparent;
   -moz-animation: rotate 1s 0 linear infinite;
