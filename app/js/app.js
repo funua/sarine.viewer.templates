@@ -77,13 +77,11 @@
         console.log(data);
         totalViewers--;
         if (totalViewers <= 0) {
-          document.querySelector('.slider').style.display = '';
-          document.querySelector('.preloader').style.display = 'none';
+          onViewersReady();
         }
       });
     } else {
-      document.querySelector('.slider').style.display = '';
-      document.querySelector('.preloader').style.display = 'none';
+      onViewersReady();
     }
 
     swipeRecognizer.on('swipeleft swiperight', function (e) {
@@ -91,17 +89,6 @@
         slider.next();
       } else {
         slider.previous();
-      }
-    });
-
-    sarineInfos.forEach(function (element) {
-      var field = element.getAttribute('data-sarine-info'),
-          value = recurse(stone, field.split('.'));
-
-      if (value === (void 0) || value === null) {
-        element.parentNode.style.display = 'none';
-      } else if (field === 'stoneProperties.carat') {
-        element.innerHTML = parseFloat(value).toFixed(3);
       }
     });
 
@@ -141,7 +128,6 @@
     });
 
 
-
     function recurse(o, props) {
       if (props.length === 0) {
         return o;
@@ -173,6 +159,22 @@
           return false;
         });
       }
+    }
+
+    function onViewersReady() {
+      sarineInfos.forEach(function (element) {
+        var field = element.getAttribute('data-sarine-info'),
+            value = recurse(stone, field.split('.'));
+
+        if (value === (void 0) || value === null) {
+          element.parentNode.style.display = 'none';
+        } else if (field === 'stoneProperties.carat') {
+          element.innerHTML = parseFloat(value).toFixed(3);
+        }
+      });
+
+      document.querySelector('.slider').style.display = '';
+      document.querySelector('.preloader').style.display = 'none';
     }
   });
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
