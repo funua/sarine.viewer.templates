@@ -25,7 +25,10 @@ $preloader-anim-duration: 500ms;
     width: $preloader-dot-size;
     height: $preloader-dot-size;
     padding: 0 4px;
-    @include border-radius(50%);
+    @include border-top-left-radius(50%);
+    @include border-top-right-radius(50%);
+    @include border-bottom-left-radius(50%);
+    @include border-bottom-right-radius(50%);
     @include animation(preloader $preloader-anim-duration ease-out infinite alternate);
 
     @for $i-index from 1 through 3 {

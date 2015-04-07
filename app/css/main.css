@@ -1032,7 +1032,6 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .video-play:before {
   content: '';
   position: absolute;
-  overflow: hidden;
   top: 50%;
   left: 50%;
   width: 56px;
@@ -1040,12 +1039,21 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   margin-left: -30px;
   margin-top: -30px;
   background-color: rgba(255, 255, 255, 0.4);
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
+  -moz-border-radius-topleft: 50%;
+  -webkit-border-top-left-radius: 50%;
+  border-top-left-radius: 50%;
+  -moz-border-radius-topright: 50%;
+  -webkit-border-top-right-radius: 50%;
+  border-top-right-radius: 50%;
+  -moz-border-radius-bottomleft: 50%;
+  -webkit-border-bottom-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  -moz-border-radius-bottomright: 50%;
+  -webkit-border-bottom-right-radius: 50%;
+  border-bottom-right-radius: 50%;
   border: 2px solid #fff;
 }
-/* line 144, ../sass/partials/_popup.scss */
+/* line 146, ../sass/partials/_popup.scss */
 .video-play:after {
   content: '';
   position: absolute;
@@ -1057,7 +1065,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-bottom: 12px solid transparent;
   border-left: 20px solid #fff;
 }
-/* line 156, ../sass/partials/_popup.scss */
+/* line 158, ../sass/partials/_popup.scss */
 .video-play--loading:before {
   border-bottom-color: transparent;
   -moz-animation: rotate 1s 0 linear infinite;
@@ -1121,26 +1129,35 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 16px;
   height: 16px;
   padding: 0 4px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  -moz-border-radius-topleft: 50%;
+  -webkit-border-top-left-radius: 50%;
+  border-top-left-radius: 50%;
+  -moz-border-radius-topright: 50%;
+  -webkit-border-top-right-radius: 50%;
+  border-top-right-radius: 50%;
+  -moz-border-radius-bottomleft: 50%;
+  -webkit-border-bottom-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  -moz-border-radius-bottomright: 50%;
+  -webkit-border-bottom-right-radius: 50%;
+  border-bottom-right-radius: 50%;
   -moz-animation: preloader 500ms ease-out infinite alternate;
   -webkit-animation: preloader 500ms ease-out infinite alternate;
   animation: preloader 500ms ease-out infinite alternate;
 }
-/* line 32, ../sass/partials/_preloader.scss */
+/* line 35, ../sass/partials/_preloader.scss */
 .preloader__dot:nth-child(3) {
   -moz-animation-delay: 0ms;
   -webkit-animation-delay: 0ms;
   animation-delay: 0ms;
 }
-/* line 32, ../sass/partials/_preloader.scss */
+/* line 35, ../sass/partials/_preloader.scss */
 .preloader__dot:nth-child(2) {
   -moz-animation-delay: -166.66667ms;
   -webkit-animation-delay: -166.66667ms;
   animation-delay: -166.66667ms;
 }
-/* line 32, ../sass/partials/_preloader.scss */
+/* line 35, ../sass/partials/_preloader.scss */
 .preloader__dot:nth-child(1) {
   -moz-animation-delay: -333.33333ms;
   -webkit-animation-delay: -333.33333ms;

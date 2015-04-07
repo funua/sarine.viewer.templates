@@ -129,7 +129,6 @@ $popup-skew-angle: 9deg;
   &:before {
     content: '';
     position: absolute;
-    overflow: hidden;
     top: 50%;
     left: 50%;
     width: 56px;
@@ -137,7 +136,10 @@ $popup-skew-angle: 9deg;
     margin-left: -30px;
     margin-top: -30px;
     background-color: rgba(#fff, 0.4);
-    @include border-radius(100%);
+    @include border-top-left-radius(50%);
+    @include border-top-right-radius(50%);
+    @include border-bottom-left-radius(50%);
+    @include border-bottom-right-radius(50%);
     border: 2px solid #fff;
   }
 
