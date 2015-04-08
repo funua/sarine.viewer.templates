@@ -4,7 +4,6 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
-
     connect: {
       server: {
         options: {
@@ -96,12 +95,52 @@ module.exports = function (grunt) {
         files: ['app/js/**/*.js', '!**/*.min.js'],
         tasks: ['jshint', 'uglify']
       }
+    },
+    
+    copy: {
+        html: {
+            flatten: true,
+            src: ["app/template.html"],
+            dest: "app/dist/",
+            expand: true,
+            rename: function (dest, src) {
+                return dest + src.replace("template", "index");
+            }
+        },
+        js: {
+            flatten: true,
+            src: ["app/js/app.bundle.min.js"],
+            dest: "app/dist/js/",
+            expand: true
+        },
+        css: {
+            flatten: true,
+            src: ["app/css/main.min.css"],
+            dest: "app/dist/css/",
+            expand: true
+        },
+        fonts: {
+            flatten: true,
+            src: ["app/fonts/."],
+            dest: "app/dist/fonts/",
+            expand: true
+        },
+        img: {
+            flatten: true,
+            src: ["app/img/."],
+            dest: "app/dist/img/",
+            expand: true
+        }
     }
   });
 
-  grunt.registerTask('serve', [
-    'connect',
-    'open',
-    'watch'
-  ]);
+    grunt.registerTask('serve', [
+        'connect',
+        'open',
+        'watch'
+    ]);
+  
+    grunt.registerTask('build', [
+        'copy'
+    ]);
 };
