@@ -121,13 +121,13 @@ module.exports = function (grunt) {
         },
         fonts: {
             flatten: true,
-            src: ["app/fonts/."],
+            src: ["app/fonts/*"],
             dest: "app/dist/fonts/",
             expand: true
         },
         img: {
             flatten: true,
-            src: ["app/img/."],
+            src: ["app/img/*"],
             dest: "app/dist/img/",
             expand: true
         }
