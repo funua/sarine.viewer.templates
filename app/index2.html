@@ -67,8 +67,8 @@
             },
             "viewersBaseUrl": "https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/"
         }];
-        var template = 'template2.html';
-        //var template = 'https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v2.0.2/template.html';
+        //var template = 'template2.html';
+        var template = 'https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v3.0.0/template.html';
     //    var configuration = {
     //        "logoUrl": "https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/AAAAAAAAAA/v1/logo.png",
     //        "favIcon": "https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/AAAAAAAAAA/v1/favicon.ico"
@@ -255,10 +255,15 @@
     <!-- business logic -->
     <script type="text/javascript" src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.resource.manager.js"></script>
     <script type="text/javascript" src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.manager.js"></script>
+
+    <!--<script type="text/javascript" src="sketch/sarine.viewer.resource.manager.js"></script>-->
+    <!--<script type="text/javascript" src="sketch/sarine.viewer.manager.js"></script>-->
+
     <!-- end business logic -->
 
     <!-- init functional script -->
     <script type="text/javascript">
+
         var vm = new ViewerManger({
             fromTag: "sarine-viewer",
             toTag: "div",
@@ -278,9 +283,11 @@
     </script>
     <!-- end init functional script -->
 
-    <link rel="stylesheet" type="text/css" href="//d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v2.0.2/css/main.min.css">
-
+    <link rel="stylesheet" type="text/css" href="//d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v3.0.0/css/main.min.css">
     <script type="text/javascript" src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.utils.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="css/main.css">-->
+    <!--<script type="text/javascript" src="sketch/sarine.viewer.utils.js"></script>-->
 
 </body>
 </html>
