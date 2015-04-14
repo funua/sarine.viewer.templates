@@ -651,9 +651,20 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 /* line 159, ../sass/partials/_slider.scss */
 .slider-template-2 .slide__img--loupe .inspect-stone .buttons.close .icon.magnify i {
   margin: 19px 0 0;
-  background: url("../../img/icon-magnify.png") 0 0;
   width: 34px;
   height: 35px;
+  position: relative;
+  background: none;
+}
+/* line 166, ../sass/partials/_slider.scss */
+.slider-template-2 .slide__img--loupe .inspect-stone .buttons.close .icon.magnify i:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/icon-magnify.png") 0 0;
 }
 
 /* line 6, ../sass/partials/_slide.scss */
