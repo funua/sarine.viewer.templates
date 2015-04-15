@@ -74,7 +74,7 @@
 
     if (totalViewers > 0) {
       $(document).on("full_init_end", function(event, data) {
-        console.log(data);
+        console.log('full_init_end data ->', data);
         totalViewers--;
         if (totalViewers <= 0) {
           onViewersReady();
@@ -176,5 +176,22 @@
       document.querySelector('.slider').style.display = '';
       document.querySelector('.preloader').style.display = 'none';
     }
+    readConfig();
   });
+  
+  
+  
+    // Read config
+    function readConfig() {
+        var configuredElements = $('[data-widgetconfig]');
+        console.log('configuredElements ->', configuredElements.length);
+        
+        // Enable storyline items
+        
+        
+        // Enable slides
+        $('ul.slider__list > li').each(function(i, $elem) {
+            
+        });
+    }
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
