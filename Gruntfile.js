@@ -100,11 +100,11 @@ module.exports = function (grunt) {
     copy: {
         html: {
             flatten: true,
-            src: ["app/template2.html"],
+            src: ["app/template.html"],
             dest: "app/dist/",
             expand: true,
             rename: function (dest, src) {
-                return dest + src.replace("template2", "index");
+                return dest + src.replace("template", "index");
             }
         },
         js: {

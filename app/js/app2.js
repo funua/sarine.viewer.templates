@@ -18,12 +18,12 @@
                 bulletClassName: '.storyline__item',
                 activeBulletClassName: 'storyline__item--active'
             }),
-//            summaryNav = new BulletNavigation({
-//                slider: slider,
-//                bulletsContainer: document.querySelector('.summary__story-wrap'),
-//                bulletClassName: '.summary__story',
-//                startFrom: 1
-//            }),
+            summaryNav = new BulletNavigation({
+                slider: slider,
+                bulletsContainer: document.querySelector('.summary__story-wrap'),
+                bulletClassName: '.summary__story',
+                startFrom: 1
+            }),
             popupService = new PopupService({
                 overlay: document.getElementById('popup_overlay')
             }),
