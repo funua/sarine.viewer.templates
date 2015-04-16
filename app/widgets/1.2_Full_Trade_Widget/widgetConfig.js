@@ -16,15 +16,16 @@ var widgetConfig = {
             enableStoryline: true,
         },
         {
-            title:  'Hearts & Arrows',
-            code:   'hna'     },
+            title:  'Light',
+            code:   'light'
+        },
         {
             title:  'Loupe',
             code:   'loupe'
         },
         {
-            title:  'Light',
-            code:   'light'
+            title:  'Hearts & Arrows',
+            code:   'hna'
         },
         {
             title:  'Cut',
