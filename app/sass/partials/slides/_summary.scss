@@ -61,11 +61,14 @@
 
   &__stories {
     height: 96px;
+    text-align: center;
   }
 
   &__story {
     position: relative;
-    float: left;
+//    float: left;
+    display: inline-block;
+    vertical-align: top;
     width: 25%;
     height: 100%;
     text-align: center;

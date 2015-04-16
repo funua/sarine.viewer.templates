@@ -22,10 +22,14 @@ var widgetConfig = {
             title:  'Loupe',
             code:   'loupe'
         },
-//        {
-//            title:  'Light',
-//            code:   'light'
-//        },
+        {
+            title:  'Light',
+            code:   'light'
+        },
+        {
+            title:  'Cut',
+            code:   'cut'
+        },
     ],
     // other template-specific fields
     show_IGI_logo: true

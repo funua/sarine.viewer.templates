@@ -64,3 +64,31 @@ $storyline-line-height: 1px;
     }
   }
 }
+
+.storyline.items-count-2{
+  &:before {
+    width: 50%;
+    left: 25%;
+  }
+  .storyline__item{
+    width: 50%;
+  }
+}
+.storyline.items-count-3{
+  &:before {
+    width: 65%;
+    left: 17%;
+  }
+  .storyline__item{
+    width: 33%;
+  }
+}
+.storyline.items-count-4{
+  &:before {
+    width: 76%;
+    left: 12%;
+  }
+  .storyline__item{
+    width: 25%;
+  }
+}

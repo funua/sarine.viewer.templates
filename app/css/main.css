@@ -807,6 +807,36 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   background-color: #04218a;
 }
 
+/* line 69, ../sass/partials/_storyline.scss */
+.storyline.items-count-2:before {
+  width: 50%;
+  left: 25%;
+}
+/* line 73, ../sass/partials/_storyline.scss */
+.storyline.items-count-2 .storyline__item {
+  width: 50%;
+}
+
+/* line 78, ../sass/partials/_storyline.scss */
+.storyline.items-count-3:before {
+  width: 65%;
+  left: 17%;
+}
+/* line 82, ../sass/partials/_storyline.scss */
+.storyline.items-count-3 .storyline__item {
+  width: 33%;
+}
+
+/* line 87, ../sass/partials/_storyline.scss */
+.storyline.items-count-4:before {
+  width: 76%;
+  left: 12%;
+}
+/* line 91, ../sass/partials/_storyline.scss */
+.storyline.items-count-4 .storyline__item {
+  width: 25%;
+}
+
 /* line 11, ../sass/partials/_specs-table.scss */
 .specs {
   padding-top: 32px;
@@ -1340,11 +1370,13 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 /* line 62, ../sass/partials/slides/_summary.scss */
 .summary__stories {
   height: 96px;
+  text-align: center;
 }
-/* line 66, ../sass/partials/slides/_summary.scss */
+/* line 67, ../sass/partials/slides/_summary.scss */
 .summary__story {
   position: relative;
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 25%;
   height: 100%;
   text-align: center;
@@ -1352,7 +1384,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   color: #04218a;
   cursor: pointer;
 }
-/* line 76, ../sass/partials/slides/_summary.scss */
+/* line 79, ../sass/partials/slides/_summary.scss */
 .summary__story:before {
   content: '';
   display: block;
@@ -1361,7 +1393,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 85, ../sass/partials/slides/_summary.scss */
+/* line 88, ../sass/partials/slides/_summary.scss */
 .summary__story:after {
   content: '';
   position: absolute;
@@ -1371,23 +1403,23 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 1px;
   background-color: #d8d3d6;
 }
-/* line 95, ../sass/partials/slides/_summary.scss */
+/* line 98, ../sass/partials/slides/_summary.scss */
 .summary__story:last-child:after {
   display: none;
 }
-/* line 99, ../sass/partials/slides/_summary.scss */
+/* line 102, ../sass/partials/slides/_summary.scss */
 .summary__story--light:before {
   background-image: url("../img/summary-light.png");
 }
-/* line 103, ../sass/partials/slides/_summary.scss */
+/* line 106, ../sass/partials/slides/_summary.scss */
 .summary__story--loupe:before {
   background-image: url("../img/summary-loupe.png");
 }
-/* line 107, ../sass/partials/slides/_summary.scss */
+/* line 110, ../sass/partials/slides/_summary.scss */
 .summary__story--hna:before {
   background-image: url("../img/summary-hna.png");
 }
-/* line 111, ../sass/partials/slides/_summary.scss */
+/* line 114, ../sass/partials/slides/_summary.scss */
 .summary__story--cut:before {
   background-image: url("../img/summary-cut.png");
 }
