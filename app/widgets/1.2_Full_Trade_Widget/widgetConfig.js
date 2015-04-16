@@ -9,8 +9,15 @@ var widgetConfig = {
     pages: [
         {
             title:  'Real view',
-            code:   'summary'
+            code:   'summary',
+//            disableNavigation: true,
+            
+            // TODO: implement this functionality
+            enableStoryline: true,
         },
+        {
+            title:  'Hearts & Arrows',
+            code:   'hna'     },
         {
             title:  'Loupe',
             code:   'loupe'
@@ -19,9 +26,6 @@ var widgetConfig = {
 //            title:  'Light',
 //            code:   'light'
 //        },
-//        {
-//            title:  'Hearts & Arrows',
-//            code:   'hna'     },
     ],
     // other template-specific fields
     show_IGI_logo: true

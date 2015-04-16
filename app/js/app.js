@@ -222,7 +222,7 @@
                 }).html(page.title).appendTo(elements.storylineContainer);
             });
         }
-        
+        elements.storylineContainer.addClass('items-count-' + wConfig.pages.length);
 
         // Enable slides
         elements.tmpSlidesContainer.append(elements.sliderPagesContainer.find('> .slide'));
@@ -233,12 +233,16 @@
         
         
         // Add slides links for summary page
-        iterateConfigPages(function (page) {
-            if (page.code === 'summary') return;
-            
-            $('<li/>', {
-                class: 'summary__story summary__story--' + page.code
-            }).html(page.title).appendTo(elements.summaryLinksContainer);
-        });
+        if (wConfig.pages[0].disableNavigation) {
+            elements.summaryLinksContainer.remove();
+        } else {
+            iterateConfigPages(function (page) {
+                if (page.code === 'summary') return;
+
+                $('<li/>', {
+                    class: 'summary__story summary__story--' + page.code
+                }).html(page.title).appendTo(elements.summaryLinksContainer);
+            });
+        }
     }
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
