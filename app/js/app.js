@@ -56,23 +56,20 @@
         FastClick.attach(document.body);
 
         slider.on('change', function (e) {
-            var header = e.detail.parentSelector.querySelector('.slider__header');
-
+            var header = e.detail.parentSelector.querySelector('.slider__header'),
+                container = $(e.detail.parentSelector);
+            
+            container.attr('class', 'slider');
             if (e.detail.currentItemIndex === 0) {
                 classie.add(header, 'slider__header--hide');
                 classie.remove(header, 'slider__header--show');
-                classie.add(e.detail.parentSelector, 'slider--summary');
+                container.addClass('slider--summary');
             } else {
                 classie.remove(header, 'slider__header--hide');
                 classie.add(header, 'slider__header--show');
-                classie.remove(e.detail.parentSelector, 'slider--summary');
             }
-
-            if (e.detail.currentItemIndex === 2) {
-                classie.add(e.detail.parentSelector, 'slider--loupe');
-            } else {
-                classie.remove(e.detail.parentSelector, 'slider--loupe');
-            }
+            
+            container.addClass('slider--' + container.find('ul.slider__list > .slide').eq(e.detail.currentItemIndex).attr('data-slidename'));
         });
 
         canvases.forEach(function (element) {
@@ -157,7 +154,7 @@
                     totalGradeStars = document.querySelector('[data-total-grade-stars]'),
                     displayVal;
 
-            if (name && totalGradeScales) {
+            if (name && totalGradeScales && totalGrade) {
                 totalGradeScales.some(function (item) {
                     if (item.name === name) {
                         displayVal = item['default-display'];
@@ -195,7 +192,8 @@
             elements = {
                 storylineContainer: $('ul.storyline'),
                 sliderPagesContainer: $('ul.slider__list'),
-                summaryLinksContainer: $('ul.summary__stories')
+                summaryLinksContainer: $('ul.summary__stories'),
+                tmpSlidesContainer: $('<div/>').appendTo($('body'))
             };
         
         function iterateConfigPages(iterator) {
@@ -227,11 +225,11 @@
         
 
         // Enable slides
-        elements.sliderPagesContainer.find('> .slide').addClass('rmSlide');
+        elements.tmpSlidesContainer.append(elements.sliderPagesContainer.find('> .slide'));
         iterateConfigPages(function (page) {
-            elements.sliderPagesContainer.find('> .slide.slide--' + page.code).removeClass('rmSlide');
+            elements.tmpSlidesContainer.find('> .slide.slide--' + page.code).attr('data-slidename', page.code).appendTo(elements.sliderPagesContainer);
         });
-        elements.sliderPagesContainer.find('> .rmSlide').remove();
+        elements.tmpSlidesContainer.remove();
         
         
         // Add slides links for summary page

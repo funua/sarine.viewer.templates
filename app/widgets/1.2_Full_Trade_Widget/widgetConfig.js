@@ -8,17 +8,20 @@ var widgetConfig = {
     color_scheme: 'color-scheme-1',
     pages: [
         {
-            title:  'Summary',
-            code:   'summary' },
+            title:  'Real view',
+            code:   'summary'
+        },
         {
             title:  'Loupe',
-            code:   'loupe' },
-        {
-            title:  'Hearts & Arrows',
-            code:   'hna'     },
-        {
-            title:  'Light',
-            code:   'light'   }
+            code:   'loupe'
+        },
+//        {
+//            title:  'Light',
+//            code:   'light'
+//        },
+//        {
+//            title:  'Hearts & Arrows',
+//            code:   'hna'     },
     ],
     // other template-specific fields
     show_IGI_logo: true
