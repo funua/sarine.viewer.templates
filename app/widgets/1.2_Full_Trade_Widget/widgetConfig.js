@@ -1,11 +1,9 @@
 var widgetConfig = {
-    title: 'Diamond22 story',
-    color: {
-        main: '#aaa',
-        // may be added other colors:
-        background: '#ccc'
-    },
+    title: 'Diamond story',
+    
+    // TODO: implement this
     color_scheme: 'color-scheme-1',
+    
     pages: [
         {
             title:  'Real view',
@@ -31,6 +29,11 @@ var widgetConfig = {
             code:   'cut'
         }
     ],
-    // other template-specific fields
-    show_IGI_logo: true
+    
+    customer_logo: {
+        img: '/img/tmp_igi_logo.png',
+        href: 'http://google.com',
+        title: 'My logo ittle'
+    }
+    // or: customer_logo: false to hide it
 };

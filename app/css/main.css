@@ -1433,14 +1433,14 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   vertical-align: middle;
 }
 /* line 42, ../sass/partials/_footer.scss */
-.footer__support__logo {
+.footer__customer__logo {
   position: absolute;
   right: 140px;
   bottom: -5px;
   height: 30px;
 }
 /* line 47, ../sass/partials/_footer.scss */
-.footer__support__logo img {
+.footer__customer__logo img {
   display: block;
   height: 30px;
   float: right;

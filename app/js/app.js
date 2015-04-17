@@ -193,7 +193,8 @@
                 storylineContainer: $('ul.storyline'),
                 sliderPagesContainer: $('ul.slider__list'),
                 summaryLinksContainer: $('ul.summary__stories'),
-                tmpSlidesContainer: $('<div/>').appendTo($('body'))
+                tmpSlidesContainer: $('<div/>').appendTo($('body')),
+                customerLogo: $('.footer__customer__logo')
             };
         
         function iterateConfigPages(iterator) {
@@ -243,6 +244,18 @@
                     class: 'summary__story summary__story--' + page.code
                 }).html(page.title).appendTo(elements.summaryLinksContainer);
             });
+        }
+        
+        
+        if (!!wConfig.customer_logo) {
+            wConfig.customer_logo.href && elements.customerLogo.attr('href', wConfig.customer_logo.href);
+            wConfig.customer_logo.img && elements.customerLogo.find('img').attr('src', wConfig.customer_logo.img);
+            if (wConfig.customer_logo.title) {
+                elements.customerLogo.attr('title', wConfig.customer_logo.title);
+                elements.customerLogo.find('img').attr('alt', wConfig.customer_logo.title);
+            }
+        } else {
+            elements.customerLogo.remove();
         }
     }
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
