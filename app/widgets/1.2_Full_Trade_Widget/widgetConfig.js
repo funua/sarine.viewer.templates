@@ -11,9 +11,8 @@ var widgetConfig = {
             title:  'Real view',
             code:   'summary',
 //            disableNavigation: true,
-            
             // TODO: implement this functionality
-            enableStoryline: true,
+            enableStoryline: true
         },
         {
             title:  'Light',
@@ -30,7 +29,7 @@ var widgetConfig = {
         {
             title:  'Cut',
             code:   'cut'
-        },
+        }
     ],
     // other template-specific fields
     show_IGI_logo: true
