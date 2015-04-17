@@ -1432,6 +1432,19 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .footer__powered__logo {
   vertical-align: middle;
 }
+/* line 42, ../sass/partials/_footer.scss */
+.footer__support__logo {
+  position: absolute;
+  right: 140px;
+  bottom: -5px;
+  height: 30px;
+}
+/* line 47, ../sass/partials/_footer.scss */
+.footer__support__logo img {
+  display: block;
+  height: 30px;
+  float: right;
+}
 
 /* line 3, ../sass/partials/slides/_summary.scss */
 .slider--summary {
