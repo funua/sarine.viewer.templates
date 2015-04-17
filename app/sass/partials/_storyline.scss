@@ -3,64 +3,94 @@
 $storyline-height: 54px;
 $storyline-point-disabled-color: #ddd;
 $storyline-text-disabled-color: #666;
-$storyline-point-active-color: $theme-accent-color;
 $storyline-point-size: 8px;
 $storyline-line-height: 1px;
 
 .storyline {
-  position: relative;
-  height: $storyline-height;
-  margin-bottom: 16px;
+	position: relative;
+	height: $storyline-height;
+	margin-bottom: 16px;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    height: $storyline-line-height;
-    background-color: $storyline-point-disabled-color;
-  }
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 10%;
+		width: 80%;
+		height: $storyline-line-height;
+		background-color: $storyline-point-disabled-color;
+	}
 
-  &__item {
-    position: relative;
-    float: left;
-    width: 20%;
-    height: 100%;
-    padding-top: 12px;
-    text-align: center;
-    font: 16px $font-family-serif;
-    color: $storyline-text-disabled-color;
-    cursor: pointer;
-    @include transition(color 0.5s ease-in);
+	&__item {
+		position: relative;
+		float: left;
+		width: 20%;
+		height: 100%;
+		padding-top: 12px;
+		text-align: center;
+		font: 16px $font-family-serif;
+		color: $storyline-text-disabled-color;
+		cursor: pointer;
+		@include transition(color 0.5s ease-in);
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: -($storyline-point-size / 2 - $storyline-line-height / 2);
-      left: 50%;
-      width: $storyline-point-size;
-      height: $storyline-point-size;
-      margin-left: -($storyline-point-size / 2);
-      background-color: $storyline-point-disabled-color;
-      @include transform(rotate(45deg));
-      @include transition(background-color 0.5s ease-in);
-    }
+		&:before {
+			content: '';
+			position: absolute;
+			top: -($storyline-point-size / 2 - $storyline-line-height / 2);
+			left: 50%;
+			width: $storyline-point-size;
+			height: $storyline-point-size;
+			margin-left: -($storyline-point-size / 2);
+			background-color: $storyline-point-disabled-color;
+			@include transform(rotate(45deg));
+			@include transition(background-color 0.5s ease-in);
+		}
 
-    &:hover {
-      color: #000;
-    }
+		&:hover {
+			color: #000;
+		}
 
-    &:hover:before {
-      background-color: lighten($storyline-point-active-color, 20%);
-    }
+		&--active{
+			color:#000;
+		}
+	}
+}
 
-    &--active {
-      color: #000;
+.storyline.items-count-2 {
 
-      &:before, &:hover:before {
-        background-color: $storyline-point-active-color;
-      }
-    }
-  }
+	&:before {
+		width: 50%;
+		left: 25%;
+	}
+
+	.storyline__item {
+		width: 50%;
+	}
+
+}
+
+.storyline.items-count-3 {
+
+	&:before {
+		width: 65%;
+		left: 17%;
+	}
+
+	.storyline__item {
+		width: 33%;
+	}
+
+}
+
+.storyline.items-count-4 {
+
+	&:before {
+		width: 76%;
+		left: 12%;
+	}
+
+	.storyline__item {
+		width: 25%;
+	}
+
 }

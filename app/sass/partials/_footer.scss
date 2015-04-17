@@ -3,39 +3,51 @@
 $footer-padding: 40px;
 
 .footer {
-  z-index: 3;
-  position: absolute;
-  left: 0;
-  bottom: 20px;
-  width: 100%;
-  padding: 0 $footer-padding;
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+	width: 100%;
+	padding: 0 $footer-padding;
 
-  &__disclaimer {
-    float: left;
-    color: #c0c0c0;
-    font-weight: 600;
-    font-size: 12px;
+	&__disclaimer {
+		float: left;
+		color: #c0c0c0;
+		font-weight: 600;
+		font-size: 12px;
 
-    &:hover, &:active {
-      color: #222;
-    }
-  }
+		&:hover, &:active {
+			color: #222;
+		}
+	}
 
-  &__powered {
-    float: right;
-    color: #c0c0c0;
-    font-size: 9px;
+	&__powered {
+		float: right;
+		color: #c0c0c0;
+		font-size: 9px;
 
-    &:hover, &:active {
-      color: #222;
+		&:hover, &:active {
+			color: #222;
 
-      .footer__powered__logo {
-        opacity: 1;
-      }
-    }
+			.footer__powered__logo {
+				opacity: 1;
+			}
+		}
 
-    &__logo {
-      vertical-align: middle;
-    }
-  }
+		&__logo {
+			vertical-align: middle;
+		}
+	}
+
+	&__support__logo {
+		position: absolute;
+		right: 140px;
+		bottom: -5px;
+		height: 30px;
+		img {
+			display: block;
+			height: 30px;
+			float: right;
+		}
+	}
 }

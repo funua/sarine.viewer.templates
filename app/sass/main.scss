@@ -1,9 +1,9 @@
 @import 'base/reset',
-        'base/theme',
         'base/typography',
         'base/modernizr';
 
-@import 'modules/animations';
+@import 'modules/animations',
+        'modules/color-scheme';
 
 @import 'partials/slider',
         'partials/slide',

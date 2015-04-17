@@ -32,7 +32,9 @@
     if (!selector) {
       throw new Error('Selector missing, eg: new WallopSlider(".selector")');
     }
-
+    
+    console.log('selectorPool ->', selectorPool);
+    
     for (var i = 0; i < selectorPool.length; i++) {
       console.log('selectorPool[i] -> ', selectorPool[i]);
       if (selectorPool[i] === selector) {
