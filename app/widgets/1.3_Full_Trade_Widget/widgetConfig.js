@@ -1,11 +1,13 @@
 var widgetConfig = {
     title: 'Diamond story',
+    
     // TODO: implement this
-    color_scheme: 'color-scheme-2',
+    color_scheme: 'color-scheme-1',
+    
     pages: [
         {
             title:  'Real view',
-            code:   'summary'
+            code:   'summary',
 //            disableNavigation: true,
 //            enableStoryline: true,
 //            controls3d: 'ctrl-3d-1'     // ctrl-3d-2   -   full
@@ -16,8 +18,7 @@ var widgetConfig = {
         },
         {
             title:  'Loupe',
-            code:   'loupe',
-            controls3d: 'ctrl-3d-2'
+            code:   'loupe'
         },
         {
             title:  'Hearts & Arrows',
@@ -28,10 +29,11 @@ var widgetConfig = {
             code:   'cut'
         }
     ],
-//    customer_logo: {
-//        img: '/img/tmp_igi_logo.png',
-//        href: 'http://google.com',
-//        title: 'My logo ittle'
-//    }
-    customer_logo: false
+    
+    customer_logo: {
+        img: '/img/tmp_igi_logo.png',
+        href: 'http://google.com',
+        title: 'My logo title'
+    }
+    // or: customer_logo: false to hide it
 };
