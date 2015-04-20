@@ -4,12 +4,12 @@ var widgetConfig = {
     color_scheme: 'color-scheme-2',
     pages: [
         {
-            title:  'Real view',
+//            title:  'Real view',
             code:   'loupe',
 //            disableNavigation: true,
 //            enableStoryline: true,
             controls3d: 'ctrl-3d-1'     // ctrl-3d-2   -   full
-        },
+        }
 //        {
 //            title:  'Light',
 //            code:   'light'
@@ -28,10 +28,10 @@ var widgetConfig = {
 //            code:   'cut'
 //        }
     ],
-//    customer_logo: {
-//        img: '/img/tmp_igi_logo.png',
-//        href: 'http://google.com',
-//        title: 'My logo ittle'
-//    }
-    customer_logo: false
+    customer_logo: {
+        img: '/img/tmp_igi_logo.png',
+        href: 'http://google.com',
+        title: 'My logo ittle'
+    }
+//    customer_logo: false
 };
