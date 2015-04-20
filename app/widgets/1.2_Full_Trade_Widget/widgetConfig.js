@@ -9,8 +9,8 @@ var widgetConfig = {
             title:  'Real view',
             code:   'summary',
 //            disableNavigation: true,
-            // TODO: implement this functionality
-            enableStoryline: true
+//            enableStoryline: true,
+//            controls3d: 'ctrl-3d-1'     // ctrl-3d-2   -   full
         },
         {
             title:  'Light',

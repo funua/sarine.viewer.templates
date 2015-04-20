@@ -61,8 +61,13 @@
             
             container.attr('class', 'slider');
             if (e.detail.currentItemIndex === 0) {
-                classie.add(header, 'slider__header--hide');
-                classie.remove(header, 'slider__header--show');
+                if (!!window.widgetConfig.pages[0].enableStoryline) {
+                    classie.remove(header, 'slider__header--hide');
+                    classie.add(header, 'slider__header--show');
+                } else {
+                    classie.add(header, 'slider__header--hide');
+                    classie.remove(header, 'slider__header--show');
+                }
                 container.addClass('slider--summary');
             } else {
                 classie.remove(header, 'slider__header--hide');
@@ -174,6 +179,7 @@
 
                 if (value === (void 0) || value === null) {
                     element.parentNode.style.display = 'none';
+                    console.log('element.parentNode ->', element.parentNode);
                 } else if (field === 'stoneProperties.carat') {
                     element.innerHTML = parseFloat(value).toFixed(3);
                 }
@@ -194,7 +200,9 @@
                 sliderPagesContainer: $('ul.slider__list'),
                 summaryLinksContainer: $('ul.summary__stories'),
                 tmpSlidesContainer: $('<div/>').appendTo($('body')),
-                customerLogo: $('.footer__customer__logo')
+                customerLogo: $('.footer__customer__logo'),
+                sliderWrap: $('.slider-wrap'),
+                sliderHeader: $('.slider__header')
             };
         
         function iterateConfigPages(iterator) {
@@ -205,6 +213,7 @@
                 iterator(wConfig.pages[i]);
             }
         }
+        
         
         // Substitute fields from config
         $('[data-widgetconfig-value]').each(function (i, elem) {
@@ -228,7 +237,12 @@
         // Enable slides
         elements.tmpSlidesContainer.append(elements.sliderPagesContainer.find('> .slide'));
         iterateConfigPages(function (page) {
-            elements.tmpSlidesContainer.find('> .slide.slide--' + page.code).attr('data-slidename', page.code).appendTo(elements.sliderPagesContainer);
+            var slide = elements.tmpSlidesContainer.find('> .slide.slide--' + page.code)
+                    .attr('data-slidename', page.code)
+                    .appendTo(elements.sliderPagesContainer);
+            if (page.controls3d) {
+                slide.addClass(page.controls3d);
+            }
         });
         elements.tmpSlidesContainer.remove();
         
@@ -247,6 +261,7 @@
         }
         
         
+        // Show / hide customer logo
         if (!!wConfig.customer_logo) {
             wConfig.customer_logo.href && elements.customerLogo.attr('href', wConfig.customer_logo.href);
             wConfig.customer_logo.img && elements.customerLogo.find('img').attr('src', wConfig.customer_logo.img);
@@ -256,6 +271,15 @@
             }
         } else {
             elements.customerLogo.remove();
+        }
+        
+        
+        // Add color scheme class
+        wConfig.color_scheme && elements.sliderWrap.addClass(wConfig.color_scheme);
+        
+        
+        if (!!wConfig.pages[0].enableStoryline) {
+            elements.sliderHeader.show();
         }
     }
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
