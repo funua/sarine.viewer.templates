@@ -1,52 +1,222 @@
 @import 'compass/css3';
 
 .slider--loupe {
-  background-color: #878787;
+	background-color: #878787;
 
-  .slider__heading {
-    color: #fff;
-  }
+	.slider__heading {
+		color: #fff;
+	}
 
-  .slide {
-    &__heading {
-      color: #fff;
-    }
+	.slide {
+		&__heading {
+			color: #fff;
+		}
 
-    &__caption {
-      color: #fff;
-    }
-  }
+		&__caption {
+			color: #fff;
+		}
+	}
 
-  .storyline__item {
-    color: #ddd;
-  }
+	.storyline__item {
+		color: #ddd;
+	}
 
-  .slider__btn {
-    stroke: #eee;
-  }
+	.slider__btn {
+		stroke: #eee;
+	}
 
-  .storyline__item {
-    &:hover, &:active, &--active {
-      color: #fff;
-    }
-  }
+	.storyline__item {
+		&:hover, &:active, &--active{
+			color:#fff;
+		}
+	}
 }
+
 
 .slide--loupe {
-  &:before {
-    background-image: url('../img/bg-loupe.png');
-    top: -50px;
-    @include background-size(200px);
-    opacity: 0.1;
-  }
-}
 
-.slide__img-wrap--loupe {
-  padding-bottom: 20px;
-}
+	&:before {
+		background-image: url('../img/bg-loupe.png');
+		top: -50px;
+		@include background-size(200px);
+		opacity: 0.1;
+	}
 
-.slide__img--loupe {
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
+	.slide__img-wrap--loupe {
+		padding-bottom: 20px;
+		overflow: visible;
+	}
+
+	.slide__img--loupe {
+		width: 250px;
+		height: 250px;
+		margin: 0 auto;
+	}
+
+	.inspect-stone{
+		overflow: visible;
+		position: static;
+
+		.stone_number{
+			position: absolute;
+			left: 50%;
+			margin: 0 0 0 -25px;
+			width: 50px;
+			text-align: center;
+			bottom: -134px;
+			z-index: 4;
+		}
+
+		.buttons{
+			margin: 0;
+			float: none;
+			border-width: 1px 0;
+			border-style: solid;
+			border-color: #a7a7a7;
+			bottom: -82px;
+			right: -34px;
+			z-index: 4;
+			top: auto;
+			height: 75px;
+
+			.icon{
+				width: 52px !important;
+				height: 45px !important;
+				border-radius: 0;
+				margin: 15px 0 13px;
+				background: none;
+				position: relative;
+
+				&.menu, &.arrow-right, &.arrow-left{
+					display: none;
+				}
+
+				i{
+					display: none;
+				}
+
+				&.top, &.side, &.bottom, &.focus_in, &.focus_out{
+					position: absolute;
+					top: 0;
+				}
+
+				&.magnify{
+					position: absolute;
+					top: 0;
+					right: 0;
+					border-left: 1px solid #a7a7a7;
+					margin-left: 0;
+					margin-right: 0;
+					width: 71px !important;
+				}
+
+				&.magnify:before{
+					background-position: -250px 0;
+					margin-left: -22px;
+				}
+
+				&:before{
+					content:"";
+					width: 50px;
+					height: 50px;
+					position: absolute;
+					top: -2px;
+					left: 50%;
+					margin-left: -26px;
+					background-image: url("../img/icons.png");
+				}
+
+				&.top:before{
+					background-position: 0 0;
+				}
+
+				&.side:before{
+					background-position: -50px 0;
+				}
+
+				&.bottom:before{
+					background-position: -100px 0;
+				}
+
+				&.focus_in:before{
+					background-position: -150px 0;
+					margin-left: 0;
+					left: 18px;
+				}
+
+				&.focus_out:before{
+					background-position: -200px 0;
+				}
+
+				&.selected{
+
+				}
+			}
+		}
+	}
+	&.ctrl-3d-1{
+		padding-bottom: 152px;
+
+		.buttons{
+			width: 71px;
+
+			.icon{
+				&.top, &.side, &.bottom, &.focus_in, &.focus_out{
+					display: none;
+				}
+			}
+		}
+	}
+	&.ctrl-3d-2{
+		padding-bottom: 152px;
+
+		.buttons{
+			width: 414px;
+
+			.icon{
+
+				&.top{
+					left: 148px;
+				}
+				&.side{
+					left: 214px;
+				}
+				&.bottom{
+					left: 280px;
+				}
+
+				&.focus_in, &.focus_out{
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.ctrl-3d-3{
+		padding-bottom: 152px;
+
+		.buttons{
+			width: 414px;
+
+			.icon{
+				&.top{
+					left: 5px;
+				}
+				&.side{
+					left: 76px;
+				}
+				&.bottom{
+					left: 137px;
+				}
+				&.focus_in{
+					left: 190px;
+					border-left: 1px solid #a7a7a7;
+					width: 70px !important;
+				}
+				&.focus_out{
+					left: 277px;
+				}
+			}
+		}
+	}
 }
