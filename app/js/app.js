@@ -23,7 +23,7 @@
             totalViewers = 1,
             playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0),
             canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0),
-            swipeRecognizer = new Hammer(document.getElementById('slider'));
+            swipeRecognizer;
 
 
         readConfig();
@@ -96,14 +96,18 @@
         } else {
             onViewersReady();
         }
-
-        swipeRecognizer.on('swipeleft swiperight', function (e) {
-            if (e.type === 'swipeleft') {
-                slider.next();
-            } else {
-                slider.previous();
-            }
-        });
+        
+        
+        if (Hammer) {
+            swipeRecognizer = new Hammer(document.getElementById('slider'));
+            swipeRecognizer.on('swipeleft swiperight', function (e) {
+                if (e.type === 'swipeleft') {
+                    slider.next();
+                } else {
+                    slider.previous();
+                }
+            });
+        }
 
         setTotalGrade();
 
