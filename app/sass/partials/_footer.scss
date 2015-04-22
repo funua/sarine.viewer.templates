@@ -40,13 +40,14 @@ $footer-padding: 40px;
 	}
 
 	&__customer__logo {
+		display: none;
 		position: absolute;
 		right: 140px;
-		bottom: -5px;
-		height: 30px;
+		bottom: 0;
+		height: 20px;
 		img {
 			display: block;
-			height: 30px;
+			height: 100%;
 			float: right;
 		}
 	}

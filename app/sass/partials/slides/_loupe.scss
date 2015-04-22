@@ -63,8 +63,12 @@
 			margin: 0 0 0 -25px;
 			width: 50px;
 			text-align: center;
-			bottom: 18px;
+			bottom: 17px;
 			z-index: 4;
+			color: #fff;
+			opacity: 0.6;
+			font-size: 12px;
+			text-shadow: none;
 		}
 
 		.buttons{
@@ -158,11 +162,20 @@
 		padding-bottom: 152px;
 
 		.buttons{
-			width: 71px;
+			width: 150px;
+			right: 50%;
+			margin-right: -75px;
 
 			.icon{
 				&.top, &.side, &.bottom, &.focus_in, &.focus_out{
 					display: none;
+				}
+
+				&.magnify{
+					border-left:none;
+					width: 52px !important;
+					right: 50%;
+					margin-right: -26px;
 				}
 			}
 		}
