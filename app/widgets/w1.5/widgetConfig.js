@@ -10,7 +10,7 @@ var widgetConfig = {
             title:  'Real view',
             code:   'real',
             disableNavigation: true,
-            enableStoryline: true,
+            enableStoryline: true
         },
         {
             title:  'Loupe',
@@ -19,7 +19,7 @@ var widgetConfig = {
         {
             title:  '3D loupe',
             code:   'loupe3d',
-            controls3d: 'ctrl-3d-1'
+            controls3d: 'ctrl-3d-2'
         }
     ],
     
