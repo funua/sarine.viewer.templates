@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var appConfig = {
-        widgetName: 'w1.2'        // must exactly match widget folder name
+        widgetName: 'w1.4'        // must exactly match widget folder name
     };
 
     grunt.initConfig({
