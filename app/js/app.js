@@ -290,7 +290,9 @@
         
         
         if (!!wConfig.pages[0].enableStoryline) {
-            elements.sliderHeader.delay(100).show();
+            window.setTimeout(function() {
+                elements.sliderHeader.show();
+            }, 500);
         }
     }
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
