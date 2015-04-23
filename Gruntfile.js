@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var appConfig = {
-        widgetName: 'w2'        // must exactly match widget folder name
+        widgetName: 'w1.2'        // must exactly match widget folder name
     };
 
     grunt.initConfig({
@@ -65,18 +65,7 @@ module.exports = function (grunt) {
             options: {
                 livereload: true
             },
-            files: ['app/**/*'],
-            sass: {
-                options: {
-                    livereload: false
-                },
-                files: 'app/sass/**/*.scss',
-                tasks: ['compass:dev', 'cssmin']
-            },
-            js: {
-                files: ['app/js/**/*.js', '!**/*.min.js'],
-                tasks: ['jshint', 'uglify']
-            }
+            files: ['app/**/*']
         },
 
         copy: {
