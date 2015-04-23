@@ -56,7 +56,7 @@
 
 
         FastClick.attach(document.body);
-
+        
         slider.on('change', function (e) {
             var header = e.detail.parentSelector.querySelector('.slider__header'),
                 container = $(e.detail.parentSelector);
@@ -70,7 +70,6 @@
                     classie.add(header, 'slider__header--hide');
                     classie.remove(header, 'slider__header--show');
                 }
-                container.addClass('slider--summary');
             } else {
                 classie.remove(header, 'slider__header--hide');
                 classie.add(header, 'slider__header--show');
@@ -205,10 +204,11 @@
                 storylineContainer: $('ul.storyline'),
                 sliderPagesContainer: $('ul.slider__list'),
                 summaryLinksContainer: $('ul.summary__stories'),
-                tmpSlidesContainer: $('<div/>').appendTo($('body')),
+                tmpSlidesContainer: $('<div/>'),
                 customerLogo: $('.footer__customer__logo'),
                 sliderWrap: $('.slider-wrap'),
-                sliderHeader: $('.slider__header')
+                sliderHeader: $('.slider__header'),
+                aSlider: $('#slider')
             };
         
         function iterateConfigPages(iterator) {
@@ -238,7 +238,10 @@
                 }).html(page.title).appendTo(elements.storylineContainer);
             });
         }
-        elements.storylineContainer.addClass('items-count-' + wConfig.pages.length);
+        elements.storylineContainer
+                .addClass('items-count-' + wConfig.pages.length)
+                .find('> .storyline__item').eq(0).addClass('storyline__item--active');
+        
 
         // Enable slides
         elements.tmpSlidesContainer.append(elements.sliderPagesContainer.find('> .slide'));
@@ -251,6 +254,7 @@
             }
         });
         elements.tmpSlidesContainer.remove();
+        elements.aSlider.addClass('slider--' + wConfig.pages[0].code);
         
         
         // Add slides links for summary page
@@ -280,8 +284,9 @@
         }
         
         
-        // Add color scheme class
+        // Add classes to slider wrap element: color scheme and widget code
         wConfig.color_scheme && elements.sliderWrap.addClass(wConfig.color_scheme);
+        wConfig.widget_brief_code && elements.sliderWrap.addClass(wConfig.widget_brief_code);
         
         
         if (!!wConfig.pages[0].enableStoryline) {

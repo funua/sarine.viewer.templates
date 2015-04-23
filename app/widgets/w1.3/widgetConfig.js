@@ -1,7 +1,8 @@
 var widgetConfig = {
     title: 'Diamond story',
     
-    // TODO: implement this
+    widget_brief_code: 'w3',
+    
     color_scheme: 'color-scheme-1',
     
     pages: [
@@ -10,7 +11,6 @@ var widgetConfig = {
             code:   'summary',
 //            disableNavigation: true,
 //            enableStoryline: true,
-//            controls3d: 'ctrl-3d-1'     // ctrl-3d-2   -   full
         },
         {
             title:  'Light',
@@ -30,10 +30,5 @@ var widgetConfig = {
         }
     ],
     
-    customer_logo: {
-        img: '/img/tmp_igi_logo.png',
-        href: 'http://google.com',
-        title: 'My logo title'
-    }
-    // or: customer_logo: false to hide it
+    customer_logo: false
 };
