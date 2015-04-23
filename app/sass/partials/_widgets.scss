@@ -12,6 +12,11 @@
 	}
 }
 
-.w3{
-
+.w4{
+	.slider--real .storyline:before{
+		background-color: #bbb;
+	}
+	.slider--real .storyline__item:not(.storyline__item--active):before{
+		background-color: #bbb;
+	}
 }

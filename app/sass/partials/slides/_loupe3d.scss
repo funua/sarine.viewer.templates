@@ -43,7 +43,7 @@
 	}
 
 	.slide__img-wrap--loupe {
-		padding-bottom: 20px;
+		padding-bottom: 172px;
 		overflow: visible;
 	}
 
@@ -78,7 +78,7 @@
 			border-style: solid;
 			border-color: #a7a7a7;
 			bottom: 80px;
-			right: 42px;
+			right: 50%;
 			z-index: 4;
 			top: auto;
 			height: 75px;
@@ -159,11 +159,10 @@
 		}
 	}
 	&.ctrl-3d-1{
-		padding-bottom: 152px;
+//		padding-bottom: 152px;
 
 		.buttons{
 			width: 150px;
-			right: 50%;
 			margin-right: -75px;
 
 			.icon{
@@ -181,11 +180,10 @@
 		}
 	}
 	&.ctrl-3d-2{
-		padding-bottom: 152px;
+//		padding-bottom: 152px;
 
 		.buttons{
 			width: 300px;
-			right: 50%;
 			margin-right: -150px;
 
 			.icon{
@@ -208,10 +206,11 @@
 	}
 
 	&.ctrl-3d-3{
-		padding-bottom: 152px;
+//		padding-bottom: 152px;
 
 		.buttons{
 			width: 414px;
+			margin-right: -207px;
 
 			.icon{
 				&.top{

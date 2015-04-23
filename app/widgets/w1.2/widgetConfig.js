@@ -7,7 +7,7 @@ var widgetConfig = {
     
     pages: [
         {
-            code:   'loupe',
+            code:   'loupe3d',
             controls3d: 'ctrl-3d-1'
         }
     ],

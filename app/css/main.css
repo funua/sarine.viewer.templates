@@ -1645,7 +1645,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 }
 /* line 45, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d .slide__img-wrap--loupe {
-  padding-bottom: 20px;
+  padding-bottom: 172px;
   overflow: visible;
 }
 /* line 50, ../sass/partials/slides/_loupe3d.scss */
@@ -1681,7 +1681,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-style: solid;
   border-color: #a7a7a7;
   bottom: 80px;
-  right: 42px;
+  right: 50%;
   z-index: 4;
   top: auto;
   height: 75px;
@@ -1756,80 +1756,67 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .slide--loupe3d .inspect-stone .buttons .icon.focus_out:before {
   background-position: -200px 0;
 }
-/* line 161, ../sass/partials/slides/_loupe3d.scss */
-.slide--loupe3d.ctrl-3d-1 {
-  padding-bottom: 152px;
-}
 /* line 164, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-1 .buttons {
   width: 150px;
-  right: 50%;
   margin-right: -75px;
 }
-/* line 170, ../sass/partials/slides/_loupe3d.scss */
+/* line 169, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-1 .buttons .icon.top, .slide--loupe3d.ctrl-3d-1 .buttons .icon.side, .slide--loupe3d.ctrl-3d-1 .buttons .icon.bottom, .slide--loupe3d.ctrl-3d-1 .buttons .icon.focus_in, .slide--loupe3d.ctrl-3d-1 .buttons .icon.focus_out {
   display: none;
 }
-/* line 174, ../sass/partials/slides/_loupe3d.scss */
+/* line 173, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-1 .buttons .icon.magnify {
   border-left: none;
   width: 52px !important;
   right: 50%;
   margin-right: -26px;
 }
-/* line 183, ../sass/partials/slides/_loupe3d.scss */
-.slide--loupe3d.ctrl-3d-2 {
-  padding-bottom: 152px;
-}
-/* line 186, ../sass/partials/slides/_loupe3d.scss */
+/* line 185, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons {
   width: 300px;
-  right: 50%;
   margin-right: -150px;
 }
-/* line 193, ../sass/partials/slides/_loupe3d.scss */
+/* line 191, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.top {
   left: 32px;
 }
-/* line 196, ../sass/partials/slides/_loupe3d.scss */
+/* line 194, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.side {
   left: 92px;
 }
-/* line 199, ../sass/partials/slides/_loupe3d.scss */
+/* line 197, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.bottom {
   left: 151px;
 }
-/* line 203, ../sass/partials/slides/_loupe3d.scss */
+/* line 201, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.focus_in, .slide--loupe3d.ctrl-3d-2 .buttons .icon.focus_out {
   display: none;
 }
-/* line 210, ../sass/partials/slides/_loupe3d.scss */
-.slide--loupe3d.ctrl-3d-3 {
-  padding-bottom: 152px;
-}
-/* line 213, ../sass/partials/slides/_loupe3d.scss */
+/* line 211, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons {
   width: 414px;
+  margin-right: -207px;
 }
-/* line 217, ../sass/partials/slides/_loupe3d.scss */
+/* line 216, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.top {
   left: 5px;
 }
-/* line 220, ../sass/partials/slides/_loupe3d.scss */
+/* line 219, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.side {
   left: 76px;
 }
-/* line 223, ../sass/partials/slides/_loupe3d.scss */
+/* line 222, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.bottom {
   left: 137px;
 }
-/* line 226, ../sass/partials/slides/_loupe3d.scss */
+/* line 225, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.focus_in {
   left: 190px;
   border-left: 1px solid #a7a7a7;
   width: 70px !important;
 }
-/* line 231, ../sass/partials/slides/_loupe3d.scss */
+/* line 230, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.focus_out {
   left: 277px;
 }
@@ -1887,7 +1874,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   height: 180px;
 }
 
-/* line 1, ../sass/partials/slides/_real.scss */
+/* line 3, ../sass/partials/slides/_real.scss */
 .slider--real {
   background-color: #e3e3e3;
   border-color: #fff;
@@ -2253,6 +2240,15 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .w1 .slide__heading {
   margin-top: -40px;
   margin-bottom: 70px;
+}
+
+/* line 16, ../sass/partials/_widgets.scss */
+.w4 .slider--real .storyline:before {
+  background-color: #bbb;
+}
+/* line 19, ../sass/partials/_widgets.scss */
+.w4 .slider--real .storyline__item:not(.storyline__item--active):before {
+  background-color: #bbb;
 }
 
 /*# sourceMappingURL=main.css.map */
