@@ -274,14 +274,28 @@
                 template: template,
             });
             vm.bind('body')
+                    // old method - very slow
+                    /*.then(function () {
+                        return vm.first_init();
+                    })
+                    .then(function () {
+                        vm.play();
+                        return vm.full_init();
+                    })*/
+                    // end old method
+                    
+                    
+                    // New method - faster
                     .then(function () {
                         vm.first_init();
                         return vm.play();
                     })
                     .then(function () {
-                        //vm.play()
                         return vm.full_init();
                     })
+                    // end new method
+                    
+                    
                     .then(function () {
                         console.log("end");
                     });

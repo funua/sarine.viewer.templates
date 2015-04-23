@@ -161,6 +161,18 @@ module.exports = function (grunt) {
                 src: 'app/dist/<%= project.widgetName %>/index.html',
                 dest: '<%= replace.dist_css_link.src %>'
             },
+            dist_img_links: {
+                options: {
+                    patterns: [
+                        {
+                            match: /src="\/img\//,
+                            replacement: 'src="/dist/<%= project.widgetName %>/img/'
+                        }
+                    ]
+                },
+                src: 'app/dist/<%= project.widgetName %>/index.html',
+                dest: '<%= replace.dist_css_link.src %>'
+            },
             css_bundle_font_urls: {
                 options: {
                     patterns: [
@@ -209,6 +221,7 @@ module.exports = function (grunt) {
 
         // replace paths in html
         'replace:dist_scripts_links',
+        'replace:dist_img_links',
         'replace:dist_css_link',
 
         // replace paths in css
