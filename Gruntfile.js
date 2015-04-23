@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         project: appConfig,
-        
+
         connect: {
             server: {
                 options: {
@@ -20,13 +20,47 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
         open: {
             server: {
                 path: 'http://localhost:<%= connect.server.options.port %>'
             }
         },
-        
+
+        compass: {
+            dist: {
+                options: {
+                    sassDir: 'app/sass',
+                    cssDir: 'app/css',
+                    fontsDir: 'app/fonts',
+                    relativeAssets: true,
+                    environment: 'production'
+                }
+            },
+            dev: {
+                options: {
+                    sassDir: 'app/sass',
+                    cssDir: 'app/css',
+                    fontsDir: 'app/fonts',
+                    relativeAssets: true,
+                    sourcemap: true,
+                    outputStyle: 'expanded'
+                }
+            }
+        },
+
+        cssmin: {
+            target: {
+                options: {
+                    report: 'min',
+                    roundingPrecision: -1
+                },
+                files: {
+                    'app/css/main.min.css': 'app/css/main.css'
+                }
+            }
+        },
+
         watch: {
             options: {
                 livereload: true
@@ -44,7 +78,7 @@ module.exports = function (grunt) {
                 tasks: ['jshint', 'uglify']
             }
         },
-        
+
         copy: {
             dist_html: {
                 flatten: true,
@@ -70,12 +104,12 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
         clean: {
             initial: ['app/dist'],
             tmp: ['tmp']
         },
-        
+
         concat: {
             options: {
                 separator: ';'
@@ -93,14 +127,14 @@ module.exports = function (grunt) {
                 dest: 'tmp/app.bundle.js'
             }
         },
-        
+
         uglify: {
             dist: {
                 src: ['tmp/app.bundle.js'],
                 dest: 'tmp/app.bundle.min.js'
             }
         },
-        
+
         replace: {
             index_html: {
                 options: {
@@ -194,7 +228,7 @@ module.exports = function (grunt) {
 
         'clean:tmp'
     ]);
-    
+
     grunt.registerTask('build_test', [
         'build_widget',
         'replace:index_html'
