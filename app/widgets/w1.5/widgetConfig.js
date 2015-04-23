@@ -16,7 +16,7 @@ var widgetConfig = {
         {
             title:  '3D loupe',
             code:   'loupe3d',
-            controls3d: 'ctrl-3d-1'
+            controls3d: 'ctrl-3d-2'
         }
     ],
     customer_logo: false
