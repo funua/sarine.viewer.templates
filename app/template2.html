@@ -5,7 +5,7 @@
 <!-- END -->
 
         <style>
-            .viewer{
+            .viewers .viewer{
                 width: 300px !important;
                 height: 400px !important;
                 margin: 20px 0 0 20px;
@@ -17,42 +17,42 @@
                 align-items: center;
             }
         </style>
-<div style="overflow: hidden; clear: both">
-    <sarine-viewer viewer="loupeRealView" order="10"></sarine-viewer>
-    <sarine-viewer viewer="loupeRealViewImage" order="11"></sarine-viewer>
-    <sarine-viewer viewer="loupeTopInspection" order="12"></sarine-viewer>
-    <sarine-viewer viewer="loupeTopInspectionImage" order="13"></sarine-viewer>
-    <sarine-viewer viewer="lightViewer" order="1"></sarine-viewer>
-    <sarine-viewer viewer="lightViewerImage" order="2"></sarine-viewer>
-    <sarine-viewer viewer="lightReportViewer" order="3"></sarine-viewer>
-    <sarine-viewer viewer="lightReportViewerImage" order="4"></sarine-viewer>
-    <sarine-viewer viewer="externalImage" order="8"></sarine-viewer>
-    <sarine-viewer viewer="externalPdf" order="9"></sarine-viewer>
-    <sarine-viewer viewer="cut2DView" order="6"></sarine-viewer>
-    <sarine-viewer viewer="cutHeartsAndArrows" order="7"></sarine-viewer>
-    <sarine-viewer viewer="loupe3DFullInspection" order="14"></sarine-viewer>
+<div style="overflow: hidden; clear: both" class="viewers">
+    <sarine-viewer viewer="loupeRealView" order="1"></sarine-viewer>
+    <sarine-viewer viewer="loupeRealViewImage" order="2"></sarine-viewer>
+    <sarine-viewer viewer="loupeTopInspection" order="3"></sarine-viewer>
+    <sarine-viewer viewer="loupeTopInspectionImage" order="4"></sarine-viewer>
+    <sarine-viewer viewer="lightViewer" order="5"></sarine-viewer>
+    <sarine-viewer viewer="lightViewerImage" order="6"></sarine-viewer>
+    <sarine-viewer viewer="lightReportViewer" order="7"></sarine-viewer>
+    <sarine-viewer viewer="lightReportViewerImage" order="8"></sarine-viewer>
+    <sarine-viewer viewer="externalImage" order="9"></sarine-viewer>
+    <sarine-viewer viewer="externalPdf" order="10"></sarine-viewer>
+    <sarine-viewer viewer="cut2DView" order="11"></sarine-viewer>
+    <sarine-viewer viewer="cutHeartsAndArrows" order="12"></sarine-viewer>
+    <!--<sarine-viewer viewer="loupe3DFullInspection" order="13"></sarine-viewer>-->
 
-    <sarine-viewer viewer="cut3DView" order="5"></sarine-viewer>
+    <sarine-viewer viewer="cut3DView" order="14"></sarine-viewer>
 </div>
 
-<!--<link rel="stylesheet" type="text/css" href="//d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v2.0.2/css/main.min.css">-->
-<div class="slider-wrap slider-template-2" data-hidden-until-load>
-    <div class="slider slider--loupe" style="display:none" id="slider">
+<link rel="stylesheet" type="text/css" href="css/main.min.css">
+<div class="slider-wrap" data-hidden-until-load>
+    <div class="slider slider--summary" style="display:none" id="slider">
         <header class="slider__header slider__header--active">
             <h1 class="slider__heading">Diamond Story</h1>
             <ul class="storyline" style="display: none;">
-                <li class="storyline__item storyline__item--active">Summary</li>
-                <li class="storyline__item">Light</li>
-                <li class="storyline__item">Loupe</li>
-                <li class="storyline__item">Hearts &amp; Arrows</li>
-                <li class="storyline__item">Cut</li>
+                <!--<li class="storyline__item storyline__item--active">Summary</li>-->
+                <!--<li class="storyline__item">Light</li>-->
+                <!--<li class="storyline__item">Loupe</li>-->
+                <!--<li class="storyline__item">Hearts &amp; Arrows</li>-->
+                <!--<li class="storyline__item">Cut</li>-->
             </ul>
             <h2 class="slide__heading" data-popup-id="popup_loupe">Sarine Loupe™ Imaging <span class="q-mark"></span></h2>
         </header>
 
         <ul class="slider__list" >
 
-            <li class="slide slide--summary ">
+            <li class="slide slide--summary slide--current">
                 <div class="summary">
                     <div class="summary__img-wrap">
                         <div class="summary__img">
@@ -96,10 +96,10 @@
                     <div class="summary__story-wrap">
                         <h1 class="summary__heading">Explore This Diamond Story</h1>
                         <ul class="summary__stories">
-                            <li class="summary__story summary__story--light">Light</li>
-                            <li class="summary__story summary__story--loupe">Loupe</li>
-                            <li class="summary__story summary__story--hna">Hearts &amp; Arrows</li>
-                            <li class="summary__story summary__story--cut">Cut</li>
+                            <!--<li class="summary__story summary__story--light">Light</li>-->
+                            <!--<li class="summary__story summary__story--loupe">Loupe</li>-->
+                            <!--<li class="summary__story summary__story--hna">Hearts &amp; Arrows</li>-->
+                            <!--<li class="summary__story summary__story--cut">Cut</li>-->
                         </ul>
                     </div>
                 </div>
@@ -215,7 +215,7 @@
                 </div>
             </li>
 
-            <li class="slide slide--loupe  slide--current">
+            <li class="slide slide--loupe">
 
                 <div class="slide__content slide__content--loupe">
                     <div class="slide__img-wrap slide__img-wrap--loupe">
@@ -305,14 +305,15 @@
 
 </div>
 
-<!--<script type="text/javascript" src="js/vendor/fastclick.js"></script>-->
-<!--<script type="text/javascript" src="js/vendor/classie.js"></script>-->
-<!--<script type="text/javascript" src="js/vendor/WallopSlider.js"></script>-->
-<!--<script type="text/javascript" src="js/PopupService.js"></script>-->
-<!--<script type="text/javascript" src="js/BulletNavigation.js"></script>-->
-<!--<script type="text/javascript" src="js/app.js"></script>-->
-
-<script type="text/javascript" src="//d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v3-dev/js/app.bundle.min.js"></script>
+<script type="text/javascript" src="/js/vendor/fastclick.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/vendor/classie.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/vendor/WallopSlider.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/vendor/hammer.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/PopupService.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/videoPlay.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/BulletNavigation.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/app.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/widgets/w2/widgetConfig.js"></script>
 
 <!--svgs-->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">

@@ -57,10 +57,11 @@ $storyline-line-height: 1px;
 }
 
 .storyline.items-count-2 {
+	padding: 0 44px;
 
 	&:before {
-		width: 50%;
-		left: 25%;
+		width: 38%;
+		left: 31%;
 	}
 
 	.storyline__item {

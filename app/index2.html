@@ -253,8 +253,12 @@
 </head>
 <body>
     <!-- business logic -->
-    <script type="text/javascript" src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.resource.manager.js"></script>
-    <script type="text/javascript" src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.manager.js"></script>
+    <!--<script type="text/javascript" src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.resource.manager.js"></script>-->
+    <!--<script type="text/javascript" src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.manager.js"></script>-->
+
+    <script type="text/javascript"
+            src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.resource.manager.js"></script>
+    <script type="text/javascript" src="/api_tmp/sarine.viewer.manager.js"></script>
 
     <!--<script type="text/javascript" src="sketch/sarine.viewer.resource.manager.js"></script>-->
     <!--<script type="text/javascript" src="sketch/sarine.viewer.manager.js"></script>-->
@@ -271,10 +275,10 @@
             template: template
         });
         vm.bind('body').then(function() {
-            return vm.first_init();
+            vm.first_init();
+            return vm.play();
         })
         .then(function() {
-            vm.play()
             return vm.full_init();
         })
         .then(function() {
@@ -283,8 +287,10 @@
     </script>
     <!-- end init functional script -->
 
-    <link rel="stylesheet" type="text/css" href="//d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v3-dev/css/main.min.css">
-    <script type="text/javascript" src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.utils.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="//d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v3-dev/css/main.min.css">-->
+    <!--<script type="text/javascript" src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.utils.js"></script>-->
+    <script type="text/javascript"
+            src="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/core/v1/sarine.viewer.utils.js"></script>
 
     <!--<link rel="stylesheet" type="text/css" href="css/main.min.css">-->
     <!--<script type="text/javascript" src="sketch/sarine.viewer.utils.js"></script>-->

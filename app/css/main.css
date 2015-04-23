@@ -894,32 +894,36 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   color: #000;
 }
 
-/* line 61, ../sass/partials/_storyline.scss */
-.storyline.items-count-2:before {
-  width: 50%;
-  left: 25%;
+/* line 59, ../sass/partials/_storyline.scss */
+.storyline.items-count-2 {
+  padding: 0 44px;
 }
-/* line 66, ../sass/partials/_storyline.scss */
+/* line 62, ../sass/partials/_storyline.scss */
+.storyline.items-count-2:before {
+  width: 38%;
+  left: 31%;
+}
+/* line 67, ../sass/partials/_storyline.scss */
 .storyline.items-count-2 .storyline__item {
   width: 50%;
 }
 
-/* line 74, ../sass/partials/_storyline.scss */
+/* line 75, ../sass/partials/_storyline.scss */
 .storyline.items-count-3:before {
   width: 65%;
   left: 17%;
 }
-/* line 79, ../sass/partials/_storyline.scss */
+/* line 80, ../sass/partials/_storyline.scss */
 .storyline.items-count-3 .storyline__item {
   width: 33%;
 }
 
-/* line 87, ../sass/partials/_storyline.scss */
+/* line 88, ../sass/partials/_storyline.scss */
 .storyline.items-count-4:before {
   width: 76%;
   left: 12%;
 }
-/* line 92, ../sass/partials/_storyline.scss */
+/* line 93, ../sass/partials/_storyline.scss */
 .storyline.items-count-4 .storyline__item {
   width: 25%;
 }
@@ -1374,13 +1378,13 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .footer__customer__logo {
   position: absolute;
   right: 140px;
-  bottom: -5px;
-  height: 30px;
+  bottom: 0;
+  height: 20px;
 }
 /* line 47, ../sass/partials/_footer.scss */
 .footer__customer__logo img {
   display: block;
-  height: 30px;
+  height: 100%;
   float: right;
 }
 
@@ -1720,51 +1724,53 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 }
 /* line 186, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-2 .buttons {
-  width: 414px;
+  width: 300px;
+  right: 50%;
+  margin-right: -150px;
 }
-/* line 191, ../sass/partials/slides/_loupe.scss */
+/* line 193, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-2 .buttons .icon.top {
-  left: 148px;
+  left: 32px;
 }
-/* line 194, ../sass/partials/slides/_loupe.scss */
+/* line 196, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-2 .buttons .icon.side {
-  left: 214px;
+  left: 92px;
 }
-/* line 197, ../sass/partials/slides/_loupe.scss */
+/* line 199, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-2 .buttons .icon.bottom {
-  left: 280px;
+  left: 151px;
 }
-/* line 201, ../sass/partials/slides/_loupe.scss */
+/* line 203, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-2 .buttons .icon.focus_in, .slide--loupe.ctrl-3d-2 .buttons .icon.focus_out {
   display: none;
 }
-/* line 208, ../sass/partials/slides/_loupe.scss */
+/* line 210, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-3 {
   padding-bottom: 152px;
 }
-/* line 211, ../sass/partials/slides/_loupe.scss */
+/* line 213, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-3 .buttons {
   width: 414px;
 }
-/* line 215, ../sass/partials/slides/_loupe.scss */
+/* line 217, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-3 .buttons .icon.top {
   left: 5px;
 }
-/* line 218, ../sass/partials/slides/_loupe.scss */
+/* line 220, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-3 .buttons .icon.side {
   left: 76px;
 }
-/* line 221, ../sass/partials/slides/_loupe.scss */
+/* line 223, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-3 .buttons .icon.bottom {
   left: 137px;
 }
-/* line 224, ../sass/partials/slides/_loupe.scss */
+/* line 226, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-3 .buttons .icon.focus_in {
   left: 190px;
   border-left: 1px solid #a7a7a7;
   width: 70px !important;
 }
-/* line 229, ../sass/partials/slides/_loupe.scss */
+/* line 231, ../sass/partials/slides/_loupe.scss */
 .slide--loupe.ctrl-3d-3 .buttons .icon.focus_out {
   left: 277px;
 }
@@ -1820,6 +1826,12 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .slide__img--cut {
   width: auto;
   height: 180px;
+}
+
+/* line 1, ../sass/partials/slides/_real.scss */
+.slider--real {
+  background-color: #ededed;
+  border-color: #fff;
 }
 
 /* line 8, ../sass/partials/transitions/_common.scss */

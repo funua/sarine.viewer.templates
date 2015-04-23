@@ -6,14 +6,10 @@
 </style>
 <!-- END -->
 
-<!--<link rel="stylesheet" type="text/css" href="//d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v2.0.2/css/main.min.css">-->
-<!--<link rel="stylesheet" type="text/css" href="/css/main.css " >-->
-<style>
-    @import '../../css/main.min.css';
-</style>
+<style>@import '../../css/main.min.css';</style>
 
-<div class="slider-wrap" data-hidden-until-load>
-    <div class="slider slider--loupe" style="display:none" id="slider">
+<div class="slider-wrap w3" data-hidden-until-load>
+    <div class="slider slider--real" style="display:none" id="slider">
         <header class="slider__header">
             <h1 class="slider__heading" data-widgetconfig-value="title">Diamond Story</h1>
             <ul class="storyline">
@@ -22,12 +18,57 @@
         </header>
 
         <ul class="slider__list">
-            <li class="slide slide--loupe slide--current">
-                <h2 class="slide__heading" data-popup-id="popup_loupe">Sarine Loupe™ Imaging <span class="q-mark"></span></h2>
+            <li class="slide slide--real slide--current">
+                <div class="summary">
+                    <div class="summary__img-wrap">
+                        <div class="summary__img">
+                            <sarine-viewer viewer="loupeRealViewImage" order="1"></sarine-viewer>
+                        </div>
+                    </div>
+                    <div class="summary__specs">
+                        <ul class="summary__specs-row">
+                            <li class="summary__spec">
+                                <span class="summary__spec__title">GIA:</span>
+                                <span class="summary__spec__value" data-sarine-info="stoneProperties.GIA"></span>
+                            </li>
+                            <li class="summary__spec">
+                                <span class="summary__spec__title">Sarine ID:</span>
+                                <span class="summary__spec__value" data-sarine-info="friendlyName"></span>
+                            </li>
+                        </ul>
+                        <ul class="summary__specs-row">
+                            <li class="summary__spec" data-popup-id="popup_color">
+                                <span class="summary__spec__title">Color:</span>
+                                <span class="summary__spec__value" data-sarine-info="stoneProperties.color"></span>
+                                <span class="q-mark q-mark--small"></span>
+                            </li>
+                            <li class="summary__spec" data-popup-id="popup_clarity">
+                                <span class="summary__spec__title">Clarity:</span>
+                                <span class="summary__spec__value" data-sarine-info="stoneProperties.clarity"></span>
+                                <span class="q-mark q-mark--small"></span>
+                            </li>
+                            <li class="summary__spec" data-popup-id="popup_cut">
+                                <span class="summary__spec__title">Cut:</span>
+                                <span class="summary__spec__value" data-sarine-info="stoneProperties.cutGrade"></span>
+                                <span class="q-mark q-mark--small"></span>
+                            </li>
+                            <li class="summary__spec" data-popup-id="popup_carat">
+                                <span class="summary__spec__title">Carat:</span>
+                                <span class="summary__spec__value" data-sarine-info="stoneProperties.carat"></span>
+                                <span class="q-mark q-mark--small"></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="slide slide--loupe">
+                <h2 class="slide__heading" data-popup-id="popup_loupe">Sarine Loupe<span class="tm">TM</span> Imaging <span class="q-mark"></span></h2>
                 <div class="slide__content slide__content--loupe">
                     <div class="slide__img-wrap slide__img-wrap--loupe">
                         <div class="slide__img slide__img--loupe">
-                            <sarine-viewer viewer="loupe3DFullInspection" order="1"></sarine-viewer>
+                            <sarine-viewer viewer="loupe3DFullInspection" order="2"></sarine-viewer>
                         </div>
                     </div>
                 </div>
@@ -38,7 +79,7 @@
                 <use xlink:href="#slider_btn_prev"></use>
             </svg>
         </button>
-        <button class="slider__btn slider__btn--next" disabled="disabled">
+        <button class="slider__btn slider__btn--next">
             <svg width="24px" height="48px" viewBox="0 0 24 48">
                 <use xlink:href="#slider_btn_next"></use>
             </svg>
@@ -54,7 +95,7 @@
                 src="/img/sarine-logo-small.png"
                 height="16" width="32"></a>
         <a href="javascript:void(0);" class="footer__customer__logo">
-            <img src="/img/sarine-logo-small.png" alt="">
+            <img src="" alt=""> <!-- run setting widget -->
         </a>
     </div>
 
@@ -86,6 +127,8 @@
 
 </div>
 
+
+<!--dist scripts replace-->
 <script type="text/javascript" src="/js/vendor/fastclick.js" data-preserve-path="1"></script>
 <script type="text/javascript" src="/js/vendor/classie.js" data-preserve-path="1"></script>
 <script type="text/javascript" src="/js/vendor/WallopSlider.js" data-preserve-path="1"></script>
@@ -95,8 +138,7 @@
 <script type="text/javascript" src="/js/BulletNavigation.js" data-preserve-path="1"></script>
 <script type="text/javascript" src="/js/app.js" data-preserve-path="1"></script>
 <script type="text/javascript" src="widgetConfig.js"></script>
-
-<!--<script type="text/javascript" src="//d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/0EXECUTE0/v2.0.2/js/app.bundle.min.js"></script>-->
+<!--end dist scripts replace-->
 
 <!--svgs-->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
