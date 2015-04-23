@@ -197,6 +197,31 @@ module.exports = function (grunt) {
                 src: 'app/dist/<%= project.widgetName %>/main.min.css',
                 dest: '<%= replace.css_bundle_img_urls.src %>'
             }
+        },
+        
+        prompt: {
+            target: {
+                options: {
+                    questions: [
+                        {
+                            config: 'project.widgetName',
+                            type: 'list',
+                            message: 'Select a widget to process',
+                            choices: function () {
+                                var widgets = [];
+                                grunt.file.expand("app/widgets/*").forEach(function (w) {
+                                    var wDirname = w.split('/').pop();
+                                    widgets.push(wDirname);
+                                });
+                                return widgets;
+                            },
+                            filter: function(value) {
+//                                console.log('Answer (filter) ->', value);
+                            }
+                        }
+                    ]
+                }
+            }
         }
     });
 
@@ -213,6 +238,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build_widget', [
         'clean:tmp',
         'clean:initial',
+//        'prompt',
         'concat',
         'uglify',
         'copy:dist_html',
@@ -235,4 +261,11 @@ module.exports = function (grunt) {
         'build_widget',
         'replace:index_html'
     ]);
+    
+//    grunt.registerTask('zz', [
+//        'prompt',
+//        function () {
+//            console.log(grunt.config.get('project.widgetName'));
+//        })
+//    ]);
 };
