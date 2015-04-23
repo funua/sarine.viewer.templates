@@ -483,162 +483,218 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
     transform: rotate(360deg);
   }
 }
-/* line 10, ../sass/modules/_color-scheme.scss */
+/* line 12, ../sass/modules/_color-scheme.scss */
 .slider .summary__story--light:before {
   background-position: 0 6px;
   width: 43px;
 }
-/* line 15, ../sass/modules/_color-scheme.scss */
+/* line 17, ../sass/modules/_color-scheme.scss */
 .slider .summary__story--loupe:before {
   background-position: -50px 5px;
   width: 47px;
 }
-/* line 20, ../sass/modules/_color-scheme.scss */
+/* line 22, ../sass/modules/_color-scheme.scss */
 .slider .summary__story--hna:before {
   background-position: -100px 4px;
   width: 36px;
 }
-/* line 25, ../sass/modules/_color-scheme.scss */
+/* line 27, ../sass/modules/_color-scheme.scss */
 .slider .summary__story--cut:before {
   background-position: -150px 13px;
   width: 41px;
 }
 
-/* line 36, ../sass/modules/_color-scheme.scss */
+/* line 38, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .preloader__heading {
   color: #04218a;
 }
-/* line 40, ../sass/modules/_color-scheme.scss */
+/* line 42, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .preloader__dot {
   background-color: #04218a;
 }
-/* line 44, ../sass/modules/_color-scheme.scss */
+/* line 46, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .q-mark {
   color: #04218a;
 }
-/* line 48, ../sass/modules/_color-scheme.scss */
+/* line 50, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .q-mark--small {
   color: #04218a;
 }
-/* line 52, ../sass/modules/_color-scheme.scss */
+/* line 54, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .summary__story {
   color: #04218a;
 }
-/* line 55, ../sass/modules/_color-scheme.scss */
+/* line 57, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .summary__story:before {
   background-image: url("../../img/summary-color-1.png");
 }
-/* line 61, ../sass/modules/_color-scheme.scss */
+/* line 63, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .storyline__item--active:before {
   background-color: #04218a;
 }
-/* line 65, ../sass/modules/_color-scheme.scss */
+/* line 67, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .storyline__item:hover:before {
   background-color: #0739ed;
 }
-/* line 69, ../sass/modules/_color-scheme.scss */
+/* line 71, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .total-grade__grade {
   color: #04218a;
 }
-/* line 73, ../sass/modules/_color-scheme.scss */
+/* line 75, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .total-grade__stars {
   color: #04218a;
 }
-/* line 77, ../sass/modules/_color-scheme.scss */
+/* line 79, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__item--foot {
   color: #04218a;
 }
-/* line 83, ../sass/modules/_color-scheme.scss */
+/* line 85, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(1):before {
   background-color: #3d54a8;
 }
-/* line 83, ../sass/modules/_color-scheme.scss */
+/* line 85, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(2):before {
   background-color: #5269c0;
 }
-/* line 83, ../sass/modules/_color-scheme.scss */
+/* line 85, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(3):before {
   background-color: #7286cc;
 }
-/* line 83, ../sass/modules/_color-scheme.scss */
+/* line 85, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(4):before {
   background-color: #93a2d8;
 }
-/* line 83, ../sass/modules/_color-scheme.scss */
+/* line 85, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(5):before {
   background-color: #b4bee4;
 }
-/* line 89, ../sass/modules/_color-scheme.scss */
+/* line 91, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 h3 {
   color: #04218a;
 }
-/* line 95, ../sass/modules/_color-scheme.scss */
+/* line 97, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .preloader__heading {
   color: #660066;
 }
-/* line 99, ../sass/modules/_color-scheme.scss */
+/* line 101, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .preloader__dot {
   background-color: #660066;
 }
-/* line 103, ../sass/modules/_color-scheme.scss */
+/* line 105, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .q-mark {
   color: #660066;
 }
-/* line 107, ../sass/modules/_color-scheme.scss */
+/* line 109, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .q-mark--small {
   color: #660066;
 }
-/* line 111, ../sass/modules/_color-scheme.scss */
+/* line 113, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .summary__story {
   color: #660066;
 }
-/* line 114, ../sass/modules/_color-scheme.scss */
+/* line 116, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .summary__story:before {
   background-image: url("../../img/summary-color-2.png");
 }
-/* line 120, ../sass/modules/_color-scheme.scss */
+/* line 122, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .storyline__item--active:before {
   background-color: #660066;
 }
-/* line 124, ../sass/modules/_color-scheme.scss */
+/* line 126, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .storyline__item:hover:before {
   background-color: #cc00cc;
 }
-/* line 128, ../sass/modules/_color-scheme.scss */
+/* line 130, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .total-grade__grade {
   color: #660066;
 }
-/* line 132, ../sass/modules/_color-scheme.scss */
+/* line 134, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .total-grade__stars {
   color: #660066;
 }
-/* line 136, ../sass/modules/_color-scheme.scss */
+/* line 138, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__item--foot {
   color: #660066;
 }
-/* line 142, ../sass/modules/_color-scheme.scss */
+/* line 144, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(1):before {
   background-color: #832183;
 }
-/* line 142, ../sass/modules/_color-scheme.scss */
+/* line 144, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(2):before {
   background-color: #a72aa7;
 }
-/* line 142, ../sass/modules/_color-scheme.scss */
+/* line 144, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(3):before {
   background-color: #ca33ca;
 }
-/* line 142, ../sass/modules/_color-scheme.scss */
+/* line 144, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(4):before {
   background-color: #d456d4;
 }
-/* line 142, ../sass/modules/_color-scheme.scss */
+/* line 144, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(5):before {
   background-color: #dd79dd;
 }
-/* line 148, ../sass/modules/_color-scheme.scss */
+/* line 150, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 h3 {
   color: #660066;
+}
+/* line 156, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .preloader__heading {
+  color: #000000;
+}
+/* line 160, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .preloader__dot {
+  background-color: #000000;
+}
+/* line 164, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .q-mark {
+  color: #000000;
+}
+/* line 168, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .q-mark--small {
+  color: #000000;
+}
+/* line 173, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .storyline__item--active:before {
+  background-color: #000000;
+}
+/* line 177, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .storyline__item:hover:before {
+  background-color: #333333;
+}
+/* line 181, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .total-grade__grade {
+  color: #000000;
+}
+/* line 185, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .total-grade__stars {
+  color: #000000;
+}
+/* line 189, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .specs__item--foot {
+  color: #000000;
+}
+/* line 195, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .specs__point:nth-child(1):before {
+  background-color: black;
+}
+/* line 195, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .specs__point:nth-child(2):before {
+  background-color: #161616;
+}
+/* line 195, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .specs__point:nth-child(3):before {
+  background-color: #2d2d2d;
+}
+/* line 195, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .specs__point:nth-child(4):before {
+  background-color: #434343;
+}
+/* line 195, ../sass/modules/_color-scheme.scss */
+.color-scheme-3 .specs__point:nth-child(5):before {
+  background-color: #595959;
 }
 
 /* line 9, ../sass/partials/_slider.scss */
@@ -1341,7 +1397,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   z-index: 3;
   position: absolute;
   left: 0;
-  bottom: 20px;
+  bottom: 13px;
   width: 100%;
   padding: 0 40px;
 }
@@ -1351,30 +1407,34 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   color: #c0c0c0;
   font-weight: 600;
   font-size: 12px;
+  line-height: 20px;
+  margin-top: -1px;
 }
-/* line 19, ../sass/partials/_footer.scss */
+/* line 21, ../sass/partials/_footer.scss */
 .footer__disclaimer:hover, .footer__disclaimer:active {
   color: #222;
 }
-/* line 24, ../sass/partials/_footer.scss */
+/* line 26, ../sass/partials/_footer.scss */
 .footer__powered {
   float: right;
   color: #c0c0c0;
   font-size: 9px;
+  line-height: 20px;
 }
-/* line 29, ../sass/partials/_footer.scss */
+/* line 32, ../sass/partials/_footer.scss */
 .footer__powered:hover, .footer__powered:active {
   color: #222;
 }
-/* line 32, ../sass/partials/_footer.scss */
+/* line 35, ../sass/partials/_footer.scss */
 .footer__powered:hover .footer__powered__logo, .footer__powered:active .footer__powered__logo {
   opacity: 1;
 }
-/* line 37, ../sass/partials/_footer.scss */
+/* line 40, ../sass/partials/_footer.scss */
 .footer__powered__logo {
   vertical-align: middle;
+  margin-top: -3px;
 }
-/* line 42, ../sass/partials/_footer.scss */
+/* line 46, ../sass/partials/_footer.scss */
 .footer__customer__logo {
   position: absolute;
   right: 140px;
@@ -1384,14 +1444,14 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   font-size: 9px;
   line-height: 20px;
 }
-/* line 50, ../sass/partials/_footer.scss */
+/* line 54, ../sass/partials/_footer.scss */
 .footer__customer__logo img {
   display: block;
   height: 100%;
   float: right;
   margin-left: 3px;
 }
-/* line 56, ../sass/partials/_footer.scss */
+/* line 60, ../sass/partials/_footer.scss */
 .footer__customer__logo:hover {
   color: #222;
 }
@@ -1666,7 +1726,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   margin: 0 0 0 -25px;
   width: 50px;
   text-align: center;
-  bottom: 17px;
+  bottom: 13px;
   z-index: 4;
   color: #fff;
   opacity: 0.6;
@@ -1757,67 +1817,75 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .slide--loupe3d .inspect-stone .buttons .icon.focus_out:before {
   background-position: -200px 0;
 }
+/* line 162, ../sass/partials/slides/_loupe3d.scss */
+.slide--loupe3d .inspect-stone .mglass_wrapper {
+  z-index: 4;
+}
 /* line 165, ../sass/partials/slides/_loupe3d.scss */
+.slide--loupe3d .inspect-stone .mglass_wrapper .mglass_viewer {
+  z-index: 4;
+}
+/* line 173, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-1 .buttons {
   width: 150px;
   margin-right: -75px;
 }
-/* line 170, ../sass/partials/slides/_loupe3d.scss */
+/* line 178, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-1 .buttons .icon.top, .slide--loupe3d.ctrl-3d-1 .buttons .icon.side, .slide--loupe3d.ctrl-3d-1 .buttons .icon.bottom, .slide--loupe3d.ctrl-3d-1 .buttons .icon.focus_in, .slide--loupe3d.ctrl-3d-1 .buttons .icon.focus_out {
   display: none;
 }
-/* line 174, ../sass/partials/slides/_loupe3d.scss */
+/* line 182, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-1 .buttons .icon.magnify {
   border-left: none;
   width: 52px !important;
   right: 50%;
   margin-right: -26px;
 }
-/* line 186, ../sass/partials/slides/_loupe3d.scss */
+/* line 194, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons {
   width: 300px;
   margin-right: -150px;
 }
-/* line 192, ../sass/partials/slides/_loupe3d.scss */
+/* line 200, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.top {
   left: 32px;
 }
-/* line 195, ../sass/partials/slides/_loupe3d.scss */
+/* line 203, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.side {
   left: 92px;
 }
-/* line 198, ../sass/partials/slides/_loupe3d.scss */
+/* line 206, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.bottom {
   left: 151px;
 }
-/* line 202, ../sass/partials/slides/_loupe3d.scss */
+/* line 210, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.focus_in, .slide--loupe3d.ctrl-3d-2 .buttons .icon.focus_out {
   display: none;
 }
-/* line 212, ../sass/partials/slides/_loupe3d.scss */
+/* line 220, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons {
   width: 414px;
   margin-right: -207px;
 }
-/* line 217, ../sass/partials/slides/_loupe3d.scss */
+/* line 225, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.top {
   left: 5px;
 }
-/* line 220, ../sass/partials/slides/_loupe3d.scss */
+/* line 228, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.side {
   left: 76px;
 }
-/* line 223, ../sass/partials/slides/_loupe3d.scss */
+/* line 231, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.bottom {
   left: 137px;
 }
-/* line 226, ../sass/partials/slides/_loupe3d.scss */
+/* line 234, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.focus_in {
   left: 190px;
   border-left: 1px solid #a7a7a7;
   width: 70px !important;
 }
-/* line 231, ../sass/partials/slides/_loupe3d.scss */
+/* line 239, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.focus_out {
   left: 277px;
 }
@@ -2336,33 +2404,33 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   -moz-align-items: center;
   align-items: center;
 }
-/* line 13, ../sass/partials/_sarine-viewer.scss */
-.viewer.loupe3DFullInspection {
+/* line 14, ../sass/partials/_sarine-viewer.scss */
+.viewer.loupe3DFullInspection .viewport {
   cursor: move;
 }
-/* line 19, ../sass/partials/_sarine-viewer.scss */
+/* line 21, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas {
   width: 150px;
 }
-/* line 22, ../sass/partials/_sarine-viewer.scss */
+/* line 24, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas.no_stone {
   display: block;
   margin: 0 auto;
 }
-/* line 28, ../sass/partials/_sarine-viewer.scss */
+/* line 30, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas.Arrows {
   float: right;
 }
-/* line 32, ../sass/partials/_sarine-viewer.scss */
+/* line 34, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas.Hearts {
   float: left;
 }
-/* line 37, ../sass/partials/_sarine-viewer.scss */
+/* line 39, ../sass/partials/_sarine-viewer.scss */
 .viewer canvas {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 41, ../sass/partials/_sarine-viewer.scss */
+/* line 43, ../sass/partials/_sarine-viewer.scss */
 .viewer canvas.no_stone {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -2389,11 +2457,6 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 /* line 19, ../sass/partials/_widgets.scss */
 .w4 .slider--real .storyline__item:not(.storyline__item--active):before, .w5 .slider--real .storyline__item:not(.storyline__item--active):before {
   background-color: #bbb;
-}
-
-/* line 24, ../sass/partials/_widgets.scss */
-.w5 .slide--loupe3d .slide__img-wrap {
-  margin-top: 58px;
 }
 
 /*# sourceMappingURL=main.css.map */

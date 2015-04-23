@@ -63,7 +63,7 @@
 			margin: 0 0 0 -25px;
 			width: 50px;
 			text-align: center;
-			bottom: 17px;
+			bottom: 13px;
 			z-index: 4;
 			color: #fff;
 			opacity: 0.6;
@@ -156,6 +156,14 @@
 				&.selected{
 
 				}
+			}
+		}
+
+		.mglass_wrapper {
+			z-index: 4;
+
+			.mglass_viewer{
+				z-index: 4;
 			}
 		}
 	}

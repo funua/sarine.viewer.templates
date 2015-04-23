@@ -4,6 +4,8 @@ $scheme1-color2: #3d54a8;
 $scheme2-color1: #660066;
 $scheme2-color2: #832183;
 
+$scheme3-color1: #000000;
+$scheme3-color2: #000000;
 
 .slider{
 
@@ -148,6 +150,54 @@ $scheme2-color2: #832183;
     &-2 h3{
 		color: $scheme2-color1;
     }
+
+	//COLOR SETTING 3
+
+	&-3 .preloader__heading{
+	    color:$scheme3-color1;
+    }
+
+	&-3 .preloader__dot{
+	    background-color:$scheme3-color1;
+    }
+
+	&-3 .q-mark{
+	    color:$scheme3-color1;
+    }
+
+	&-3 .q-mark--small{
+	    color:$scheme3-color1;
+    }
+
+
+	&-3 .storyline__item--active:before{
+	    background-color: $scheme3-color1;
+    }
+
+	&-3 .storyline__item:hover:before {
+	    background-color: lighten($scheme3-color1, 20%);
+    }
+
+	&-3 .total-grade__grade{
+	    color: $scheme3-color1;
+    }
+
+	&-3 .total-grade__stars{
+	    color: $scheme3-color1;
+    }
+
+	&-3 .specs__item--foot{
+	    color: $scheme3-color1;
+    }
+
+	&-3 .specs__point{
+	    @for $i-index from 1 through 5 {
+		    &:nth-child(#{$i-index}):before {
+			    background-color: lighten($scheme3-color2, (($i-index - 1) / 4) * 35%);
+		    }
+	    }
+	}
+
 }
 
 
