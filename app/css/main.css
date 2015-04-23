@@ -1880,6 +1880,85 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-color: #fff;
 }
 
+/* line 10, ../sass/partials/slides/_real.scss */
+.real__img-wrap {
+  padding: 80px 0 50px;
+}
+/* line 14, ../sass/partials/slides/_real.scss */
+.real__img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+}
+/* line 21, ../sass/partials/slides/_real.scss */
+.real__specs-row {
+  height: 28px;
+  font-size: 12px;
+  text-align: center;
+}
+/* line 27, ../sass/partials/slides/_real.scss */
+.real__spec {
+  display: inline-block;
+  padding: 0 9px;
+}
+/* line 31, ../sass/partials/slides/_real.scss */
+.real__spec__title {
+  color: #818181;
+}
+/* line 35, ../sass/partials/slides/_real.scss */
+.real__spec__value {
+  font-weight: 600;
+}
+/* line 40, ../sass/partials/slides/_real.scss */
+.real__story-wrap {
+  padding-top: 60px;
+}
+/* line 44, ../sass/partials/slides/_real.scss */
+.real__heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+/* line 49, ../sass/partials/slides/_real.scss */
+.real__stories {
+  height: 96px;
+  text-align: center;
+}
+/* line 54, ../sass/partials/slides/_real.scss */
+.real__story {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  font: italic bold 16px "Utopia Std", "Georgia", serif;
+  cursor: pointer;
+}
+/* line 65, ../sass/partials/slides/_real.scss */
+.real__story:before {
+  content: '';
+  display: block;
+  height: 55px;
+  margin: 0 auto 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 74, ../sass/partials/slides/_real.scss */
+.real__story:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 20px;
+  width: 1px;
+  background-color: #d8d3d6;
+}
+/* line 84, ../sass/partials/slides/_real.scss */
+.real__story:last-child:after {
+  display: none;
+}
+
 /* line 8, ../sass/partials/transitions/_common.scss */
 .slide--hide-previous {
   -moz-animation: slideToLeft 105ms 385ms ease-in both;
@@ -2173,6 +2252,66 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   animation: fadeIn 105ms 385ms ease-in both;
 }
 
+/* line 1, ../sass/partials/transitions/_real.scss */
+.slider--real:before {
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+  -moz-animation: summaryBackground 0.5s 910ms ease backwards;
+  -webkit-animation: summaryBackground 0.5s 910ms ease backwards;
+  animation: summaryBackground 0.5s 910ms ease backwards;
+}
+
+/* line 28, ../sass/partials/transitions/_real.scss */
+.slide--real.slide--hide-previous .real__img-wrap {
+  -moz-animation: slideToLeft 480ms 10ms ease-in both;
+  -webkit-animation: slideToLeft 480ms 10ms ease-in both;
+  animation: slideToLeft 480ms 10ms ease-in both;
+}
+/* line 32, ../sass/partials/transitions/_real.scss */
+.slide--real.slide--hide-previous .real__specs {
+  -moz-animation: slideToLeft 355ms 135ms ease-in both;
+  -webkit-animation: slideToLeft 355ms 135ms ease-in both;
+  animation: slideToLeft 355ms 135ms ease-in both;
+}
+/* line 36, ../sass/partials/transitions/_real.scss */
+.slide--real.slide--hide-previous .real__heading {
+  -moz-animation: slideToLeft 230ms 260ms ease-in both;
+  -webkit-animation: slideToLeft 230ms 260ms ease-in both;
+  animation: slideToLeft 230ms 260ms ease-in both;
+}
+/* line 40, ../sass/partials/transitions/_real.scss */
+.slide--real.slide--hide-previous .real__stories {
+  -moz-animation: slideToLeft 105ms 385ms ease-in both;
+  -webkit-animation: slideToLeft 105ms 385ms ease-in both;
+  animation: slideToLeft 105ms 385ms ease-in both;
+}
+/* line 48, ../sass/partials/transitions/_real.scss */
+.slide--real.slide--show-previous .real__img-wrap {
+  -moz-animation: slideFromLeft 620ms 170ms ease both;
+  -webkit-animation: slideFromLeft 620ms 170ms ease both;
+  animation: slideFromLeft 620ms 170ms ease both;
+}
+/* line 52, ../sass/partials/transitions/_real.scss */
+.slide--real.slide--show-previous .real__specs {
+  -moz-animation: slideFromLeft 460ms 330ms ease both;
+  -webkit-animation: slideFromLeft 460ms 330ms ease both;
+  animation: slideFromLeft 460ms 330ms ease both;
+}
+/* line 56, ../sass/partials/transitions/_real.scss */
+.slide--real.slide--show-previous .real__heading {
+  -moz-animation: slideFromLeft 300ms 490ms ease both;
+  -webkit-animation: slideFromLeft 300ms 490ms ease both;
+  animation: slideFromLeft 300ms 490ms ease both;
+}
+/* line 60, ../sass/partials/transitions/_real.scss */
+.slide--real.slide--show-previous .real__stories {
+  -moz-animation: slideFromLeft 140ms 650ms ease both;
+  -webkit-animation: slideFromLeft 140ms 650ms ease both;
+  animation: slideFromLeft 140ms 650ms ease both;
+}
+
 /* line 3, ../sass/partials/_sarine-viewer.scss */
 .viewer {
   width: 100%;
@@ -2228,27 +2367,32 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 }
 
 /* line 2, ../sass/partials/_widgets.scss */
-.w1 .slider__header {
+.w2 .slider__header {
   display: block;
   padding-top: 66px;
 }
 /* line 6, ../sass/partials/_widgets.scss */
-.w1 .storyline {
+.w2 .storyline {
   display: none;
 }
 /* line 9, ../sass/partials/_widgets.scss */
-.w1 .slide__heading {
+.w2 .slide__heading {
   margin-top: -40px;
   margin-bottom: 70px;
 }
 
 /* line 16, ../sass/partials/_widgets.scss */
-.w4 .slider--real .storyline:before {
+.w4 .slider--real .storyline:before, .w5 .slider--real .storyline:before {
   background-color: #bbb;
 }
 /* line 19, ../sass/partials/_widgets.scss */
-.w4 .slider--real .storyline__item:not(.storyline__item--active):before {
+.w4 .slider--real .storyline__item:not(.storyline__item--active):before, .w5 .slider--real .storyline__item:not(.storyline__item--active):before {
   background-color: #bbb;
+}
+
+/* line 24, ../sass/partials/_widgets.scss */
+.w5 .slide--loupe3d .slide__img-wrap {
+  margin-top: 58px;
 }
 
 /*# sourceMappingURL=main.css.map */

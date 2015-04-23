@@ -1,4 +1,4 @@
-.w1{
+.w2{
 	.slider__header{
 		display: block;
 		padding-top: 66px;
@@ -12,11 +12,15 @@
 	}
 }
 
-.w4{
+.w4, .w5{
 	.slider--real .storyline:before{
 		background-color: #bbb;
 	}
 	.slider--real .storyline__item:not(.storyline__item--active):before{
 		background-color: #bbb;
 	}
+}
+
+.w5 .slide--loupe3d .slide__img-wrap{
+	margin-top: 58px;
 }
