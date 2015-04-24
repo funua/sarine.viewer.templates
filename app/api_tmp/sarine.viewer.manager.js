@@ -118,7 +118,16 @@
             deferArr = [];
             scripts = [];
             $("<div>").load(template, function (a, b, c) {
-                $(selector).prepend($(a).filter((function (_this) {
+                var $tpl = $(a);
+//                
+//                $tpl.find('[data-replace-src]').each(function (i, el) {
+//                    var $el = $(el);
+//                    if ($el.attr('data-replace-src').substring(0, 2) === './') {
+//                        $el.attr('src', getPath(template) + $el.attr('data-replace-src').substring(1));
+//                    }
+//                });
+                
+                $(selector).prepend($tpl.filter((function (_this) {
                     return function (i, v) {
                         if (v.tagName === "SCRIPT") {
                             if (v.src && !$(v).attr('data-preserve-path')) {
