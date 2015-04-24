@@ -202,9 +202,8 @@ module.exports = function (grunt) {
                         }
                     ]
                 },
-                files: {
-                    '<%= replace.css_bundle_img_urls.src %>': "app/dist/<% project.widgetName %>/main.min.css"
-                }
+                src: "app/dist/<%= project.widgetName %>/main.min.css",
+                dest: '<%= replace.css_bundle_font_urls.src %>'
             }
         }
     };
