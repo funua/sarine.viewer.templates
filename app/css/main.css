@@ -1432,7 +1432,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 /* line 40, ../sass/partials/_footer.scss */
 .footer__powered__logo {
   vertical-align: middle;
-  margin-top: -3px;
+  margin: -3px 0 0 4px;
 }
 /* line 46, ../sass/partials/_footer.scss */
 .footer__customer__logo {
@@ -1443,13 +1443,13 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   color: silver;
   font-size: 9px;
   line-height: 20px;
+  vertical-align: top;
 }
-/* line 54, ../sass/partials/_footer.scss */
+/* line 55, ../sass/partials/_footer.scss */
 .footer__customer__logo img {
-  display: block;
+  vertical-align: top;
   height: 100%;
-  float: right;
-  margin-left: 3px;
+  margin-left: 4px;
 }
 /* line 60, ../sass/partials/_footer.scss */
 .footer__customer__logo:hover {

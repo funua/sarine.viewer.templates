@@ -1,5 +1,5 @@
 var widgetConfig = {
-    title: 'Diamond story',
+    title: 'Diamond Story',
     widget_brief_code: 'w2',
     color_scheme: 'color-scheme-3',
     pages: [
@@ -9,7 +9,7 @@ var widgetConfig = {
         }
     ],
     customer_logo: {
-        img: '//dev.sarineplatform.com.s3.amazonaws.com/dev3/content/viewers/templates/0EXECUTE0/v3-dev/w1/img/igi-logo.png',
+        img: '../img/igi-logo.png',
         href: 'http://www.igiworldwide.com/',
         title: 'IGI'
     }

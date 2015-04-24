@@ -1,10 +1,10 @@
 var widgetConfig = {
-    title: 'Diamond story',
+    title: 'Diamond Story',
     widget_brief_code: 'w5',
     color_scheme: 'color-scheme-1',
     pages: [
         {
-            title:  'Real view',
+            title:  'Real View',
             code:   'real',
             disableNavigation: true,
             enableStoryline: true
@@ -14,7 +14,7 @@ var widgetConfig = {
             code:   'loupe'
         },
         {
-            title:  '3D loupe',
+            title:  '3D Loupe',
             code:   'loupe3d',
             controls3d: 'ctrl-3d-2'
         }

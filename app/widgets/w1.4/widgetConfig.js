@@ -1,10 +1,10 @@
 var widgetConfig = {
-    title: 'Diamond story',
+    title: 'Diamond Story',
     widget_brief_code: 'w4',
     color_scheme: 'color-scheme-1',
     pages: [
         {
-            title:  'Real view',
+            title:  'Real View',
             code:   'real',
             enableStoryline: true
         },
