@@ -65,7 +65,14 @@ module.exports = function (grunt) {
             options: {
                 livereload: true
             },
-            files: ['app/**/*']
+            files: ['app/**/*'],
+            sass: {
+                options: {
+                    livereload: false
+                },
+                files: 'app/sass/**/*.scss',
+                tasks: ['compass:dev', 'cssmin']
+            }
         },
 
         copy: {
