@@ -4,10 +4,11 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var appConfig = {
-        widgetName: 'w1.2'        // must exactly match widget folder name
-    };
-
-    grunt.initConfig({
+        widgetName: null
+    },
+    thenCallback;
+    
+    var fullConfig = {
         project: appConfig,
 
         connect: {
@@ -189,7 +190,7 @@ module.exports = function (grunt) {
                         }
                     ]
                 },
-                src: 'app/dist/<%= project.widgetName %>/main.min.css',
+                src: "app/dist/<%= project.widgetName %>/main.min.css",
                 dest: '<%= replace.css_bundle_font_urls.src %>'
             },
             css_bundle_img_urls: {
@@ -201,11 +202,14 @@ module.exports = function (grunt) {
                         }
                     ]
                 },
-                src: 'app/dist/<%= project.widgetName %>/main.min.css',
-                dest: '<%= replace.css_bundle_img_urls.src %>'
+                files: {
+                    '<%= replace.css_bundle_img_urls.src %>': "app/dist/<% project.widgetName %>/main.min.css"
+                }
             }
-        },
-        
+        }
+    };
+
+    grunt.initConfig({
         prompt: {
             target: {
                 options: {
@@ -223,29 +227,46 @@ module.exports = function (grunt) {
                                 return widgets;
                             },
                             filter: function(value) {
-//                                console.log('Answer (filter) ->', value);
+                                appConfig.widgetName = value;
                             }
                         }
-                    ]
+                    ],
+                    then: function () {
+                        thenCallback();
+                    }
                 }
             }
         }
     });
 
-    grunt.registerTask('serve', [
-        'connect',
-        'open',
-        'watch'
-    ]);
 
-    grunt.registerTask('build', [
-        'copy'
-    ]);
+    grunt.registerTask('serve', 'Watch for changes in files', function () {
+        grunt.initConfig(fullConfig);
+        grunt.task.run([
+            'connect',
+            'open',
+            'watch'
+        ]);
+    });
 
-    grunt.registerTask('build_widget', [
+
+//    grunt.registerTask('build', [
+//        'copy'
+//    ]);
+
+
+    grunt.registerTask('build_widget', 'Ask for widget folder and then build widget', function () {
+        grunt.task.run(['prompt']);
+        thenCallback = function () {
+            grunt.initConfig(fullConfig);
+            grunt.task.run(['build_widget_internal']);
+        };
+    });
+    
+    
+    grunt.registerTask('build_widget_internal', [
         'clean:tmp',
         'clean:initial',
-//        'prompt',
         'concat',
         'uglify',
         'copy:dist_html',
@@ -268,11 +289,4 @@ module.exports = function (grunt) {
         'build_widget',
         'replace:index_html'
     ]);
-    
-//    grunt.registerTask('zz', [
-//        'prompt',
-//        function () {
-//            console.log(grunt.config.get('project.widgetName'));
-//        })
-//    ]);
 };
