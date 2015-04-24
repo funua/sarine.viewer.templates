@@ -130,7 +130,7 @@
 					margin-left: -26px;
 					background-image: url("../img/icons.png");
 					opacity: 0.6;
-
+					z-index: 2;
 				}
 
 				&.top:before{
@@ -161,11 +161,14 @@
 				&.selected:after{
 					content: '';
 					position: absolute;
+					left: 50%;
 					top: 0;
-					left: 0;
-					box-shadow: 0 0 40px #fff;
-					width: 100%;
+					box-shadow: #878787 0 0 20px 10px inset;
+					width: 52px;
 					height: 100%;
+					background: rgba(255,255,255,.25);
+					z-index: 1;
+					margin-left: -26px;
 				}
 			}
 		}

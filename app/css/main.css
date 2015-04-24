@@ -1795,6 +1795,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   margin-left: -26px;
   background-image: url("../img/icons.png");
   opacity: 0.6;
+  z-index: 2;
 }
 /* line 136, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d .inspect-stone .buttons .icon.top:before {
@@ -1826,81 +1827,84 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .slide--loupe3d .inspect-stone .buttons .icon.selected:after {
   content: '';
   position: absolute;
+  left: 50%;
   top: 0;
-  left: 0;
-  box-shadow: 0 0 40px #fff;
-  width: 100%;
+  box-shadow: #878787 0 0 20px 10px inset;
+  width: 52px;
   height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  z-index: 1;
+  margin-left: -26px;
 }
-/* line 173, ../sass/partials/slides/_loupe3d.scss */
+/* line 176, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d .inspect-stone .mglass_wrapper {
   z-index: 4;
 }
-/* line 176, ../sass/partials/slides/_loupe3d.scss */
+/* line 179, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d .inspect-stone .mglass_wrapper .mglass_viewer {
   z-index: 4;
 }
-/* line 184, ../sass/partials/slides/_loupe3d.scss */
+/* line 187, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-1 .buttons {
   width: 150px;
   margin-right: -75px;
 }
-/* line 189, ../sass/partials/slides/_loupe3d.scss */
+/* line 192, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-1 .buttons .icon.top, .slide--loupe3d.ctrl-3d-1 .buttons .icon.side, .slide--loupe3d.ctrl-3d-1 .buttons .icon.bottom, .slide--loupe3d.ctrl-3d-1 .buttons .icon.focus_in, .slide--loupe3d.ctrl-3d-1 .buttons .icon.focus_out {
   display: none;
 }
-/* line 193, ../sass/partials/slides/_loupe3d.scss */
+/* line 196, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-1 .buttons .icon.magnify {
   border-left: none;
   width: 52px !important;
   right: 50%;
   margin-right: -26px;
 }
-/* line 205, ../sass/partials/slides/_loupe3d.scss */
+/* line 208, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons {
   width: 300px;
   margin-right: -150px;
 }
-/* line 211, ../sass/partials/slides/_loupe3d.scss */
+/* line 214, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.top {
   left: 32px;
 }
-/* line 214, ../sass/partials/slides/_loupe3d.scss */
+/* line 217, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.side {
   left: 92px;
 }
-/* line 217, ../sass/partials/slides/_loupe3d.scss */
+/* line 220, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.bottom {
   left: 151px;
 }
-/* line 221, ../sass/partials/slides/_loupe3d.scss */
+/* line 224, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.focus_in, .slide--loupe3d.ctrl-3d-2 .buttons .icon.focus_out {
   display: none;
 }
-/* line 231, ../sass/partials/slides/_loupe3d.scss */
+/* line 234, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons {
   width: 414px;
   margin-right: -207px;
 }
-/* line 236, ../sass/partials/slides/_loupe3d.scss */
+/* line 239, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.top {
   left: 5px;
 }
-/* line 239, ../sass/partials/slides/_loupe3d.scss */
+/* line 242, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.side {
   left: 76px;
 }
-/* line 242, ../sass/partials/slides/_loupe3d.scss */
+/* line 245, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.bottom {
   left: 137px;
 }
-/* line 245, ../sass/partials/slides/_loupe3d.scss */
+/* line 248, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.focus_in {
   left: 190px;
   border-left: 1px solid #a7a7a7;
   width: 70px !important;
 }
-/* line 250, ../sass/partials/slides/_loupe3d.scss */
+/* line 253, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.focus_out {
   left: 277px;
 }
