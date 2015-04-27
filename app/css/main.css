@@ -494,205 +494,210 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 47px;
 }
 /* line 22, ../sass/modules/_color-scheme.scss */
+.slider .summary__story--loupe3d:before {
+  background-position: -50px 5px;
+  width: 47px;
+}
+/* line 27, ../sass/modules/_color-scheme.scss */
 .slider .summary__story--hna:before {
   background-position: -100px 4px;
   width: 36px;
 }
-/* line 27, ../sass/modules/_color-scheme.scss */
+/* line 32, ../sass/modules/_color-scheme.scss */
 .slider .summary__story--cut:before {
   background-position: -150px 13px;
   width: 41px;
 }
 
-/* line 38, ../sass/modules/_color-scheme.scss */
+/* line 43, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .preloader__heading {
   color: #04218a;
 }
-/* line 42, ../sass/modules/_color-scheme.scss */
+/* line 47, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .preloader__dot {
   background-color: #04218a;
 }
-/* line 46, ../sass/modules/_color-scheme.scss */
+/* line 51, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .q-mark {
   color: #04218a;
 }
-/* line 50, ../sass/modules/_color-scheme.scss */
+/* line 55, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .q-mark--small {
   color: #04218a;
 }
-/* line 54, ../sass/modules/_color-scheme.scss */
+/* line 59, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .summary__story {
   color: #04218a;
 }
-/* line 57, ../sass/modules/_color-scheme.scss */
+/* line 62, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .summary__story:before {
   background-image: url("../../img/summary-color-1.png");
 }
-/* line 63, ../sass/modules/_color-scheme.scss */
+/* line 68, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .storyline__item--active:before {
   background-color: #04218a;
 }
-/* line 67, ../sass/modules/_color-scheme.scss */
+/* line 72, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .storyline__item:hover:before {
   background-color: #0739ed;
 }
-/* line 71, ../sass/modules/_color-scheme.scss */
+/* line 76, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .total-grade__grade {
   color: #04218a;
 }
-/* line 75, ../sass/modules/_color-scheme.scss */
+/* line 80, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .total-grade__stars {
   color: #04218a;
 }
-/* line 79, ../sass/modules/_color-scheme.scss */
+/* line 84, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__item--foot {
   color: #04218a;
 }
-/* line 85, ../sass/modules/_color-scheme.scss */
+/* line 90, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(1):before {
   background-color: #3d54a8;
 }
-/* line 85, ../sass/modules/_color-scheme.scss */
+/* line 90, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(2):before {
   background-color: #5269c0;
 }
-/* line 85, ../sass/modules/_color-scheme.scss */
+/* line 90, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(3):before {
   background-color: #7286cc;
 }
-/* line 85, ../sass/modules/_color-scheme.scss */
+/* line 90, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(4):before {
   background-color: #93a2d8;
 }
-/* line 85, ../sass/modules/_color-scheme.scss */
+/* line 90, ../sass/modules/_color-scheme.scss */
 .color-scheme-1 .specs__point:nth-child(5):before {
   background-color: #b4bee4;
 }
-/* line 91, ../sass/modules/_color-scheme.scss */
-.color-scheme-2 h3 {
+/* line 96, ../sass/modules/_color-scheme.scss */
+.color-scheme-1 h3 {
   color: #04218a;
 }
-/* line 97, ../sass/modules/_color-scheme.scss */
+/* line 102, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .preloader__heading {
   color: #660066;
 }
-/* line 101, ../sass/modules/_color-scheme.scss */
+/* line 106, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .preloader__dot {
   background-color: #660066;
 }
-/* line 105, ../sass/modules/_color-scheme.scss */
+/* line 110, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .q-mark {
   color: #660066;
 }
-/* line 109, ../sass/modules/_color-scheme.scss */
+/* line 114, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .q-mark--small {
   color: #660066;
 }
-/* line 113, ../sass/modules/_color-scheme.scss */
+/* line 118, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .summary__story {
   color: #660066;
 }
-/* line 116, ../sass/modules/_color-scheme.scss */
+/* line 121, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .summary__story:before {
   background-image: url("../../img/summary-color-2.png");
 }
-/* line 122, ../sass/modules/_color-scheme.scss */
+/* line 127, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .storyline__item--active:before {
   background-color: #660066;
 }
-/* line 126, ../sass/modules/_color-scheme.scss */
+/* line 131, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .storyline__item:hover:before {
   background-color: #cc00cc;
 }
-/* line 130, ../sass/modules/_color-scheme.scss */
+/* line 135, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .total-grade__grade {
   color: #660066;
 }
-/* line 134, ../sass/modules/_color-scheme.scss */
+/* line 139, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .total-grade__stars {
   color: #660066;
 }
-/* line 138, ../sass/modules/_color-scheme.scss */
+/* line 143, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__item--foot {
   color: #660066;
 }
-/* line 144, ../sass/modules/_color-scheme.scss */
+/* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(1):before {
   background-color: #832183;
 }
-/* line 144, ../sass/modules/_color-scheme.scss */
+/* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(2):before {
   background-color: #a72aa7;
 }
-/* line 144, ../sass/modules/_color-scheme.scss */
+/* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(3):before {
   background-color: #ca33ca;
 }
-/* line 144, ../sass/modules/_color-scheme.scss */
+/* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(4):before {
   background-color: #d456d4;
 }
-/* line 144, ../sass/modules/_color-scheme.scss */
+/* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(5):before {
   background-color: #dd79dd;
 }
-/* line 150, ../sass/modules/_color-scheme.scss */
+/* line 155, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 h3 {
   color: #660066;
 }
-/* line 156, ../sass/modules/_color-scheme.scss */
+/* line 161, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .preloader__heading {
   color: #000000;
 }
-/* line 160, ../sass/modules/_color-scheme.scss */
+/* line 165, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .preloader__dot {
   background-color: #000000;
 }
-/* line 164, ../sass/modules/_color-scheme.scss */
+/* line 169, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .q-mark {
   color: #000000;
 }
-/* line 168, ../sass/modules/_color-scheme.scss */
+/* line 173, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .q-mark--small {
   color: #000000;
 }
-/* line 173, ../sass/modules/_color-scheme.scss */
+/* line 178, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .storyline__item--active:before {
   background-color: #000000;
 }
-/* line 177, ../sass/modules/_color-scheme.scss */
+/* line 182, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .storyline__item:hover:before {
   background-color: #333333;
 }
-/* line 181, ../sass/modules/_color-scheme.scss */
+/* line 186, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .total-grade__grade {
   color: #000000;
 }
-/* line 185, ../sass/modules/_color-scheme.scss */
+/* line 190, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .total-grade__stars {
   color: #000000;
 }
-/* line 189, ../sass/modules/_color-scheme.scss */
+/* line 194, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .specs__item--foot {
   color: #000000;
 }
-/* line 195, ../sass/modules/_color-scheme.scss */
+/* line 200, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .specs__point:nth-child(1):before {
   background-color: black;
 }
-/* line 195, ../sass/modules/_color-scheme.scss */
+/* line 200, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .specs__point:nth-child(2):before {
   background-color: #161616;
 }
-/* line 195, ../sass/modules/_color-scheme.scss */
+/* line 200, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .specs__point:nth-child(3):before {
   background-color: #2d2d2d;
 }
-/* line 195, ../sass/modules/_color-scheme.scss */
+/* line 200, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .specs__point:nth-child(4):before {
   background-color: #434343;
 }
-/* line 195, ../sass/modules/_color-scheme.scss */
+/* line 200, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .specs__point:nth-child(5):before {
   background-color: #595959;
 }
