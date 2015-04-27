@@ -39,7 +39,7 @@ $footer-padding: 40px;
 
 		&__logo {
 			vertical-align: middle;
-			margin-top: -3px;
+			margin: -3px 0 0 4px;
 		}
 	}
 
@@ -51,11 +51,11 @@ $footer-padding: 40px;
 		color: silver;
 		font-size: 9px;
 		line-height: 20px;
+		vertical-align: top;
 		img {
-			display: block;
+			vertical-align: top;
 			height: 100%;
-			float: right;
-			margin-left: 3px;
+			margin-left: 4px;
 		}
 		&:hover{
 			color: #222;
