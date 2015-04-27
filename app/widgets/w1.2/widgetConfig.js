@@ -1,5 +1,5 @@
 var widgetConfig = {
-    title: 'Diamond story',
+    title: 'Diamond Story',
     widget_brief_code: 'w2',
     color_scheme: 'color-scheme-3',
     pages: [
