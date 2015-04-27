@@ -4,7 +4,8 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var appConfig = {
-        widgetName: null
+        widgetName: null,
+        dir: ''
     },
     thenCallback;
     
@@ -80,7 +81,7 @@ module.exports = function (grunt) {
             dist_html: {
                 flatten: true,
                 src: ["app/widgets/<%= project.widgetName %>/template.html"],
-                dest: 'app/dist/<%= project.widgetName %>/',
+                dest: 'app/<%= project.dir %>/<%= project.widgetName %>/',
                 expand: true,
                 rename: function (dest, src) {
                     return dest + src.replace('template', 'index');
@@ -89,12 +90,12 @@ module.exports = function (grunt) {
             dist_assets1: {
                 flatten: true,
                 src: ['tmp/app.bundle.min.js', 'app/css/main.min.css'],
-                dest: 'app/dist/<%= project.widgetName %>/',
+                dest: 'app/<%= project.dir %>/<%= project.widgetName %>/',
                 expand: true
             },
             dist_assets2: {
                 src: ['app/fonts/**', 'app/img/**'],
-                dest: "app/dist/<%= project.widgetName %>/",
+                dest: "app/<%= project.dir %>/<%= project.widgetName %>/",
                 expand: true,
                 rename: function (dest, src) {
                     return dest + src.replace('app\/', '');
@@ -143,7 +144,7 @@ module.exports = function (grunt) {
                     ]
                 },
                 src: 'app/index.html',
-                dest: 'app/dist/test_<%= project.widgetName %>.html'
+                dest: 'app/<%= project.dir %>/<%= project.container_name %>'
             },
             widget_html: {
                 options: {
@@ -153,14 +154,14 @@ module.exports = function (grunt) {
                             replacement: '<script type="text/javascript" src="app.bundle.min.js"></script>'
                         }, {
                             match: /@import '[./]+css\/main\.min\.css'/,
-                            replacement: "@import '/dist/<%= project.widgetName %>/main.min.css'"
+                            replacement: "@import '/<%= project.dir %>/<%= project.widgetName %>/main.min.css'"
                         }, {
                             match: /src="\/img\//,
-                            replacement: 'src="/dist/<%= project.widgetName %>/img/'
+                            replacement: 'src="/<%= project.dir %>/<%= project.widgetName %>/img/'
                         }
                     ]
                 },
-                src: 'app/dist/<%= project.widgetName %>/index.html',
+                src: 'app/<%= project.dir %>/<%= project.widgetName %>/index.html',
                 dest: '<%= replace.widget_html.src %>'
             },
             css_bundle: {
@@ -168,15 +169,15 @@ module.exports = function (grunt) {
                     patterns: [
                         {
                             match: /url\(\.\.\/fonts/g,
-                            replacement: 'url(/dist/<%= project.widgetName %>/fonts'
+                            replacement: 'url(/<%= project.dir %>/<%= project.widgetName %>/fonts'
                         },
                         {
                             match: /url\([./]+img/g,
-                            replacement: 'url(/dist/<%= project.widgetName %>/img'
+                            replacement: 'url(/<%= project.dir %>/<%= project.widgetName %>/img'
                         }
                     ]
                 },
-                src: 'app/dist/<%= project.widgetName %>/main.min.css',
+                src: 'app/<%= project.dir %>/<%= project.widgetName %>/main.min.css',
                 dest: '<%= replace.css_bundle.src %>'
             }
         }
@@ -222,24 +223,32 @@ module.exports = function (grunt) {
         ]);
     });
 
-
-//    grunt.registerTask('build', [
-//        'copy'
-//    ]);
-
-
-    grunt.registerTask('build_widget', 'Ask for widget folder and then build widget', function () {
-        grunt.task.run(['prompt']);
-        thenCallback = function () {
-            grunt.initConfig(fullConfig);
-            grunt.task.run(['build_widget_internal']);
-        };
+    
+    grunt.registerTask('build_widget', '', function () {
+        build_widget_prompt('dist');
     });
     
     
+    grunt.registerTask('build_test', '', function () {
+        build_widget_prompt('dist_test');
+    });
+    
+    function build_widget_prompt(dir) {
+        appConfig.dir = dir;
+        grunt.task.run(['prompt']);
+        thenCallback = function () {
+            appConfig.container_name = dir === 'dist' ? 'release' : 'test';
+            appConfig.container_name += '_' + appConfig.widgetName + '.html';
+            grunt.initConfig(fullConfig);
+            if (dir === 'dist') {
+                grunt.task.run(['clean:initial']);
+            }
+            grunt.task.run(['build_widget_internal', 'replace:container']);
+        };
+    };
+    
     grunt.registerTask('build_widget_internal', [
         'clean:tmp',
-        'clean:initial',
         'concat',
         'uglify',
         'copy',
@@ -251,10 +260,5 @@ module.exports = function (grunt) {
         'replace:css_bundle',
 
         'clean:tmp'
-    ]);
-
-    grunt.registerTask('build_test', [
-        'build_widget',
-        'replace:container'
     ]);
 };

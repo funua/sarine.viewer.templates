@@ -13,7 +13,8 @@ var widgetConfig = {
         },
         {
             title:  'Loupe',
-            code:   'loupe'
+            code:   'loupe3d',
+            controls3d: 'ctrl-3d-2'
         },
         {
             title:  'Hearts & Arrows',
