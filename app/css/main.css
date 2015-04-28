@@ -2483,4 +2483,85 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   background-color: #bbb;
 }
 
+/* line 24, ../sass/partials/_widgets.scss */
+.w6 {
+  width: 322px;
+  height: auto;
+  margin: 0 auto;
+  border: none;
+  left: -15px;
+}
+/* line 31, ../sass/partials/_widgets.scss */
+.w6 .slider--real {
+  border: none;
+}
+/* line 34, ../sass/partials/_widgets.scss */
+.w6 .slider--real .slider__header {
+  display: block;
+}
+/* line 37, ../sass/partials/_widgets.scss */
+.w6 .slider--real .slider__header .storyline {
+  display: none;
+}
+/* line 42, ../sass/partials/_widgets.scss */
+.w6 .slider--real .slide--real {
+  padding-top: 0;
+}
+/* line 45, ../sass/partials/_widgets.scss */
+.w6 .slider--real .slide--real .slide__heading {
+  margin-top: 40px;
+}
+/* line 49, ../sass/partials/_widgets.scss */
+.w6 .slider--real .slide--real .real__img-wrap {
+  padding-top: 0;
+}
+/* line 55, ../sass/partials/_widgets.scss */
+.w6 .footer {
+  padding: 0 20px;
+}
+
+/* line 61, ../sass/partials/_widgets.scss */
+.w7 .slider__header {
+  display: block;
+  padding-top: 66px;
+}
+/* line 65, ../sass/partials/_widgets.scss */
+.w7 .storyline {
+  display: none;
+}
+/* line 68, ../sass/partials/_widgets.scss */
+.w7 .slide__heading {
+  margin-top: -40px;
+}
+
+/* line 74, ../sass/partials/_widgets.scss */
+.w8 .slider__header {
+  display: block;
+  padding-top: 66px;
+}
+/* line 78, ../sass/partials/_widgets.scss */
+.w8 .storyline {
+  display: none;
+}
+/* line 81, ../sass/partials/_widgets.scss */
+.w8 .slide__heading {
+  margin-top: -40px;
+  margin-bottom: 70px;
+}
+
+/* line 88, ../sass/partials/_widgets.scss */
+.w9 .slider__header {
+  display: block;
+  padding-top: 66px;
+}
+/* line 92, ../sass/partials/_widgets.scss */
+.w9 .storyline {
+  display: none;
+}
+/* line 95, ../sass/partials/_widgets.scss */
+.w9 .slide__heading {
+  margin-top: -40px;
+  margin-bottom: 70px;
+}
+
 /*# sourceMappingURL=main.css.map */
