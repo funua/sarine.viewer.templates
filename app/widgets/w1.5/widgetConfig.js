@@ -18,6 +18,5 @@ var widgetConfig = {
             code:   'loupe3d',
             controls3d: 'ctrl-3d-2'
         }
-    ],
-    customer_logo: false
+    ]
 };

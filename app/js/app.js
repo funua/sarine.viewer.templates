@@ -272,16 +272,16 @@
         
         
         // Show / hide customer logo
-        if (!!wConfig.customer_logo) {
-            wConfig.customer_logo.href && elements.customerLogo.attr('href', wConfig.customer_logo.href);
-            wConfig.customer_logo.img && elements.customerLogo.find('img').attr('src', wConfig.customer_logo.img);
-            if (wConfig.customer_logo.title) {
-                elements.customerLogo.attr('title', wConfig.customer_logo.title);
-                elements.customerLogo.find('img').attr('alt', wConfig.customer_logo.title);
-            }
-        } else {
-            elements.customerLogo.remove();
-        }
+//        if (!!wConfig.customer_logo) {
+//            wConfig.customer_logo.href && elements.customerLogo.attr('href', wConfig.customer_logo.href);
+//            wConfig.customer_logo.img && elements.customerLogo.find('img').attr('src', wConfig.customer_logo.img);
+//            if (wConfig.customer_logo.title) {
+//                elements.customerLogo.attr('title', wConfig.customer_logo.title);
+//                elements.customerLogo.find('img').attr('alt', wConfig.customer_logo.title);
+//            }
+//        } else {
+//            elements.customerLogo.remove();
+//        }
         
         
         // Add classes to slider wrap element: color scheme and widget code
