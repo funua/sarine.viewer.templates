@@ -1,11 +1,12 @@
 var widgetConfig = {
     title: 'Diamond Story',
-    widget_brief_code: 'w2',
+    widget_brief_code: 'w7',
     color_scheme: 'color-scheme-3',
     pages: [
         {
-            code:   'loupe3d',
-            controls3d: 'ctrl-3d-1'
+            title:  'Real View',
+            code:   'real',
+            enableStoryline: false
         }
     ]
 };

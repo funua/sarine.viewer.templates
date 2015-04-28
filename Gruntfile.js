@@ -7,75 +7,11 @@ module.exports = function (grunt) {
         widgetName: null,
         dir: ''
     },
-    thenCallback;
     
-    var fullConfig = {
+    thenCallback,
+    
+    fullConfig = {
         project: appConfig,
-
-        connect: {
-            server: {
-                options: {
-                    port: 9003,
-                    base: 'app',
-                    hostname: '0.0.0.0',
-                    livereload: true
-                }
-            }
-        },
-
-        open: {
-            server: {
-                path: 'http://localhost:<%= connect.server.options.port %>'
-            }
-        },
-
-        compass: {
-            dist: {
-                options: {
-                    sassDir: 'app/sass',
-                    cssDir: 'app/css',
-                    fontsDir: 'app/fonts',
-                    relativeAssets: true,
-                    environment: 'production'
-                }
-            },
-            dev: {
-                options: {
-                    sassDir: 'app/sass',
-                    cssDir: 'app/css',
-                    fontsDir: 'app/fonts',
-                    relativeAssets: true,
-                    sourcemap: true,
-                    outputStyle: 'expanded'
-                }
-            }
-        },
-
-        cssmin: {
-            target: {
-                options: {
-                    report: 'min',
-                    roundingPrecision: -1
-                },
-                files: {
-                    'app/css/main.min.css': 'app/css/main.css'
-                }
-            }
-        },
-
-        watch: {
-            options: {
-                livereload: true
-            },
-            files: ['app/**/*'],
-            sass: {
-                options: {
-                    livereload: false
-                },
-                files: 'app/sass/**/*.scss',
-                tasks: ['compass:dev', 'cssmin']
-            }
-        },
 
         copy: {
             dist_html: {
@@ -153,11 +89,11 @@ module.exports = function (grunt) {
                             match: /<!--dist scripts replace-->[\s\S]+<!--end dist scripts replace-->/,     // [\s\S]+ multiline match of any character
                             replacement: '<script type="text/javascript" src="app.bundle.min.js"></script>'
                         }, {
-                            match: /@import '[./]+css\/main\.min\.css'/,
-                            replacement: "@import '/<%= project.dir %>/<%= project.widgetName %>/main.min.css'"
+                            match: /@import '[.\/]+css\/main\.min\.css'/,
+                            replacement: "@import '<%= project.widgetPath %>main.min.css'"
                         }, {
-                            match: /src="\/img\//,
-                            replacement: 'src="/<%= project.dir %>/<%= project.widgetName %>/img/'
+                            match: /src="[.\/]+img\//g,
+                            replacement: 'src="<%= project.widgetPath %>img/'
                         }
                     ]
                 },
@@ -169,11 +105,11 @@ module.exports = function (grunt) {
                     patterns: [
                         {
                             match: /url\(\.\.\/fonts/g,
-                            replacement: 'url(/<%= project.dir %>/<%= project.widgetName %>/fonts'
+                            replacement: 'url(<%= project.widgetPath %>fonts'
                         },
                         {
-                            match: /url\([./]+img/g,
-                            replacement: 'url(/<%= project.dir %>/<%= project.widgetName %>/img'
+                            match: /url\([.\/]+img/g,
+                            replacement: 'url(<%= project.widgetPath %>img'
                         }
                     ]
                 },
@@ -181,9 +117,76 @@ module.exports = function (grunt) {
                 dest: '<%= replace.css_bundle.src %>'
             }
         }
-    };
+    },
+    
+    watchConfig = {
+        connect: {
+            server: {
+                options: {
+                    port: 9003,
+                    base: 'app',
+                    hostname: '0.0.0.0',
+                    livereload: true
+                }
+            }
+        },
 
-    grunt.initConfig({
+        open: {
+            server: {
+                path: 'http://localhost:<%= connect.server.options.port %>'
+            }
+        },
+
+        compass: {
+            dist: {
+                options: {
+                    sassDir: 'app/sass',
+                    cssDir: 'app/css',
+                    fontsDir: 'app/fonts',
+                    relativeAssets: true,
+                    environment: 'production'
+                }
+            },
+            dev: {
+                options: {
+                    sassDir: 'app/sass',
+                    cssDir: 'app/css',
+                    fontsDir: 'app/fonts',
+                    relativeAssets: true,
+                    sourcemap: true,
+                    outputStyle: 'expanded'
+                }
+            }
+        },
+
+        cssmin: {
+            target: {
+                options: {
+                    report: 'min',
+                    roundingPrecision: -1
+                },
+                files: {
+                    'app/css/main.min.css': 'app/css/main.css'
+                }
+            }
+        },
+
+        watch: {
+            options: {
+                livereload: true
+            },
+            files: ['app/**/*'],
+            sass: {
+                options: {
+                    livereload: false
+                },
+                files: 'app/sass/**/*.scss',
+                tasks: ['compass:dev', 'cssmin']
+            }
+        }
+    },
+    
+    promptConfig = {
         prompt: {
             target: {
                 options: {
@@ -211,11 +214,11 @@ module.exports = function (grunt) {
                 }
             }
         }
-    });
-
-
+    };
+    
+    
+    grunt.initConfig(watchConfig);
     grunt.registerTask('serve', 'Watch for changes in files', function () {
-        grunt.initConfig(fullConfig);
         grunt.task.run([
             'connect',
             'open',
@@ -224,41 +227,65 @@ module.exports = function (grunt) {
     });
 
     
-    grunt.registerTask('build_widget', '', function () {
+    grunt.registerTask('build_widget', 'Build widget for production', function () {
         build_widget_prompt('dist');
     });
     
     
-    grunt.registerTask('build_test', '', function () {
+    grunt.registerTask('build_test', 'Build widget for testing', function () {
         build_widget_prompt('dist_test');
     });
     
     function build_widget_prompt(dir) {
         appConfig.dir = dir;
+        grunt.initConfig(promptConfig);
         grunt.task.run(['prompt']);
         thenCallback = function () {
-            appConfig.container_name = dir === 'dist' ? 'release' : 'test';
-            appConfig.container_name += '_' + appConfig.widgetName + '.html';
-            grunt.initConfig(fullConfig);
             if (dir === 'dist') {
-                grunt.task.run(['clean:initial']);
+                appConfig.widgetPath = './';
+            } else {
+                appConfig.widgetPath = '/' + dir + '/' + appConfig.widgetName + '/';
             }
-            grunt.task.run(['build_widget_internal', 'replace:container']);
+            appConfig.container_name = 'test_' + appConfig.widgetName + '.html';
+            grunt.initConfig(fullConfig);
+            
+            conditionalExec([
+                {task: 'clean:initial',         exec: dir === 'dist'},
+                {task: 'clean:tmp',             exec: 1},
+                {task: 'concat',                exec: 1},
+                {task: 'uglify',                exec: 1},
+                {task: 'copy',                  exec: 1},
+                
+//                {task: 'replace:widget_html_dist',   exec: dir === 'dist'},
+//                {task: 'replace:widget_html_test',   exec: dir !== 'dist'},
+                {task: 'replace:widget_html',   exec: 1},
+                
+//                {task: 'replace:css_bundle_dist',    exec: dir === 'dist'},
+//                {task: 'replace:css_bundle_test',    exec: dir !== 'dist'},
+                {task: 'replace:css_bundle',    exec: 1},
+                
+                {task: 'clean:tmp',             exec: 1},
+                {task: 'replace:container',     exec: dir !== 'dist'}
+            ]);
         };
     };
     
-    grunt.registerTask('build_widget_internal', [
-        'clean:tmp',
-        'concat',
-        'uglify',
-        'copy',
-
-        // replace paths in html
-        'replace:widget_html',
-
-        // replace paths in css
-        'replace:css_bundle',
-
-        'clean:tmp'
-    ]);
+    
+    /**
+     * 
+     * @param {Array} data     Pass the names of tasks and boolean values: {
+     *      taskName1: true, taskName2: false
+     * }
+     * @returns {void}
+     */
+    function conditionalExec(data) {
+        var i,
+            tasklist = [];
+        for (i = 0; i < data.length; i++) {
+            if (!!data[i].exec) {
+                tasklist.push(data[i].task);
+            }
+        }
+        grunt.task.run(tasklist);
+    }
 };
