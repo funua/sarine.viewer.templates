@@ -24,6 +24,5 @@ var widgetConfig = {
             title:  'Cut',
             code:   'cut'
         }
-    ],
-    customer_logo: false
+    ]
 };
