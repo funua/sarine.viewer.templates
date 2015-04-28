@@ -89,11 +89,11 @@ module.exports = function (grunt) {
                             match: /<!--dist scripts replace-->[\s\S]+<!--end dist scripts replace-->/,     // [\s\S]+ multiline match of any character
                             replacement: '<script type="text/javascript" src="app.bundle.min.js"></script>'
                         }, {
-                            match: /@import '[./]+css\/main\.min\.css'/,
-                            replacement: "@import '/<%= project.dir %>/<%= project.widgetName %>/main.min.css'"
+                            match: /@import '[.\/]+css\/main\.min\.css'/,
+                            replacement: "@import '<%= project.widgetPath %>main.min.css'"
                         }, {
-                            match: /src="\/img\//,
-                            replacement: 'src="/<%= project.dir %>/<%= project.widgetName %>/img/'
+                            match: /src="[.\/]+img\//g,
+                            replacement: 'src="<%= project.widgetPath %>img/'
                         }
                     ]
                 },
@@ -105,11 +105,11 @@ module.exports = function (grunt) {
                     patterns: [
                         {
                             match: /url\(\.\.\/fonts/g,
-                            replacement: 'url(/<%= project.dir %>/<%= project.widgetName %>/fonts'
+                            replacement: 'url(<%= project.widgetPath %>fonts'
                         },
                         {
-                            match: /url\([./]+img/g,
-                            replacement: 'url(/<%= project.dir %>/<%= project.widgetName %>/img'
+                            match: /url\([.\/]+img/g,
+                            replacement: 'url(<%= project.widgetPath %>img'
                         }
                     ]
                 },
@@ -241,6 +241,11 @@ module.exports = function (grunt) {
         grunt.initConfig(promptConfig);
         grunt.task.run(['prompt']);
         thenCallback = function () {
+            if (dir === 'dist') {
+                appConfig.widgetPath = './';
+            } else {
+                appConfig.widgetPath = '/' + dir + '/' + appConfig.widgetName + '/';
+            }
             appConfig.container_name = 'test_' + appConfig.widgetName + '.html';
             grunt.initConfig(fullConfig);
             
@@ -250,8 +255,15 @@ module.exports = function (grunt) {
                 {task: 'concat',                exec: 1},
                 {task: 'uglify',                exec: 1},
                 {task: 'copy',                  exec: 1},
+                
+//                {task: 'replace:widget_html_dist',   exec: dir === 'dist'},
+//                {task: 'replace:widget_html_test',   exec: dir !== 'dist'},
                 {task: 'replace:widget_html',   exec: 1},
+                
+//                {task: 'replace:css_bundle_dist',    exec: dir === 'dist'},
+//                {task: 'replace:css_bundle_test',    exec: dir !== 'dist'},
                 {task: 'replace:css_bundle',    exec: 1},
+                
                 {task: 'clean:tmp',             exec: 1},
                 {task: 'replace:container',     exec: dir !== 'dist'}
             ]);
