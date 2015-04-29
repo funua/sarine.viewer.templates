@@ -86,7 +86,6 @@
 
         if (totalViewers > 0) {
             $(document).on("first_init_end", function (event, data) {
-//                console.log('first_init_end data ->', data);
                 totalViewers--;
                 if (totalViewers <= 0) {
                     onViewersReady();
@@ -180,11 +179,10 @@
         function onViewersReady() {
             sarineInfos.forEach(function (element) {
                 var field = element.getAttribute('data-sarine-info'),
-                        value = recurse(stone, field.split('.'));
+                    value = recurse(stone, field.split('.'));
 
                 if (value === (void 0) || value === null) {
                     element.parentNode.style.display = 'none';
-                    console.log('element.parentNode ->', element.parentNode);
                 } else if (field === 'stoneProperties.carat') {
                     element.innerHTML = parseFloat(value).toFixed(3);
                 }
