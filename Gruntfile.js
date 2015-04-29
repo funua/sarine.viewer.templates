@@ -104,7 +104,7 @@ module.exports = function (grunt) {
                 options: {
                     patterns: [
                         {
-                            match: /url\([.\/]+fonts/g,
+                            match: /url\((\.[.\/]+|\/)fonts/g,
                             replacement: 'url(<%= project.widgetPath %>fonts'
                         },
                         {
