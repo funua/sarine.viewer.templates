@@ -104,7 +104,7 @@ module.exports = function (grunt) {
                 options: {
                     patterns: [
                         {
-                            match: /url\(\.\.\/fonts/g,
+                            match: /url\([.\/]+fonts/g,
                             replacement: 'url(<%= project.widgetPath %>fonts'
                         },
                         {
@@ -255,15 +255,8 @@ module.exports = function (grunt) {
                 {task: 'concat',                exec: 1},
                 {task: 'uglify',                exec: 1},
                 {task: 'copy',                  exec: 1},
-                
-//                {task: 'replace:widget_html_dist',   exec: dir === 'dist'},
-//                {task: 'replace:widget_html_test',   exec: dir !== 'dist'},
                 {task: 'replace:widget_html',   exec: 1},
-                
-//                {task: 'replace:css_bundle_dist',    exec: dir === 'dist'},
-//                {task: 'replace:css_bundle_test',    exec: dir !== 'dist'},
                 {task: 'replace:css_bundle',    exec: 1},
-                
                 {task: 'clean:tmp',             exec: 1},
                 {task: 'replace:container',     exec: dir !== 'dist'}
             ]);
