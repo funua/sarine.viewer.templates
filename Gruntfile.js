@@ -116,6 +116,29 @@ module.exports = function (grunt) {
                 src: 'app/<%= project.dir %>/<%= project.widgetName %>/main.min.css',
                 dest: '<%= replace.css_bundle.src %>'
             }
+        },
+        
+        template: {
+            shell: {
+                options: {
+                    data: appConfig
+                },
+//                src: 'app/shell.tpl.html',
+//                dest: 'app/<%= widgetName %>.html',
+                
+                files: {
+//                    a: 'b'
+                }
+                
+//                files: [
+//                    {
+//                        cwd: 'app/',
+//                        src: 'shell.tpl.html',
+//                        dest: 'app/<%= widgetName %>.html',
+//                        expand: true
+//                    }
+//                ] 
+            }
         }
     },
     
@@ -262,6 +285,19 @@ module.exports = function (grunt) {
             ]);
         };
     };
+    
+    
+    grunt.registerTask('make_shell', 'Make shell file for uploading to sarine-widgets.synergetica.net', function () {
+        grunt.initConfig(promptConfig);
+        grunt.task.run(['prompt']);
+        thenCallback = function () {
+            fullConfig.template.shell.files['app/' + appConfig.widgetName + '.html'] = ['app/shell.tpl.html'];
+            grunt.initConfig(fullConfig);
+            grunt.task.run([
+                'template'
+            ]);
+        };
+    });
     
     
     /**
