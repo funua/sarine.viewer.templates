@@ -33,10 +33,10 @@
       throw new Error('Selector missing, eg: new WallopSlider(".selector")');
     }
     
-    console.log('selectorPool ->', selectorPool);
+//    console.log('selectorPool ->', selectorPool);
     
     for (var i = 0; i < selectorPool.length; i++) {
-      console.log('selectorPool[i] -> ', selectorPool[i]);
+//      console.log('selectorPool[i] -> ', selectorPool[i]);
       if (selectorPool[i] === selector) {
         throw new Error('An instance of WallopSlider with this selector already exists: ' + selectorPool[i]);
       }
