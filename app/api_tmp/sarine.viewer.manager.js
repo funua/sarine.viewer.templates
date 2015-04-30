@@ -132,7 +132,13 @@
                         if (v.tagName === "SCRIPT") {
                             if (v.src && !$(v).attr('data-preserve-path')) {
                                 deferArr.push($.Deferred());
-                                v.src = v.src.replace(getPath(location.origin + location.pathname), getPath(template));
+                                
+                                // replace path for widgetConfig.js only
+                                if (v.src.indexOf('widgetConfig.js') !== -1) {
+                                    v.src = v.src.replace(getPath(location.origin + location.pathname), getPath(template));
+                                }
+                                
+//                                v.src = v.src.replace(getPath(location.origin + location.pathname), getPath(template));
                                 $.getScript(v.src, function () {
                                     deferArr.pop();
                                     if (deferArr.length === 0) {
