@@ -1343,7 +1343,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 14px;
   height: 14px;
   margin: 0 2px;
-  line-height: 14px;
+  line-height: 12px;
   font-size: 10px;
   vertical-align: baseline;
 }
@@ -2522,73 +2522,77 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   left: -15px;
 }
 /* line 49, ../sass/partials/_widgets.scss */
+.w6 .preloader {
+  padding-top: 40%;
+}
+/* line 52, ../sass/partials/_widgets.scss */
 .w6 .slider--real {
   border: none;
 }
-/* line 52, ../sass/partials/_widgets.scss */
+/* line 55, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slider__header {
   display: block;
 }
-/* line 55, ../sass/partials/_widgets.scss */
+/* line 58, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slider__header .storyline {
   display: none;
 }
-/* line 60, ../sass/partials/_widgets.scss */
+/* line 63, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slide--real {
   padding-top: 0;
 }
-/* line 63, ../sass/partials/_widgets.scss */
+/* line 66, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slide--real .slide__heading {
   margin-top: 40px;
 }
-/* line 67, ../sass/partials/_widgets.scss */
+/* line 70, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slide--real .real__img-wrap {
   padding-top: 0;
 }
-/* line 73, ../sass/partials/_widgets.scss */
+/* line 76, ../sass/partials/_widgets.scss */
 .w6 .footer {
   padding: 0 20px;
 }
 
-/* line 79, ../sass/partials/_widgets.scss */
+/* line 82, ../sass/partials/_widgets.scss */
 .w7 .slider__header {
   display: block;
   padding-top: 66px;
 }
-/* line 83, ../sass/partials/_widgets.scss */
+/* line 86, ../sass/partials/_widgets.scss */
 .w7 .storyline {
   display: none;
 }
-/* line 86, ../sass/partials/_widgets.scss */
+/* line 89, ../sass/partials/_widgets.scss */
 .w7 .slide__heading {
   margin-top: -40px;
 }
 
-/* line 92, ../sass/partials/_widgets.scss */
+/* line 95, ../sass/partials/_widgets.scss */
 .w8 .slider__header {
   display: block;
   padding-top: 66px;
 }
-/* line 96, ../sass/partials/_widgets.scss */
+/* line 99, ../sass/partials/_widgets.scss */
 .w8 .storyline {
   display: none;
 }
-/* line 99, ../sass/partials/_widgets.scss */
+/* line 102, ../sass/partials/_widgets.scss */
 .w8 .slide__heading {
   margin-top: -40px;
   margin-bottom: 70px;
 }
 
-/* line 106, ../sass/partials/_widgets.scss */
+/* line 109, ../sass/partials/_widgets.scss */
 .w9 .slider__header {
   display: block;
   padding-top: 66px;
 }
-/* line 110, ../sass/partials/_widgets.scss */
+/* line 113, ../sass/partials/_widgets.scss */
 .w9 .storyline {
   display: none;
 }
-/* line 113, ../sass/partials/_widgets.scss */
+/* line 116, ../sass/partials/_widgets.scss */
 .w9 .slide__heading {
   margin-top: -40px;
   margin-bottom: 70px;
