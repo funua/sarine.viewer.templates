@@ -4,7 +4,7 @@ var widgetConfig = {
     color_scheme: 'color-scheme-1',
     pages: [
         {
-            title:  'Real View',
+            title:  'Summary',
             code:   'summary'
         },
         {
