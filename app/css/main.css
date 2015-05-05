@@ -2470,50 +2470,51 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 /* line 1, ../sass/partials/_widgets.scss */
 .cut2DView svg {
   width: 100%;
+  display: block;
 }
 
-/* line 6, ../sass/partials/_widgets.scss */
+/* line 7, ../sass/partials/_widgets.scss */
 .w2 .slider__header {
   display: block;
   padding-top: 66px;
 }
-/* line 10, ../sass/partials/_widgets.scss */
+/* line 11, ../sass/partials/_widgets.scss */
 .w2 .storyline {
   display: none;
 }
-/* line 13, ../sass/partials/_widgets.scss */
+/* line 14, ../sass/partials/_widgets.scss */
 .w2 .slide__heading {
   margin-top: -40px;
   margin-bottom: 70px;
 }
-/* line 17, ../sass/partials/_widgets.scss */
+/* line 18, ../sass/partials/_widgets.scss */
 .w2 .inspect-stone {
   max-width: 480px;
   max-height: 480px;
   height: 100%;
   width: 100%;
 }
-/* line 23, ../sass/partials/_widgets.scss */
+/* line 24, ../sass/partials/_widgets.scss */
 .w2 .inspect-stone.large .viewport {
   width: 100%;
   height: 100%;
 }
-/* line 27, ../sass/partials/_widgets.scss */
+/* line 28, ../sass/partials/_widgets.scss */
 .w2 .inspect-stone.large #main-image {
   height: 100%;
   width: 100%;
 }
 
-/* line 34, ../sass/partials/_widgets.scss */
+/* line 35, ../sass/partials/_widgets.scss */
 .w4 .slider--real .storyline:before, .w5 .slider--real .storyline:before {
   background-color: #bbb;
 }
-/* line 37, ../sass/partials/_widgets.scss */
+/* line 38, ../sass/partials/_widgets.scss */
 .w4 .slider--real .storyline__item:not(.storyline__item--active):before, .w5 .slider--real .storyline__item:not(.storyline__item--active):before {
   background-color: #bbb;
 }
 
-/* line 42, ../sass/partials/_widgets.scss */
+/* line 43, ../sass/partials/_widgets.scss */
 .w6 {
   width: 322px;
   height: auto;
@@ -2521,78 +2522,78 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border: none;
   left: -15px;
 }
-/* line 49, ../sass/partials/_widgets.scss */
+/* line 50, ../sass/partials/_widgets.scss */
 .w6 .preloader {
   padding-top: 40%;
 }
-/* line 52, ../sass/partials/_widgets.scss */
+/* line 53, ../sass/partials/_widgets.scss */
 .w6 .slider--real {
   border: none;
 }
-/* line 55, ../sass/partials/_widgets.scss */
+/* line 56, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slider__header {
   display: block;
 }
-/* line 58, ../sass/partials/_widgets.scss */
+/* line 59, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slider__header .storyline {
   display: none;
 }
-/* line 63, ../sass/partials/_widgets.scss */
+/* line 64, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slide--real {
   padding-top: 0;
 }
-/* line 66, ../sass/partials/_widgets.scss */
+/* line 67, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slide--real .slide__heading {
   margin-top: 40px;
 }
-/* line 70, ../sass/partials/_widgets.scss */
+/* line 71, ../sass/partials/_widgets.scss */
 .w6 .slider--real .slide--real .real__img-wrap {
   padding-top: 0;
 }
-/* line 76, ../sass/partials/_widgets.scss */
+/* line 77, ../sass/partials/_widgets.scss */
 .w6 .footer {
   padding: 0 20px;
 }
 
-/* line 82, ../sass/partials/_widgets.scss */
+/* line 83, ../sass/partials/_widgets.scss */
 .w7 .slider__header {
   display: block;
   padding-top: 66px;
 }
-/* line 86, ../sass/partials/_widgets.scss */
+/* line 87, ../sass/partials/_widgets.scss */
 .w7 .storyline {
   display: none;
 }
-/* line 89, ../sass/partials/_widgets.scss */
+/* line 90, ../sass/partials/_widgets.scss */
 .w7 .slide__heading {
   margin-top: -40px;
 }
 
-/* line 95, ../sass/partials/_widgets.scss */
+/* line 96, ../sass/partials/_widgets.scss */
 .w8 .slider__header {
   display: block;
   padding-top: 66px;
 }
-/* line 99, ../sass/partials/_widgets.scss */
+/* line 100, ../sass/partials/_widgets.scss */
 .w8 .storyline {
   display: none;
 }
-/* line 102, ../sass/partials/_widgets.scss */
+/* line 103, ../sass/partials/_widgets.scss */
 .w8 .slide__heading {
   margin-top: -40px;
   margin-bottom: 70px;
 }
 
-/* line 109, ../sass/partials/_widgets.scss */
+/* line 110, ../sass/partials/_widgets.scss */
 .w9 .slider__header {
   display: block;
   padding-top: 66px;
 }
-/* line 113, ../sass/partials/_widgets.scss */
+/* line 114, ../sass/partials/_widgets.scss */
 .w9 .storyline {
   display: none;
 }
-/* line 116, ../sass/partials/_widgets.scss */
+/* line 117, ../sass/partials/_widgets.scss */
 .w9 .slide__heading {
   margin-top: -40px;
   margin-bottom: 70px;
