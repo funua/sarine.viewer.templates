@@ -191,11 +191,6 @@
             document.querySelector('.slider').style.display = '';
             document.querySelector('.preloader').style.display = 'none';
         }
-        
-        $('body').on('click', '.footer__disclaimer', function (e) {
-            e.preventDefault();
-            GetLegalConditions();
-        });
     });
   
   
