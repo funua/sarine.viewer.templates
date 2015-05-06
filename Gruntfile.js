@@ -5,10 +5,11 @@ module.exports = function (grunt) {
 
     var appConfig = {
         widgetName: null,
-        dir: '',
+        dir: 'dist_test',
         fsTargetDir: '',
-        codeWidgetPath: '',
-        shell_name: ''
+        codeWidgetPath: './',
+        shell_name: '',
+        base_server: ''
     },
     
     thenCallback,
@@ -73,18 +74,18 @@ module.exports = function (grunt) {
         },
 
         replace: {
-            shell: {
-                options: {
-                    patterns: [
-                        {
-                            match: /var template = '[^']+'/,
-                            replacement: "var template = '<%= project.widgetName %>/index.html'"
-                        }
-                    ]
-                },
-                src: 'app/index.html',
-                dest: 'app/<%= project.dir %>/<%= project.shell_name %>'
-            },
+//            shell: {
+//                options: {
+//                    patterns: [
+//                        {
+//                            match: /var template = '[^']+'/,
+//                            replacement: "var template = '<%= project.widgetName %>/index.html'"
+//                        }
+//                    ]
+//                },
+//                src: 'app/index.html',
+//                dest: 'app/<%= project.dir %>/<%= project.shell_name %>'
+//            },
             widget_html: {
                 options: {
                     patterns: [
@@ -92,8 +93,8 @@ module.exports = function (grunt) {
                             match: /<!--dist scripts replace-->[\s\S]+<!--end dist scripts replace-->/,     // [\s\S]+ multiline match of any character
                             replacement: '<script type="text/javascript" src="app.bundle.min.js"></script>'
                         }, {
-                            match: /@import '[.\/]+css\/main\.min\.css'/,
-                            replacement: "@import '<%= project.codeWidgetPath %>main.min.css'"
+                            match: /<style>@import '[.\/]+css\/main\.min\.css';<\/style>/,
+                            replacement: '<link type="text/css" rel="stylesheet" href="/main.min.css" />'
                         }, {
                             match: /src="[.\/]+img\//g,
                             replacement: 'src="<%= project.codeWidgetPath %>img/'
@@ -223,6 +224,11 @@ module.exports = function (grunt) {
     };
     
     
+    
+    
+    
+    
+    
     grunt.initConfig(watchConfig);
     grunt.registerTask('serve', 'Watch for changes in files', function () {
         grunt.task.run([
@@ -252,15 +258,36 @@ module.exports = function (grunt) {
     
     
     grunt.registerTask('make_shell', 'Make shell file for uploading to sarine-widgets.synergetica.net', function () {
-        grunt.initConfig(promptConfig);
-        grunt.task.run(['prompt']);
+        var dir = this.args[0],
+            isRelease = dir === 'dist',
+            targetFilename = '';
+        appConfig.dir = dir;
+        
         thenCallback = function () {
-            fullConfig.template.shell.files['app/' + appConfig.widgetName + '.html'] = ['app/shell.tpl.html'];
+//            fullConfig.template.shell.files['app/' + appConfig.widgetName + '.html'] = ['app/shell.tpl.html'];
+            if (isRelease) {
+                appConfig.base_server = 'http://sarine-widgets.synergetica.net';
+                targetFilename = 'app/' + appConfig.widgetName;
+            } else {
+                appConfig.base_server = 'http://sarine-widgets.ho.ua';
+                targetFilename = 'app/dist_test/test_' + appConfig.widgetName;
+            }
+            targetFilename += '.html';
+            
+            fullConfig.template.shell.files[targetFilename] = ['app/shell.tpl.html'];
             grunt.initConfig(fullConfig);
             grunt.task.run([
                 'template'
             ]);
         };
+        
+        if (this.args[1]) {
+            appConfig.widgetName = this.args[1];
+            thenCallback();
+        } else {
+            grunt.initConfig(promptConfig);
+            grunt.task.run(['prompt']);
+        }
     });
     
     
@@ -286,9 +313,9 @@ module.exports = function (grunt) {
         
         appConfig.fsTargetDir = 'app/' + appConfig.dir;
         if (isRelease) {
-            appConfig.codeWidgetPath = './';
+//            appConfig.codeWidgetPath = './';
         } else {
-            appConfig.codeWidgetPath = '/' + appConfig.dir + '/' + appConfig.widgetName + '/';
+//            appConfig.codeWidgetPath = '/' + appConfig.dir + '/' + appConfig.widgetName + '/';
             appConfig.fsTargetDir += '/' + appConfig.widgetName;
         }
         appConfig.shell_name = 'test_' + appConfig.widgetName + '.html';
@@ -304,7 +331,7 @@ module.exports = function (grunt) {
             {task: 'replace:widget_html',   exec: 1},
             {task: 'replace:css_bundle',    exec: 1},
             {task: 'clean:tmp',             exec: 1},
-            {task: 'replace:shell',         exec: !isRelease}
+            {task: 'make_shell:dist_test:' + appConfig.widgetName,         exec: !isRelease}
         ]);
     });
     
