@@ -94,7 +94,7 @@ module.exports = function (grunt) {
                             replacement: '<script type="text/javascript" src="app.bundle.min.js"></script>'
                         }, {
                             match: /<style>@import '[.\/]+css\/main\.min\.css';<\/style>/,
-                            replacement: '<link type="text/css" rel="stylesheet" href="/main.min.css" />'
+                            replacement: '<!--[if !IE]><!--><style>@import \'./main.min.css\';</style><!--<![endif]--> <!--[if IE]><link type="text/css" rel="stylesheet" href="/main.min.css" /><![endif]-->'
                         }, {
                             match: /src="[.\/]+img\//g,
                             replacement: 'src="<%= project.codeWidgetPath %>img/'
@@ -127,7 +127,6 @@ module.exports = function (grunt) {
                 options: {
                     data: appConfig
                 },
-                
                 files: {}
             }
         }

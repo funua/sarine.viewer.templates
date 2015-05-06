@@ -294,20 +294,20 @@
         <script type="text/javascript" src="http://d3oayecwxm3wp6.cloudfront.net/qa4/content/viewers/core/v1/sarine.viewer.utils.js?cacheVersion="></script>
 
         <script type="text/javascript">
-            var body = document.getElementsByTagName('body')[0];
-            var script = document.createElement('script');
-            script.id = "viewerSdkUrl";
-            script.type = 'text/javascript';
-            script.onload = function () {
-                Legal.init({locale: "en-US"});
-            };
-            script.src = 'http://d3oayecwxm3wp6.cloudfront.net/qa4/web-sites/legal-sdk/viewer.sdk.js';
-            body.appendChild(script);
+    var body = document.getElementsByTagName('body')[0];
+    var script = document.createElement('script');
+    script.id = "viewerSdkUrl";
+    script.type = 'text/javascript';
+    script.onload = function () {
+        Legal.init({ locale: "en-US" });
+    };
+        script.src = 'https://d3oayecwxm3wp6.cloudfront.net/qa4/web-sites/legal-sdk/viewer.sdk.js';
+        body.appendChild(script);
 
-            function GetLegalConditions() {
-                Legal.GetLatestActiveDocumentVersion("18", "3", "_blank");
-            }
-        </script>
+        function GetLegalConditions(){
+            Legal.GetLatestActiveDocumentVersion("18", "3", "_blank");
+        }
+    </script>
 
     </body>
 </html>
