@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"2999340e52","applicationID":"6056522","transactionName":"YgEAMUBXDEpWBUcIXFtLIwZGXw1XGDBaBERQFiEKXEIQVlsKVhMcYAoJC11BDBl2BUcIXFs=","queueTime":0,"applicationTime":567,"ttGuid":"B33C8F75E33479BB","agent":"js-agent.newrelic.com/nr-632.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o?o:n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(e,n){function t(e){function n(n,t,a){e&&e(n,t,a),a||(a={});for(var u=c(n),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(e,n){f[e]=c(e).concat(n)}function c(e){return f[e]||[]}function u(){return t(n)}var f={};return{on:a,emit:n,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=e("gos");n.exports=t()},{gos:"7eSDFh"}],ee:[function(e,n){n.exports=e("QJf3ax")},{}],3:[function(e,n){function t(e){return function(){r(e,[(new Date).getTime()].concat(i(arguments)))}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(e,n){window.NREUM[n]=t("api-"+n)}),n.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],"7eSDFh":[function(e,n){function t(e,n,t){if(r.call(e,n))return e[n];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[n]=o,o}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],gos:[function(e,n){n.exports=e("7eSDFh")},{}],handle:[function(e,n){n.exports=e("D5DuLP")},{}],D5DuLP:[function(e,n){function t(e,n,t){return r.listeners(e).length?r.emit(e,n,t):(o[e]||(o[e]=[]),void o[e].push(n))}var r=e("ee").create(),o={};n.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(e,n){n.exports=e("XL7HBI")},{}],XL7HBI:[function(e,n){function t(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");n.exports=t},{gos:"7eSDFh"}],G9z0Bl:[function(e,n){function t(){var e=d.info=NREUM.info,n=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){c(p,function(n,t){n in e||(e[n]=t)});var t="https"===s.split(":")[0]||e.sslForHttp;d.proto=t?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=d.proto+e.agent,n.parentNode.insertBefore(r,n)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=e("handle"),c=e(1),u=(e(2),window),f=u.document,s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},d=n.exports={offset:i(),origin:s,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",t,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,n){n.exports=e("G9z0Bl")},{}],12:[function(e,n){function t(e,n){var t=[],o="",i=0;for(o in e)r.call(e,o)&&(t[i]=n(o,e[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],13:[function(e,n){function t(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=t},{}]},{},["G9z0Bl"]);</script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <base href="http://sarine-widgets.synergetica.net/dist/<%= widgetName %>/">
+        <base href="<%= base_server %>/<%= dir %>/<%= widgetName %>/">
         <link type="text/css" href="https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/shell/v1/css/jquery.reject.css" rel="stylesheet"/>
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
         <script>
@@ -17,52 +17,52 @@
         <script type="text/javascript">
             var stones = [
                 {
-                    "friendlyName": "197MV9W03H",
+                    "friendlyName": "2165JRE8F4",
                     "stoneProperties": {
                         "shape": "Round",
-                        "carat": 3.9,
-                        "clarity": null,
-                        "color": null,
-                        "cutGrade": null
+                        "carat": 0.91,
+                        "clarity": "VVS1",
+                        "color": "E",
+                        "cutGrade": "VG"
                     },
                     "lightGrades": {
                         "brilliance": {
-                            "value": 98.0,
-                            "name": "Brilliance"
+                          "value": 2.0,
+                          "name": "Standard"
                         },
                         "symmetry": {
-                            "value": 87.957,
-                            "name": "Symmetry"
+                          "value": 1.0,
+                          "name": "Minimum"
                         },
                         "fire": {
-                            "value": 2.86593,
-                            "name": "Fire"
+                          "value": 3.0,
+                          "name": "High"
                         },
                         "totalGrade": {
-                            "value": 18.0,
-                            "name": "Total Grade"
+                          "value": 5.0,
+                          "name": "Premium1"
                         },
                         "scintillation": {
-                            "value": 37.9606,
-                            "name": "Sparkle"
+                          "value": 3.0,
+                          "name": "High"
                         },
-                        "rotationAngle": -1.7976931348623157E+308
+                        "rotationAngle": 0.0
                     },
                     "viewers": {
-                        "lightViewer": "http://dhvtgnmv8a4vr.cloudfront.net/bfbc2f25-e713-42ff-87bb-e3414c6f307a/Dlight/414451/Viewer/",
-                        "lightViewerImage": "http://dhvtgnmv8a4vr.cloudfront.net/bfbc2f25-e713-42ff-87bb-e3414c6f307a/Dlight/414451/Viewer/",
-                        "lightReportViewer": "http://dhvtgnmv8a4vr.cloudfront.net/bfbc2f25-e713-42ff-87bb-e3414c6f307a/Dlight/414451/Viewer/",
-                        "lightReportViewerImage": "http://dhvtgnmv8a4vr.cloudfront.net/bfbc2f25-e713-42ff-87bb-e3414c6f307a/Dlight/414451/Viewer/",
-                        "cut3DView": "http://dhvtgnmv8a4vr.cloudfront.net/bfbc2f25-e713-42ff-87bb-e3414c6f307a/SarineCut/1/",
-                        "cut2DView": "http://dhvtgnmv8a4vr.cloudfront.net/bfbc2f25-e713-42ff-87bb-e3414c6f307a/SarineCut/1/",
-                        "cutHeartsAndArrows": "http://dhvtgnmv8a4vr.cloudfront.net/bfbc2f25-e713-42ff-87bb-e3414c6f307a/SarineCut/1/",
-                        "externalImage": "http://dhvtgnmv8a4vr.cloudfront.net/bfbc2f25-e713-42ff-87bb-e3414c6f307a/ExternalResources/1/",
-                        "externalPdf": "http://dhvtgnmv8a4vr.cloudfront.net/bfbc2f25-e713-42ff-87bb-e3414c6f307a/ExternalResources/1/",
-                        "loupeRealView": "http://dyvu8hmn7kpxq.cloudfront.net/a8428eef-5c83-436d-9a2b-ba3b988543cc/Dloupe/21dfb4d8-144d-48f9-bc7e-b4630d80c801",
-                        "loupeRealViewImage": "http://dyvu8hmn7kpxq.cloudfront.net/a8428eef-5c83-436d-9a2b-ba3b988543cc/Dloupe/21dfb4d8-144d-48f9-bc7e-b4630d80c801/Images/Eyeview/",
-                        "loupeTopInspection": "http://dyvu8hmn7kpxq.cloudfront.net/a8428eef-5c83-436d-9a2b-ba3b988543cc/Dloupe/21dfb4d8-144d-48f9-bc7e-b4630d80c801",
-                        "loupeTopInspectionImage": "http://dyvu8hmn7kpxq.cloudfront.net/a8428eef-5c83-436d-9a2b-ba3b988543cc/Dloupe/21dfb4d8-144d-48f9-bc7e-b4630d80c801/Images/Impression/",
-                        "loupe3DFullInspection": "http://dyvu8hmn7kpxq.cloudfront.net/a8428eef-5c83-436d-9a2b-ba3b988543cc/Dloupe/21dfb4d8-144d-48f9-bc7e-b4630d80c801"
+                        "lightViewer": "http://dhvtgnmv8a4vr.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/Dlight/216999136/Viewer/",
+                        "lightViewerImage": "http://dhvtgnmv8a4vr.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/Dlight/216999136/Viewer/",
+                        "lightReportViewer": "http://dhvtgnmv8a4vr.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/Dlight/216999136/Viewer/",
+                        "lightReportViewerImage": "http://dhvtgnmv8a4vr.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/Dlight/216999136/Viewer/",
+                        "cut3DView": "http://dhvtgnmv8a4vr.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/SarineCut/1/",
+                        "cut2DView": "http://dhvtgnmv8a4vr.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/SarineCut/1/",
+                        "cutHeartsAndArrows": "http://dhvtgnmv8a4vr.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/SarineCut/1/",
+                        "externalImage": "http://dhvtgnmv8a4vr.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/ExternalResources/1/",
+                        "externalPdf": "http://dhvtgnmv8a4vr.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/ExternalResources/1/",
+                        "loupeRealView": "http://dyvu8hmn7kpxq.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/Dloupe/69cc1c8a-3fa7-45d7-9064-d2927e07fcfb",
+                        "loupeRealViewImage": "http://dyvu8hmn7kpxq.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/Dloupe/69cc1c8a-3fa7-45d7-9064-d2927e07fcfb/Images/Eyeview/",
+                        "loupeTopInspection": "http://dyvu8hmn7kpxq.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/Dloupe/69cc1c8a-3fa7-45d7-9064-d2927e07fcfb",
+                        "loupeTopInspectionImage": "http://dyvu8hmn7kpxq.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/Dloupe/69cc1c8a-3fa7-45d7-9064-d2927e07fcfb/Images/Impression/",
+                        "loupe3DFullInspection": "http://dyvu8hmn7kpxq.cloudfront.net/ed977702-f028-4e24-bfb0-43498ebf5351/Dloupe/69cc1c8a-3fa7-45d7-9064-d2927e07fcfb"
                     },
                     "cutGrades": {
                         "clarity": null,
@@ -74,7 +74,7 @@
                 }
             ];
 
-            var template = 'http://sarine-widgets.synergetica.net/dist/<%= widgetName %>/index.html';
+            var template = '<%= base_server %>/<%= dir %>/<%= widgetName %>/index.html';
             
             var configuration = {
                 "logoUrl": "https://d3oayecwxm3wp6.cloudfront.net/dev3/content/viewers/templates/AAAAAAAAAA/v1/logo.png",
