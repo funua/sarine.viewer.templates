@@ -74,18 +74,6 @@ module.exports = function (grunt) {
         },
 
         replace: {
-//            shell: {
-//                options: {
-//                    patterns: [
-//                        {
-//                            match: /var template = '[^']+'/,
-//                            replacement: "var template = '<%= project.widgetName %>/index.html'"
-//                        }
-//                    ]
-//                },
-//                src: 'app/index.html',
-//                dest: 'app/<%= project.dir %>/<%= project.shell_name %>'
-//            },
             widget_html: {
                 options: {
                     patterns: [
@@ -94,7 +82,7 @@ module.exports = function (grunt) {
                             replacement: '<script type="text/javascript" src="app.bundle.min.js"></script>'
                         }, {
                             match: /<style>@import '[.\/]+css\/main\.min\.css';<\/style>/,
-                            replacement: '<!--[if !IE]><!--><style>@import \'./main.min.css\';</style><!--<![endif]--> <!--[if IE]><link type="text/css" rel="stylesheet" href="/main.min.css" /><![endif]-->'
+                            replacement: '<!--[if !IE]><!--><style>@import \'./main.min.css\';</style><!--<![endif]--> <!--[if IE]>--><link type="text/css" rel="stylesheet" href="../main.min.css" /><!--<![endif]-->'
                         }, {
                             match: /src="[.\/]+img\//g,
                             replacement: 'src="<%= project.codeWidgetPath %>img/'
@@ -114,6 +102,11 @@ module.exports = function (grunt) {
                         {
                             match: /url\([.\/]+img/g,
                             replacement: 'url(<%= project.codeWidgetPath %>img'
+                        },
+                        {
+                            // remove iefix
+                            match: /(src:)[^,;]+,/g,
+                            replacement: '$1'
                         }
                     ]
                 },
@@ -311,10 +304,7 @@ module.exports = function (grunt) {
         appConfig.widgetName = this.args[1];
         
         appConfig.fsTargetDir = 'app/' + appConfig.dir;
-        if (isRelease) {
-//            appConfig.codeWidgetPath = './';
-        } else {
-//            appConfig.codeWidgetPath = '/' + appConfig.dir + '/' + appConfig.widgetName + '/';
+        if (!isRelease) {
             appConfig.fsTargetDir += '/' + appConfig.widgetName;
         }
         appConfig.shell_name = 'test_' + appConfig.widgetName + '.html';

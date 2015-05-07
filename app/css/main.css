@@ -2599,4 +2599,9 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   margin-bottom: 70px;
 }
 
+/* line 124, ../sass/partials/_widgets.scss */
+.w10 .slider__header {
+  display: block;
+}
+
 /*# sourceMappingURL=main.css.map */
