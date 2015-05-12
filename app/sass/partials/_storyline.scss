@@ -57,7 +57,7 @@ $storyline-line-height: 1px;
 }
 
 .storyline.items-count-2 {
-	padding: 0 44px;
+	padding: 0 55px;
 
 	&:before {
 		width: 38%;
@@ -66,6 +66,8 @@ $storyline-line-height: 1px;
 
 	.storyline__item {
 		width: 50%;
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 
 }

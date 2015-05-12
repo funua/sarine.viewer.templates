@@ -280,3 +280,50 @@
         }
     }
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
+
+
+
+
+/**
+ * Intercept console.log() calls and display their messages in floating element.
+ * Add 'catch_log' string to url hash to enable this feature,
+ * i.e. 'localhost:9003/#catch_log'.
+ * 
+ * May also be combined with 'debug' key to show another floating element for displaying viewers loading process.
+ * For example:
+ * localhost:9003/#debug--catch_log
+ * The keys separator may be any valid character(s).
+ * 
+ * @returns {void}
+ */
+(function () {
+    var consoleLog,
+        logSelector = 'console_log',
+        oldLog = console.log;
+    
+    if (window.location.hash.indexOf('catch_log') === -1) return;
+    
+    consoleLog = $('#' + logSelector);
+    if (consoleLog.length === 0) {
+        consoleLog = $('<div/>', {id: logSelector})
+                .css({
+                    position: 'absolute',
+                    right: '10px',
+                    bottom: '10px',
+                    padding: '10px 20px',
+                    border: '1px soled #999',
+                    background: '#ddd',
+                    maxHeight: '300px',
+                    maxWidth: '300px',
+                    overflowY: 'auto',
+                    fontFamily: 'monospace',
+                    fontSize: '92%',
+                    lineHeight: '130%'
+                })
+                .appendTo($('body'));
+    }
+    console.log = function (message) {
+        consoleLog.prepend($('<p/>', {text: message}).css({margin: '.7em 0'}));
+        oldLog.apply(console, arguments);
+    };
+})();
