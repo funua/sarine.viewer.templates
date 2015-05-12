@@ -8,8 +8,8 @@
 
 <style>@import './main.min.css';</style>
 
-<div class="slider-wrap" data-hidden-until-load>
-    <div class="slider slider--cut" style="display:none" id="slider">
+<div class="slider-wrap color-scheme-1 w6" data-hidden-until-load>
+    <div class="slider" style="display:none" id="slider">
         <header class="slider__header">
             <h1 class="slider__heading" data-widgetconfig-value="title">Diamond Story</h1>
             <ul class="storyline">
@@ -18,20 +18,14 @@
         </header>
 
         <ul class="slider__list">
-            <li class="slide slide--cut slide--current">
-                <h2 class="slide__heading" data-popup-id="popup_cut_n_sym">
-                    Cut and Symmetry Grading <span class="q-mark"></span>
-                </h2>
-
-                <div class="slide__content">
-                    <div class="slide__img-wrap slide__img-wrap--cut">
-                        <div class="slide__img slide__img--cut">
-                            <sarine-viewer viewer="cut2DView"></sarine-viewer>
+            <li class="slide slide--real slide--current">
+                <h2 class="slide__heading">Real View</h2>
+                <div class="slide__content real">
+                    <div class="real__img-wrap">
+                        <div class="real__img">
+                            <sarine-viewer viewer="loupeRealView"></sarine-viewer>
                         </div>
                     </div>
-                    <p class="slide__caption">
-                        View the accurate geometrical measurements of the diamond to evaluate the proportions.
-                    </p>
                 </div>
             </li>
         </ul>
@@ -55,17 +49,6 @@
             <div class="preloader__dot"></div>
             <div class="preloader__dot"></div>
             <div class="preloader__dot"></div>
-        </div>
-    </div>
-
-    <div class="popup-overlay" id="popup_overlay"></div>
-
-    <div class="popup-wrap popup-wrap--cut" id="popup_cut_n_sym">
-        <div class="popup popup--cut">
-            <button class="popup__close-btn"></button>
-            <h1 class="popup__heading">Cut and Symmetry Grading</h1>
-
-            <p class="popup__caption">Cut grade is determined by the quality of the diamond's craftsmanship. In the hands of the professional cutter, the rough stone is transformed into a polished diamond featuring optimal proportion, symmetry and light refraction. The cut is the diamond's unique signature, reflecting its individual character and beauty.</p>
         </div>
     </div>
 
