@@ -6,10 +6,10 @@
 </style>
 <!-- END -->
 
-<style>@import './main.min.css';</style>
+<!--[if !IE]><!--><style>@import "./main.min.css";</style><!--<![endif]--> <!--[if IE]>--><link type="text/css" rel="stylesheet" href="./main.min.css" /><!--<![endif]-->
 
-<div class="slider-wrap color-scheme-1 w6" data-hidden-until-load>
-    <div class="slider" style="display:none" id="slider">
+<div class="slider-wrap" data-hidden-until-load>
+    <div class="slider slider--light" style="display:none" id="slider">
         <header class="slider__header">
             <h1 class="slider__heading" data-widgetconfig-value="title">Diamond Story</h1>
             <ul class="storyline">
@@ -18,12 +18,112 @@
         </header>
 
         <ul class="slider__list">
-            <li class="slide slide--real slide--current">
-                <h2 class="slide__heading">Real View</h2>
-                <div class="slide__content real">
-                    <div class="real__img-wrap">
-                        <div class="real__img">
-                            <sarine-viewer viewer="loupeRealView"></sarine-viewer>
+            <li class="slide slide--light slide--current">
+                <h2 class="slide__heading" data-popup-id="popup_light">Light Performance Results <span class="q-mark"></span></h2>
+
+                <div class="slide__content">
+                    <div class="slide__img-wrap slide__img-wrap--light">
+                        <div class="slide__img slide__img--light">
+                            <sarine-viewer viewer="lightReportViewer"></sarine-viewer>
+                        </div>
+                        <div class="total-grade">
+                            <div class="total-grade__title">Total Grade</div>
+                            <div class="total-grade__grade" data-total-grade></div>
+                            <div class="total-grade__stars-wrap">
+                                <span class="total-grade__stars" data-total-grade-stars></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="specs">
+                    <div class="specs__row specs__row--line">
+                        <div class="specs__item specs__item--value">Exceptional</div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                    </div>
+                    <div class="specs__row specs__row--line">
+                        <div class="specs__item specs__item--value">Very High</div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                    </div>
+                    <div class="specs__row specs__row--line">
+                        <div class="specs__item specs__item--value">High</div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                    </div>
+                    <div class="specs__row specs__row--line">
+                        <div class="specs__item specs__item--value">Standard</div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                        <div class="specs__item"></div>
+                    </div>
+                    <div class="specs__row specs__row--line">
+                        <div class="specs__item specs__item--value">Minimum</div>
+                        <div class="specs__item specs__item--points-wrap">
+                            <div class="specs__points" data-light-grade="brilliance">
+                                <div class="specs__points-list">
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specs__item specs__item--points-wrap">
+                            <div class="specs__points" data-light-grade="scintillation">
+                                <div class="specs__points-list">
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specs__item specs__item--points-wrap">
+                            <div class="specs__points" data-light-grade="fire">
+                                <div class="specs__points-list">
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specs__item specs__item--points-wrap">
+                            <div class="specs__points" data-light-grade="symmetry">
+                                <div class="specs__points-list">
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                    <div class="specs__point"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="specs__row specs__row--foot">
+                        <div class="specs__item specs__item--value"></div>
+                        <div class="specs__item specs__item--foot" data-popup-id="popup_brilliance">
+                            Brilliance <span class="q-mark q-mark--small"></span>
+                        </div>
+                        <div class="specs__item specs__item--foot" data-popup-id="popup_sparkle">
+                            Sparkle <span class="q-mark q-mark--small"></span>
+                        </div>
+                        <div class="specs__item specs__item--foot" data-popup-id="popup_fire">
+                            Fire <span class="q-mark q-mark--small"></span>
+                        </div>
+                        <div class="specs__item specs__item--foot" data-popup-id="popup_symmetry">
+                            Symmetry <span class="q-mark q-mark--small"></span>
                         </div>
                     </div>
                 </div>
@@ -49,6 +149,97 @@
             <div class="preloader__dot"></div>
             <div class="preloader__dot"></div>
             <div class="preloader__dot"></div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup_overlay"></div>
+
+    <div class="popup-wrap" id="popup_light">
+        <div class="popup">
+            <button class="popup__close-btn"></button>
+            <h1 class="popup__heading">Light Performance Results</h1>
+
+            <p class="popup__caption">As light enters and exits a diamond, the rare allure of the unique gemstone is revealed. Light performance is the combined grading of the four light qualities that define the diamond's individual beauty: Brilliance, Sparkle, Fire and Light Symmetry.</p>
+
+            <div class="popup__media popup__media--video">
+                <video class="popup__video" id="video_light" data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/loup.mp4"></video>
+                <button class="popup__thumbnail video-play" data-video-id="video_light">
+                    <img class="video-play__thumb" src="./img/light-thumbnail.jpg">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-wrap" id="popup_brilliance">
+        <div class="popup">
+            <button class="popup__close-btn"></button>
+            <h1 class="popup__heading">Brilliance</h1>
+
+            <p class="popup__caption">Brilliance is a measure of the intense white light that radiates from the stone. Brilliance is created by the diamond's unique cut, which determines how the light that enters the diamond is reflected back to the viewer.</p>
+
+            <div class="popup__media popup__media--video">
+                <video class="popup__video" id="video_brilliance"
+                       data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/brillinace.mp4"></video>
+                <button class="popup__thumbnail video-play" data-video-id="video_brilliance">
+                    <img class="video-play__thumb" src="./img/brilliance-thumbnail.jpg">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-wrap" id="popup_fire">
+        <div class="popup">
+            <button class="popup__close-btn"></button>
+            <h1 class="popup__heading">Fire</h1>
+
+            <p class="popup__caption">When light enters and exits the dense structure of the diamond, it refracts, or bends.
+                This refraction radiates vivid flares of rainbow colors that are commonly described as the diamond's 'fire'.
+                Diamonds with intense fire are appreciated for their fascinating play of color and beauty at different
+                angles.</p>
+
+            <div class="popup__media popup__media--video">
+                <video class="popup__video" id="video_fire"
+                       data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/fire.mp4"></video>
+                <button class="popup__thumbnail video-play" data-video-id="video_fire">
+                    <img class="video-play__thumb" src="./img/fire-thumbnail.jpg">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-wrap" id="popup_sparkle">
+        <div class="popup">
+            <button class="popup__close-btn"></button>
+            <h1 class="popup__heading">Sparkle</h1>
+
+            <p class="popup__caption">As a diamond moves, the play of light inside the stone creates dramatic, luminous
+                flashes that are ever changing in their beauty. The diamond's sparkle reflects the quality of the cut, a
+                direct result of the skill and craftsmanship of the professional diamond cutter.</p>
+
+            <div class="popup__media popup__media--video">
+                <video class="popup__video" id="video_sparkle"
+                       data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/sparkle.mp4"></video>
+                <button class="popup__thumbnail video-play" data-video-id="video_sparkle">
+                    <img class="video-play__thumb" src="./img/sparkle-thumbnail.jpg">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-wrap" id="popup_symmetry">
+        <div class="popup">
+            <button class="popup__close-btn"></button>
+            <h1 class="popup__heading">Symmetry</h1>
+
+            <p class="popup__caption">Light symmetry is determined by the quality of a diamond's cut and the position of inclusions and blemishes, which may occur during the natural formation process. A well-cut diamond features optimal proportions for equal light distribution.</p>
+
+            <div class="popup__media popup__media--video">
+                <video class="popup__video" id="video_symmetry"
+                       data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/symmetry.mp4"></video>
+                <button class="popup__thumbnail video-play" data-video-id="video_symmetry">
+                    <img class="video-play__thumb" src="./img/symmetry-thumbnail.jpg">
+                </button>
+            </div>
         </div>
     </div>
 
