@@ -327,3 +327,39 @@
         oldLog.apply(console, arguments);
     };
 })();
+
+
+
+
+/**
+ * Profiler.
+ * Add 'profiler' to to url hash to enable this feature.
+ */
+(function (window, document, $) {
+    var $resultContainer, timeStart;
+    
+    if (window.location.hash.indexOf('profiler') === -1) return;
+    
+    timeStart = new Date().valueOf();
+    console.log('Start profiling...');
+    
+    $resultContainer = $('<div/>').css({
+        minHeight: '50px',
+        textAlign: 'center',
+        paddingTop: '15px',
+        fontWeight: 'bold',
+        fontSize: '150%',
+        color: 'red'
+    });
+    $('sarine-viewer').eq(0).replaceWith($resultContainer);
+    $('sarine-viewer').remove();
+    
+    $(window).load(function () {
+        var timeEnd = new Date().valueOf(),
+            timeDelta = timeEnd - timeStart;
+        console.log('Document loaded. Loading time =', timeDelta, 'ms');
+        document.querySelector('.slider').style.display = '';
+        document.querySelector('.preloader').style.display = 'none';
+        $resultContainer.html('Loading time:<br /><b>' + timeDelta + ' ms</b>');
+    });
+})(window, window.document, window.jQuery);
