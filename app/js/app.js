@@ -278,6 +278,8 @@
                 elements.sliderHeader.show();
             }, 600);
         }
+
+        $('.popup-wrap button').attr('tabindex', '-1');
     }
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
 
