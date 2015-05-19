@@ -1,0 +1,8 @@
+@media screen and (max-width:500px){
+	.slider-wrap{
+		width:100%;
+		max-width: $slider-max-width;
+		min-width:320px;
+		margin:0 auto;
+	}
+}
