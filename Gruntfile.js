@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         },
 
         clean: {
-            initial: ['app/dist'],
+//            initial: ['app/dist'],
             tmp: ['tmp']
         },
 
@@ -305,16 +305,16 @@ module.exports = function (grunt) {
         appConfig.dir = this.args[0];
         appConfig.widgetName = this.args[1];
         
-        appConfig.fsTargetDir = 'app/' + appConfig.dir;
-        if (!isRelease) {
-            appConfig.fsTargetDir += '/' + appConfig.widgetName;
-        }
+        appConfig.fsTargetDir = 'app/' + appConfig.dir + '/' + appConfig.widgetName;
+//        if (!isRelease) {
+//            appConfig.fsTargetDir += '/' + appConfig.widgetName;
+//        }
         appConfig.shell_name = 'test_' + appConfig.widgetName + '.html';
         
         grunt.initConfig(fullConfig);
         
         conditionalExec([
-            {task: 'clean:initial',         exec: isRelease},
+//            {task: 'clean:initial',         exec: isRelease},
             {task: 'clean:tmp',             exec: 1},
             {task: 'concat',                exec: 1},
             {task: 'uglify',                exec: 1},
