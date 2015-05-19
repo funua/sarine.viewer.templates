@@ -6,7 +6,9 @@
 </style>
 <!-- END -->
 
-<style>@import '../../css/main.min.css';</style>
+<!-- v1.10.3 - 2015-05-18 -->
+
+<!--[if !IE]><!--><style>@import "./main.min.css";</style><!--<![endif]--> <!--[if IE]>--><link type="text/css" rel="stylesheet" href="./main.min.css" /><!--<![endif]-->
 
 <div class="slider-wrap" data-hidden-until-load>
     <div class="slider slider--hna" style="display:none" id="slider">
@@ -44,7 +46,7 @@
                 <div class="slide__content">
                     <div class="slide__img-wrap slide__img-wrap--cut">
                         <div class="slide__img slide__img--cut">
-                            <sarine-viewer viewer="cut2DView" order="2" version="v2"></sarine-viewer>
+                            <sarine-viewer viewer="cut2DView" version="v2" order="2"></sarine-viewer>
                         </div>
                     </div>
                     <p class="slide__caption">
@@ -74,7 +76,7 @@
         <a class="footer__disclaimer" href="https://s3.amazonaws.com/sarineplatform.com/web-sites/legal/js/LegalJsSDK/PDFViewer/PDFViewerJs.html?file=https://s3.amazonaws.com/sarineplatform.com/content/legal/Sarine%20Profile/Disclaimer/1_0f3cb78a12564b72973bfe71982c0434.pdf" target="_blank">Conditions</a>
         <a class="footer__powered" href="http://www.sarine.com" target="_blank">Powered by<img
                 class="footer__powered__logo"
-                src="/img/sarine-logo-small.png"
+                src="./img/sarine-logo-small.png"
                 height="16" width="32"></a>
     </div>
 
@@ -101,7 +103,7 @@
             <h1 class="popup__heading">Hearts</h1>
 
             <p class="popup__caption">A distinctive circular hearts pattern is apparent from the bottom view of the diamond’s pavilion. Created by the play of light as it enters and exits the diamond, the hearts pattern indicates superior optical symmetry and a higher cut grade.</p>
-            <img class="popup__media" src="/img/popup-hearts.png">
+            <img class="popup__media" src="./img/popup-hearts.png">
         </div>
     </div>
 
@@ -111,7 +113,7 @@
             <h1 class="popup__heading">Arrows</h1>
 
             <p class="popup__caption">A distinctive circular arrows pattern is apparent from the top view of the diamond’s crown. Created by the play of light as it enters and exits the diamond, the arrows pattern indicates superior optical symmetry and a higher cut grade.</p>
-            <img class="popup__media" src="/img/popup-arrows.png">
+            <img class="popup__media" src="./img/popup-arrows.png">
         </div>
     </div>
 
@@ -126,14 +128,4 @@
 
 </div>
 
-<!--dist scripts replace-->
-<script type="text/javascript" src="/js/vendor/fastclick.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/vendor/classie.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/vendor/WallopSlider.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/vendor/hammer.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/PopupService.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/videoPlay.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/BulletNavigation.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/app.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="widgetConfig.js"></script>
-<!--end dist scripts replace-->
+<script type="text/javascript" src="app.bundle.min.js"></script>
