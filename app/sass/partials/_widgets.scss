@@ -45,7 +45,7 @@
 	height: 322px;
 	margin: 0 auto;
 	border: none;
-	left: -15px;
+//	left: -15px;
 
 	.preloader{
 		padding-top:40%;
@@ -124,4 +124,10 @@
     .slider__header{
 		display: block;
 	}
+}
+.w11 .slide{
+	padding-top:100px;
+}
+.w11 .slide--loupe3d .slide__img-wrap--loupe{
+	padding-bottom:202px;
 }

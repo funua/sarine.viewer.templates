@@ -1,8 +1,128 @@
+@import 'compass/css3';
+
 @media screen and (max-width:500px){
 	.slider-wrap{
 		width:100%;
 		max-width: $slider-max-width;
 		min-width:320px;
 		margin:0 auto;
+	}
+	.slide{
+		padding-left:8px;
+		padding-right:8px;
+	}
+	.slide__content{
+		padding:0 18px;
+	}
+
+	// storyline
+	.storyline.items-count-2{
+		padding:0;
+	}
+	.storyline.items-count-2:before {
+		width: 50%;
+		left: 25%;
+	}
+	.storyline .storyline__item{
+		padding-left:3%;
+		padding-right:3%;
+		font-size:14px;
+	}
+
+	// slide cut
+
+	// slide hna
+	.slide__img-wrap--hna{
+		padding:0 18px;
+	}
+	// slide light
+	.specs__item--foot{
+		font-size:12px;
+	}
+	// slide loupe
+
+	// slide loupe3d
+	.slide--loupe3d.ctrl-3d-2 .buttons{
+		@include transform(scale(0.8));
+		@include transform-origin(50%);
+	}
+	// slide real
+
+	// slide summary
+
+
+	// popup
+	.popup{
+		padding-left:36px;
+		padding-right:36px;
+	}
+
+	// logo
+	.footer__customer__logo{
+		right:40px;
+		bottom:24px;
+	}
+}
+@media screen and (max-width:400px){
+	.slide__content{
+		padding:0;
+	}
+	.slider__btn--previous{
+		left:-18px;
+	}
+	.slider__btn--next{
+		right:-18px;
+	}
+
+	// slide cut
+
+	// slide hna
+	.viewer.cutHeartsAndArrows canvas{
+		width:130px;
+		height:130px;
+		margin:10px 0
+	}
+	.hna{
+		width:130px;
+	}
+	.slide__img-wrap--hna{
+		padding:0 12px;
+	}
+	// slide light
+	.slide__img-wrap--light{
+		padding-left:0;
+	}
+	.specs__item--value{
+		font-size:8px;
+	}
+	.specs__item--foot {
+		font-size: 10px;
+	}
+	// slide loupe
+
+	// slide loupe3d
+
+	// slide real
+
+	// slide summary
+
+	//popup
+	.popup__media{
+		width:240px;
+	}
+	.popup__media--video{
+		min-height:160px;
+	}
+	.popup__thumbnail, .popup__video{
+		width:240px;
+		height:160px;
+	}
+	.popup__thumbnail img{
+		display:block;
+		width:100%;
+	}
+	.video-play{
+		width:240px;
+		height:160px;
 	}
 }
