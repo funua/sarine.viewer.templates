@@ -40,6 +40,12 @@ module.exports = function (grunt) {
                 rename: function (dest, src) {
                     return dest + src.replace('app\/', '');
                 }
+            },
+            version_json: {
+                flatten: true,
+                expand: true,
+                src: ["app/widgets/<%= project.widgetName %>/version.json"],
+                dest: '<%= project.fsTargetDir %>/'
             }
         },
 
