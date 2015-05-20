@@ -337,12 +337,9 @@
  * Add 'profiler' to to url hash to enable this feature.
  */
 (function (window, document, $) {
-    var $resultContainer, timeStart;
+    var $resultContainer;
     
     if (window.location.hash.indexOf('profiler') === -1) return;
-    
-    timeStart = new Date().valueOf();
-    console.log('Start profiling...');
     
     $resultContainer = $('<div/>').css({
         minHeight: '50px',
@@ -356,11 +353,8 @@
     $('sarine-viewer').remove();
     
     $(window).load(function () {
-        var timeEnd = new Date().valueOf(),
-            timeDelta = timeEnd - timeStart;
-        console.log('Document loaded. Loading time =', timeDelta, 'ms');
         document.querySelector('.slider').style.display = '';
         document.querySelector('.preloader').style.display = 'none';
-        $resultContainer.html('Loading time:<br /><b>' + timeDelta + ' ms</b>');
+        $resultContainer.html('Loaded');
     });
 })(window, window.document, window.jQuery);
