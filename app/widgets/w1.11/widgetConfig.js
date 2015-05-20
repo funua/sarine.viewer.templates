@@ -1,7 +1,7 @@
 var widgetConfig = {
     //title: 'Diamond Story',
     widget_brief_code: 'w11',
-    color_scheme: 'color-scheme-3',
+    color_scheme: 'color-scheme-1',
     pages: [
         {
             code:   'loupe3d',

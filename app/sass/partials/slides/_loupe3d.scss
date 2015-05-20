@@ -225,6 +225,11 @@
 					display: none;
 				}
 			}
+
+			@media screen and (max-width:500px){
+				@include transform(scale(0.8));
+				@include transform-origin(50%);
+			}
 		}
 	}
 

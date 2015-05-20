@@ -71,4 +71,19 @@ $slide-padding: 24px;
 
 		@include transition(color 0.5s ease-in);
 	}
+
+	@media screen and (max-width:500px){
+		&:not(.slide--hna){
+			padding-left:8px;
+			padding-right:8px;
+		}
+		&:not(.slide--hna) .slide__content{
+			padding:0 18px;
+		}
+	}
+	@media screen and (max-width:400px){
+		&:not(.slide--hna) .slide__content{
+			padding:0;
+		}
+	}
 }

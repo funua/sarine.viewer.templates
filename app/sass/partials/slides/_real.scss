@@ -22,6 +22,10 @@
 		height: 28px;
 		font-size: 12px;
 		text-align: center;
+
+		@media screen and (max-width:500px){
+			height:auto;
+		}
 	}
 
 	&__spec {
@@ -34,6 +38,11 @@
 
 		&__value {
 			font-weight: 600;
+		}
+
+		@media screen and (max-width:500px){
+			display:block;
+			margin:9px 0;
 		}
 	}
 

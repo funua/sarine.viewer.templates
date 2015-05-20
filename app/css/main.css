@@ -107,14 +107,6 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
-/* line 37, ../sass/base/_reset.scss */
-#ho_adv {
-  display: none !important;
-}
-
-@viewport {
-  zoom: 150%;
-}
 @font-face {
   font-family: "Utopia Std";
   src: url('../fonts/UtopiaStd-Regular_0.eot?1431676091');
@@ -740,8 +732,17 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .slider-wrap--hide {
   display: none;
 }
+@media screen and (max-width: 500px) {
+  /* line 22, ../sass/partials/_slider.scss */
+  .slider-wrap {
+    width: 100%;
+    max-width: 500px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+}
 
-/* line 22, ../sass/partials/_slider.scss */
+/* line 31, ../sass/partials/_slider.scss */
 .slider {
   position: relative;
   height: 100%;
@@ -752,7 +753,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   -webkit-transition: background-color 0.5s ease-in;
   transition: background-color 0.5s ease-in;
 }
-/* line 29, ../sass/partials/_slider.scss */
+/* line 38, ../sass/partials/_slider.scss */
 .slider:before {
   content: '';
   position: absolute;
@@ -774,11 +775,11 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   -webkit-transition: background-position 0.5s ease-in;
   transition: background-position 0.5s ease-in;
 }
-/* line 50, ../sass/partials/_slider.scss */
+/* line 59, ../sass/partials/_slider.scss */
 .slider__list {
   position: relative;
 }
-/* line 54, ../sass/partials/_slider.scss */
+/* line 63, ../sass/partials/_slider.scss */
 .slider__btn {
   position: absolute;
   top: 260px;
@@ -786,21 +787,33 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   height: 48px;
   stroke: #000;
 }
-/* line 61, ../sass/partials/_slider.scss */
+/* line 70, ../sass/partials/_slider.scss */
 .slider__btn[disabled] {
   display: none;
 }
-/* line 65, ../sass/partials/_slider.scss */
+/* line 74, ../sass/partials/_slider.scss */
 .slider__btn--previous {
   left: 0;
   text-align: right;
 }
-/* line 70, ../sass/partials/_slider.scss */
+@media screen and (max-width: 400px) {
+  /* line 74, ../sass/partials/_slider.scss */
+  .slider__btn--previous {
+    left: -18px;
+  }
+}
+/* line 83, ../sass/partials/_slider.scss */
 .slider__btn--next {
   right: 0;
   text-align: left;
 }
-/* line 76, ../sass/partials/_slider.scss */
+@media screen and (max-width: 400px) {
+  /* line 83, ../sass/partials/_slider.scss */
+  .slider__btn--next {
+    right: -18px;
+  }
+}
+/* line 93, ../sass/partials/_slider.scss */
 .slider__heading {
   height: 36px;
   line-height: 36px;
@@ -810,7 +823,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   -webkit-transition: stroke 0.5s ease-in;
   transition: stroke 0.5s ease-in;
 }
-/* line 84, ../sass/partials/_slider.scss */
+/* line 101, ../sass/partials/_slider.scss */
 .slider__header {
   display: none;
   position: absolute;
@@ -820,21 +833,21 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 100%;
   padding: 24px 24px 0 24px;
 }
-/* line 93, ../sass/partials/_slider.scss */
+/* line 110, ../sass/partials/_slider.scss */
 .slider__header--show {
   display: block;
   -moz-animation: slideFromRight 0.5s 10ms ease-in-out both;
   -webkit-animation: slideFromRight 0.5s 10ms ease-in-out both;
   animation: slideFromRight 0.5s 10ms ease-in-out both;
 }
-/* line 98, ../sass/partials/_slider.scss */
+/* line 115, ../sass/partials/_slider.scss */
 .slider__header--hide {
   display: block;
   -moz-animation: slideToRight 0.5s 10ms ease-in-out both;
   -webkit-animation: slideToRight 0.5s 10ms ease-in-out both;
   animation: slideToRight 0.5s 10ms ease-in-out both;
 }
-/* line 102, ../sass/partials/_slider.scss */
+/* line 119, ../sass/partials/_slider.scss */
 .slider__header--active {
   display: block;
 }
@@ -919,6 +932,23 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   -webkit-transition: color 0.5s ease-in;
   transition: color 0.5s ease-in;
 }
+@media screen and (max-width: 500px) {
+  /* line 76, ../sass/partials/_slide.scss */
+  .slide:not(.slide--hna) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  /* line 80, ../sass/partials/_slide.scss */
+  .slide:not(.slide--hna) .slide__content {
+    padding: 0 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 85, ../sass/partials/_slide.scss */
+  .slide:not(.slide--hna) .slide__content {
+    padding: 0;
+  }
+}
 
 /* line 9, ../sass/partials/_storyline.scss */
 .storyline {
@@ -979,39 +1009,58 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .storyline__item--active {
   color: #000;
 }
+@media screen and (max-width: 500px) {
+  /* line 24, ../sass/partials/_storyline.scss */
+  .storyline__item {
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 14px;
+  }
+}
 
-/* line 59, ../sass/partials/_storyline.scss */
+/* line 65, ../sass/partials/_storyline.scss */
 .storyline.items-count-2 {
   padding: 0 55px;
 }
-/* line 62, ../sass/partials/_storyline.scss */
+/* line 68, ../sass/partials/_storyline.scss */
 .storyline.items-count-2:before {
   width: 38%;
   left: 31%;
 }
-/* line 67, ../sass/partials/_storyline.scss */
+/* line 73, ../sass/partials/_storyline.scss */
 .storyline.items-count-2 .storyline__item {
   width: 50%;
   padding-left: 10%;
   padding-right: 10%;
 }
+@media screen and (max-width: 500px) {
+  /* line 80, ../sass/partials/_storyline.scss */
+  .storyline.items-count-2 {
+    padding: 0;
+  }
+  /* line 83, ../sass/partials/_storyline.scss */
+  .storyline.items-count-2:before {
+    width: 50%;
+    left: 25%;
+  }
+}
 
-/* line 77, ../sass/partials/_storyline.scss */
+/* line 93, ../sass/partials/_storyline.scss */
 .storyline.items-count-3:before {
   width: 65%;
   left: 17%;
 }
-/* line 82, ../sass/partials/_storyline.scss */
+/* line 98, ../sass/partials/_storyline.scss */
 .storyline.items-count-3 .storyline__item {
   width: 33%;
 }
 
-/* line 90, ../sass/partials/_storyline.scss */
+/* line 106, ../sass/partials/_storyline.scss */
 .storyline.items-count-4:before {
   width: 76%;
   left: 12%;
 }
-/* line 95, ../sass/partials/_storyline.scss */
+/* line 111, ../sass/partials/_storyline.scss */
 .storyline.items-count-4 .storyline__item {
   width: 25%;
 }
@@ -1052,7 +1101,13 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   font-size: 10px;
   color: #9c9b9a;
 }
-/* line 43, ../sass/partials/_specs-table.scss */
+@media screen and (max-width: 400px) {
+  /* line 43, ../sass/partials/_specs-table.scss */
+  .specs__item--value {
+    font-size: 8px;
+  }
+}
+/* line 49, ../sass/partials/_specs-table.scss */
 .specs__item--foot {
   text-align: center;
   font-style: italic;
@@ -1061,11 +1116,23 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-top: 1px solid #7d7d7d;
   white-space: nowrap;
 }
-/* line 52, ../sass/partials/_specs-table.scss */
+@media screen and (max-width: 500px) {
+  /* line 58, ../sass/partials/_specs-table.scss */
+  .specs__item--foot {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 63, ../sass/partials/_specs-table.scss */
+  .specs__item--foot {
+    font-size: 10px;
+  }
+}
+/* line 69, ../sass/partials/_specs-table.scss */
 .specs__item--points-wrap {
   position: relative;
 }
-/* line 57, ../sass/partials/_specs-table.scss */
+/* line 74, ../sass/partials/_specs-table.scss */
 .specs__points {
   overflow: hidden;
   position: absolute;
@@ -1074,47 +1141,47 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 10px;
   margin-left: -5px;
 }
-/* line 66, ../sass/partials/_specs-table.scss */
+/* line 83, ../sass/partials/_specs-table.scss */
 .specs__points--value-1 {
   height: 30px;
 }
-/* line 66, ../sass/partials/_specs-table.scss */
+/* line 83, ../sass/partials/_specs-table.scss */
 .specs__points--value-2 {
   height: 60px;
 }
-/* line 66, ../sass/partials/_specs-table.scss */
+/* line 83, ../sass/partials/_specs-table.scss */
 .specs__points--value-3 {
   height: 90px;
 }
-/* line 66, ../sass/partials/_specs-table.scss */
+/* line 83, ../sass/partials/_specs-table.scss */
 .specs__points--value-4 {
   height: 120px;
 }
-/* line 66, ../sass/partials/_specs-table.scss */
+/* line 83, ../sass/partials/_specs-table.scss */
 .specs__points--value-5 {
   height: 150px;
 }
-/* line 71, ../sass/partials/_specs-table.scss */
+/* line 88, ../sass/partials/_specs-table.scss */
 .specs__points--minimum {
   height: 30px;
 }
-/* line 75, ../sass/partials/_specs-table.scss */
+/* line 92, ../sass/partials/_specs-table.scss */
 .specs__points--standard {
   height: 60px;
 }
-/* line 79, ../sass/partials/_specs-table.scss */
+/* line 96, ../sass/partials/_specs-table.scss */
 .specs__points--high {
   height: 90px;
 }
-/* line 83, ../sass/partials/_specs-table.scss */
+/* line 100, ../sass/partials/_specs-table.scss */
 .specs__points--very-high {
   height: 120px;
 }
-/* line 87, ../sass/partials/_specs-table.scss */
+/* line 104, ../sass/partials/_specs-table.scss */
 .specs__points--exceptional {
   height: 150px;
 }
-/* line 92, ../sass/partials/_specs-table.scss */
+/* line 109, ../sass/partials/_specs-table.scss */
 .specs__points-list {
   position: absolute;
   bottom: 0;
@@ -1122,13 +1189,13 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 10px;
   height: 150px;
 }
-/* line 100, ../sass/partials/_specs-table.scss */
+/* line 117, ../sass/partials/_specs-table.scss */
 .specs__point {
   position: relative;
   height: 30px;
   margin: 0 auto;
 }
-/* line 105, ../sass/partials/_specs-table.scss */
+/* line 122, ../sass/partials/_specs-table.scss */
 .specs__point:before {
   content: '';
   position: absolute;
@@ -1152,6 +1219,10 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   top: 0;
   width: 100%;
   height: 100%;
+}
+/* line 14, ../sass/partials/_popup.scss */
+.popup-overlay--open {
+  display: block;
 }
 
 /* line 19, ../sass/partials/_popup.scss */
@@ -1194,6 +1265,12 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   -ms-transform: skewY(9deg);
   -webkit-transform: skewY(9deg);
   transform: skewY(9deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 /* line 52, ../sass/partials/_popup.scss */
 .popup-wrap--cut:before {
@@ -1222,6 +1299,9 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   position: relative;
   height: 100%;
   padding: 80px 54px 36px;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 /* line 77, ../sass/partials/_popup.scss */
 .popup--cut {
@@ -1238,33 +1318,60 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .popup__caption {
   color: #ccc;
   margin-bottom: 24px;
+  font-size: 14px;
 }
-/* line 93, ../sass/partials/_popup.scss */
+/* line 94, ../sass/partials/_popup.scss */
 .popup__media {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-/* line 98, ../sass/partials/_popup.scss */
+/* line 99, ../sass/partials/_popup.scss */
 .popup__media--blank {
   height: 165px;
 }
-/* line 102, ../sass/partials/_popup.scss */
+/* line 103, ../sass/partials/_popup.scss */
 .popup__media--video {
   min-height: 180px;
 }
-/* line 107, ../sass/partials/_popup.scss */
+@media screen and (max-width: 400px) {
+  /* line 106, ../sass/partials/_popup.scss */
+  .popup__media--video {
+    min-height: 160px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 112, ../sass/partials/_popup.scss */
+  .popup__media {
+    width: 240px;
+  }
+}
+/* line 118, ../sass/partials/_popup.scss */
 .popup__video, .popup__thumbnail {
   display: block;
   margin: 0 auto;
   height: 180px;
   width: 270px;
 }
-/* line 114, ../sass/partials/_popup.scss */
+@media screen and (max-width: 400px) {
+  /* line 125, ../sass/partials/_popup.scss */
+  .popup__video, .popup__thumbnail {
+    width: 240px;
+    height: 160px;
+  }
+}
+/* line 132, ../sass/partials/_popup.scss */
 .popup__thumbnail {
   position: relative;
 }
-/* line 118, ../sass/partials/_popup.scss */
+@media screen and (max-width: 400px) {
+  /* line 136, ../sass/partials/_popup.scss */
+  .popup__thumbnail img {
+    display: block;
+    width: 100%;
+  }
+}
+/* line 143, ../sass/partials/_popup.scss */
 .popup__close-btn {
   position: absolute;
   right: 0;
@@ -1273,13 +1380,20 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   height: 54px;
   background: url("../img/close-ico.svg") no-repeat center center;
 }
+@media screen and (max-width: 500px) {
+  /* line 152, ../sass/partials/_popup.scss */
+  .popup {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
 
-/* line 128, ../sass/partials/_popup.scss */
+/* line 159, ../sass/partials/_popup.scss */
 .video-play {
   width: 270px;
   height: 180px;
 }
-/* line 132, ../sass/partials/_popup.scss */
+/* line 163, ../sass/partials/_popup.scss */
 .video-play:before {
   content: '';
   position: absolute;
@@ -1304,7 +1418,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-bottom-right-radius: 50%;
   border: 2px solid #fff;
 }
-/* line 149, ../sass/partials/_popup.scss */
+/* line 180, ../sass/partials/_popup.scss */
 .video-play:after {
   content: '';
   position: absolute;
@@ -1316,12 +1430,19 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-bottom: 12px solid transparent;
   border-left: 20px solid #fff;
 }
-/* line 161, ../sass/partials/_popup.scss */
+/* line 192, ../sass/partials/_popup.scss */
 .video-play--loading:before {
   border-bottom-color: transparent;
   -moz-animation: rotate 1s 0 linear infinite;
   -webkit-animation: rotate 1s 0 linear infinite;
   animation: rotate 1s 0 linear infinite;
+}
+@media screen and (max-width: 400px) {
+  /* line 198, ../sass/partials/_popup.scss */
+  .video-play {
+    width: 240px;
+    height: 160px;
+  }
 }
 
 /* line 8, ../sass/partials/_q-mark.scss */
@@ -1475,6 +1596,13 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .footer__customer__logo:hover {
   color: #222;
 }
+@media screen and (max-width: 500px) {
+  /* line 64, ../sass/partials/_footer.scss */
+  .footer__customer__logo {
+    right: 40px;
+    bottom: 24px;
+  }
+}
 
 /* line 3, ../sass/partials/slides/_summary.scss */
 .slider--summary {
@@ -1579,43 +1707,49 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .slide__img-wrap--light {
   padding-left: 24px;
 }
+@media screen and (max-width: 400px) {
+  /* line 5, ../sass/partials/slides/_light.scss */
+  .slide__img-wrap--light {
+    padding-left: 0;
+  }
+}
 
-/* line 5, ../sass/partials/slides/_light.scss */
+/* line 11, ../sass/partials/slides/_light.scss */
 .slide__img--light {
   float: left;
 }
 
-/* line 9, ../sass/partials/slides/_light.scss */
+/* line 15, ../sass/partials/slides/_light.scss */
 .total-grade {
   overflow: hidden;
   margin-top: 40px;
   text-align: center;
 }
-/* line 14, ../sass/partials/slides/_light.scss */
+/* line 20, ../sass/partials/slides/_light.scss */
 .total-grade__title {
   color: #413f41;
   font: italic 18px "Open Sans", "Helvetica Neue", "Arial", sans-serif;
   line-height: 24px;
 }
-/* line 20, ../sass/partials/slides/_light.scss */
+/* line 26, ../sass/partials/slides/_light.scss */
 .total-grade__grade {
   font: italic 30px "Utopia Std", "Georgia", serif;
   line-height: 32px;
 }
-/* line 25, ../sass/partials/slides/_light.scss */
+/* line 31, ../sass/partials/slides/_light.scss */
 .total-grade__stars-wrap {
   overflow: hidden;
   text-align: center;
   margin: 0 24px;
 }
-/* line 31, ../sass/partials/slides/_light.scss */
+/* line 37, ../sass/partials/slides/_light.scss */
 .total-grade__stars {
   position: relative;
   display: inline-block;
   letter-spacing: 3px;
   font: 16px "Utopia Std", "Georgia", serif;
 }
-/* line 37, ../sass/partials/slides/_light.scss */
+/* line 43, ../sass/partials/slides/_light.scss */
 .total-grade__stars:before, .total-grade__stars:after {
   content: '';
   position: absolute;
@@ -1624,11 +1758,11 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   margin: 0 8px -2px;
   border-bottom: 1px solid #a5a5a5;
 }
-/* line 46, ../sass/partials/slides/_light.scss */
+/* line 52, ../sass/partials/slides/_light.scss */
 .total-grade__stars:before {
   right: 100%;
 }
-/* line 50, ../sass/partials/slides/_light.scss */
+/* line 56, ../sass/partials/slides/_light.scss */
 .total-grade__stars:after {
   left: 100%;
 }
@@ -1901,30 +2035,43 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .slide--loupe3d.ctrl-3d-2 .buttons .icon.focus_in, .slide--loupe3d.ctrl-3d-2 .buttons .icon.focus_out {
   display: none;
 }
-/* line 234, ../sass/partials/slides/_loupe3d.scss */
+@media screen and (max-width: 500px) {
+  /* line 208, ../sass/partials/slides/_loupe3d.scss */
+  .slide--loupe3d.ctrl-3d-2 .buttons {
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+}
+/* line 239, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons {
   width: 414px;
   margin-right: -207px;
 }
-/* line 239, ../sass/partials/slides/_loupe3d.scss */
+/* line 244, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.top {
   left: 5px;
 }
-/* line 242, ../sass/partials/slides/_loupe3d.scss */
+/* line 247, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.side {
   left: 76px;
 }
-/* line 245, ../sass/partials/slides/_loupe3d.scss */
+/* line 250, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.bottom {
   left: 137px;
 }
-/* line 248, ../sass/partials/slides/_loupe3d.scss */
+/* line 253, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.focus_in {
   left: 190px;
   border-left: 1px solid #a7a7a7;
   width: 70px !important;
 }
-/* line 253, ../sass/partials/slides/_loupe3d.scss */
+/* line 258, ../sass/partials/slides/_loupe3d.scss */
 .slide--loupe3d.ctrl-3d-3 .buttons .icon.focus_out {
   left: 277px;
 }
@@ -1965,6 +2112,19 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   float: right;
 }
 
+@media screen and (max-width: 500px) {
+  /* line 40, ../sass/partials/slides/_hna.scss */
+  .slide--hna .viewer.cutHeartsAndArrows canvas,
+  .slide--hna .hna {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 46, ../sass/partials/slides/_hna.scss */
+  .slide--hna .slide__content {
+    padding: 0;
+  }
+}
 /* line 2, ../sass/partials/slides/_cut.scss */
 .slide--cut:before {
   background-image: url("../img/bg-cut.png");
@@ -2005,34 +2165,47 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   font-size: 12px;
   text-align: center;
 }
-/* line 27, ../sass/partials/slides/_real.scss */
+@media screen and (max-width: 500px) {
+  /* line 21, ../sass/partials/slides/_real.scss */
+  .real__specs-row {
+    height: auto;
+  }
+}
+/* line 31, ../sass/partials/slides/_real.scss */
 .real__spec {
   display: inline-block;
   padding: 0 9px;
 }
-/* line 31, ../sass/partials/slides/_real.scss */
+/* line 35, ../sass/partials/slides/_real.scss */
 .real__spec__title {
   color: #818181;
 }
-/* line 35, ../sass/partials/slides/_real.scss */
+/* line 39, ../sass/partials/slides/_real.scss */
 .real__spec__value {
   font-weight: 600;
 }
-/* line 40, ../sass/partials/slides/_real.scss */
+@media screen and (max-width: 500px) {
+  /* line 31, ../sass/partials/slides/_real.scss */
+  .real__spec {
+    display: block;
+    margin: 9px 0;
+  }
+}
+/* line 49, ../sass/partials/slides/_real.scss */
 .real__story-wrap {
   padding-top: 60px;
 }
-/* line 44, ../sass/partials/slides/_real.scss */
+/* line 53, ../sass/partials/slides/_real.scss */
 .real__heading {
   font-size: 24px;
   margin-bottom: 20px;
 }
-/* line 49, ../sass/partials/slides/_real.scss */
+/* line 58, ../sass/partials/slides/_real.scss */
 .real__stories {
   height: 96px;
   text-align: center;
 }
-/* line 54, ../sass/partials/slides/_real.scss */
+/* line 63, ../sass/partials/slides/_real.scss */
 .real__story {
   position: relative;
   display: inline-block;
@@ -2043,7 +2216,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   font: italic bold 16px "Utopia Std", "Georgia", serif;
   cursor: pointer;
 }
-/* line 65, ../sass/partials/slides/_real.scss */
+/* line 74, ../sass/partials/slides/_real.scss */
 .real__story:before {
   content: '';
   display: block;
@@ -2052,7 +2225,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 74, ../sass/partials/slides/_real.scss */
+/* line 83, ../sass/partials/slides/_real.scss */
 .real__story:after {
   content: '';
   position: absolute;
@@ -2062,7 +2235,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 1px;
   background-color: #d8d3d6;
 }
-/* line 84, ../sass/partials/slides/_real.scss */
+/* line 93, ../sass/partials/slides/_real.scss */
 .real__story:last-child:after {
   display: none;
 }
@@ -2618,155 +2791,6 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 /* line 131, ../sass/partials/_widgets.scss */
 .w11 .slide--loupe3d .slide__img-wrap--loupe {
   padding-bottom: 202px;
-}
-
-@media screen and (max-width: 500px) {
-  /* line 4, ../sass/modules/_media.scss */
-  .slider-wrap {
-    width: 100%;
-    max-width: 500px;
-    min-width: 320px;
-    margin: 0 auto;
-  }
-
-  /* line 10, ../sass/modules/_media.scss */
-  .slide {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  /* line 14, ../sass/modules/_media.scss */
-  .slide__content {
-    padding: 0 18px;
-  }
-
-  /* line 19, ../sass/modules/_media.scss */
-  .storyline.items-count-2 {
-    padding: 0;
-  }
-
-  /* line 22, ../sass/modules/_media.scss */
-  .storyline.items-count-2:before {
-    width: 50%;
-    left: 25%;
-  }
-
-  /* line 26, ../sass/modules/_media.scss */
-  .storyline .storyline__item {
-    padding-left: 3%;
-    padding-right: 3%;
-    font-size: 14px;
-  }
-
-  /* line 35, ../sass/modules/_media.scss */
-  .slide__img-wrap--hna {
-    padding: 0 18px;
-  }
-
-  /* line 39, ../sass/modules/_media.scss */
-  .specs__item--foot {
-    font-size: 12px;
-  }
-
-  /* line 45, ../sass/modules/_media.scss */
-  .slide--loupe3d.ctrl-3d-2 .buttons {
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    -moz-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-  }
-
-  /* line 55, ../sass/modules/_media.scss */
-  .popup {
-    padding-left: 36px;
-    padding-right: 36px;
-  }
-
-  /* line 61, ../sass/modules/_media.scss */
-  .footer__customer__logo {
-    right: 40px;
-    bottom: 24px;
-  }
-}
-@media screen and (max-width: 400px) {
-  /* line 67, ../sass/modules/_media.scss */
-  .slide__content {
-    padding: 0;
-  }
-
-  /* line 70, ../sass/modules/_media.scss */
-  .slider__btn--previous {
-    left: -18px;
-  }
-
-  /* line 73, ../sass/modules/_media.scss */
-  .slider__btn--next {
-    right: -18px;
-  }
-
-  /* line 80, ../sass/modules/_media.scss */
-  .viewer.cutHeartsAndArrows canvas {
-    width: 130px;
-    height: 130px;
-    margin: 10px 0;
-  }
-
-  /* line 85, ../sass/modules/_media.scss */
-  .hna {
-    width: 130px;
-  }
-
-  /* line 88, ../sass/modules/_media.scss */
-  .slide__img-wrap--hna {
-    padding: 0 12px;
-  }
-
-  /* line 92, ../sass/modules/_media.scss */
-  .slide__img-wrap--light {
-    padding-left: 0;
-  }
-
-  /* line 95, ../sass/modules/_media.scss */
-  .specs__item--value {
-    font-size: 8px;
-  }
-
-  /* line 98, ../sass/modules/_media.scss */
-  .specs__item--foot {
-    font-size: 10px;
-  }
-
-  /* line 110, ../sass/modules/_media.scss */
-  .popup__media {
-    width: 240px;
-  }
-
-  /* line 113, ../sass/modules/_media.scss */
-  .popup__media--video {
-    min-height: 160px;
-  }
-
-  /* line 116, ../sass/modules/_media.scss */
-  .popup__thumbnail, .popup__video {
-    width: 240px;
-    height: 160px;
-  }
-
-  /* line 120, ../sass/modules/_media.scss */
-  .popup__thumbnail img {
-    display: block;
-    width: 100%;
-  }
-
-  /* line 124, ../sass/modules/_media.scss */
-  .video-play {
-    width: 240px;
-    height: 160px;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
