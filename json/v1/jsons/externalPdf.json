@@ -1,7 +1,0 @@
-﻿{
-    "instance": "PDF",
-    "name" : "sarine.viewer.pdf",
-    "args": {
-		"pdfName" : "gia.pdf"
-    }
-}

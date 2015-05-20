@@ -1,0 +1,88 @@
+$slide-transition-hide-function: ease-in;
+$slide-transition-show-function: ease;
+$slide-transition-hide-duration: 500ms;
+$slide-transition-show-duration: 800ms;
+
+.slide {
+
+  &--hide-previous {
+    @include seq-animation(slideToLeft, 4, $slide-transition-hide-function);
+
+    &:before {
+      opacity: 0;
+    }
+
+    .slide__heading {
+      @include seq-animation(slideToLeft, 2, $slide-transition-hide-function);
+    }
+
+    .slide__img-wrap {
+      @include seq-animation(slideToLeft, 3, $slide-transition-hide-function);
+    }
+
+    .slide__caption {
+      @include seq-animation(slideToLeft, 4, $slide-transition-hide-function);
+    }
+  }
+
+
+  &--hide-next {
+    @include seq-animation(slideToRight, 4, $slide-transition-hide-function);
+
+    &:before {
+      opacity: 0;
+    }
+
+    .slide__heading {
+      @include seq-animation(slideToRight, 2, $slide-transition-hide-function);
+    }
+
+    .slide__img-wrap {
+      @include seq-animation(slideToRight, 3, $slide-transition-hide-function);
+    }
+
+    .slide__caption {
+      @include seq-animation(slideToRight, 4, $slide-transition-hide-function);
+    }
+  }
+
+
+  &--show-next {
+
+    &:before {
+      @include animation(fadeIn 0.5s ease-in 10ms backwards);
+    }
+
+    .slide__heading {
+      @include seq-animation(slideFromRight, 2, $slide-transition-show-function, 4, $slide-transition-show-duration);
+    }
+
+    .slide__img-wrap {
+      @include seq-animation(slideFromRight, 3, $slide-transition-show-function, 4, $slide-transition-show-duration);
+    }
+
+    .slide__caption {
+      @include seq-animation(slideFromRight, 4, $slide-transition-show-function, 4, $slide-transition-show-duration);
+    }
+  }
+
+
+  &--show-previous {
+
+    &:before {
+      @include animation(fadeIn 0.5s ease-in 10ms backwards);
+    }
+
+    .slide__heading {
+      @include seq-animation(slideFromLeft, 2, $slide-transition-show-function, 4, $slide-transition-show-duration);
+    }
+
+    .slide__img-wrap {
+      @include seq-animation(slideFromLeft, 3, $slide-transition-show-function, 4, $slide-transition-show-duration);
+    }
+
+    .slide__caption {
+      @include seq-animation(slideFromLeft, 4, $slide-transition-show-function, 4, $slide-transition-show-duration);
+    }
+  }
+}

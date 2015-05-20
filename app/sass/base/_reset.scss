@@ -1,0 +1,45 @@
+@import 'compass/reset';
+@import 'compass/css3';
+
+* {
+  @include box-sizing(border-box);
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  cursor: pointer;
+  @include border-radius(0);
+  @include appearance(none);
+}
+
+[data-popup-id] {
+  cursor: pointer;
+}
+
+[data-hidden-until-load] {
+  display: block !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+}
+
+//#ho_adv{
+//	display:none !important;
+//}
+
+//@viewport{
+//	width: device-width;
+//	min-zoom:1;
+//	zoom:150%;
+//}

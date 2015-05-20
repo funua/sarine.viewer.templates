@@ -1,0 +1,70 @@
+$hna-image-width: 150px;
+
+.slide--hna {
+	&:before {
+		background-image: url('../img/bg-hna.png');
+	}
+}
+
+.slide__img-wrap--hna {
+	height: 260px;
+}
+
+.slide__img--hna {
+	width: 100%;
+}
+
+.hna {
+	float: left;
+	width: $hna-image-width;
+
+	&__img {
+		display: block;
+		width: $hna-image-width;
+		height: $hna-image-width;
+	}
+
+	&__caption {
+		margin-top: 30px;
+		//push title to feel visually more centered
+		//margin-left: 20px;
+		//end
+		font-size: 24px;
+	}
+
+	&--arrows {
+		float:right;
+	}
+}
+@media screen and (max-width:500px){
+	.slide--hna .viewer.cutHeartsAndArrows canvas,
+	.slide--hna .hna{
+		width:120px;
+	}
+}
+@media screen and (max-width:400px){
+	.slide--hna .slide__content{
+		padding:0;
+	}
+}
+
+
+//500
+//.viewer.cutHeartsAndArrows canvas{
+//	width:140px;
+//}
+////400
+//.viewer.cutHeartsAndArrows canvas{
+//	width:130px;
+//	height:130px;
+//	margin:10px 0
+//}
+//.hna{
+//	width:130px;
+//}
+//.slide__img-wrap--hna{
+//	padding:0 12px;
+//}
+//.slide--hna .slide__content{
+//	width:100%;
+//}

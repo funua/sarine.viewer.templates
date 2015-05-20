@@ -1,0 +1,15 @@
+.slide--cut {
+  &:before {
+    background-image: url('../img/bg-cut.png');
+  }
+}
+
+.slide__img-wrap--cut {
+  height: 260px;
+  text-align: center;
+}
+
+.slide__img--cut {
+  width: auto;
+  height: 180px;
+}

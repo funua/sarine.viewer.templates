@@ -1,0 +1,133 @@
+$specs-item-height: 30px;
+$specs-first-col-width: 16%;
+$specs-point-size: 5px;
+$specs-points-wrap-width: 20px;
+$specs-point-height: $specs-item-height;
+$specs-col-width: ((100% - $specs-first-col-width) / 4);
+
+
+.specs {
+    padding-top: 32px;
+
+    &__row {
+        position: relative;
+        height: $specs-item-height;
+
+	    &--line:before {
+			content: '';
+			position: absolute;
+			left: $specs-first-col-width;
+			top: 50%;
+			right: 0;
+			height: 1px;
+			background-color: #e3e3e3;
+	    }
+
+	    &--foot {
+			margin-top: 5px;
+	    }
+    }
+
+    &__item {
+        float: left;
+        width: $specs-col-width;
+        height: $specs-item-height;
+        line-height: $specs-item-height;
+
+        &--value {
+			width: $specs-first-col-width;
+            font-size: 10px;
+            color: #9c9b9a;
+
+		    @media screen and (max-width:400px){
+			    &{
+				    font-size: 8px;
+			    }
+		    }
+        }
+
+        &--foot {
+            text-align: center;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 14px;
+            border-top: 1px solid #7d7d7d;
+            white-space: nowrap;
+
+	        @media screen and (max-width:500px){
+		        &{
+			        font-size:12px;
+		        }
+	        }
+		    @media screen and (max-width:400px){
+			    &{
+				    font-size: 10px;
+			    }
+		    }
+        }
+
+        &--points-wrap {
+            position: relative;
+        }
+    }
+
+    &__points {
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: $specs-point-size * 2;
+        margin-left: (-$specs-point-size);
+
+	    @for $i-index from 1 through 5 {
+			&--value-#{$i-index} {
+				height: $specs-point-height * $i-index;
+			}
+	    }
+
+		&--minimum {
+			height: $specs-point-height;
+		}
+
+		&--standard {
+			height: $specs-point-height * 2;
+		}
+
+		&--high {
+			height: $specs-point-height * 3;
+		}
+
+		&--very-high {
+			height: $specs-point-height * 4;
+		}
+
+		&--exceptional {
+			height: $specs-point-height * 5;
+		}
+    }
+
+	&__points-list {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: $specs-point-size * 2;
+		height: $specs-point-height * 5;
+	}
+
+	&__point {
+		position: relative;
+		height: $specs-point-height;
+		margin: 0 auto;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: $specs-point-size;
+			height: $specs-point-size;
+			margin: (-$specs-point-size / 2) 0 0 (-$specs-point-size / 2);
+			@include transform(rotate(45deg));
+		}
+	}
+}

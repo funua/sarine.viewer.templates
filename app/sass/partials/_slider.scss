@@ -1,0 +1,170 @@
+@import 'compass/css3';
+
+$slider-max-width: 500px;
+$slider-height: 640px;
+$slider-padding: 24px;
+$slider-heading-line-height: 36px;
+$slider-heading-bottom-margin: 20px;
+
+.slider-wrap {
+	position: relative;
+	overflow: hidden;
+	width: $slider-max-width;
+	height: $slider-height;
+	margin: 20px auto;
+	border: 2px solid #e5e5e5;
+
+	&--hide {
+		display: none;
+	}
+
+	@media screen and (max-width:500px){
+		&{
+			width:100%;
+			max-width: $slider-max-width;
+			min-width:320px;
+			margin:0 auto;
+		}
+	}
+}
+
+.slider {
+	position: relative;
+	height: 100%;
+	padding: 20px 0;
+	border: 3px solid rgba(#fff, 0);
+	@include transition(background-color 0.5s ease-in);
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: 0;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: 0 300px;
+		@include background-image(
+		linear-gradient(
+		to top,
+		#fff 0%,
+		#fff 200px,
+		rgba(#fff, 0) 300px
+		)
+		);
+		@include transition(background-position 0.5s ease-in);
+	}
+
+	&__list {
+	position: relative;
+	}
+
+	&__btn {
+		position: absolute;
+		top: 260px;
+		width: 48px;
+		height: 48px;
+		stroke: #000;
+
+		&[disabled] {
+			display: none;
+		}
+
+		&--previous {
+			left: 0;
+			text-align: right;
+
+			@media screen and (max-width:400px){
+				left:-18px;
+			}
+		}
+
+		&--next {
+			right: 0;
+			text-align: left;
+
+			@media screen and (max-width:400px){
+				right:-18px;
+			}
+		}
+	}
+
+	&__heading {
+		height: $slider-heading-line-height;
+		line-height: $slider-heading-line-height;
+		margin-bottom: $slider-heading-bottom-margin;
+
+		@include transition(stroke 0.5s ease-in);
+	}
+
+	&__header {
+		display: none;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: $slider-padding $slider-padding 0 $slider-padding;
+
+		&--show {
+			display: block;
+			@include animation(slideFromRight 0.5s 10ms ease-in-out both);
+		}
+
+		&--hide {
+			display: block;
+			@include animation(slideToRight 0.5s 10ms ease-in-out both);
+		}
+		&--active {
+			display: block;
+		}
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

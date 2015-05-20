@@ -1,0 +1,70 @@
+@import 'compass/css3';
+
+$footer-padding: 40px;
+
+.footer {
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	bottom: 13px;
+	width: 100%;
+	padding: 0 $footer-padding;
+
+	&__disclaimer {
+		float: left;
+		color: #c0c0c0;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 20px;
+		margin-top: -1px;
+
+		&:hover, &:active {
+			color: #222;
+		}
+	}
+
+	&__powered {
+		float: right;
+		color: #c0c0c0;
+		font-size: 9px;
+		line-height: 20px;
+
+		&:hover, &:active {
+			color: #222;
+
+			.footer__powered__logo {
+				opacity: 1;
+			}
+		}
+
+		&__logo {
+			vertical-align: middle;
+			margin: -3px 0 0 4px;
+		}
+	}
+
+	&__customer__logo {
+		position: absolute;
+		right: 140px;
+		bottom: 0;
+		height: 20px;
+		color: silver;
+		font-size: 9px;
+		line-height: 20px;
+		vertical-align: top;
+		img {
+			vertical-align: top;
+			height: 100%;
+			margin-left: 4px;
+		}
+		&:hover{
+			color: #222;
+		}
+		@media screen and (max-width:500px){
+			&{
+				right:40px;
+				bottom:24px;
+			}
+		}
+	}
+}

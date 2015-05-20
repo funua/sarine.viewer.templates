@@ -1,0 +1,61 @@
+@import '../modules/flexbox';
+
+.viewer {
+	width: 100%;
+	height: 100%;
+
+	&.loupeRealView, &.lightReportViewer, &.cut2DView, &.loupe3DFullInspection, &.loupeTopInspection {
+		@include flexbox;
+		@include justify-content(center);
+		@include align-items(center);
+	}
+
+	&.loupe3DFullInspection {
+		.viewport {
+			cursor: move;
+		}
+	}
+
+	&.cutHeartsAndArrows {
+
+		canvas {
+			width: 150px;
+
+			&.no_stone {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		canvas.Arrows {
+			float: right;
+		}
+
+		canvas.Hearts {
+			float: left;
+		}
+	}
+
+	canvas {
+		max-width: 100%;
+		max-height: 100%;
+
+		&.no_stone {
+			background-color: rgba(#000, 0.1);
+		}
+	}
+}
+
+//.loupe3DFullInspection,
+//.loupe3DFullInspection .viewport,
+//.loupe3DFullInspection .viewport #main-image,
+//.inspect-stone.large .viewport,
+//.loupe3DFullInspection .inspect-stone {
+//  width: 250px !important;
+//  height: 250px !important;
+//}
+//
+//.loupe3DFullInspection .mglass_viewer {
+//  width: 210px !important;
+//  height: 210px !important;
+//}
