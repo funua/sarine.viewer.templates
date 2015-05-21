@@ -130,6 +130,25 @@ module.exports = function (grunt) {
                 },
                 files: {}
             }
+        },
+        
+        appcache: {
+            options: {
+                // Task-specific options go here. 
+                basePath: '<%= project.fsTargetDir %>'
+            },
+            target1: {
+                dest: '<%= project.fsTargetDir %>/cache.manifest',
+                cache: {
+                    patterns: [
+                        '<%= project.fsTargetDir %>/img/**/*',
+                        '<%= project.fsTargetDir %>/fonts/**/*',
+                        '<%= project.fsTargetDir %>/app.bundle.min.js',
+                        '<%= project.fsTargetDir %>/main.min.css'
+                    ]
+                },
+                network: '*'
+            }
         }
     },
     
@@ -328,7 +347,8 @@ module.exports = function (grunt) {
             {task: 'replace:widget_html',   exec: 1},
             {task: 'replace:css_bundle',    exec: 1},
             {task: 'clean:tmp',             exec: 1},
-            {task: 'make_shell:dist_test:' + appConfig.widgetName,         exec: !isRelease}
+            {task: 'make_shell:dist_test:' + appConfig.widgetName,         exec: !isRelease},
+            {task: 'appcache',              exec: isRelease}
         ]);
     });
     
