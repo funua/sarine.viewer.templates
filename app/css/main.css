@@ -109,22 +109,22 @@ a:hover, a:active {
 
 @font-face {
   font-family: "Utopia Std";
-  src: url('../fonts/UtopiaStd-Regular_0.eot?1431676091');
-  src: url('../fonts/UtopiaStd-Regular_0.eot?&1431676091#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Regular_0.woff?1431676091') format('woff'), url('../fonts/UtopiaStd-Regular_0.ttf?1431676091') format('truetype'), url('../fonts/UtopiaStd-Regular_0.svg?1431676091') format('svg');
+  src: url('../fonts/UtopiaStd-Regular_0.eot?1432133317');
+  src: url('../fonts/UtopiaStd-Regular_0.eot?&1432133317#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Regular_0.woff?1432133317') format('woff'), url('../fonts/UtopiaStd-Regular_0.ttf?1432133317') format('truetype'), url('../fonts/UtopiaStd-Regular_0.svg?1432133317') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Utopia Std";
-  src: url('../fonts/UtopiaStd-Italic_0.eot?1431676091');
-  src: url('../fonts/UtopiaStd-Italic_0.eot?&1431676091#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Italic_0.woff?1431676091') format('woff'), url('../fonts/UtopiaStd-Italic_0.ttf?1431676091') format('truetype'), url('../fonts/UtopiaStd-Italic_0.svg?1431676091') format('svg');
+  src: url('../fonts/UtopiaStd-Italic_0.eot?1432133317');
+  src: url('../fonts/UtopiaStd-Italic_0.eot?&1432133317#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Italic_0.woff?1432133317') format('woff'), url('../fonts/UtopiaStd-Italic_0.ttf?1432133317') format('truetype'), url('../fonts/UtopiaStd-Italic_0.svg?1432133317') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Utopia Std";
-  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?1431676091');
-  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?&1431676091#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-SemiboldIt_0.woff?1431676091') format('woff'), url('../fonts/UtopiaStd-SemiboldIt_0.ttf?1431676091') format('truetype'), url('../fonts/UtopiaStd-SemiboldIt_0.svg?1431676091') format('svg');
+  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?1432133317');
+  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?&1432133317#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-SemiboldIt_0.woff?1432133317') format('woff'), url('../fonts/UtopiaStd-SemiboldIt_0.ttf?1432133317') format('truetype'), url('../fonts/UtopiaStd-SemiboldIt_0.svg?1432133317') format('svg');
   font-weight: bold;
   font-style: italic;
 }
@@ -2122,7 +2122,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 @media screen and (max-width: 400px) {
   /* line 46, ../sass/partials/slides/_hna.scss */
   .slide--hna .slide__content {
-    padding: 0;
+    padding: 0 8px;
   }
 }
 /* line 2, ../sass/partials/slides/_cut.scss */
@@ -2629,20 +2629,28 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   display: block;
   margin: 0 auto;
 }
-/* line 30, ../sass/partials/_sarine-viewer.scss */
+/* line 28, ../sass/partials/_sarine-viewer.scss */
+.viewer.cutHeartsAndArrows canvas.no_stone:nth-child(1) {
+  float: right;
+}
+/* line 31, ../sass/partials/_sarine-viewer.scss */
+.viewer.cutHeartsAndArrows canvas.no_stone:nth-child(2) {
+  float: left;
+}
+/* line 37, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas.Arrows {
   float: right;
 }
-/* line 34, ../sass/partials/_sarine-viewer.scss */
+/* line 41, ../sass/partials/_sarine-viewer.scss */
 .viewer.cutHeartsAndArrows canvas.Hearts {
   float: left;
 }
-/* line 39, ../sass/partials/_sarine-viewer.scss */
+/* line 46, ../sass/partials/_sarine-viewer.scss */
 .viewer canvas {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 43, ../sass/partials/_sarine-viewer.scss */
+/* line 50, ../sass/partials/_sarine-viewer.scss */
 .viewer canvas.no_stone {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -2787,10 +2795,18 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .w11 .slide {
   padding-top: 100px;
 }
-
 /* line 131, ../sass/partials/_widgets.scss */
-.w11 .slide--loupe3d .slide__img-wrap--loupe {
+.w11 .slide .slide__img-wrap--loupe {
   padding-bottom: 202px;
+}
+
+/* line 137, ../sass/partials/_widgets.scss */
+.w13 .slide {
+  padding-top: 60px;
+}
+/* line 140, ../sass/partials/_widgets.scss */
+.w13 .slide__img--loupe {
+  margin: 50px auto;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -24,6 +24,13 @@
 			&.no_stone {
 				display: block;
 				margin: 0 auto;
+
+				&:nth-child(1){
+					float:right;
+				}
+				&:nth-child(2){
+					float:left;
+				}
 			}
 		}
 
@@ -45,17 +52,3 @@
 		}
 	}
 }
-
-//.loupe3DFullInspection,
-//.loupe3DFullInspection .viewport,
-//.loupe3DFullInspection .viewport #main-image,
-//.inspect-stone.large .viewport,
-//.loupe3DFullInspection .inspect-stone {
-//  width: 250px !important;
-//  height: 250px !important;
-//}
-//
-//.loupe3DFullInspection .mglass_viewer {
-//  width: 210px !important;
-//  height: 210px !important;
-//}

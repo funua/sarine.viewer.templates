@@ -127,7 +127,17 @@
 }
 .w11 .slide{
 	padding-top:100px;
+
+	& .slide__img-wrap--loupe{
+		padding-bottom:202px;
+	}
 }
-.w11 .slide--loupe3d .slide__img-wrap--loupe{
-	padding-bottom:202px;
+.w13 {
+
+	.slide{
+		padding-top:60px;
+	}
+	.slide__img--loupe{
+		margin:50px auto;
+	}
 }

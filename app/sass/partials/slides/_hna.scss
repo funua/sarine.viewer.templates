@@ -44,27 +44,6 @@ $hna-image-width: 150px;
 }
 @media screen and (max-width:400px){
 	.slide--hna .slide__content{
-		padding:0;
+		padding:0 8px;
 	}
 }
-
-
-//500
-//.viewer.cutHeartsAndArrows canvas{
-//	width:140px;
-//}
-////400
-//.viewer.cutHeartsAndArrows canvas{
-//	width:130px;
-//	height:130px;
-//	margin:10px 0
-//}
-//.hna{
-//	width:130px;
-//}
-//.slide__img-wrap--hna{
-//	padding:0 12px;
-//}
-//.slide--hna .slide__content{
-//	width:100%;
-//}
