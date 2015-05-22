@@ -1,3 +1,4 @@
 node_modules
 app/dist_test
 .sass-cache
+.idea/
