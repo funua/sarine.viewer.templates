@@ -1,0 +1,77 @@
+@import 'compass/css3';
+
+@media screen and (max-width:500px){
+
+    //slider
+    .slider-wrap{
+        width:100%;
+        max-width: 500px;
+        min-width:320px;
+        margin:0 auto;
+    }
+
+    //slides
+    .slide:not(.slide--hna){
+        padding-left:8px;
+        padding-right:8px;
+
+        .slide__content{
+            padding:0 18px;
+        }
+    }
+
+    //real
+    .real__specs-row{
+        height:auto;
+    }
+    .real__spec{
+        margin: 9px 0;
+        padding: 0;
+        width: 45%;
+    }
+
+    //slide hna
+    .slide--hna .viewer.cutHeartsAndArrows canvas,
+    .slide--hna .hna{
+        width:120px;
+    }
+
+    //slide loupe3d
+    .slide--loupe3d.ctrl-3d-2 .buttons{
+        @include transform(scale(0.8));
+        @include transform-origin(50%);
+    }
+
+    //slide light
+    .specs__item--foot{
+        font-size: 12px;
+    }
+
+    //storyline
+    .storyline{
+        &__item{
+            padding-left:3%;
+            padding-right:3%;
+            font-size:14px;
+        }
+        &.items-count-2{
+            padding:0;
+            &:before{
+                width: 50%;
+                left: 25%;
+            }
+        }
+    }
+
+    //popups
+    .popup{
+        padding-left:36px;
+        padding-right:36px;
+    }
+
+    //footer w1.2
+    .footer__customer__logo{
+        right:40px;
+        bottom:24px;
+    }
+}
