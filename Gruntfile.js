@@ -17,6 +17,8 @@ module.exports = function (grunt) {
     fullConfig = {
         project: appConfig,
 
+        version: {},
+
         copy: {
             dist_html: {
                 flatten: true,
@@ -69,6 +71,42 @@ module.exports = function (grunt) {
                     'app/js/app.js'         // must be last in bundle
                 ],
                 dest: 'tmp/app.bundle.js'
+            },
+            banner_html: {
+                options: {
+                    stripBanners: true,
+                    banner: '<!-- \n\
+   ! <%= version.codename %> - v<%= version.full %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n\
+-->\n\
+'
+                },
+                files: {
+                    '<%= project.fsTargetDir %>/index.html': ['<%= project.fsTargetDir %>/index.html']
+                }
+            },
+            banner_css: {
+                options: {
+                    stripBanners: true,
+                    banner: '/* \n\
+   ! <%= version.codename %> - v<%= version.full %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n\
+*/\n\
+'
+                },
+                files: {
+                    '<%= project.fsTargetDir %>/main.min.css': ['<%= project.fsTargetDir %>/main.min.css']
+                }
+            },
+            banner_js: {
+                options: {
+                    stripBanners: true,
+                    banner: '/* \n\
+   ! <%= version.codename %> - v<%= version.full %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n\
+*/\n\
+'
+                },
+                files: {
+                    '<%= project.fsTargetDir %>/app.bundle.min.js': ['<%= project.fsTargetDir %>/app.bundle.min.js']
+                }
             }
         },
 
@@ -88,9 +126,7 @@ module.exports = function (grunt) {
                             replacement: '<script type="text/javascript" src="app.bundle.min.js"></script>'
                         }, {
                             match: /<style>@import '[.\/]+css\/main\.min\.css';<\/style>/,
-                            //replacement: '<style>@import \'./main.min.css\';</style>'
                             replacement: '<!--[if !IE]><!--><style>@import "./main.min.css";</style><!--<![endif]--> <!--[if IE]>--><link type="text/css" rel="stylesheet" href="./main.min.css" /><!--<![endif]-->'
-                            //replacement: '<!--[if !IE]><!--><style>@import \'./main.min.css\';</style><!--<![endif]--> <!--[if IE]>--><link type="text/css" rel="stylesheet" href="./main.min.css" /><!--<![endif]-->'
                         }, {
                             match: /src="[.\/]+img\//g,
                             replacement: 'src="<%= project.codeWidgetPath %>img/'
@@ -331,10 +367,8 @@ module.exports = function (grunt) {
         appConfig.widgetName = this.args[1];
         
         appConfig.fsTargetDir = 'app/' + appConfig.dir + '/' + appConfig.widgetName;
-//        if (!isRelease) {
-//            appConfig.fsTargetDir += '/' + appConfig.widgetName;
-//        }
         appConfig.shell_name = 'test_' + appConfig.widgetName + '.html';
+        fullConfig.version = grunt.file.readJSON('app/widgets/' + appConfig.widgetName + '/version.json');
         
         grunt.initConfig(fullConfig);
         
@@ -348,7 +382,10 @@ module.exports = function (grunt) {
             {task: 'replace:css_bundle',    exec: 1},
             {task: 'clean:tmp',             exec: 1},
             {task: 'make_shell:dist_test:' + appConfig.widgetName,         exec: !isRelease},
-            {task: 'appcache',              exec: isRelease}
+            {task: 'appcache',              exec: isRelease},
+            {task: 'concat:banner_html',    exec: 1},
+            {task: 'concat:banner_css',     exec: 1},
+            {task: 'concat:banner_js',      exec: 1}
         ]);
     });
     
