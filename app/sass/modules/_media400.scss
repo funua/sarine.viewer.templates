@@ -16,8 +16,13 @@
     }
 
     //slide light
-    .slide__img-wrap--light{
-        padding-left:0;
+    .slide__img-wrap--light {
+	    .total-grade__title{
+		    font-size:16px;
+	    }
+	    .total-grade__grade{
+		    font-size:24px;
+	    }
     }
 
     //slide hna
