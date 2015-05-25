@@ -65,7 +65,7 @@ module.exports = function (grunt) {
                     // order of elements is important!
                     'app/js/vendor/*.js',
                     'app/js/*.js',
-                    'app/widgets/<%= project.widgetName %>**/*.js',
+                    'app/widgets/<%= project.widgetName %>/*.js',
                     '!app/js/app.bundle.min.js',
                     '!app/js/app.js',
                     'app/js/app.js'         // must be last in bundle
