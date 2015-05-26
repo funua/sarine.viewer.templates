@@ -1,0 +1,8 @@
+@import 'compass/css3';
+
+@media screen and (max-device-width:984px) {
+	// storyline https://github.com/SarineTechnologies/sarine.viewer.templates/issues/164
+	.color-scheme-1 .storyline__item:not(.storyline__item--active):hover:before {
+		background-color: #ddd;
+	}
+}
