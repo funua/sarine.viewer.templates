@@ -382,7 +382,7 @@ module.exports = function (grunt) {
             {task: 'replace:css_bundle',    exec: 1},
             {task: 'clean:tmp',             exec: 1},
             {task: 'make_shell:dist_test:' + appConfig.widgetName,         exec: !isRelease},
-            {task: 'appcache',              exec: isRelease},
+//            {task: 'appcache',              exec: isRelease},
             {task: 'concat:banner_html',    exec: 1},
             {task: 'concat:banner_css',     exec: 1},
             {task: 'concat:banner_js',      exec: 1}
