@@ -1,5 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700");
-/* line 5, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -109,22 +109,22 @@ a:hover, a:active {
 
 @font-face {
   font-family: "Utopia Std";
-  src: url('../fonts/UtopiaStd-Regular_0.eot?1432133317');
-  src: url('../fonts/UtopiaStd-Regular_0.eot?&1432133317#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Regular_0.woff?1432133317') format('woff'), url('../fonts/UtopiaStd-Regular_0.ttf?1432133317') format('truetype'), url('../fonts/UtopiaStd-Regular_0.svg?1432133317') format('svg');
+  src: url('../fonts/UtopiaStd-Regular_0.eot?1432134852');
+  src: url('../fonts/UtopiaStd-Regular_0.eot?&1432134852#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Regular_0.woff?1432134852') format('woff'), url('../fonts/UtopiaStd-Regular_0.ttf?1432134852') format('truetype'), url('../fonts/UtopiaStd-Regular_0.svg?1432134852') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Utopia Std";
-  src: url('../fonts/UtopiaStd-Italic_0.eot?1432133317');
-  src: url('../fonts/UtopiaStd-Italic_0.eot?&1432133317#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Italic_0.woff?1432133317') format('woff'), url('../fonts/UtopiaStd-Italic_0.ttf?1432133317') format('truetype'), url('../fonts/UtopiaStd-Italic_0.svg?1432133317') format('svg');
+  src: url('../fonts/UtopiaStd-Italic_0.eot?1432134852');
+  src: url('../fonts/UtopiaStd-Italic_0.eot?&1432134852#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Italic_0.woff?1432134852') format('woff'), url('../fonts/UtopiaStd-Italic_0.ttf?1432134852') format('truetype'), url('../fonts/UtopiaStd-Italic_0.svg?1432134852') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Utopia Std";
-  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?1432133317');
-  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?&1432133317#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-SemiboldIt_0.woff?1432133317') format('woff'), url('../fonts/UtopiaStd-SemiboldIt_0.ttf?1432133317') format('truetype'), url('../fonts/UtopiaStd-SemiboldIt_0.svg?1432133317') format('svg');
+  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?1432134852');
+  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?&1432134852#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-SemiboldIt_0.woff?1432134852') format('woff'), url('../fonts/UtopiaStd-SemiboldIt_0.ttf?1432134852') format('truetype'), url('../fonts/UtopiaStd-SemiboldIt_0.svg?1432134852') format('svg');
   font-weight: bold;
   font-style: italic;
 }
@@ -2761,6 +2761,171 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 /* line 266, ../sass/partials/_widgets.scss */
 .w15 .footer {
   padding: 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 6, ../sass/modules/_media500.scss */
+  .slider-wrap {
+    width: 100%;
+    max-width: 500px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* line 14, ../sass/modules/_media500.scss */
+  .slide:not(.slide--hna) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  /* line 18, ../sass/modules/_media500.scss */
+  .slide:not(.slide--hna) .slide__content {
+    padding: 0 18px;
+  }
+
+  /* line 24, ../sass/modules/_media500.scss */
+  .real__specs-row {
+    height: auto;
+  }
+
+  /* line 27, ../sass/modules/_media500.scss */
+  .real__spec {
+    margin: 9px 0;
+    padding: 0;
+    width: 45%;
+  }
+
+  /* line 34, ../sass/modules/_media500.scss */
+  .slide--hna .viewer.cutHeartsAndArrows canvas,
+  .slide--hna .hna {
+    width: 120px;
+  }
+
+  /* line 40, ../sass/modules/_media500.scss */
+  .slide--loupe3d.ctrl-3d-2 .buttons {
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+
+  /* line 46, ../sass/modules/_media500.scss */
+  .specs__item--foot {
+    font-size: 12px;
+  }
+
+  /* line 52, ../sass/modules/_media500.scss */
+  .storyline__item {
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 14px;
+  }
+  /* line 57, ../sass/modules/_media500.scss */
+  .storyline.items-count-2 {
+    padding: 0;
+  }
+  /* line 59, ../sass/modules/_media500.scss */
+  .storyline.items-count-2:before {
+    width: 50%;
+    left: 25%;
+  }
+
+  /* line 67, ../sass/modules/_media500.scss */
+  .popup {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  /* line 73, ../sass/modules/_media500.scss */
+  .footer__customer__logo {
+    right: 40px;
+    bottom: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 6, ../sass/modules/_media400.scss */
+  .slider__btn--previous {
+    left: -18px;
+  }
+
+  /* line 9, ../sass/modules/_media400.scss */
+  .slider__btn--next {
+    right: -18px;
+  }
+
+  /* line 14, ../sass/modules/_media400.scss */
+  .slide:not(.slide--hna) .slide__content {
+    padding: 0;
+  }
+
+  /* line 20, ../sass/modules/_media400.scss */
+  .slide__img-wrap--light .total-grade__title {
+    font-size: 16px;
+  }
+  /* line 23, ../sass/modules/_media400.scss */
+  .slide__img-wrap--light .total-grade__grade {
+    font-size: 24px;
+  }
+
+  /* line 29, ../sass/modules/_media400.scss */
+  .slide--hna .slide__content {
+    padding: 0 8px;
+  }
+
+  /* line 34, ../sass/modules/_media400.scss */
+  .specs__item--value {
+    font-size: 8px;
+  }
+
+  /* line 37, ../sass/modules/_media400.scss */
+  .specs__item--foot {
+    font-size: 10px;
+  }
+
+  /* line 43, ../sass/modules/_media400.scss */
+  .popup .popup__media {
+    width: 240px;
+  }
+  /* line 46, ../sass/modules/_media400.scss */
+  .popup .popup__media--video {
+    min-height: 160px;
+  }
+  /* line 51, ../sass/modules/_media400.scss */
+  .popup__video, .popup__thumbnail {
+    width: 240px;
+    height: 160px;
+  }
+  /* line 55, ../sass/modules/_media400.scss */
+  .popup__video img, .popup__thumbnail img {
+    display: block;
+    width: 100%;
+  }
+  /* line 61, ../sass/modules/_media400.scss */
+  .popup .video-play {
+    width: 240px;
+    height: 160px;
+  }
+
+  /* line 68, ../sass/modules/_media400.scss */
+  .w12 {
+    width: 100%;
+    min-width: 200px;
+  }
+
+  /* line 72, ../sass/modules/_media400.scss */
+  .w14 {
+    width: 100%;
+    min-width: 200px;
+  }
+
+  /* line 76, ../sass/modules/_media400.scss */
+  .w15 {
+    width: 100%;
+    min-width: 200px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
