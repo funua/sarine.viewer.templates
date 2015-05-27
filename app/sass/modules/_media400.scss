@@ -1,6 +1,6 @@
 @import 'compass/css3';
 
-@media screen and (max-width:400px) {
+@media screen and (max-device-width:400px) {
 
     //slider
     .slider__btn--previous{
@@ -18,10 +18,10 @@
     //slide light
     .slide__img-wrap--light {
 	    .total-grade__title{
-		    font-size:16px;
+		    font-size:12px;
 	    }
 	    .total-grade__grade{
-		    font-size:24px;
+		    font-size:20px;
 	    }
     }
 
@@ -37,6 +37,11 @@
     .specs__item--foot{
         font-size: 10px;
     }
+
+	//storyline
+	.storyline__item{
+		font-size:13px;
+	}
 
     //popups
     .popup {
