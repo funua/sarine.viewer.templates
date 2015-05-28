@@ -1,85 +1,87 @@
-@import 'compass/css3';
+//@import 'compass/css3';
 
-@media screen and (max-device-width:400px) {
+@media screen and (max-width:400px) {
+	html:not(.msie){
 
-    //slider
-    .slider__btn--previous{
-        left:-18px;
-    }
-    .slider__btn--next{
-        right:-18px;
-    }
-
-    //slides
-    .slide:not(.slide--hna) .slide__content{
-        padding:0;
-    }
-
-    //slide light
-    .slide__img-wrap--light {
-	    .total-grade__title{
-		    font-size:12px;
+	    //slider
+	    .slider__btn--previous{
+	        left:-18px;
 	    }
-	    .total-grade__grade{
-		    font-size:20px;
+	    .slider__btn--next{
+	        right:-18px;
 	    }
-    }
 
-    //slide hna
-    .slide--hna .slide__content{
-        padding:0 8px;
-    }
+	    //slides
+	    .slide:not(.slide--hna) .slide__content{
+	        padding:0;
+	    }
 
-    //slide light
-    .specs__item--value{
-        font-size: 8px;
-    }
-    .specs__item--foot{
-        font-size: 10px;
-    }
+	    //slide light
+	    .slide__img-wrap--light {
+		    .total-grade__title{
+			    font-size:12px;
+		    }
+		    .total-grade__grade{
+			    font-size:20px;
+		    }
+	    }
 
-	//storyline
-	.storyline__item{
-		font-size:13px;
+	    //slide hna
+	    .slide--hna .slide__content{
+	        padding:0 8px;
+	    }
+
+	    //slide light
+	    .specs__item--value{
+	        font-size: 8px;
+	    }
+	    .specs__item--foot{
+	        font-size: 10px;
+	    }
+
+		//storyline
+		.storyline__item{
+			font-size:13px;
+		}
+
+	    //popups
+	    .popup {
+	        .popup__media{
+	            width:240px;
+
+	            &--video{
+	        min-height:160px;
+	        }
+	        }
+
+	        &__video, &__thumbnail{
+	            width:240px;
+	            height:160px;
+
+	            & img{
+	                display:block;
+	                width:100%;
+	            }
+	        }
+
+	        .video-play{
+	            width:240px;
+	            height:160px;
+	        }
+	    }
+
+	    //widgets
+	    .w12{
+	        width:100%;
+	        min-width:200px;
+	    }
+	    .w14{
+	        width:100%;
+	        min-width:200px;
+	    }
+	    .w15{
+	        width:100%;
+	        min-width:200px;
+	    }
 	}
-
-    //popups
-    .popup {
-        .popup__media{
-            width:240px;
-
-            &--video{
-        min-height:160px;
-        }
-        }
-
-        &__video, &__thumbnail{
-            width:240px;
-            height:160px;
-
-            & img{
-                display:block;
-                width:100%;
-            }
-        }
-
-        .video-play{
-            width:240px;
-            height:160px;
-        }
-    }
-
-    //widgets
-    .w12{
-        width:100%;
-        min-width:200px;
-    }
-    .w14{
-        width:100%;
-        min-width:200px;
-    }
-    .w15{
-        width:100%;
-        min-width:200px;
-    }
 }
