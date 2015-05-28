@@ -20,7 +20,7 @@
                 4: 'very-high',
                 5: 'exceptional'
             },
-            totalViewers = 1,
+            totalViewers = $('.viewer').length,
             playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0),
             canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0),
             swipeRecognizer;
@@ -83,7 +83,7 @@
                 totalViewers--;
             }
         });
-
+        
         if (totalViewers > 0) {
             $(document).on("first_init_end", function (event, data) {
                 totalViewers--;
@@ -337,9 +337,11 @@
  * Add 'profiler' to to url hash to enable this feature.
  */
 (function (window, document, $) {
-    var $resultContainer;
+    var $resultContainer,
+        loaded = false;
     
     if (window.location.hash.indexOf('profiler') === -1) return;
+    console.log('Remove sarine-viewers and load empty pages...');
     
     $resultContainer = $('<div/>').css({
         minHeight: '50px',
@@ -353,8 +355,20 @@
     $('sarine-viewer').remove();
     
     $(window).load(function () {
+        console.log('Finished loading');
+        loaded = true;
+        onLoad();
+    });
+    window.setTimeout(function () {
+        if (loaded) return;
+        loaded = true;
+        console.log('Force finished loading');
+        onLoad();
+    }, 1000);
+    
+    function onLoad() {
         document.querySelector('.slider').style.display = '';
         document.querySelector('.preloader').style.display = 'none';
         $resultContainer.html('Loaded');
-    });
+    }
 })(window, window.document, window.jQuery);

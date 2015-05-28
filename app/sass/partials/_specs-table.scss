@@ -38,13 +38,11 @@ $specs-col-width: ((100% - $specs-first-col-width) / 4);
 			width: $specs-first-col-width;
             font-size: 10px;
             color: #9c9b9a;
-
-//		    @media screen and (max-width:400px){
-//			    &{
-//				    font-size: 8px;
-//			    }
-//		    }
         }
+
+	    .q-mark{
+		    vertical-align:baseline;
+	    }
 
         &--foot {
             text-align: center;
@@ -53,17 +51,6 @@ $specs-col-width: ((100% - $specs-first-col-width) / 4);
             font-size: 14px;
             border-top: 1px solid #7d7d7d;
             white-space: nowrap;
-
-//	        @media screen and (max-width:500px){
-//		        &{
-//			        font-size:12px;
-//		        }
-//	        }
-//		    @media screen and (max-width:400px){
-//			    &{
-//				    font-size: 10px;
-//			    }
-//		    }
         }
 
         &--points-wrap {
