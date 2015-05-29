@@ -95,7 +95,7 @@
         }
         
         
-        Hammer && attachHammer();
+//        Hammer && attachHammer();
 
         setTotalGrade();
 
@@ -180,38 +180,39 @@
 
             document.querySelector('.slider').style.display = '';
             document.querySelector('.preloader').style.display = 'none';
+            
+            attachHammer(slider);
         }
     });
   
     
-    function attachHammer() {
-        var hammerManager;
-        hammerManager = new Hammer.Manager(document.getElementById('slider'));
+    function attachHammer(slider) {
+        var hammerManager,
+            loupeMgr,
+            sliderEl = document.getElementById('slider'),
+            loupeViewer = $(sliderEl).find('.loupe3DFullInspection'),
+            swipeLocked = false;
+        hammerManager = new Hammer.Manager(sliderEl);
         hammerManager.add(new Hammer.Swipe());
-        hammerManager.on('swipe', onSwipe);
-//        hammerManager.on('swipeleft swiperight', onSwipe);
-
-        function onSwipe(e) {
-            console.log('e ->', e);
-            console.log('this ->', this);
-        }
+        hammerManager.on('swipeleft swiperight', function (e) {
+            swipeLocked = false;
+            window.setTimeout(function () {
+                if (swipeLocked) return;
+                if (e.type === 'swipeleft') {
+                    slider.next();
+                } else {
+                    slider.previous();
+                }
+            }, 80);
+        });
         
-//        function onSwipe(e) {
-//            console.log('onSwipe');
-//        }
-
-//        swipeRecognizer = new Hammer(document.getElementById('slider'));
-//        swipeRecognizer.on('dragstart', function (e) {
-//            console.log('dragstart e ->', e);
-//        });
-//        swipeRecognizer.on('swipeleft swiperight', function (e) {
-//            console.log('swipeend e ->', e);
-//            if (e.type === 'swipeleft') {
-//                slider.next();
-//            } else {
-//                slider.previous();
-//            }
-//        });
+        // Prevent page sliding if swiped on 3d loupe viewer
+        if (loupeViewer.length) {
+            loupeMgr = new Hammer(loupeViewer[0]);
+            loupeMgr.on('swipe', function (e) {
+                swipeLocked = true;
+            });
+        }
     }
     
   
