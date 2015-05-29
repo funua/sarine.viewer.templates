@@ -22,8 +22,7 @@
             },
             totalViewers = $('.viewer').length,
             playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0),
-            canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0),
-            swipeRecognizer;
+            canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0);
 
 
         readConfig();
@@ -96,16 +95,7 @@
         }
         
         
-        if (Hammer) {
-            swipeRecognizer = new Hammer(document.getElementById('slider'));
-            swipeRecognizer.on('swipeleft swiperight', function (e) {
-                if (e.type === 'swipeleft') {
-                    slider.next();
-                } else {
-                    slider.previous();
-                }
-            });
-        }
+        Hammer && attachHammer();
 
         setTotalGrade();
 
@@ -193,7 +183,37 @@
         }
     });
   
-  
+    
+    function attachHammer() {
+        var hammerManager;
+        hammerManager = new Hammer.Manager(document.getElementById('slider'));
+        hammerManager.add(new Hammer.Swipe());
+        hammerManager.on('swipe', onSwipe);
+//        hammerManager.on('swipeleft swiperight', onSwipe);
+
+        function onSwipe(e) {
+            console.log('e ->', e);
+            console.log('this ->', this);
+        }
+        
+//        function onSwipe(e) {
+//            console.log('onSwipe');
+//        }
+
+//        swipeRecognizer = new Hammer(document.getElementById('slider'));
+//        swipeRecognizer.on('dragstart', function (e) {
+//            console.log('dragstart e ->', e);
+//        });
+//        swipeRecognizer.on('swipeleft swiperight', function (e) {
+//            console.log('swipeend e ->', e);
+//            if (e.type === 'swipeleft') {
+//                slider.next();
+//            } else {
+//                slider.previous();
+//            }
+//        });
+    }
+    
   
     function readConfig() {
         var wConfig = window.widgetConfig,
