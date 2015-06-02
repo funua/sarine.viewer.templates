@@ -107,6 +107,9 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
+@viewport {
+  max-zoom: 150%;
+}
 @font-face {
   font-family: "Utopia Std";
   src: url('../fonts/UtopiaStd-Regular_0.eot?1432133317');
@@ -2465,7 +2468,7 @@ html.firefox .q-mark:before {
   height: 100%;
 }
 /* line 7, ../sass/partials/_sarine-viewer.scss */
-.viewer.loupeRealView, .viewer.lightReportViewer, .viewer.cut2DView, .viewer.loupe3DFullInspection, .viewer.loupeTopInspection {
+.viewer.loupeRealView, .viewer.lightReportViewer, .viewer.cut2DView, .viewer.loupe3DFullInspection, .viewer.loupeTopInspection, .viewer.loupeTopInspectionImage {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
