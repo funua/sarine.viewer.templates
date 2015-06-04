@@ -26,7 +26,6 @@ $popup-skew-angle: 9deg;
 	opacity:0;
 	@include transform(translateY(600px));
 
-
 	&:before {
 		content: '';
 		z-index: -1;
