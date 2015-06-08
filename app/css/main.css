@@ -1078,8 +1078,9 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   text-align: left;
 }
 /* line 44, ../sass/partials/_specs-table.scss */
-.specs__item .q-mark {
-  vertical-align: baseline;
+.specs__item .q-mark--small {
+  vertical-align: top;
+  top: 8px;
 }
 /* line 48, ../sass/partials/_specs-table.scss */
 .specs__item--foot {
@@ -1089,12 +1090,13 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   font-size: 14px;
   border-top: 1px solid #7d7d7d;
   white-space: nowrap;
+  vertical-align: baseline;
 }
-/* line 57, ../sass/partials/_specs-table.scss */
+/* line 58, ../sass/partials/_specs-table.scss */
 .specs__item--points-wrap {
   position: relative;
 }
-/* line 62, ../sass/partials/_specs-table.scss */
+/* line 63, ../sass/partials/_specs-table.scss */
 .specs__points {
   overflow: hidden;
   position: absolute;
@@ -1103,47 +1105,47 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 10px;
   margin-left: -5px;
 }
-/* line 71, ../sass/partials/_specs-table.scss */
+/* line 72, ../sass/partials/_specs-table.scss */
 .specs__points--value-1 {
   height: 30px;
 }
-/* line 71, ../sass/partials/_specs-table.scss */
+/* line 72, ../sass/partials/_specs-table.scss */
 .specs__points--value-2 {
   height: 60px;
 }
-/* line 71, ../sass/partials/_specs-table.scss */
+/* line 72, ../sass/partials/_specs-table.scss */
 .specs__points--value-3 {
   height: 90px;
 }
-/* line 71, ../sass/partials/_specs-table.scss */
+/* line 72, ../sass/partials/_specs-table.scss */
 .specs__points--value-4 {
   height: 120px;
 }
-/* line 71, ../sass/partials/_specs-table.scss */
+/* line 72, ../sass/partials/_specs-table.scss */
 .specs__points--value-5 {
   height: 150px;
 }
-/* line 76, ../sass/partials/_specs-table.scss */
+/* line 77, ../sass/partials/_specs-table.scss */
 .specs__points--minimum {
   height: 30px;
 }
-/* line 80, ../sass/partials/_specs-table.scss */
+/* line 81, ../sass/partials/_specs-table.scss */
 .specs__points--standard {
   height: 60px;
 }
-/* line 84, ../sass/partials/_specs-table.scss */
+/* line 85, ../sass/partials/_specs-table.scss */
 .specs__points--high {
   height: 90px;
 }
-/* line 88, ../sass/partials/_specs-table.scss */
+/* line 89, ../sass/partials/_specs-table.scss */
 .specs__points--very-high {
   height: 120px;
 }
-/* line 92, ../sass/partials/_specs-table.scss */
+/* line 93, ../sass/partials/_specs-table.scss */
 .specs__points--exceptional {
   height: 150px;
 }
-/* line 97, ../sass/partials/_specs-table.scss */
+/* line 98, ../sass/partials/_specs-table.scss */
 .specs__points-list {
   position: absolute;
   bottom: 0;
@@ -1151,13 +1153,13 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   width: 10px;
   height: 150px;
 }
-/* line 105, ../sass/partials/_specs-table.scss */
+/* line 106, ../sass/partials/_specs-table.scss */
 .specs__point {
   position: relative;
   height: 30px;
   margin: 0 auto;
 }
-/* line 110, ../sass/partials/_specs-table.scss */
+/* line 111, ../sass/partials/_specs-table.scss */
 .specs__point:before {
   content: '';
   position: absolute;
