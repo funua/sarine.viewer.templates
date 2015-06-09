@@ -25,7 +25,19 @@
             canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0),
             swipeRecognizer;
 
-
+        
+        if ($('.slider__header')[0]) {
+            $('.slider__header')[0].setVisibility = function (setVisible) {
+                if (setVisible) {
+                    classie.remove(this, 'slider__header--hide');
+                    classie.add(this, 'slider__header--show');
+                } else {
+                    classie.add(this, 'slider__header--hide');
+                    classie.remove(this, 'slider__header--show');
+                }
+            };
+        }
+        
         readConfig();
 
 
@@ -63,16 +75,9 @@
             
             container.attr('class', 'slider');
             if (e.detail.currentItemIndex === 0) {
-                if (!!window.widgetConfig.pages[0].enableStoryline) {
-                    classie.remove(header, 'slider__header--hide');
-                    classie.add(header, 'slider__header--show');
-                } else {
-                    classie.add(header, 'slider__header--hide');
-                    classie.remove(header, 'slider__header--show');
-                }
+                header.setVisibility(window.widgetConfig.pages[0].enableStoryline);
             } else {
-                classie.remove(header, 'slider__header--hide');
-                classie.add(header, 'slider__header--show');
+                header.setVisibility(true);
             }
             
             container.addClass('slider--' + container.find('ul.slider__list > .slide').eq(e.detail.currentItemIndex).attr('data-slidename'));
@@ -273,10 +278,8 @@
         wConfig.widget_brief_code && elements.sliderWrap.addClass(wConfig.widget_brief_code);
         
         
-        if (!!wConfig.pages[0].enableStoryline) {
-            window.setTimeout(function() {
-                elements.sliderHeader.show();
-            }, 600);
+        if (wConfig.pages[0].enableStoryline) {
+            elements.sliderHeader[0].setVisibility(true);
         }
         $('.popup-wrap button').attr('tabindex', '-1');
     }
