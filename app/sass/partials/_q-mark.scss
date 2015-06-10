@@ -21,6 +21,10 @@ $q-mark-border-color: #dfdfdf;
 
 	&:before {
 		content: '?';
+		position: absolute;
+		top: 2px;
+		left: 4px;
+		line-height: 12px;
 	}
 
 	&--small {
@@ -29,6 +33,17 @@ $q-mark-border-color: #dfdfdf;
 		margin: 0 2px;
 		line-height: $q-mark-big-font-size;
 		font-size: $q-mark-small-font-size;
-		vertical-align: baseline;
+		top:2px;
+
+		&:before{
+			top: 1px;
+			left: 4px;
+			line-height: 10px;
+		}
+	}
+}
+html.firefox .q-mark{
+	&:before{
+		top:1px;
 	}
 }

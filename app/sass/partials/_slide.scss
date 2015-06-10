@@ -10,6 +10,7 @@ $slide-padding: 24px;
 	top: 0;
 	left: 0;
 	width: 100%;
+	text-align:center;
 
 	&:before {
 		content: '';
@@ -37,8 +38,11 @@ $slide-padding: 24px;
 	&__heading {
 		overflow: hidden;
 		height: $slide-heading-height;
+		display:inline-block;
+		vertical-align:top;
 		margin-bottom: 30px;
-
+		position: relative;
+		z-index: 0;
 		@include transition(color 0.5s ease-in);
 
 		.tm{
@@ -68,22 +72,7 @@ $slide-padding: 24px;
 		max-height: 350px;
 		color: #535353;
 		line-height: 1.5;
-
+		text-align:left;
 		@include transition(color 0.5s ease-in);
 	}
-
-//	@media screen and (max-width:500px){
-//		&:not(.slide--hna){
-//			padding-left:8px;
-//			padding-right:8px;
-//		}
-//		&:not(.slide--hna) .slide__content{
-//			padding:0 18px;
-//		}
-//	}
-//	@media screen and (max-width:400px){
-//		&:not(.slide--hna) .slide__content{
-//			padding:0;
-//		}
-//	}
 }
