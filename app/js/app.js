@@ -186,8 +186,14 @@
             document.querySelector('.slider').style.display = '';
             document.querySelector('.preloader').style.display = 'none';
             
-            attachHammer(slider);
+//            window.setTimeout(function () {
+                attachHammer(slider);
+//            }, 2000);
         }
+        
+//        $(document).on('full_init_end', function (event, data) {
+//            console.log('full_init_end ->', data);
+//        });
     });
   
     
@@ -197,12 +203,26 @@
             sliderEl = document.getElementById('slider'),
             loupeViewer = $(sliderEl).find('.loupe3DFullInspection'),
             swipeLocked = false;
+        
+        console.log('Uninitialized loupe3d viewer ->', !!$('[viewer="loupe3DFullInspection"]').length);
+        console.log('Initialized loupe3d viewer ->', !!loupeViewer.length);
+        
+        /*
+            if uninitializedViewer
+                wait for loupe3dViewer to be initialized and then attach Hammer
+            else
+                attach Hammer immediately
+         */
         hammerManager = new Hammer.Manager(sliderEl);
         hammerManager.add(new Hammer.Swipe());
         hammerManager.on('swipeleft swiperight', function (e) {
             swipeLocked = false;
             window.setTimeout(function () {
-                if (swipeLocked) return;
+                if (swipeLocked) {
+                    console.log('Swiped on 3D loupe viewer. Skipping swipe...');
+                    return;
+                }
+                console.log('Swiping...');
                 if (e.type === 'swipeleft') {
                     slider.next();
                 } else {
@@ -213,6 +233,7 @@
         
         // Prevent page sliding if swiped on 3d loupe viewer
         if (loupeViewer.length) {
+            console.log('Found 3D loupe viewer. Attach swipe skip handler');
             loupeMgr = new Hammer(loupeViewer[0]);
             loupeMgr.on('swipe', function (e) {
                 swipeLocked = true;
