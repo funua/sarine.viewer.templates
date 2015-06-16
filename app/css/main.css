@@ -2146,36 +2146,36 @@ html.firefox .q-mark:before {
 }
 
 /* line 3, ../sass/partials/slides/_inscription.scss */
-.slider--loupeinscription {
+.slider--loupeInscription {
   background-color: #878787;
 }
 /* line 6, ../sass/partials/slides/_inscription.scss */
-.slider--loupeinscription .slider__heading {
+.slider--loupeInscription .slider__heading {
   color: #fff;
 }
 /* line 11, ../sass/partials/slides/_inscription.scss */
-.slider--loupeinscription .slide__heading {
+.slider--loupeInscription .slide__heading {
   color: #fff;
 }
 /* line 15, ../sass/partials/slides/_inscription.scss */
-.slider--loupeinscription .slide__caption {
+.slider--loupeInscription .slide__caption {
   color: #fff;
 }
 /* line 20, ../sass/partials/slides/_inscription.scss */
-.slider--loupeinscription .storyline__item {
+.slider--loupeInscription .storyline__item {
   color: #ddd;
 }
 /* line 24, ../sass/partials/slides/_inscription.scss */
-.slider--loupeinscription .slider__btn {
+.slider--loupeInscription .slider__btn {
   stroke: #eee;
 }
 /* line 29, ../sass/partials/slides/_inscription.scss */
-.slider--loupeinscription .storyline__item:hover, .slider--loupeinscription .storyline__item:active, .slider--loupeinscription .storyline__item--active {
+.slider--loupeInscription .storyline__item:hover, .slider--loupeInscription .storyline__item:active, .slider--loupeInscription .storyline__item--active {
   color: #fff;
 }
 
 /* line 38, ../sass/partials/slides/_inscription.scss */
-.slide--loupeinscription:before {
+.slide--loupeInscription:before {
   background-image: url("../img/bg-loupe.png");
   top: -50px;
   -moz-background-size: 200px;
@@ -2185,12 +2185,7 @@ html.firefox .q-mark:before {
   opacity: 0.1;
 }
 /* line 45, ../sass/partials/slides/_inscription.scss */
-.slide--loupeinscription .slide__img-wrap--loupeinscription {
-  padding-bottom: 172px;
-  overflow: visible;
-}
-/* line 50, ../sass/partials/slides/_inscription.scss */
-.slide--loupeinscription .slide__img--loupeinscription {
+.slide--loupeInscription .slide__img--loupeInscription {
   width: 250px;
   height: 250px;
   margin: 0 auto;
