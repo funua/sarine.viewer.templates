@@ -1,6 +1,6 @@
 @import 'compass/css3';
 
-.slider--loupeinscription {
+.slider--loupeInscription {
     background-color: #878787;
 
     .slider__heading {
@@ -33,7 +33,7 @@
 }
 
 
-.slide--loupeinscription {
+.slide--loupeInscription {
 
     &:before {
         background-image: url('../img/bg-loupe.png');
@@ -42,7 +42,7 @@
         opacity: 0.1;
     }
 
-    .slide__img--loupeinscription {
+    .slide__img--loupeInscription {
         width: 250px;
         height: 250px;
         margin: 0 auto;

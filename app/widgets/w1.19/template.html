@@ -1,6 +1,3 @@
-<!-- 
-   ! Full Trade Widget - v1.1.7 - Friday, June 19th, 2015, 3:19:02 PM
--->
 <!-- HIDE CONTENT UNTIL MAIN.CSS IS LOADED -->
 <style type="text/css">
     [data-hidden-until-load] {
@@ -9,10 +6,10 @@
 </style>
 <!-- END -->
 
-<link type="text/css" rel="stylesheet" href="./main.min.css" />
+<style>@import '../../css/main.min.css';</style>
 
-<div class="slider-wrap" data-hidden-until-load>
-    <div class="slider slider--summary" style="display:none" id="slider">
+<div class="slider-wrap w19 color-scheme-1" data-hidden-until-load>
+    <div class="slider" style="display:none" id="slider">
         <header class="slider__header">
             <h1 class="slider__heading" data-widgetconfig-value="title">Diamond Story</h1>
             <ul class="storyline">
@@ -21,212 +18,84 @@
         </header>
 
         <ul class="slider__list">
-            <li class="slide slide--summary slide--current">
-                <div class="summary">
-                    <div class="summary__img-wrap">
-                        <div class="summary__img">
+            <li class="slide slide--real slide--current">
+                <div class="real">
+                    <div class="real__img-wrap">
+                        <div class="real__img">
                             <sarine-viewer viewer="loupeRealView" order="1"></sarine-viewer>
                         </div>
                     </div>
-                    <div class="summary__specs">
-                        <ul class="summary__specs-row">
-                            <li class="summary__spec">
-                                <span class="summary__spec__title">GIA:</span>
-                                <span class="summary__spec__value" data-sarine-info="stoneProperties.GIA"></span>
+                    <div class="real__specs">
+                        <ul class="real__specs-row">
+                            <li class="real__spec">
+                                <span class="real__spec__title">GIA:</span>
+                                <span class="real__spec__value" data-sarine-info="stoneProperties.GIA"></span>
                             </li>
-                            <li class="summary__spec">
-                                <span class="summary__spec__title">Sarine ID:</span>
-                                <span class="summary__spec__value" data-sarine-info="friendlyName"></span>
-                            </li>
-                        </ul>
-                        <ul class="summary__specs-row">
-                            <li class="summary__spec" data-popup-id="popup_color">
-                                <span class="summary__spec__title">Color:</span>
-                                <span class="summary__spec__value" data-sarine-info="stoneProperties.color"></span>
-                                <span class="q-mark q-mark--small"></span>
-                            </li>
-                            <li class="summary__spec" data-popup-id="popup_clarity">
-                                <span class="summary__spec__title">Clarity:</span>
-                                <span class="summary__spec__value" data-sarine-info="stoneProperties.clarity"></span>
-                                <span class="q-mark q-mark--small"></span>
-                            </li>
-                            <li class="summary__spec" data-popup-id="popup_cut">
-                                <span class="summary__spec__title">Cut:</span>
-                                <span class="summary__spec__value" data-sarine-info="stoneProperties.cutGrade"></span>
-                                <span class="q-mark q-mark--small"></span>
-                            </li>
-                            <li class="summary__spec" data-popup-id="popup_carat">
-                                <span class="summary__spec__title">Carat:</span>
-                                <span class="summary__spec__value" data-sarine-info="stoneProperties.carat"></span>
-                                <span class="q-mark q-mark--small"></span>
+                            <li class="real__spec">
+                                <span class="real__spec__title">Sarine ID:</span>
+                                <span class="real__spec__value" data-sarine-info="friendlyName"></span>
                             </li>
                         </ul>
-                    </div>
-                    <div class="summary__story-wrap">
-                        <h1 class="summary__heading">Explore This Diamond Story</h1>
-                        <ul class="summary__stories">
-                            <!-- run setting widget -->
+                        <ul class="real__specs-row">
+                            <li class="real__spec" data-popup-id="popup_color">
+                                <span class="real__spec__title">Color:</span>
+                                <span class="real__spec__value" data-sarine-info="stoneProperties.color"></span>
+                                <span class="q-mark q-mark--small"></span>
+                            </li>
+                            <li class="real__spec" data-popup-id="popup_clarity">
+                                <span class="real__spec__title">Clarity:</span>
+                                <span class="real__spec__value" data-sarine-info="stoneProperties.clarity"></span>
+                                <span class="q-mark q-mark--small"></span>
+                            </li>
+                            <li class="real__spec" data-popup-id="popup_cut">
+                                <span class="real__spec__title">Cut:</span>
+                                <span class="real__spec__value" data-sarine-info="stoneProperties.cutGrade"></span>
+                                <span class="q-mark q-mark--small"></span>
+                            </li>
+                            <li class="real__spec" data-popup-id="popup_carat">
+                                <span class="real__spec__title">Carat:</span>
+                                <span class="real__spec__value" data-sarine-info="stoneProperties.carat"></span>
+                                <span class="q-mark q-mark--small"></span>
+                            </li>
                         </ul>
-                    </div>
-                </div>
-            </li>
-
-            <li class="slide slide--light">
-                <h2 class="slide__heading" data-popup-id="popup_light">Light Performance Results <span class="q-mark"></span></h2>
-                <div class="slide__content">
-                    <div class="slide__img-wrap slide__img-wrap--light">
-                        <div class="slide__img slide__img--light">
-                            <sarine-viewer viewer="lightReportViewer" order="2"></sarine-viewer>
-                        </div>
-                        <div class="total-grade">
-                            <div class="total-grade__title">Total Grade</div>
-                            <div class="total-grade__grade" data-total-grade></div>
-                            <div class="total-grade__stars-wrap">
-                                <span class="total-grade__stars" data-total-grade-stars></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="specs">
-                    <div class="specs__row specs__row--line">
-                        <div class="specs__item specs__item--value">Exceptional</div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                    </div>
-                    <div class="specs__row specs__row--line">
-                        <div class="specs__item specs__item--value">Very High</div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                    </div>
-                    <div class="specs__row specs__row--line">
-                        <div class="specs__item specs__item--value">High</div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                    </div>
-                    <div class="specs__row specs__row--line">
-                        <div class="specs__item specs__item--value">Standard</div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                        <div class="specs__item"></div>
-                    </div>
-                    <div class="specs__row specs__row--line">
-                        <div class="specs__item specs__item--value">Minimum</div>
-                        <div class="specs__item specs__item--points-wrap">
-                            <div class="specs__points" data-light-grade="brilliance">
-                                <div class="specs__points-list">
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="specs__item specs__item--points-wrap">
-                            <div class="specs__points" data-light-grade="scintillation">
-                                <div class="specs__points-list">
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="specs__item specs__item--points-wrap">
-                            <div class="specs__points" data-light-grade="fire">
-                                <div class="specs__points-list">
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="specs__item specs__item--points-wrap">
-                            <div class="specs__points" data-light-grade="symmetry">
-                                <div class="specs__points-list">
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                    <div class="specs__point"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="specs__row specs__row--foot">
-                        <div class="specs__item specs__item--value"></div>
-                        <div class="specs__item specs__item--foot" data-popup-id="popup_brilliance">
-                            Brilliance <span class="q-mark q-mark--small"></span>
-                        </div>
-                        <div class="specs__item specs__item--foot" data-popup-id="popup_sparkle">
-                            Sparkle <span class="q-mark q-mark--small"></span>
-                        </div>
-                        <div class="specs__item specs__item--foot" data-popup-id="popup_fire">
-                            Fire <span class="q-mark q-mark--small"></span>
-                        </div>
-                        <div class="specs__item specs__item--foot" data-popup-id="popup_symmetry">
-                            Symmetry <span class="q-mark q-mark--small"></span>
-                        </div>
                     </div>
                 </div>
             </li>
 
             <li class="slide slide--loupe">
                 <h2 class="slide__heading" data-popup-id="popup_loupe">Sarine Loupe<span class="tm">TM</span> Imaging <span class="q-mark"></span></h2>
+
                 <div class="slide__content slide__content--loupe">
                     <div class="slide__img-wrap slide__img-wrap--loupe">
                         <div class="slide__img slide__img--loupe">
-                            <sarine-viewer viewer="loupeTopInspection" order="3"></sarine-viewer>
+                            <sarine-viewer viewer="loupeTopInspection" order="2"></sarine-viewer>
                         </div>
                     </div>
-                    <p class="slide__caption">
-                        Get to know the diamond as if you were holding it in your hand. View the diamond in precise virtual detail, and discover if it is the perfect choice for you.
-                    </p>
+                    <p class="slide__caption">Get to know the diamond as if you were holding it in your hand. View the diamond in precise virtual detail, and discover if it is the perfect choice for you.</p>
                 </div>
             </li>
 
-            <li class="slide slide--hna">
-                <h2 class="slide__heading">Hearts &amp; Arrows</h2>
-                <div class="slide__content">
-                    <div class="slide__img-wrap slide__img-wrap--hna">
-                        <div class="slide__img slide__img--hna">
-                            <sarine-viewer viewer="cutHeartsAndArrows" order="4"></sarine-viewer>
-                        </div>
-                        <div class="hna hna--hearts">
-                            <h3 class="hna__caption" data-popup-id="popup_hearts">Hearts <span class="q-mark q-mark"></span></h3>
-                        </div>
-                        <div class="hna hna--arrows">
-                            <h3 class="hna__caption" data-popup-id="popup_arrows">Arrows <span class="q-mark q-mark"></span></h3>
+            <li class="slide slide--loupeInscription">
+                <h2 class="slide__heading" data-popup-id="popup_loupeInscription">Sarine Loupe<span class="tm">TM</span> Inscription <span class="q-mark"></span></h2>
+                <div class="slide__content slide__content--loupeInscription">
+                    <div class="slide__img-wrap slide__img-wrap--loupeInscription">
+                        <div class="slide__img slide__img--loupeInscription">
+                            <sarine-viewer viewer="loupeInscription" order="3"></sarine-viewer>
                         </div>
                     </div>
-                    <p class="slide__caption">Hearts &amp; Arrows is a symmetrical optical pattern seen in round brilliant diamonds cut to the highest quality and precision.</p>
                 </div>
             </li>
 
-            <li class="slide slide--cut">
-                <h2 class="slide__heading" data-popup-id="popup_cut_n_sym">Cut and Symmetry Grading <span class="q-mark"></span></h2>
-                <div class="slide__content">
-                    <div class="slide__img-wrap slide__img-wrap--cut">
-                        <div class="slide__img slide__img--cut">
-                            <sarine-viewer viewer="cut2DView" order="5" version="v2"></sarine-viewer>
+            <li class="slide slide--loupe3d">
+                <h2 class="slide__heading" data-popup-id="popup_loupe3d">Sarine Loupe<span class="tm">TM</span> Imaging <span class="q-mark"></span></h2>
+                <div class="slide__content slide__content--loupe">
+                    <div class="slide__img-wrap slide__img-wrap--loupe">
+                        <div class="slide__img slide__img--loupe">
+                            <sarine-viewer viewer="loupe3DFullInspection" order="4"></sarine-viewer>
                         </div>
                     </div>
-                    <p class="slide__caption">
-                        View the diamond's geometrical measurements and angles to assess its proportions and symmetry.
-                    </p>
                 </div>
             </li>
-
         </ul>
         <button class="slider__btn slider__btn--previous" disabled="disabled">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="48px" viewBox="0 0 24 48">
@@ -249,7 +118,7 @@
         <a class="footer__disclaimer" href="https://s3.amazonaws.com/sarineplatform.com/web-sites/legal/js/LegalJsSDK/PDFViewer/PDFViewerJs.html?file=https://s3.amazonaws.com/sarineplatform.com/content/legal/Sarine%20Profile/Disclaimer/1_0f3cb78a12564b72973bfe71982c0434.pdf" target="_blank">Conditions</a>
         <a class="footer__powered" href="http://www.sarine.com" target="_blank">Powered by<img
                 class="footer__powered__logo"
-                src="./img/sarine-logo-small.png"
+                src="/img/sarine-logo-small.png"
                 height="16" width="32"></a>
     </div>
 
@@ -270,92 +139,14 @@
 
     <div class="popup-overlay" id="popup_overlay"></div>
 
-    <div class="popup-wrap" id="popup_light">
+    <div class="popup-wrap" id="popup_loupeInscription">
         <div class="popup">
             <button class="popup__close-btn"></button>
-            <h1 class="popup__heading">Light Performance Results</h1>
+            <h1 class="popup__heading">Sarine Loupe<span class="tm">Tm</span> Inscription</h1>
 
-            <p class="popup__caption">As light enters and exits a diamond, the rare allure of the unique gemstone is revealed. Light performance is the combined grading of the four light qualities that define the diamond's individual beauty: Brilliance, Sparkle, Fire and Light Symmetry.</p>
+            <p class="popup__caption">[TBD] Text</p>
 
-            <div class="popup__media popup__media--video">
-                <video class="popup__video" id="video_light"
-                       data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/loup.mp4"></video>
-                <button class="popup__thumbnail video-play" data-video-id="video_light">
-                    <img class="video-play__thumb"
-                         src="./img/light-thumbnail.jpg">
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="popup-wrap" id="popup_brilliance">
-        <div class="popup">
-            <button class="popup__close-btn"></button>
-            <h1 class="popup__heading">Brilliance</h1>
-
-            <p class="popup__caption">Brilliance is a measure of the intense white light that radiates from the stone. Brilliance is created by the diamond's unique cut, which determines how the light that enters the diamond is reflected back to the viewer.</p>
-
-            <div class="popup__media popup__media--video">
-                <video class="popup__video" id="video_brilliance"
-                       data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/brillinace.mp4"></video>
-                <button class="popup__thumbnail video-play" data-video-id="video_brilliance">
-                    <img class="video-play__thumb"
-                         src="./img/brilliance-thumbnail.jpg">
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="popup-wrap" id="popup_fire">
-        <div class="popup">
-            <button class="popup__close-btn"></button>
-            <h1 class="popup__heading">Fire</h1>
-
-            <p class="popup__caption">When light enters and exits the dense structure of the diamond, it refracts, or bends. This refraction radiates vivid flares of rainbow colors that are commonly described as the diamond's 'fire'. Diamonds with intense fire are appreciated for their fascinating play of color and beauty at different angles.</p>
-
-            <div class="popup__media popup__media--video">
-                <video class="popup__video" id="video_fire"
-                       data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/fire.mp4"></video>
-                <button class="popup__thumbnail video-play" data-video-id="video_fire">
-                    <img class="video-play__thumb"
-                         src="./img/fire-thumbnail.jpg">
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="popup-wrap" id="popup_sparkle">
-        <div class="popup">
-            <button class="popup__close-btn"></button>
-            <h1 class="popup__heading">Sparkle</h1>
-
-            <p class="popup__caption">As a diamond moves, the play of light inside the stone creates dramatic, luminous flashes that are ever changing in their beauty. The diamond's sparkle reflects the quality of the cut, a direct result of the skill and craftsmanship of the professional diamond cutter.</p>
-
-            <div class="popup__media popup__media--video">
-                <video class="popup__video" id="video_sparkle"
-                       data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/sparkle.mp4"></video>
-                <button class="popup__thumbnail video-play" data-video-id="video_sparkle">
-                    <img class="video-play__thumb"
-                         src="./img/sparkle-thumbnail.jpg">
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="popup-wrap" id="popup_symmetry">
-        <div class="popup">
-            <button class="popup__close-btn"></button>
-            <h1 class="popup__heading">Symmetry</h1>
-
-            <p class="popup__caption">Light symmetry is determined by the quality of a diamond's cut and the position of inclusions and blemishes, which may occur during the natural formation process. A well-cut diamond features optimal proportions for equal light distribution.</p>
-
-            <div class="popup__media popup__media--video">
-                <video class="popup__video" id="video_symmetry"
-                       data-src="//d3n02ovm6tlpii.cloudfront.net/content/media/symmetry.mp4"></video>
-                <button class="popup__thumbnail video-play" data-video-id="video_symmetry">
-                    <img class="video-play__thumb" src="./img/symmetry-thumbnail.jpg">
-                </button>
-            </div>
+            <div class="popup__media popup__media--blank"></div>
         </div>
     </div>
 
@@ -364,38 +155,20 @@
             <button class="popup__close-btn"></button>
             <h1 class="popup__heading">Sarine Loupe<span class="tm">Tm</span> Imaging</h1>
 
-            <p class="popup__caption">The Sarine Loupe provides advanced virtual imaging of the diamond's top view, based on its unique cut and clarity.  See an instant, accurate display of the diamond's actual appearance.</p>
+            <p class="popup__caption">The Sarine Loupe provides advanced virtual imaging of the diamond's top view, based on its unique cut and clarity. See an instant, accurate display of the diamond's actual appearance.</p>
 
             <div class="popup__media popup__media--blank"></div>
         </div>
     </div>
-
-    <div class="popup-wrap" id="popup_hearts">
+    
+    <div class="popup-wrap" id="popup_loupe3d">
         <div class="popup">
             <button class="popup__close-btn"></button>
-            <h1 class="popup__heading">Hearts</h1>
+            <h1 class="popup__heading">Sarine Loupe<span class="tm">Tm</span> Imaging</h1>
 
-            <p class="popup__caption">A distinctive circular hearts pattern is apparent from the bottom view of the diamond’s pavilion. Created by the play of light as it enters and exits the diamond, the hearts pattern indicates superior optical symmetry and a higher cut grade.</p>
-            <img class="popup__media" src="./img/popup-hearts.png">
-        </div>
-    </div>
+            <p class="popup__caption">The Sarine Loupe knits together thousands of individual images to present an accurate, instant picture of the diamond's cut and clarity. Intuitive 3D imaging allows you to explore the diamond at near microscopic level, for a superbly precise viewing experience.</p>
 
-    <div class="popup-wrap" id="popup_arrows">
-        <div class="popup">
-            <button class="popup__close-btn"></button>
-            <h1 class="popup__heading">Arrows</h1>
-
-            <p class="popup__caption">A distinctive circular arrows pattern is apparent from the top view of the diamond’s crown. Created by the play of light as it enters and exits the diamond, the arrows pattern indicates superior optical symmetry and a higher cut grade.</p>
-            <img class="popup__media" src="./img/popup-arrows.png">
-        </div>
-    </div>
-
-    <div class="popup-wrap popup-wrap--cut" id="popup_cut_n_sym">
-        <div class="popup popup--cut">
-            <button class="popup__close-btn"></button>
-            <h1 class="popup__heading">Cut and Symmetry Grading</h1>
-
-            <p class="popup__caption">Cut grade is determined by the quality of the diamond's craftsmanship. In the hands of the professional cutter, the rough stone is transformed into a polished diamond featuring optimal proportion, symmetry and light refraction. The cut is the diamond's unique signature, reflecting its individual character and beauty.</p>
+            <div class="popup__media popup__media--blank"></div>
         </div>
     </div>
 
@@ -431,11 +204,22 @@
             <button class="popup__close-btn"></button>
             <h1 class="popup__heading">Carat</h1>
 
-            <p class="popup__caption">Carat is the measure of a diamond’s mass or weight. For the past century, the carat unit has been set at a standard 200 milligrams. Diamonds are often measured in increments of 1/4 carat.</p>
+            <p class="popup__caption">Carat is the measure of a diamond’s mass or weight. For the past century, the carat
+                unit has been set at a standard 200 milligrams. Diamonds are often measured in increments of 1/4 carat.</p>
 
             <div class="popup__media popup__media--blank"></div>
         </div>
     </div>
 </div>
 
-<script type="text/javascript" src="app.bundle.min.js"></script>
+<!--dist scripts replace-->
+<script type="text/javascript" src="/js/vendor/fastclick.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/vendor/classie.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/vendor/WallopSlider.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/vendor/hammer.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/PopupService.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/videoPlay.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/BulletNavigation.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="/js/app.js" data-preserve-path="1"></script>
+<script type="text/javascript" src="widgetConfig.js"></script>
+<!--end dist scripts replace-->
