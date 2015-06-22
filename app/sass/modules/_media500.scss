@@ -21,16 +21,6 @@
 	        }
 	    }
 
-	    //real
-	//    .real__specs-row{
-	//        height:auto;
-	//    }
-	//    .real__spec{
-	//        margin: 9px 0;
-	//        padding: 0;
-	//        width: 45%;
-	//    }
-
 	    //slide hna
 	    .slide--hna .viewer.cutHeartsAndArrows canvas,
 	    .slide--hna .hna{
@@ -51,10 +41,11 @@
 	    //storyline
 	    .storyline{
 	        &__item{
-	            padding-left:3%;
-	            padding-right:3%;
+	            padding-left:1%;
+	            padding-right:1%;
 	            font-size:14px;
 	        }
+
 	        &.items-count-2{
 	            padding:0;
 	            &:before{

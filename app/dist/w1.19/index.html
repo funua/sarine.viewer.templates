@@ -1,3 +1,6 @@
+<!-- 
+   ! A dynamic widget for Loupe - v1.19.1 - Friday, June 19th, 2015, 3:31:52 PM
+-->
 <!-- HIDE CONTENT UNTIL MAIN.CSS IS LOADED -->
 <style type="text/css">
     [data-hidden-until-load] {
@@ -6,7 +9,7 @@
 </style>
 <!-- END -->
 
-<style>@import '../../css/main.min.css';</style>
+<link type="text/css" rel="stylesheet" href="./main.min.css" />
 
 <div class="slider-wrap w19 color-scheme-1" data-hidden-until-load>
     <div class="slider" style="display:none" id="slider">
@@ -118,7 +121,7 @@
         <a class="footer__disclaimer" href="https://s3.amazonaws.com/sarineplatform.com/web-sites/legal/js/LegalJsSDK/PDFViewer/PDFViewerJs.html?file=https://s3.amazonaws.com/sarineplatform.com/content/legal/Sarine%20Profile/Disclaimer/1_0f3cb78a12564b72973bfe71982c0434.pdf" target="_blank">Conditions</a>
         <a class="footer__powered" href="http://www.sarine.com" target="_blank">Powered by<img
                 class="footer__powered__logo"
-                src="/img/sarine-logo-small.png"
+                src="./img/sarine-logo-small.png"
                 height="16" width="32"></a>
     </div>
 
@@ -212,14 +215,4 @@
     </div>
 </div>
 
-<!--dist scripts replace-->
-<script type="text/javascript" src="/js/vendor/fastclick.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/vendor/classie.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/vendor/WallopSlider.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/vendor/hammer.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/PopupService.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/videoPlay.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/BulletNavigation.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="/js/app.js" data-preserve-path="1"></script>
-<script type="text/javascript" src="widgetConfig.js"></script>
-<!--end dist scripts replace-->
+<script type="text/javascript" src="app.bundle.min.js"></script>

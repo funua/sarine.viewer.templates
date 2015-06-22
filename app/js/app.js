@@ -221,13 +221,16 @@
         
         function markPagesForNullViewers() {
             console.log(' == markPagesForNullViewers()');
+
             iterateConfigPages(function (page) {
                 var currentSlide = $('ul.slider__list').find('.slide--' + page.code),
                     currentViewer = currentSlide.find('.viewer'),
                     currentViewerName = '';
                 if (!currentViewer.length) return;
+
                 currentViewerName = currentViewer.attr('class').replace('viewer ', '');
-                if (!stone.viewers[currentViewerName]) {
+
+                if (!document.viewersList[currentViewerName]) {
                     console.log('Skip ', currentViewerName);
                     page.skip = true;
                 }
@@ -341,13 +344,24 @@
         if (wConfig.autoDisableSlides) {
             $(document).on('loadTemplate', function () {
                 // Finished loading and initializing viewers
-                
+
                 // For debug only. Disable this on production
-                stone.viewers.loupe3DFullInspection = null;
-                stone.viewers.lightReportViewer = null;
+//                stone.viewers.loupe3DFullInspection = null;
+//                stone.viewers.lightReportViewer = null;
 //                stone.viewers.loupeRealView = null;
-                
-                markPagesForNullViewers();
+
+                var obj = document.viewersList;
+                //var obj = stones[0].viewers;
+
+                //console.log(obj);
+
+                for (var key in obj){
+                    if(obj[key] == null){
+                        markPagesForNullViewers();
+                    }
+                }
+
+                //markPagesForNullViewers();
                 main();
                 onViewersReady();
             });
