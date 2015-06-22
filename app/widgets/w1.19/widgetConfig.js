@@ -1,6 +1,6 @@
 var widgetConfig = {
     title: 'Diamond Story',
-//    widget_brief_code: 'w5',
+    widget_brief_code: 'w19',
 //    color_scheme: 'color-scheme-1',
     autoDisableSlides: true,
     pages: [

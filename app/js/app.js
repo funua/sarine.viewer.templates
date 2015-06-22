@@ -42,7 +42,7 @@
         
         
         function main() {
-            console.log(' == main()');
+//            console.log(' == main()');
             
             openPopupTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-popup-id]'), 0);
             closePopupTriggers = Array.prototype.slice.call(document.querySelectorAll('.popup__close-btn'), 0);
@@ -107,7 +107,7 @@
 
             if (totalViewers > 0) {
                 $(document).on("first_init_end", function (event, data) {
-                    console.log('first_init_end ->', data.Id);
+//                    console.log('first_init_end ->', data.Id);
                     totalViewers--;
                     if (totalViewers <= 0) {
                         onViewersReady();
@@ -202,7 +202,7 @@
             
 
         function onViewersReady() {
-            console.log(' == onViewersReady()');
+//            console.log(' == onViewersReady()');
             sarineInfos.forEach(function (element) {
                 var field = element.getAttribute('data-sarine-info'),
                     value = recurse(stone, field.split('.'));
@@ -220,7 +220,7 @@
         
         
         function markPagesForNullViewers() {
-            console.log(' == markPagesForNullViewers()');
+//            console.log(' == markPagesForNullViewers()');
 
             iterateConfigPages(function (page) {
                 var currentSlide = $('ul.slider__list').find('.slide--' + page.code),
@@ -231,7 +231,7 @@
                 currentViewerName = currentViewer.attr('class').replace('viewer ', '');
 
                 if (!document.viewersList[currentViewerName]) {
-                    console.log('Skip ', currentViewerName);
+//                    console.log('Skip ', currentViewerName);
                     page.skip = true;
                 }
             });
@@ -261,7 +261,7 @@
                 },
                 activeSlidesCount;
                 
-            console.log(' == readConfig()');
+//            console.log(' == readConfig()');
 
             // Substitute fields from config
             $('[data-widgetconfig-value]').each(function (i, elem) {
@@ -344,26 +344,9 @@
         if (wConfig.autoDisableSlides) {
             $(document).on('loadTemplate', function () {
                 // Finished loading and initializing viewers
-
-                // For debug only. Disable this on production
-//                stone.viewers.loupe3DFullInspection = null;
-//                stone.viewers.lightReportViewer = null;
-//                stone.viewers.loupeRealView = null;
-
-                var obj = document.viewersList;
-                //var obj = stones[0].viewers;
-
-                //console.log(obj);
-
-                for (var key in obj){
-                    if(obj[key] == null){
-                        markPagesForNullViewers();
-                    }
-                }
-
-                //markPagesForNullViewers();
+                markPagesForNullViewers();
                 main();
-                onViewersReady();
+                onViewersReady();       // In case of some viewers are null
             });
         } else {
             main();
