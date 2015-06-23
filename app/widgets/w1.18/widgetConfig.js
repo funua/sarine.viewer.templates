@@ -11,7 +11,7 @@ var widgetConfig = {
         },
         {
             title: 'Inscription',
-            code: 'loupeinscription'
+            code: 'loupeInscription'
         }
     ]
 };
