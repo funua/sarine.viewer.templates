@@ -50,6 +50,7 @@
             defer = $.Deferred();
             arrDefer = [];
             _t = this;
+            document.viewersList = JSON.parse(JSON.stringify(stones[0].viewers));
             $(selector).find(fromTag).each((function (_this) {
                 return function (i, v) {
                     var active, coordinates, menu, order, toElement, type;
