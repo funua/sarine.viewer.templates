@@ -2,7 +2,6 @@ var widgetConfig = {
     title: 'Diamond Story',
     widget_brief_code: 'w3',
     color_scheme: 'color-scheme-1',
-    autoDisableSlides: true,
     pages: [
         {
             title:  'Summary',
