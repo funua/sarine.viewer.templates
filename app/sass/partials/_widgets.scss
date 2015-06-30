@@ -45,7 +45,7 @@
 	}
 }
 
-.w4, .w5, .w16, .w19{
+.w4, .w5, .w16, .w19, .w22{
 	.slider--real .storyline:before{
 		background-color: #bbb;
 	}
@@ -267,4 +267,13 @@
 	.footer{
 		padding: 0 20px;
 	}
+}
+.w22{
+	.slider__list{
+		height:100%;
+		.slide{
+			height:100%;
+		}
+	}
+
 }

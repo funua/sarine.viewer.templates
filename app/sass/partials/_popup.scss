@@ -19,7 +19,7 @@ $popup-skew-angle: 9deg;
 .popup-wrap {
 	z-index: 5;
 	position: absolute;
-	display: block;
+	display: none;
 	left: 0;
 	bottom: 0;
 	width: 100%;
@@ -44,7 +44,7 @@ $popup-skew-angle: 9deg;
 		@include background-image(linear-gradient(to bottom, #001A4D 0, #000 200px, #000 100%));
 		@include transform-origin(0, 100%);
 		@include transform(skewY(9deg));
-		@include backface-visibility(hidden);
+		// @include backface-visibility(hidden);
 		@include transform-style(preserve-3d);
 	}
 
@@ -71,7 +71,7 @@ $popup-skew-angle: 9deg;
 	position: relative;
 	height: 100%;
 	padding: 80px 54px 36px;
-	@include backface-visibility(hidden);
+	// @include backface-visibility(hidden);
 
 	&--cut {
 		padding-bottom: 186px;

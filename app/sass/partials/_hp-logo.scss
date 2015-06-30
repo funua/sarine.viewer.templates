@@ -1,0 +1,83 @@
+.hp-logo {
+	.slide:after{
+		content:"";
+		position:absolute;
+		width:128px;
+		height:40px;
+		background:url("../../img/HP.logo.png") 0 0 no-repeat;
+		background-size: cover;
+	}
+	&--top .slide:after{
+		top:-1px;
+	}
+	&--left .slide:after{
+		left:5px;
+	}
+
+	&--bottom .slide:after{
+		bottom:-11px;
+    }
+	&--center .slide:after{
+		left:50%;
+		margin-left:-64px;
+    }
+}
+
+.hp-logo .slide{
+	&.slide--show-next:after{
+		@include animation(logoFromRight 0.5s 310ms ease backwards);
+	}
+
+	&.slide--show-previous:after{
+		@include animation(logoFromLeft 0.5s 310ms ease backwards);
+	}
+}
+
+
+.hp-logo .slide--summary:after{
+	@include animation(logoFromRight 0.5s 1.2s ease backwards);
+}
+
+
+@include keyframes(logoFromRight) {
+	 0% {
+		 opacity: 0;
+		 @include transform(translate3d(600px, 0, 0));
+	 }
+	 100% {
+		 opacity:1;
+		 @include transform(translate3d(0, 0, 0));
+	 }
+ }
+
+@include keyframes(logoFromLeft) {
+	0% {
+		opacity: 0;
+		@include transform(translate3d(-600px, 0, 0));
+	}
+	100% {
+		opacity:1;
+		@include transform(translate3d(0, 0, 0));
+	}
+}
+
+@media screen and (max-width:500px){
+	.hp-logo {
+		.slide:after{
+			width:64px;
+			height:20px;
+		}
+		&--top .slide:after{
+			top:-18px;
+		}
+		&--left .slide:after{
+			left:5px;
+		}
+		&--bottom .slide:after{
+			bottom:-6px;
+		}
+		&--center .slide:after{
+			margin-left:-34px;
+		}
+	}
+}

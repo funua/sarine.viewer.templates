@@ -1,8 +1,8 @@
 $scheme1-color1: #04218a;
 $scheme1-color2: #3d54a8;
 
-$scheme2-color1: #660066;
-$scheme2-color2: #832183;
+$scheme2-color1: #5A336C;
+//$scheme2-color2: #832183;
 
 $scheme3-color1: #000000;
 $scheme3-color2: #000000;
@@ -147,7 +147,7 @@ $scheme3-color2: #000000;
     &-2 .specs__point{
         @for $i-index from 1 through 5 {
 	        &:nth-child(#{$i-index}):before {
-		        background-color: lighten($scheme2-color2, (($i-index - 1) / 4) * 35%);
+		        background-color: lighten($scheme2-color1, (($i-index - 1) / 4) * 35%);
 	        }
         }
     }

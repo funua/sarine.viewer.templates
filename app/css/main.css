@@ -607,23 +607,23 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 }
 /* line 102, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .preloader__heading {
-  color: #660066;
+  color: #5A336C;
 }
 /* line 106, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .preloader__dot {
-  background-color: #660066;
+  background-color: #5A336C;
 }
 /* line 110, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .q-mark {
-  color: #660066;
+  color: #5A336C;
 }
 /* line 114, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .q-mark--small {
-  color: #660066;
+  color: #5A336C;
 }
 /* line 118, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .summary__story {
-  color: #660066;
+  color: #5A336C;
 }
 /* line 121, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .summary__story:before {
@@ -631,47 +631,47 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 }
 /* line 127, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .storyline__item--active:before {
-  background-color: #660066;
+  background-color: #5A336C;
 }
 /* line 131, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .storyline__item:hover:before {
-  background-color: #cc00cc;
+  background-color: #9356af;
 }
 /* line 135, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .total-grade__grade {
-  color: #660066;
+  color: #5A336C;
 }
 /* line 139, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .total-grade__stars {
-  color: #660066;
+  color: #5A336C;
 }
 /* line 143, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__item--foot {
-  color: #660066;
+  color: #5A336C;
 }
 /* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(1):before {
-  background-color: #832183;
+  background-color: #5a336c;
 }
 /* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(2):before {
-  background-color: #a72aa7;
+  background-color: #73418a;
 }
 /* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(3):before {
-  background-color: #ca33ca;
+  background-color: #8d50a9;
 }
 /* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(4):before {
-  background-color: #d456d4;
+  background-color: #a16cb9;
 }
 /* line 149, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 .specs__point:nth-child(5):before {
-  background-color: #dd79dd;
+  background-color: #b48ac8;
 }
 /* line 155, ../sass/modules/_color-scheme.scss */
 .color-scheme-2 h3 {
-  color: #660066;
+  color: #5A336C;
 }
 /* line 161, ../sass/modules/_color-scheme.scss */
 .color-scheme-3 .preloader__heading {
@@ -1193,7 +1193,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .popup-wrap {
   z-index: 5;
   position: absolute;
-  display: block;
+  display: none;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -1229,9 +1229,6 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   -ms-transform: skewY(9deg);
   -webkit-transform: skewY(9deg);
   transform: skewY(9deg);
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -1263,9 +1260,6 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   position: relative;
   height: 100%;
   padding: 80px 54px 36px;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 /* line 76, ../sass/partials/_popup.scss */
 .popup--cut {
@@ -2649,11 +2643,11 @@ html.firefox .q-mark:before {
 }
 
 /* line 49, ../sass/partials/_widgets.scss */
-.w4 .slider--real .storyline:before, .w5 .slider--real .storyline:before, .w16 .slider--real .storyline:before, .w19 .slider--real .storyline:before {
+.w4 .slider--real .storyline:before, .w5 .slider--real .storyline:before, .w16 .slider--real .storyline:before, .w19 .slider--real .storyline:before, .w22 .slider--real .storyline:before {
   background-color: #bbb;
 }
 /* line 52, ../sass/partials/_widgets.scss */
-.w4 .slider--real .storyline__item:not(.storyline__item--active):before, .w5 .slider--real .storyline__item:not(.storyline__item--active):before, .w16 .slider--real .storyline__item:not(.storyline__item--active):before, .w19 .slider--real .storyline__item:not(.storyline__item--active):before {
+.w4 .slider--real .storyline__item:not(.storyline__item--active):before, .w5 .slider--real .storyline__item:not(.storyline__item--active):before, .w16 .slider--real .storyline__item:not(.storyline__item--active):before, .w19 .slider--real .storyline__item:not(.storyline__item--active):before, .w22 .slider--real .storyline__item:not(.storyline__item--active):before {
   background-color: #bbb;
 }
 
@@ -2889,6 +2883,165 @@ html.firefox .q-mark:before {
   padding: 0 20px;
 }
 
+/* line 272, ../sass/partials/_widgets.scss */
+.w22 .slider__list {
+  height: 100%;
+}
+/* line 274, ../sass/partials/_widgets.scss */
+.w22 .slider__list .slide {
+  height: 100%;
+}
+
+/* line 2, ../sass/partials/_hp-logo.scss */
+.hp-logo .slide:after {
+  content: "";
+  position: absolute;
+  width: 128px;
+  height: 40px;
+  background: url("../../img/HP.logo.png") 0 0 no-repeat;
+  background-size: cover;
+}
+/* line 10, ../sass/partials/_hp-logo.scss */
+.hp-logo--top .slide:after {
+  top: -1px;
+}
+/* line 13, ../sass/partials/_hp-logo.scss */
+.hp-logo--left .slide:after {
+  left: 5px;
+}
+/* line 17, ../sass/partials/_hp-logo.scss */
+.hp-logo--bottom .slide:after {
+  bottom: -11px;
+}
+/* line 20, ../sass/partials/_hp-logo.scss */
+.hp-logo--center .slide:after {
+  left: 50%;
+  margin-left: -64px;
+}
+
+/* line 27, ../sass/partials/_hp-logo.scss */
+.hp-logo .slide.slide--show-next:after {
+  -moz-animation: logoFromRight 0.5s 310ms ease backwards;
+  -webkit-animation: logoFromRight 0.5s 310ms ease backwards;
+  animation: logoFromRight 0.5s 310ms ease backwards;
+}
+/* line 31, ../sass/partials/_hp-logo.scss */
+.hp-logo .slide.slide--show-previous:after {
+  -moz-animation: logoFromLeft 0.5s 310ms ease backwards;
+  -webkit-animation: logoFromLeft 0.5s 310ms ease backwards;
+  animation: logoFromLeft 0.5s 310ms ease backwards;
+}
+
+/* line 37, ../sass/partials/_hp-logo.scss */
+.hp-logo .slide--summary:after {
+  -moz-animation: logoFromRight 0.5s 1.2s ease backwards;
+  -webkit-animation: logoFromRight 0.5s 1.2s ease backwards;
+  animation: logoFromRight 0.5s 1.2s ease backwards;
+}
+
+@-moz-keyframes logoFromRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(600px, 0, 0);
+    transform: translate3d(600px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes logoFromRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(600px, 0, 0);
+    transform: translate3d(600px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes logoFromRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(600px, 0, 0);
+    -ms-transform: translate3d(600px, 0, 0);
+    -webkit-transform: translate3d(600px, 0, 0);
+    transform: translate3d(600px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-moz-keyframes logoFromLeft {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(-600px, 0, 0);
+    transform: translate3d(-600px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes logoFromLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-600px, 0, 0);
+    transform: translate3d(-600px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes logoFromLeft {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(-600px, 0, 0);
+    -ms-transform: translate3d(-600px, 0, 0);
+    -webkit-transform: translate3d(-600px, 0, 0);
+    transform: translate3d(-600px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 66, ../sass/partials/_hp-logo.scss */
+  .hp-logo .slide:after {
+    width: 64px;
+    height: 20px;
+  }
+  /* line 70, ../sass/partials/_hp-logo.scss */
+  .hp-logo--top .slide:after {
+    top: -18px;
+  }
+  /* line 73, ../sass/partials/_hp-logo.scss */
+  .hp-logo--left .slide:after {
+    left: 5px;
+  }
+  /* line 76, ../sass/partials/_hp-logo.scss */
+  .hp-logo--bottom .slide:after {
+    bottom: -6px;
+  }
+  /* line 79, ../sass/partials/_hp-logo.scss */
+  .hp-logo--center .slide:after {
+    margin-left: -34px;
+  }
+}
 @media screen and (max-width: 500px) {
   /* line 7, ../sass/modules/_media500.scss */
   html:not(.msie) .slider-wrap {
