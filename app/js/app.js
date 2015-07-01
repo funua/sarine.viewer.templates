@@ -260,7 +260,8 @@
                     aSlider: $('#slider')
                 },
                 activeSlidesCount;
-                
+            
+            // TODO: remove this.
 //            console.log(' == readConfig()');
 
             // Substitute fields from config
