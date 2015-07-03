@@ -1,0 +1,8 @@
+{
+    "pages": [
+        {"viewer": "loupeInscription"},
+        {"viewer": "loupeRealView"},
+        {"viewer": "loupeTopInspection"},
+        {"viewer": "loupe3DFullInspection"}
+    ]
+}

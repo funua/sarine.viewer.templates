@@ -240,18 +240,37 @@ module.exports = function (grunt) {
                 }
             }
         },
+        
+        coffee: {
+            glob_to_multiple: {
+                expand: true,
+                flatten: false,
+                src: ['app/**/*.coffee'],
+                ext: '.js'
+            }
+        },
 
         watch: {
             options: {
                 livereload: true
             },
-            files: ['app/**/*'],
+            files: [
+                'app/**/*',
+                '!app/**/*.coffee'
+            ],
             sass: {
                 options: {
                     livereload: false
                 },
                 files: 'app/sass/**/*.scss',
                 tasks: ['compass:dev', 'cssmin']
+            },
+            myCoffee: {
+                options: {
+                    livereload: false
+                },
+                files: '**/*.coffee',
+                tasks: 'coffee'
             }
         }
     },

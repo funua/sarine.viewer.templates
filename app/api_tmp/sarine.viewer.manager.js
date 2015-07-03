@@ -130,7 +130,7 @@
                                     v.src = v.src.replace(getPath(location.origin + location.pathname), getPath(template));
                                 }
                                 
-//                                v.src = v.src.replace(getPath(location.origin + location.pathname), getPath(template));
+                                v.src = v.src.replace(getPath(location.origin + location.pathname), getPath(template));
                                 $.getScript(v.src, function () {
                                     deferArr.pop();
                                     if (deferArr.length === 0) {
