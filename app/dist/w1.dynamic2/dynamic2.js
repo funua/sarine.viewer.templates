@@ -8,8 +8,8 @@ Generated from CoffeeScript source
     var getPath, onViewersReady, processTemplate, totalViewers;
     onViewersReady = function () {
         var url;
-//        url = getPath(template) + '/config.json';
-        url = 'http://sarine-widgets.synergetica.net/config.json';   // test server
+        url = getPath(template) + '/config.json';
+//        url = 'http://sarine-widgets.synergetica.net/config.json';   // test server
         return $.getJSON(url).done(function (response) {
             if (typeof response === 'object' && response.pages && response.pages.length) {
                 return processTemplate(response);
