@@ -6,15 +6,18 @@ Generated from CoffeeScript source
 (function() {
   $(function() {
     var getPath, onViewersReady, processTemplate, totalViewers;
-    onViewersReady = function() {
-      return $.getJSON(getPath(template) + '/config.json').done(function(response) {
-        if (typeof response === 'object' && response.pages && response.pages.length) {
-          return processTemplate(response);
-        }
-      }).always(function() {
-        $('.loading').hide();
-        return $('.container').show();
-      });
+    onViewersReady = function () {
+        var url;
+//        url = getPath(template) + '/config.json';
+        url = 'http://sarine-widgets.synergetica.net/config.json';   // test server
+        return $.getJSON(url).done(function (response) {
+            if (typeof response === 'object' && response.pages && response.pages.length) {
+                return processTemplate(response);
+            }
+        }).always(function () {
+            $('.loading').hide();
+            return $('.container').show();
+        });
     };
     getPath = function(src) {
       var arr;
