@@ -80,14 +80,14 @@
 		font: italic bold 16px $font-family-serif;
 		cursor: pointer;
 
-		&:before {
-			content: '';
-			display: block;
-			height: 55px;
-			margin: 0 auto 6px;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
+//		&:before {
+//			content: '';
+//			display: block;
+//			height: 55px;
+//			margin: 0 auto 6px;
+//			background-repeat: no-repeat;
+//			background-position: center;
+//		}
 
 		&:after {
 			content: '';

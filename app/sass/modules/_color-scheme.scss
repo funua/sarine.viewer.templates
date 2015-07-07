@@ -7,34 +7,34 @@ $scheme2-color1: #5A336C;
 $scheme3-color1: #000000;
 $scheme3-color2: #000000;
 
-.slider{
-
-	.summary__story--light:before{
-		background-position: 0 6px;
-		width: 43px;
-	}
-
-	.summary__story--loupe:before{
-		background-position: -50px 5px;
-		width: 47px;
-	}
-
-	.summary__story--loupe3d:before{
-		background-position: -50px 5px;
-		width: 47px;
-	}
-
-	.summary__story--hna:before{
-		background-position: -100px 4px;
-		width: 36px;
-	}
-
-	.summary__story--cut:before{
-		background-position: -150px 13px;
-		width: 41px;
-	}
-
-}
+//.slider{
+//
+//	.summary__story--light:before{
+//		background-position: 0 6px;
+//		width: 43px;
+//	}
+//
+//	.summary__story--loupe:before{
+//		background-position: -50px 5px;
+//		width: 47px;
+//	}
+//
+//	.summary__story--loupe3d:before{
+//		background-position: -50px 5px;
+//		width: 47px;
+//	}
+//
+//	.summary__story--hna:before{
+//		background-position: -100px 4px;
+//		width: 36px;
+//	}
+//
+//	.summary__story--cut:before{
+//		background-position: -150px 13px;
+//		width: 41px;
+//	}
+//
+//}
 
 .color-scheme{
 
@@ -59,8 +59,9 @@ $scheme3-color2: #000000;
     &-1 .summary__story{
         color:$scheme1-color1;
 
-        &:before{
-            background-image: url("../../img/summary-color-1.png");
+        svg *{
+	        stroke:$scheme1-color1;
+//            background-image: url("../../img/summary-color-1.png");
         }
 
     }
@@ -211,5 +212,22 @@ $scheme3-color2: #000000;
 	}
 	.color-scheme-1 .storyline__item--active:hover:before {
 		background-color: $scheme1-color1 !important;
+	}
+}
+
+
+
+
+.brand-img svg{
+	width:50px;
+	height:50px;
+	display:block;
+	margin:0 auto 6px;
+
+	*{
+		fill:none;
+		stroke:inherit;
+		stroke-linecap:round;
+		stroke-miterlimit:10;
 	}
 }
