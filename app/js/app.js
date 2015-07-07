@@ -345,7 +345,6 @@
                 $(".brand-color, .brand-color li").css("color",wConfig.brandColor);
                 $(".brand-bg").css("background",wConfig.brandColor);
                 $(".brand-img *").css("stroke",wConfig.brandColor);
-
             }
 
             if(wConfig.summaryLabel){
@@ -353,7 +352,7 @@
                     "color":wConfig.summaryLabel.color,
                     "font-size":wConfig.summaryLabel.size,
                     "font-family":wConfig.summaryLabel.font
-                })
+                });
             }
 
             if(wConfig.summaryValue){
@@ -361,7 +360,7 @@
                     "color":wConfig.summaryValue.color,
                     "font-size":wConfig.summaryValue.size,
                     "font-family":wConfig.summaryValue.font
-                })
+                });
             }
 
             if(wConfig.summaryNav){
@@ -370,7 +369,7 @@
                     "font-size":wConfig.summaryNav.size,
                     "font-family":wConfig.summaryNav.font
                 });
-                $(".summary__story svg *").css("stroke",wConfig.summaryNav.color)
+                $(".summary__story svg *").css("stroke",wConfig.summaryNav.color);
             }
 
             if(wConfig.conditions){
@@ -378,7 +377,7 @@
                     "color":wConfig.conditions.color,
                     "font-size":wConfig.conditions.size,
                     "font-family":wConfig.conditions.font
-                })
+                });
             }
 
             if(wConfig.poweredBy){
@@ -386,16 +385,23 @@
                     "color":wConfig.poweredBy.color,
                     "font-size":wConfig.poweredBy.size,
                     "font-family":wConfig.poweredBy.font
-                })
+                });
             }
         }
         
         function setText() {
-            var e = $('[data-text]');
-
-            $(e).text($(e).data());
-
-            console.log($(e).val());
+            var attrName = 'data-text';
+            
+            $('[' + attrName + ']').each(function () {
+                var $el = $(this),
+                    valueFromConfig = '';
+                try {
+                    valueFromConfig = recurse( window.dynamicText, $el.attr(attrName).split('.') );
+                } catch (e) {
+                    console.log(e);
+                }
+                $el.html(valueFromConfig);
+            });
         }
         
         if (wConfig.autoDisableSlides) {
