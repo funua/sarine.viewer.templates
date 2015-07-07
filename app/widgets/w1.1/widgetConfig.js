@@ -1,7 +1,5 @@
 var widgetConfig = {
     title: 'Diamond Story',
-//    widget_brief_code: 'w1',
-//    color_scheme: 'color-scheme-1',
     pages: [
         {
             title:  'Summary',
@@ -24,15 +22,15 @@ var widgetConfig = {
             code:   'cut'
         }
     ],
-    brandColor: "#ff00ff",
+    brandColor: "orange",
     summaryLabel: {
         font: "Arial",
-        size: "10px",
-        color: "blue"
+        size: "15px",
+        color: "red"
     },
     summaryValue: {
         font: "Times New Roman",
-        size: "12px",
+        size: "18px",
         color: "green"
     },
     summaryNav: {
@@ -42,12 +40,12 @@ var widgetConfig = {
     },
     conditions: {
         font: "Tahoma",
-        size: "10px",
+        size: "14px",
         color: "darkblue"
     },
     poweredBy: {
         font: "Tahoma",
-        size: "10px",
-        color: "darkblue"
+        size: "18px",
+        color: "blue"
     }
 };

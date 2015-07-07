@@ -24,9 +24,8 @@
             playTriggers,
             canvases,
             swipeRecognizer,
-            wConfig = window.widgetConfig,
-            dText = window.dynamicText;
-
+            dText = window.dynamicText,
+            wConfig = window.widgetConfig;
         
         if ($('.slider__header')[0]) {
             $('.slider__header')[0].setVisibility = function (setVisible) {
@@ -52,12 +51,9 @@
             totalViewers = $('.viewer').length;
             playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0);
             canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0);
-            
-            
+
             readConfig();
-            readText();
-            
-//            console.log('Slides count ->', $('.slide').length);
+            setText();
             
             slider = new WallopSlider(document.querySelector('.slider'), {
                 btnPreviousClass: 'slider__btn--previous',
@@ -165,6 +161,7 @@
             playTriggers.forEach(function (element) {
                 videoPlay.initButton(element);
             });
+
         }
 
 
@@ -345,7 +342,7 @@
 
 
             if(wConfig.brandColor){
-                $(".brand-color").css("color",wConfig.brandColor);
+                $(".brand-color, .brand-color li").css("color",wConfig.brandColor);
                 $(".brand-bg").css("background",wConfig.brandColor);
                 $(".brand-img *").css("stroke",wConfig.brandColor);
 
@@ -393,7 +390,13 @@
             }
         }
         
-        
+        function setText() {
+            var e = $('[data-text]');
+
+            $(e).text($(e).data());
+
+            console.log($(e).val());
+        }
         
         if (wConfig.autoDisableSlides) {
             $(document).on('loadTemplate', function () {
@@ -408,12 +411,7 @@
 
 
 
-        //add text from text.js
-        function readText(){
-//            $('[data-text]').each(function (i, elm) {
-//                var value = $(elm).attr('data-text');
-//            });
-        };
+
 
     });
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
