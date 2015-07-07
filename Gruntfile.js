@@ -31,7 +31,7 @@ module.exports = function (grunt) {
             },
             dist_assets1: {
                 flatten: true,
-                src: ['tmp/app.bundle.min.js', 'app/css/main.min.css'],
+                src: ['tmp/app.bundle.min.js', 'app/css/main.min.css', 'app/widgets/<%= project.widgetName %>/widgetConfig.js'],
                 dest: '<%= project.fsTargetDir %>/',
                 expand: true
             },

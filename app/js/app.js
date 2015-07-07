@@ -47,7 +47,7 @@
             
             openPopupTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-popup-id]'), 0);
             closePopupTriggers = Array.prototype.slice.call(document.querySelectorAll('.popup__close-btn'), 0);
-            sarineInfos = Array.prototype.slice.call(document.querySelectorAll('[data-sarine-info]'), 0);
+            sarineInfos = Array.prototype.slice.call(document.querySelectorAll('[pages]'), 0);
             lightGrades = Array.prototype.slice.call(document.querySelectorAll('[data-light-grade]'), 0);
             totalViewers = $('.viewer').length;
             playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0);
@@ -410,29 +410,10 @@
 
         //add text from text.js
         function readText(){
-
-            //console.log(wConfig);
-            //console.log(dText);
-
-            $('[data-text]').each(function (i, elm) {
-                var value = $(elm).attr('data-text');
-
-                console.log(value);
-                console.log(dText.slide.summary.title)
-
-                //if (text[value]) {
-                    //$(elem).html(text[value]);
-                //}
-            });
+//            $('[data-text]').each(function (i, elm) {
+//                var value = $(elm).attr('data-text');
+//            });
         };
-
-
-//        $('[data-widgetconfig-value]').each(function (i, elem) {
-//            var value = $(elem).attr('data-widgetconfig-value');
-//            if (wConfig[value]) {
-//                $(elem).html(wConfig[value]);
-//            }
-//        });
 
     });
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
