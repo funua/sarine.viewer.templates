@@ -133,7 +133,7 @@ module.exports = function (grunt) {
                             match: /src="[.\/]+img\//g,
                             replacement: 'src="<%= project.codeWidgetPath %>img/'
                         }, {
-                            match: /src="\/js\/text\.js"/,
+                            match: /src="\/dist\/common\/text\.js"/,
                             replacement: 'src="http://dev.sarineplatform.com.s3.amazonaws.com/qa4/content/viewers/templates/common/text.js"'
                         }
                     ]
