@@ -1578,31 +1578,32 @@ html.firefox .q-mark:before {
 /* line 45, ../sass/partials/slides/_summary.scss */
 .summary__spec__title {
   color: #818181;
+  padding-right: 4px;
 }
-/* line 49, ../sass/partials/slides/_summary.scss */
+/* line 50, ../sass/partials/slides/_summary.scss */
 .summary__spec__value {
   font-weight: 600;
 }
-/* line 52, ../sass/partials/slides/_summary.scss */
+/* line 53, ../sass/partials/slides/_summary.scss */
 .summary__spec .q-mark--small {
   vertical-align: top;
   top: 1px;
 }
-/* line 58, ../sass/partials/slides/_summary.scss */
+/* line 59, ../sass/partials/slides/_summary.scss */
 .summary__story-wrap {
   padding-top: 60px;
 }
-/* line 62, ../sass/partials/slides/_summary.scss */
+/* line 63, ../sass/partials/slides/_summary.scss */
 .summary__heading {
   font-size: 24px;
   margin-bottom: 20px;
 }
-/* line 67, ../sass/partials/slides/_summary.scss */
+/* line 68, ../sass/partials/slides/_summary.scss */
 .summary__stories {
   height: 96px;
   text-align: center;
 }
-/* line 72, ../sass/partials/slides/_summary.scss */
+/* line 73, ../sass/partials/slides/_summary.scss */
 .summary__story {
   position: relative;
   display: inline-block;
@@ -1613,7 +1614,7 @@ html.firefox .q-mark:before {
   font: italic bold 16px "Utopia Std", "Georgia", serif;
   cursor: pointer;
 }
-/* line 92, ../sass/partials/slides/_summary.scss */
+/* line 93, ../sass/partials/slides/_summary.scss */
 .summary__story:after {
   content: '';
   position: absolute;
@@ -1623,7 +1624,7 @@ html.firefox .q-mark:before {
   width: 1px;
   background-color: #d8d3d6;
 }
-/* line 102, ../sass/partials/slides/_summary.scss */
+/* line 103, ../sass/partials/slides/_summary.scss */
 .summary__story:last-child:after {
   display: none;
 }

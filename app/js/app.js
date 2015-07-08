@@ -407,8 +407,8 @@
                     aRow.forEach(function (anItem) {
                         var specItem = $('<li class="summary__spec"/>').appendTo(rowContainer);
                         specItem
-                                .append( $('<span class="summary__spec__title"/>').attr('data-text', anItem.text) )
-                                .append( $('<span class="summary__spec__value"/>').attr('data-sarine-info', anItem.sarineInfoField) );
+                                .append( $('<span class="summary__spec__title config-color"/>').attr('data-text', anItem.text) )
+                                .append( $('<span class="summary__spec__value config-color"/>').attr('data-sarine-info', anItem.sarineInfoField) );
                         if (anItem.popupId) {
                             specItem.attr('data-popup-id', anItem.popupId);
                         }
