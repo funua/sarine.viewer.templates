@@ -25,28 +25,28 @@ var widgetConfig = {
     styles: {
         brandColor: "orange",
         summaryLabel: {
-            font: "Arial",
-            size: "15px",
+            "font-family": "Arial",
+            "font-size": "15px",
             color: "red"
         },
         summaryValue: {
-            font: "Times New Roman",
-            size: "18px",
+            "font-family": "Times New Roman",
+            "font-size": "18px",
             color: "green"
         },
         summaryNav: {
-            font: "Tahoma",
-            size: "24px",
+            "font-family": "Tahoma",
+            "font-size": "24px",
             color: "red"
         },
         conditions: {
-            font: "Tahoma",
-            size: "14px",
+            "font-family": "Tahoma",
+            "font-size": "14px",
             color: "darkblue"
         },
         poweredBy: {
-            font: "Tahoma",
-            size: "18px",
+            "font-family": "Tahoma",
+            "font-size": "18px",
             color: "blue"
         }
     }
