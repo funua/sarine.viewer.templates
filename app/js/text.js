@@ -73,16 +73,16 @@ var dynamicText = {
         real_view: "",
         light: {
             title: "Light Performance Results <span class='q-mark brand-color'></span>",
-            subtitle: "Total Grade",
-            value1: "Exceptional",
-            value2: "Very High",
-            value3: "High",
-            value4: "Standard",
-            value5: "Minimum",
-            popuptitle1: "Brilliance <span class='q-mark brand-color'></span>",
-            popuptitle2: "Sparkle <span class='q-mark brand-color'></span>",
-            popuptitle3: "Fire <span class='q-mark brand-color'></span>",
-            popuptitle4: "Symmetry <span class='q-mark brand-color'></span>"
+            text1: "Total Grade",
+            text2: "Exceptional",
+            text3: "Very High",
+            text4: "High",
+            text5: "Standard",
+            text6: "Minimum",
+            text7: "Brilliance <span class='q-mark brand-color'></span>",
+            text8: "Sparkle <span class='q-mark brand-color'></span>",
+            text9: "Fire <span class='q-mark brand-color'></span>",
+            text10: "Symmetry <span class='q-mark brand-color'></span>"
         },
         loupe: {
             title: "Sarine Loupe<span class='tm'>Tm</span> Imaging <span class='q-mark brand-color'></span>",
