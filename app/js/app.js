@@ -1,4 +1,4 @@
-(function (window, document, $, FastClick, classie, Hammer, WallopSlider, PopupService, BulletNavigation, videoPlay) {
+(function (window, document, $, FastClick, classie, Hammer, WallopSlider, PopupService, BulletNavigation, videoPlay, jss) {
     $(function () {
         'use strict';
 
@@ -42,8 +42,6 @@
         
         
         function main() {
-//            console.log(' == main()');
-            
             openPopupTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-popup-id]'), 0);
             closePopupTriggers = Array.prototype.slice.call(document.querySelectorAll('.popup__close-btn'), 0);
             sarineInfos = Array.prototype.slice.call(document.querySelectorAll('[pages]'), 0);
@@ -53,7 +51,8 @@
             canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0);
 
             readConfig();
-            setText();
+            setStyles();
+            setTexts();
             
             slider = new WallopSlider(document.querySelector('.slider'), {
                 btnPreviousClass: 'slider__btn--previous',
@@ -105,7 +104,6 @@
 
             if (totalViewers > 0) {
                 $(document).on("first_init_end", function (event, data) {
-//                    console.log('first_init_end ->', data.Id);
                     totalViewers--;
                     if (totalViewers <= 0) {
                         onViewersReady();
@@ -132,10 +130,6 @@
             lightGrades.forEach(function (element) {
                 var grade = stone && stone.lightGrades && stone.lightGrades[element.getAttribute('data-light-grade')],
                         value = grade && grade.value;
-
-                /*if (value) {
-                 classie.add(element, 'specs__points--value-' + Math.ceil(7 * value / 5));
-                 }*/
 
                 if (value && lightGradesMap[value]) {
                     classie.add(element, 'specs__points--' + lightGradesMap[value]);
@@ -201,7 +195,6 @@
             
 
         function onViewersReady() {
-//            console.log(' == onViewersReady()');
             sarineInfos.forEach(function (element) {
                 var field = element.getAttribute('data-sarine-info'),
                     value = recurse(stone, field.split('.'));
@@ -219,8 +212,6 @@
         
         
         function markPagesForNullViewers() {
-//            console.log(' == markPagesForNullViewers()');
-
             iterateConfigPages(function (page) {
                 var currentSlide = $('ul.slider__list').find('.slide--' + page.code),
                     currentViewer = currentSlide.find('.viewer'),
@@ -230,7 +221,6 @@
                 currentViewerName = currentViewer.attr('class').replace('viewer ', '');
 
                 if (!document.viewersList[currentViewerName]) {
-//                    console.log('Skip ', currentViewerName);
                     page.skip = true;
                 }
             });
@@ -259,9 +249,6 @@
                     aSlider: $('#slider')
                 },
                 activeSlidesCount;
-            
-            // TODO: remove this.
-//            console.log(' == readConfig()');
 
             // Substitute fields from config
             $('[data-widgetconfig-value]').each(function (i, elem) {
@@ -285,7 +272,6 @@
             activeSlidesCount = $('.storyline__item').length;
             
                 
-
 
             // Enable slides
             iterateConfigPages(function (page) {
@@ -341,55 +327,93 @@
             $('.popup-wrap button').attr('tabindex', '-1');
 
 
-            if(wConfig.brandColor){
-                $(".brand-color, .brand-color li").css("color",wConfig.brandColor);
-                $(".brand-bg").css("background",wConfig.brandColor);
-                $(".brand-img *").css("stroke",wConfig.brandColor);
-            }
+            
+            // Delete this later:
+            
+//            if(wConfig.summaryLabel){
+//                $(".summary__spec__title").css({
+//                    "color":wConfig.summaryLabel.color,
+//                    "font-size":wConfig.summaryLabel.size,
+//                    "font-family":wConfig.summaryLabel.font
+//                });
+//            }
 
-            if(wConfig.summaryLabel){
-                $(".summary__spec__title").css({
-                    "color":wConfig.summaryLabel.color,
-                    "font-size":wConfig.summaryLabel.size,
-                    "font-family":wConfig.summaryLabel.font
+//            if(wConfig.summaryValue){
+//                $(".summary__spec__value").css({
+//                    "color":wConfig.summaryValue.color,
+//                    "font-size":wConfig.summaryValue.size,
+//                    "font-family":wConfig.summaryValue.font
+//                });
+//            }
+
+//            if(wConfig.summaryNav){
+//                $(".summary__story").css({
+//                    "color":wConfig.summaryNav.color,
+//                    "font-size":wConfig.summaryNav.size,
+//                    "font-family":wConfig.summaryNav.font
+//                });
+//                jss.set('.summary__story svg *', {
+//                    stroke: wConfig.summaryNav.color
+//                });
+//                $(".summary__story svg *").css("stroke",wConfig.summaryNav.color);
+//            }
+
+//            if(wConfig.conditions){
+//                $(".footer__disclaimer").css({
+//                    "color":wConfig.conditions.color,
+//                    "font-size":wConfig.conditions.size,
+//                    "font-family":wConfig.conditions.font
+//                });
+//            }
+
+//            if(wConfig.poweredBy){
+//                $(".footer__powered").css({
+//                    "color":wConfig.poweredBy.color,
+//                    "font-size":wConfig.poweredBy.size,
+//                    "font-family":wConfig.poweredBy.font
+//                });
+//            }
+        }
+        
+        
+        function setStyles() {
+            var styleConfig = wConfig.styles;
+            
+            // Set brand color according to config
+            if (styleConfig.brandColor) {
+                [
+                    {selector: '.brand-color',  prop: 'color'},
+                    {selector: '.brand-bg',     prop: 'background'},
+                    {selector: '.brand-img *',  prop: 'stroke'}
+                ].forEach(function (item) {
+                    var newStyle = {};
+                    newStyle[item.prop] = styleConfig.brandColor + ' !important';
+                    jss.set(item.selector, newStyle);
                 });
             }
-
-            if(wConfig.summaryValue){
-                $(".summary__spec__value").css({
-                    "color":wConfig.summaryValue.color,
-                    "font-size":wConfig.summaryValue.size,
-                    "font-family":wConfig.summaryValue.font
-                });
-            }
-
-            if(wConfig.summaryNav){
-                $(".summary__story").css({
-                    "color":wConfig.summaryNav.color,
-                    "font-size":wConfig.summaryNav.size,
-                    "font-family":wConfig.summaryNav.font
-                });
-                $(".summary__story svg *").css("stroke",wConfig.summaryNav.color);
-            }
-
-            if(wConfig.conditions){
-                $(".footer__disclaimer").css({
-                    "color":wConfig.conditions.color,
-                    "font-size":wConfig.conditions.size,
-                    "font-family":wConfig.conditions.font
-                });
-            }
-
-            if(wConfig.poweredBy){
-                $(".footer__powered").css({
-                    "color":wConfig.poweredBy.color,
-                    "font-size":wConfig.poweredBy.size,
-                    "font-family":wConfig.poweredBy.font
+            
+            // Set CSS classes for other config fields
+            [
+                {selector: '.summary__spec__title', configField: 'summaryLabel'},
+                {selector: '.summary__spec__value', configField: 'summaryValue'},
+                {selector: '.summary__story', configField: 'summaryNav'},
+                {selector: '.footer__disclaimer', configField: 'conditions'},
+                {selector: '.footer__powered', configField: 'poweredBy'},
+            ].forEach(function (item) {
+                if ( ! styleConfig[item.configField] ) return;
+                jss.set(item.selector, styleConfig[item.configField]);
+            });
+            
+            // Set color for svg images
+            if(styleConfig.summaryNav){
+                jss.set('.summary__story svg *', {
+                    stroke: styleConfig.summaryNav.color
                 });
             }
         }
         
-        function setText() {
+        
+        function setTexts() {
             var attrName = 'data-text';
             
             $('[' + attrName + ']').each(function () {
@@ -404,6 +428,7 @@
             });
         }
         
+        
         if (wConfig.autoDisableSlides) {
             $(document).on('loadTemplate', function () {
                 // Finished loading and initializing viewers
@@ -414,13 +439,8 @@
         } else {
             main();
         }
-
-
-
-
-
     });
-})(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay);
+})(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay, window.jss);
 
 
 
