@@ -65,8 +65,9 @@ module.exports = function (grunt) {
                     // order of elements is important!
                     'app/js/vendor/*.js',
                     'app/js/*.js',
-                    'app/widgets/<%= project.widgetName %>/*.js',
+//                    'app/widgets/<%= project.widgetName %>/*.js',
                     '!app/js/app.bundle.min.js',
+                    '!app/js/text.js',
                     '!app/js/app.js',
                     'app/js/app.js'         // must be last in bundle
                 ],
@@ -131,6 +132,9 @@ module.exports = function (grunt) {
                         }, {
                             match: /src="[.\/]+img\//g,
                             replacement: 'src="<%= project.codeWidgetPath %>img/'
+                        }, {
+                            match: /src="\/js\/text\.js"/,
+                            replacement: 'src="http://dev.sarineplatform.com.s3.amazonaws.com/qa4/content/viewers/templates/common/text.js"'
                         }
                     ]
                 },
