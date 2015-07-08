@@ -67,25 +67,27 @@ var dynamicText = {
         },
         real_view: "",
         light: {
-            title: "Light Performance Results"
+            title: "Light Performance Results <span class='q-mark brand-color'></span>"
         },
         loupe: {
-            title: "Sarine Loupe<sup>Tm</sup> Imaging",
+            title: "Sarine Loupe<span class='tm'>Tm</span> Imaging <span class='q-mark brand-color'></span>",
             body: "Get to know the diamond as if you were holding it in your hand. View the diamond in precise virtual detail, and discover if it is the perfect choice for you."
         },
         loupe3d: {
-            title: "Sarine Loupe<sup>Tm</sup> Imaging"
+            title: "Sarine Loupe<span class='tm'>Tm</span> Imaging"
         },
         hna: {
             title: "Hearts & Arrows",
+            subtitle1: "Hearts  <span class='q-mark brand-color'></span>",
+            subtitle2: "Arrows <span class='q-mark brand-color'></span>",
             body: "Hearts & Arrows is a symmetrical optical pattern seen in round brilliant diamonds cut to the highest quality and precision."
         },
         cut: {
-            title: "Cut and Symmetry Grading",
+            title: "Cut and Symmetry Grading <span class='q-mark brand-color'></span>",
             body: "View the diamond's geometrical measurements and angles to assess its proportions and symmetry."
         },
         inscription: {
-            title: "Sarine Loupe<sup>Tm</sup> Inscription"
+            title: "Sarine Loupe<span class='tm'>Tm</span> Inscription"
         }
     }
 };
