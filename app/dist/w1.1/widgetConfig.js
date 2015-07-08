@@ -1,11 +1,21 @@
 var widgetConfig = {
     title: 'Diamond Story',
-//    widget_brief_code: 'w1',
-//    color_scheme: 'color-scheme-1',
     pages: [
         {
             title:  'Summary',
-            code:   'summary'
+            code:   'summary',
+            specs: [
+                [
+                    {text: 'slide.summary.text6', sarineInfoField: 'stoneProperties.GIA'},
+                    {text: 'slide.summary.text1', sarineInfoField: 'friendlyName'}
+                ],
+                [
+                    {popupId: 'popup_color', text: 'slide.summary.text2', sarineInfoField: 'stoneProperties.color'},
+                    {popupId: 'popup_clarity', text: 'slide.summary.text3', sarineInfoField: 'stoneProperties.clarity'},
+                    {popupId: 'popup_cut', text: 'slide.summary.text4', sarineInfoField: 'stoneProperties.cutGrade'},
+                    {popupId: 'popup_carat', text: 'slide.summary.text5', sarineInfoField: 'stoneProperties.carat'}
+                ]
+            ]
         },
         {
             title:  'Light',
@@ -24,30 +34,32 @@ var widgetConfig = {
             code:   'cut'
         }
     ],
-    brandColor: "#ff00ff",
-    summaryLabel: {
-        font: "Arial",
-        size: "10px",
-        color: "blue"
-    },
-    summaryValue: {
-        font: "Times New Roman",
-        size: "12px",
-        color: "green"
-    },
-    summaryNav: {
-        font: "Tahoma",
-        size: "24px",
-        color: "red"
-    },
-    conditions: {
-        font: "Tahoma",
-        size: "10px",
-        color: "darkblue"
-    },
-    poweredBy: {
-        font: "Tahoma",
-        size: "10px",
-        color: "darkblue"
+    styles: {
+        brandColor: "orange",
+        summaryLabel: {
+//            "font-family": "Arial",
+//            "font-size": "15px",
+//            color: "red"
+        },
+        summaryValue: {
+//            "font-family": "Times New Roman",
+//            "font-size": "18px",
+//            color: "green"
+        },
+        summaryNav: {
+//            "font-family": "Tahoma",
+//            "font-size": "22px",
+//            color: "#ff00ff"
+        },
+        conditions: {
+//            "font-family": "Tahoma",
+//            "font-size": "14px",
+//            color: "darkblue"
+        },
+//        poweredBy: {
+//            "font-family": "Tahoma",
+//            "font-size": "18px",
+//            color: "blue"
+//        }
     }
 };

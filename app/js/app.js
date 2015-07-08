@@ -376,11 +376,11 @@
             });
             
             // Set color for svg images
-            if(styleConfig.summaryNav){
+            try {
                 jss.set('.brand-img *', {
                     stroke: styleConfig.summaryNav.color
                 });
-            }
+            } catch (e) {}
         }
         
         
@@ -410,7 +410,8 @@
                                 .append( $('<span class="summary__spec__title config-color"/>').attr('data-text', anItem.text) )
                                 .append( $('<span class="summary__spec__value config-color"/>').attr('data-sarine-info', anItem.sarineInfoField) );
                         if (anItem.popupId) {
-                            specItem.attr('data-popup-id', anItem.popupId);
+                            specItem.attr('data-popup-id', anItem.popupId)
+                                .append($('<span class="q-mark q-mark--small brand-color"/>'));
                         }
                     });
                 }
