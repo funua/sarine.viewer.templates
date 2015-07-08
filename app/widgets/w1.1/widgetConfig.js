@@ -38,14 +38,14 @@ var widgetConfig = {
     styles: {
         brandColor: "orange",
         summaryLabel: {
-//            "font-family": "Arial",
-//            "font-size": "15px",
-//            color: "red"
+            "font-family": "Arial",
+            "font-size": "15px",
+            color: "red"
         },
         summaryValue: {
-//            "font-family": "Times New Roman",
-//            "font-size": "18px",
-//            color: "green"
+            "font-family": "Times New Roman",
+            "font-size": "18px",
+            color: "green"
         },
         summaryNav: {
             "font-family": "Tahoma",
@@ -53,14 +53,14 @@ var widgetConfig = {
             color: "#ff00ff"
         },
         conditions: {
-//            "font-family": "Tahoma",
-//            "font-size": "14px",
-//            color: "darkblue"
+            "font-family": "Tahoma",
+            "font-size": "14px",
+            color: "darkblue"
         },
         poweredBy: {
-//            "font-family": "Tahoma",
-//            "font-size": "18px",
-//            color: "blue"
+            "font-family": "Tahoma",
+            "font-size": "18px",
+            color: "blue"
         }
     }
 };
