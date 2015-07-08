@@ -36,8 +36,8 @@ var widgetConfig = {
         },
         summaryNav: {
             "font-family": "Tahoma",
-            "font-size": "24px",
-            color: "red"
+            "font-size": "22px",
+            color: "#ff00ff"
         },
         conditions: {
             "font-family": "Tahoma",

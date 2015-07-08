@@ -383,7 +383,7 @@
             if (styleConfig.brandColor) {
                 [
                     {selector: '.brand-color',  prop: 'color'},
-                    {selector: '.brand-bg',     prop: 'background'},
+                    {selector: '.brand-bg, .brand-config .storyline__item--active:before, .brand-config .storyline__item:hover:before, .brand-config .specs__point:before',     prop: 'background'},
                     {selector: '.brand-img *',  prop: 'stroke'}
                 ].forEach(function (item) {
                     var newStyle = {};
@@ -392,13 +392,14 @@
                 });
             }
             
-            // Set CSS classes for other config fields
+            //Set CSS classes for other config fields
             [
-                {selector: '.summary__spec__title', configField: 'summaryLabel'},
-                {selector: '.summary__spec__value', configField: 'summaryValue'},
-                {selector: '.summary__story', configField: 'summaryNav'},
-                {selector: '.footer__disclaimer', configField: 'conditions'},
-                {selector: '.footer__powered', configField: 'poweredBy'},
+                {selector: '.summary__spec__title.config-color', configField: 'summaryLabel'},
+                {selector: '.summary__spec__value.config-color', configField: 'summaryValue'},
+                {selector: '.brand-config .summary__story', configField: 'summaryNav'},
+
+                {selector: '.config-color.footer__disclaimer', configField: 'conditions'},
+                {selector: '.config-color.footer__powered', configField: 'poweredBy'},
             ].forEach(function (item) {
                 if ( ! styleConfig[item.configField] ) return;
                 jss.set(item.selector, styleConfig[item.configField]);
@@ -406,7 +407,7 @@
             
             // Set color for svg images
             if(styleConfig.summaryNav){
-                jss.set('.summary__story svg *', {
+                jss.set('.brand-img *', {
                     stroke: styleConfig.summaryNav.color
                 });
             }

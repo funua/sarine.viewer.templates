@@ -117,6 +117,7 @@ $specs-col-width: ((100% - $specs-first-col-width) / 4);
 			height: $specs-point-size;
 			margin: (-$specs-point-size / 2) 0 0 (-$specs-point-size / 2);
 			@include transform(rotate(45deg));
+			background-color:#000;
 		}
 	}
 }

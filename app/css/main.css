@@ -992,39 +992,43 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
 .storyline__item--active {
   color: #000;
 }
+/* line 55, ../sass/partials/_storyline.scss */
+.storyline__item--active:before {
+  background-color: #000;
+}
 
-/* line 59, ../sass/partials/_storyline.scss */
+/* line 62, ../sass/partials/_storyline.scss */
 .storyline.items-count-2 {
   padding: 0 55px;
 }
-/* line 62, ../sass/partials/_storyline.scss */
+/* line 65, ../sass/partials/_storyline.scss */
 .storyline.items-count-2:before {
   width: 38%;
   left: 31%;
 }
-/* line 67, ../sass/partials/_storyline.scss */
+/* line 70, ../sass/partials/_storyline.scss */
 .storyline.items-count-2 .storyline__item {
   width: 50%;
   padding-left: 10%;
   padding-right: 10%;
 }
 
-/* line 76, ../sass/partials/_storyline.scss */
+/* line 79, ../sass/partials/_storyline.scss */
 .storyline.items-count-3:before {
   width: 65%;
   left: 17%;
 }
-/* line 81, ../sass/partials/_storyline.scss */
+/* line 84, ../sass/partials/_storyline.scss */
 .storyline.items-count-3 .storyline__item {
   width: 33%;
 }
 
-/* line 89, ../sass/partials/_storyline.scss */
+/* line 92, ../sass/partials/_storyline.scss */
 .storyline.items-count-4:before {
   width: 76%;
   left: 12%;
 }
-/* line 94, ../sass/partials/_storyline.scss */
+/* line 97, ../sass/partials/_storyline.scss */
 .storyline.items-count-4 .storyline__item {
   width: 25%;
 }
@@ -1161,6 +1165,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+  background-color: #000;
 }
 
 /* line 5, ../sass/partials/_popup.scss */

@@ -52,6 +52,9 @@ $storyline-line-height: 1px;
 
 		&--active{
 			color:#000;
+			&:before{
+				background-color:#000;
+			}
 		}
 	}
 }
