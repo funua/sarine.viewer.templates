@@ -68,7 +68,8 @@ var dynamicText = {
             text2: "Color:",
             text3: "Clarity:",
             text4: "Cut:",
-            text5: "Carat:"
+            text5: "Carat:",
+            text6: 'GIA:'
         },
         real_view: "",
         light: {

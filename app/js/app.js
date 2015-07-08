@@ -42,6 +42,10 @@
         
         
         function main() {
+            readConfig();
+            setStyles();
+            setTexts();
+            
             openPopupTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-popup-id]'), 0);
             closePopupTriggers = Array.prototype.slice.call(document.querySelectorAll('.popup__close-btn'), 0);
             sarineInfos = Array.prototype.slice.call(document.querySelectorAll('[pages]'), 0);
@@ -50,10 +54,6 @@
             playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0);
             canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0);
 
-            readConfig();
-            setStyles();
-            setTexts();
-            
             slider = new WallopSlider(document.querySelector('.slider'), {
                 btnPreviousClass: 'slider__btn--previous',
                 btnNextClass: 'slider__btn--next',
@@ -195,19 +195,28 @@
             
 
         function onViewersReady() {
-            sarineInfos.forEach(function (element) {
-                var field = element.getAttribute('data-sarine-info'),
-                    value = recurse(stone, field.split('.'));
-
-                if (value === (void 0) || value === null) {
-                    element.parentNode.style.display = 'none';
-                } else if (field === 'stoneProperties.carat') {
-                    element.innerHTML = parseFloat(value).toFixed(3);
-                }
-            });
+            parseSarineInfos();
 
             document.querySelector('.slider').style.display = '';
             document.querySelector('.preloader').style.display = 'none';
+        }
+        
+        
+        function parseSarineInfos() {
+            var sarineInfoAttr = 'data-sarine-info';
+            
+            $('[' + sarineInfoAttr + ']').each(function () {
+                var element = $(this),
+                    field = element.attr(sarineInfoAttr),
+                    value = recurse(stone, field.split('.'));
+                
+                if (value === (void 0) || value === null) {
+                    element.parent().hide();
+                } else if (field === 'stoneProperties.carat') {
+                    value = parseFloat(value).toFixed(3);
+                }
+                element.html(value);
+            });
         }
         
         
@@ -242,6 +251,7 @@
                     storylineContainer: $('ul.storyline'),
                     sliderPagesContainer: $('ul.slider__list'),
                     summaryLinksContainer: $('ul.summary__stories'),
+                    summarySpecsContainer: $('.summary__specs'),
                     tmpSlidesContainer: $('<div/>'),
                     customerLogo: $('.footer__customer__logo'),
                     sliderWrap: $('.slider-wrap'),
@@ -298,7 +308,7 @@
                 iterateConfigPages(function (page) {
                     if (page.code === 'summary' || page.skip) return;
 
-                    var svg = $("#summary__story--"+page.code).show();
+                    var svg = $("#summary__story--" + page.code).show();
 
                     $('<li/>', {
                         class: 'summary__story summary__story--' + page.code
@@ -306,7 +316,15 @@
                 });
             }
             
-            
+            // Add summary page specs
+            iterateConfigPages(function (page) {
+                if (page.code !== 'summary' || page.skip) return;
+
+                if (page.specs && page.specs.length) {
+                    setSummaryPageSpecs(page.specs, elements.summarySpecsContainer);
+                }
+            });
+                        
             if (activeSlidesCount > 1) {
                 elements.storylineContainer
                         .addClass('items-count-' + activeSlidesCount)
@@ -325,54 +343,6 @@
                 elements.sliderHeader[0].setVisibility(true);
             }
             $('.popup-wrap button').attr('tabindex', '-1');
-
-
-            
-            // Delete this later:
-            
-//            if(wConfig.summaryLabel){
-//                $(".summary__spec__title").css({
-//                    "color":wConfig.summaryLabel.color,
-//                    "font-size":wConfig.summaryLabel.size,
-//                    "font-family":wConfig.summaryLabel.font
-//                });
-//            }
-
-//            if(wConfig.summaryValue){
-//                $(".summary__spec__value").css({
-//                    "color":wConfig.summaryValue.color,
-//                    "font-size":wConfig.summaryValue.size,
-//                    "font-family":wConfig.summaryValue.font
-//                });
-//            }
-
-//            if(wConfig.summaryNav){
-//                $(".summary__story").css({
-//                    "color":wConfig.summaryNav.color,
-//                    "font-size":wConfig.summaryNav.size,
-//                    "font-family":wConfig.summaryNav.font
-//                });
-//                jss.set('.summary__story svg *', {
-//                    stroke: wConfig.summaryNav.color
-//                });
-//                $(".summary__story svg *").css("stroke",wConfig.summaryNav.color);
-//            }
-
-//            if(wConfig.conditions){
-//                $(".footer__disclaimer").css({
-//                    "color":wConfig.conditions.color,
-//                    "font-size":wConfig.conditions.size,
-//                    "font-family":wConfig.conditions.font
-//                });
-//            }
-
-//            if(wConfig.poweredBy){
-//                $(".footer__powered").css({
-//                    "color":wConfig.poweredBy.color,
-//                    "font-size":wConfig.poweredBy.size,
-//                    "font-family":wConfig.poweredBy.font
-//                });
-//            }
         }
         
         
@@ -426,6 +396,24 @@
                     console.log(e);
                 }
                 $el.html(valueFromConfig);
+            });
+        }
+        
+        
+        function setSummaryPageSpecs(specsConfig, specsContainer) {
+            specsConfig.forEach(function (aRow) {
+                var rowContainer = $('<ul class="summary__specs-row"/>').appendTo(specsContainer);
+                if (aRow.length) {
+                    aRow.forEach(function (anItem) {
+                        var specItem = $('<li class="summary__spec"/>').appendTo(rowContainer);
+                        specItem
+                                .append( $('<span class="summary__spec__title"/>').attr('data-text', anItem.text) )
+                                .append( $('<span class="summary__spec__value"/>').attr('data-sarine-info', anItem.sarineInfoField) );
+                        if (anItem.popupId) {
+                            specItem.attr('data-popup-id', anItem.popupId);
+                        }
+                    });
+                }
             });
         }
         
