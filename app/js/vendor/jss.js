@@ -287,4 +287,5 @@ var jss = (function() {
     return exports;
 })();
 
-typeof module !== 'undefined' && module.exports && (module.exports = jss); // CommonJS support
+// CommonJS support
+typeof module !== 'undefined' && module.exports && (module.exports = jss);
