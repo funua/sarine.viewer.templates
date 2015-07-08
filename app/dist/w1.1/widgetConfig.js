@@ -19,7 +19,8 @@ var widgetConfig = {
         },
         {
             title:  'Light',
-            code:   'light'
+            code:   'light',
+            enableStoryline: true
         },
         {
             title:  'Loupe',
@@ -47,19 +48,19 @@ var widgetConfig = {
 //            color: "green"
         },
         summaryNav: {
-//            "font-family": "Tahoma",
-//            "font-size": "22px",
-//            color: "#ff00ff"
+            "font-family": "Tahoma",
+            "font-size": "22px",
+            color: "#ff00ff"
         },
         conditions: {
 //            "font-family": "Tahoma",
 //            "font-size": "14px",
 //            color: "darkblue"
         },
-//        poweredBy: {
+        poweredBy: {
 //            "font-family": "Tahoma",
 //            "font-size": "18px",
 //            color: "blue"
-//        }
+        }
     }
 };

@@ -300,66 +300,13 @@ module.exports = function (grunt) {
 
     
     grunt.registerTask('build_widget', 'Build widget for production', function () {
-        build_widget_prompt('dist');
-    });
-    
-    
-    grunt.registerTask('build_test', 'Build widget for testing', function () {
-        build_widget_prompt('dist_test');
-    });
-    
-    function build_widget_prompt(dir) {
         grunt.initConfig(promptConfig);
         grunt.task.run(['prompt']);
         thenCallback = function () {
-            grunt.task.run('build:' + dir + ':' + appConfig.widgetName);
+            grunt.task.run('build:dist:' + appConfig.widgetName);
         };
-    };
-    
-    
-    grunt.registerTask('make_shell', 'Make shell file for uploading to sarine-widgets.synergetica.net', function () {
-        var dir = this.args[0],
-            isRelease = dir === 'dist',
-            targetFilename = '';
-        appConfig.dir = dir;
-        
-        thenCallback = function () {
-//            fullConfig.template.shell.files['app/' + appConfig.widgetName + '.html'] = ['app/shell.tpl.html'];
-            if (isRelease) {
-                appConfig.base_server = 'http://sarine-widgets.synergetica.net';
-                targetFilename = 'app/' + appConfig.widgetName;
-            } else {
-                appConfig.base_server = 'http://sarine-widgets.ho.ua';
-                targetFilename = 'app/dist_test/test_' + appConfig.widgetName;
-            }
-            targetFilename += '.html';
-            
-            fullConfig.template.shell.files[targetFilename] = ['app/shell.tpl.html'];
-            grunt.initConfig(fullConfig);
-            grunt.task.run([
-                'template'
-            ]);
-        };
-        
-        if (this.args[1]) {
-            appConfig.widgetName = this.args[1];
-            thenCallback();
-        } else {
-            grunt.initConfig(promptConfig);
-            grunt.task.run(['prompt']);
-        }
     });
     
-    
-    grunt.registerTask('build_all_test', 'Build all widgets for testing', function () {
-        var widgets = getAllWidgets(),
-            i,
-            tasksList = [];
-        for (i = 0; i < widgets.length; i++) {
-            tasksList.push('build:dist_test:' + widgets[i]);
-        }
-        grunt.task.run(tasksList);
-    });
     
     
     /**
@@ -378,7 +325,6 @@ module.exports = function (grunt) {
         grunt.initConfig(fullConfig);
         
         conditionalExec([
-//            {task: 'clean:initial',         exec: isRelease},
             {task: 'clean:tmp',             exec: 1},
             {task: 'concat',                exec: 1},
             {task: 'uglify',                exec: 1},

@@ -19,7 +19,8 @@ var widgetConfig = {
         },
         {
             title:  'Light',
-            code:   'light'
+            code:   'light',
+            enableStoryline: true
         },
         {
             title:  'Loupe',
