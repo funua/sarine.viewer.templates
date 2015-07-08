@@ -354,7 +354,7 @@
                 [
                     {selector: '.brand-color',  prop: 'color'},
                     {selector: '.brand-bg, .brand-config .storyline__item--active:before, .brand-config .storyline__item:hover:before, .brand-config .specs__point:before',     prop: 'background'},
-                    {selector: '.brand-img *',  prop: 'stroke'}
+                    {selector: '.brand-img svg *',  prop: 'stroke'}
                 ].forEach(function (item) {
                     var newStyle = {};
                     newStyle[item.prop] = styleConfig.brandColor + ' !important';
@@ -377,7 +377,7 @@
             
             // Set color for svg images
             try {
-                jss.set('.brand-img *', {
+                jss.set('.brand-img svg *', {
                     stroke: styleConfig.summaryNav.color
                 });
             } catch (e) {}
