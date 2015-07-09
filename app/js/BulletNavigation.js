@@ -7,12 +7,11 @@
     var bullets = Array.prototype.slice.call(args.bulletsContainer.querySelectorAll(args.bulletClassName), 0),
         activeBulletIndex = 0,
         slider = args.slider,
-        activeClassName = args.activeBulletClassName || '',
-        startFrom = args.startFrom || 0;
+        activeClassName = args.activeBulletClassName || '';
 
-    bullets.forEach(function (element, index) {
-      element.addEventListener('click', function (e) {
-        slider.goTo(index + startFrom);
+    bullets.forEach(function (element) {
+      element.addEventListener('click', function () {
+        slider.goTo( parseInt(element.getAttribute('data-target')) );
       });
     });
 

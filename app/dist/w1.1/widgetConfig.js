@@ -2,6 +2,15 @@ var widgetConfig = {
     title: 'Diamond Story',
     pages: [
         {
+            title:  'Light',
+            code:   'light',
+            enableStoryline: true
+        },
+        {
+            title:  'Loupe',
+            code:   'loupe'
+        },
+        {
             title:  'Summary',
             code:   'summary',
             specs: [
@@ -18,15 +27,6 @@ var widgetConfig = {
             ]
         },
         {
-            title:  'Light',
-            code:   'light',
-            enableStoryline: true
-        },
-        {
-            title:  'Loupe',
-            code:   'loupe'
-        },
-        {
             title:  'Hearts & Arrows',
             code:   'hna'
         },
@@ -37,30 +37,30 @@ var widgetConfig = {
     ],
     styles: {
         brandColor: "orange",
-        summaryLabel: {
-            "font-family": "Arial",
-            "font-size": "15px",
-            color: "red"
-        },
-        summaryValue: {
-            "font-family": "Times New Roman",
-            "font-size": "18px",
-            color: "green"
-        },
-        summaryNav: {
-            "font-family": "Tahoma",
-            "font-size": "22px",
-            color: "#ff00ff"
-        },
-        conditions: {
-            "font-family": "Tahoma",
-            "font-size": "14px",
-            color: "darkblue"
-        },
-        poweredBy: {
-            "font-family": "Tahoma",
-            "font-size": "18px",
-            color: "blue"
-        }
+//        summaryLabel: {
+//            "font-family": "Arial",
+//            "font-size": "15px",
+//            color: "red"
+//        },
+//        summaryValue: {
+//            "font-family": "Times New Roman",
+//            "font-size": "18px",
+//            color: "green"
+//        },
+//        summaryNav: {
+//            "font-family": "Tahoma",
+//            "font-size": "22px",
+//            color: "#ff00ff"
+//        },
+//        conditions: {
+//            "font-family": "Tahoma",
+//            "font-size": "14px",
+//            color: "darkblue"
+//        },
+//        poweredBy: {
+//            "font-family": "Tahoma",
+//            "font-size": "18px",
+//            color: "blue"
+//        }
     }
 };

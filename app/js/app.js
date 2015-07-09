@@ -74,8 +74,7 @@
                 summaryNav = new BulletNavigation({
                     slider: slider,
                     bulletsContainer: document.querySelector('.summary__story-wrap'),
-                    bulletClassName: '.summary__story',
-                    startFrom: 1
+                    bulletClassName: '.summary__story'
                 });
             }
 
@@ -241,7 +240,7 @@
             if (typeof iterator !== 'function') return;
 
             for (i = 0, cpl = wConfig.pages.length; i < cpl; i++) {
-                iterator(wConfig.pages[i]);
+                iterator(wConfig.pages[i], i);
             }
         }
     
@@ -272,10 +271,11 @@
 
             // Add storyline items
             if ($.isArray(wConfig.pages)) {
-                iterateConfigPages(function (page) {
+                iterateConfigPages(function (page, i) {
                     if (page.skip) return;
                     $('<li />', {
-                        class: 'storyline__item'
+                        class: 'storyline__item',
+                        'data-target': i
                     }).html(page.title).appendTo(elements.storylineContainer);
                 });
             }
@@ -305,13 +305,14 @@
             if (wConfig.pages[0].disableNavigation) {
                 elements.summaryLinksContainer.remove();
             } else {
-                iterateConfigPages(function (page) {
+                iterateConfigPages(function (page, i) {
                     if (page.code === 'summary' || page.skip) return;
 
                     var svg = $("#summary__story--" + page.code).show();
 
                     $('<li/>', {
-                        class: 'summary__story summary__story--' + page.code
+                        class: 'summary__story summary__story--' + page.code,
+                        'data-target': i
                     }).html(page.title).prepend(svg).appendTo(elements.summaryLinksContainer);
                 });
             }
@@ -462,7 +463,7 @@
                     right: '10px',
                     bottom: '10px',
                     padding: '10px 20px',
-                    border: '1px soled #999',
+                    border: '1px solid #999',
                     background: '#ddd',
                     maxHeight: '300px',
                     maxWidth: '300px',
