@@ -24,9 +24,9 @@
             playTriggers,
             canvases,
             swipeRecognizer,
-            dText = window.dynamicText,
-            wConfig = window.widgetConfig;
+            wConfig;
         
+        // Preparation stage
         if ($('.slider__header')[0]) {
             $('.slider__header')[0].setVisibility = function (setVisible) {
                 if (setVisible) {
@@ -39,6 +39,50 @@
             };
         }
         
+        totalViewers = $('.viewer').length;
+        if (totalViewers === 0) {
+            totalViewers = $('sarine-viewer').length;
+        }
+        $(document).on('first_init_end', function () {
+            totalViewers--;
+            console.log('simple first_init_end listener. totalViewers ->', totalViewers);
+        });
+        
+        
+        console.log('Starting2...');
+        loadScript('http://dev.sarineplatform.com.s3.amazonaws.com/qa4/content/viewers/templates/common/text.js')
+                .then(function () {
+                    console.log('texts loaded');
+                    console.log('widgetConfig path ->', getPath(template) + '/widgetConfig.js');
+                    return loadScript(getPath(template) + '/widgetConfig.js');
+                })
+                .then(function () {
+                    console.log('widgetConfig loaded');
+                    start();
+                })
+                .catch(function (e) {
+                    console.log('error ->', e);
+                });
+        
+        
+        function loadScript(src) {
+            return new Promise(function (resolve, reject) {
+                var el = document.createElement('script');
+                el.onload = resolve;
+                el.onerror = reject;
+                el.async = true;
+                el.src = src;
+                document.getElementsByTagName('body')[0].appendChild(el);
+            });
+        }
+        
+        
+        function getPath(src) {
+            var arr;
+            arr = src.split('/');
+            arr.pop();
+            return arr.join('/');
+        }
         
         
         function main() {
@@ -50,7 +94,7 @@
             closePopupTriggers = Array.prototype.slice.call(document.querySelectorAll('.popup__close-btn'), 0);
             sarineInfos = Array.prototype.slice.call(document.querySelectorAll('[pages]'), 0);
             lightGrades = Array.prototype.slice.call(document.querySelectorAll('[data-light-grade]'), 0);
-            totalViewers = $('.viewer').length;
+            
             playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0);
             canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0);
 
@@ -102,12 +146,14 @@
             });
 
             if (totalViewers > 0) {
-                $(document).on("first_init_end", function (event, data) {
-                    totalViewers--;
-                    if (totalViewers <= 0) {
-                        onViewersReady();
-                    }
-                });
+                $(document).off('first_init_end')
+                        .on("first_init_end", function (event, data) {
+                            totalViewers--;
+                            console.log('extended first_init_end listener. totalViewers ->', totalViewers);
+                            if (totalViewers <= 0) {
+                                onViewersReady();
+                            }
+                        });
             } else {
                 onViewersReady();
             }
@@ -154,7 +200,6 @@
             playTriggers.forEach(function (element) {
                 videoPlay.initButton(element);
             });
-
         }
 
 
@@ -420,15 +465,21 @@
         }
         
         
-        if (wConfig.autoDisableSlides) {
-            $(document).on('loadTemplate', function () {
-                // Finished loading and initializing viewers
-                markPagesForNullViewers();
+        function start() {
+            wConfig = window.widgetConfig;
+            
+            console.log('start()');
+            
+            if (wConfig.autoDisableSlides) {
+                $(document).on('loadTemplate', function () {
+                    // Finished loading and initializing viewers
+                    markPagesForNullViewers();
+                    main();
+                    onViewersReady();       // In case of some viewers are null
+                });
+            } else {
                 main();
-                onViewersReady();       // In case of some viewers are null
-            });
-        } else {
-            main();
+            }
         }
     });
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.Hammer, window.WallopSlider, window.PopupService, window.BulletNavigation, window.videoPlay, window.jss);

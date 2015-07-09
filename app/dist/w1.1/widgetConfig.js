@@ -1,11 +1,11 @@
 var widgetConfig = {
     title: 'Diamond Story',
     pages: [
-        {
+        /*{
             title:  'Light',
             code:   'light',
             enableStoryline: true
-        },
+        },*/
         {
             title:  'Loupe',
             code:   'loupe'

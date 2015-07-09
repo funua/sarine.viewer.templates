@@ -122,16 +122,20 @@
                 $(selector).prepend($(a).filter((function (_this) {
                     return function (i, v) {
                         if (v.tagName === "SCRIPT") {
-                            if (v.src && !$(v).attr('data-preserve-path')) {
+                            if (v.src) {
                                 deferArr.push($.Deferred());
                                 
                                 // replace path for widgetConfig.js only
-                                if (v.src.indexOf('widgetConfig.js') !== -1) {
+//                                if (v.src.indexOf('widgetConfig.js') !== -1) {
+//                                    v.src = v.src.replace(getPath(location.origin + location.pathname), getPath(template));
+//                                }
+                                
+                                if (!$(v).attr('data-preserve-path')) {
                                     v.src = v.src.replace(getPath(location.origin + location.pathname), getPath(template));
                                 }
                                 
-//                                v.src = v.src.replace(getPath(location.origin + location.pathname), getPath(template));
                                 $.getScript(v.src, function () {
+//                                    console.log();
                                     deferArr.pop();
                                     if (deferArr.length === 0) {
                                         $(selector).append(scripts);
