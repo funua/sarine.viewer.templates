@@ -28,7 +28,7 @@ body{
 
 	header{
 		height:408px;
-		background:darkblue;
+		background:url("../img/head_dashboard.jpg") 50% 50% no-repeat;
 	}
 	section{
 		background:#fff;
@@ -41,6 +41,7 @@ body{
 			text-align:center;
 			font: italic bold 36px/54px $font-family-serif;
 			margin:36px 0 0;
+			color:#3e3e3e;
 		}
 
 		.dashboard-info{
@@ -212,6 +213,7 @@ body{
 @import 'partials/q-mark',
 		'partials/slides/light',
 		'partials/specs-table',
-		'partials/slides/loupe3d';
+		'partials/slides/loupe3d',
+		'partials/popup';
 
 @import 'modules/color-scheme';
