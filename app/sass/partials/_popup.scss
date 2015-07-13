@@ -54,8 +54,9 @@ $popup-skew-angle: 9deg;
 		@include background-image(linear-gradient(to top, #002369 0, #000 400px, #000 100%));
 	}
 
-	&--open, &--close {
-	//    display: block;
+	& sup {
+        vertical-align: super;
+        font-size: 60%;
 	}
 
 	&--open {

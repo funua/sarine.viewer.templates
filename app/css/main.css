@@ -1,5 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700");
-/* line 5, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -120,22 +120,22 @@ p {
 }
 @font-face {
   font-family: "Utopia Std";
-  src: url('../fonts/UtopiaStd-Regular_0.eot?1432133317');
-  src: url('../fonts/UtopiaStd-Regular_0.eot?&1432133317#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Regular_0.woff?1432133317') format('woff'), url('../fonts/UtopiaStd-Regular_0.ttf?1432133317') format('truetype'), url('../fonts/UtopiaStd-Regular_0.svg?1432133317') format('svg');
+  src: url('../fonts/UtopiaStd-Regular_0.eot?1432134852');
+  src: url('../fonts/UtopiaStd-Regular_0.eot?&1432134852#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Regular_0.woff?1432134852') format('woff'), url('../fonts/UtopiaStd-Regular_0.ttf?1432134852') format('truetype'), url('../fonts/UtopiaStd-Regular_0.svg?1432134852') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Utopia Std";
-  src: url('../fonts/UtopiaStd-Italic_0.eot?1432133317');
-  src: url('../fonts/UtopiaStd-Italic_0.eot?&1432133317#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Italic_0.woff?1432133317') format('woff'), url('../fonts/UtopiaStd-Italic_0.ttf?1432133317') format('truetype'), url('../fonts/UtopiaStd-Italic_0.svg?1432133317') format('svg');
+  src: url('../fonts/UtopiaStd-Italic_0.eot?1432134852');
+  src: url('../fonts/UtopiaStd-Italic_0.eot?&1432134852#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-Italic_0.woff?1432134852') format('woff'), url('../fonts/UtopiaStd-Italic_0.ttf?1432134852') format('truetype'), url('../fonts/UtopiaStd-Italic_0.svg?1432134852') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Utopia Std";
-  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?1432133317');
-  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?&1432133317#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-SemiboldIt_0.woff?1432133317') format('woff'), url('../fonts/UtopiaStd-SemiboldIt_0.ttf?1432133317') format('truetype'), url('../fonts/UtopiaStd-SemiboldIt_0.svg?1432133317') format('svg');
+  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?1432134852');
+  src: url('../fonts/UtopiaStd-SemiboldIt_0.eot?&1432134852#iefix') format('embedded-opentype'), url('../fonts/UtopiaStd-SemiboldIt_0.woff?1432134852') format('woff'), url('../fonts/UtopiaStd-SemiboldIt_0.ttf?1432134852') format('truetype'), url('../fonts/UtopiaStd-SemiboldIt_0.svg?1432134852') format('svg');
   font-weight: bold;
   font-style: italic;
 }
@@ -1236,37 +1236,42 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   background-image: -webkit-linear-gradient(bottom, #002369 0%, #000000 400px, #000000 100%);
   background-image: linear-gradient(to top, #002369 0%, #000000 400px, #000000 100%);
 }
-/* line 61, ../sass/partials/_popup.scss */
+/* line 57, ../sass/partials/_popup.scss */
+.popup-wrap sup {
+  vertical-align: super;
+  font-size: 60%;
+}
+/* line 62, ../sass/partials/_popup.scss */
 .popup-wrap--open {
   -moz-animation: openPopup 0.5s ease 10ms both;
   -webkit-animation: openPopup 0.5s ease 10ms both;
   animation: openPopup 0.5s ease 10ms both;
 }
-/* line 65, ../sass/partials/_popup.scss */
+/* line 66, ../sass/partials/_popup.scss */
 .popup-wrap--close {
   -moz-animation: closePopup 0.5s ease 10ms both;
   -webkit-animation: closePopup 0.5s ease 10ms both;
   animation: closePopup 0.5s ease 10ms both;
 }
 
-/* line 70, ../sass/partials/_popup.scss */
+/* line 71, ../sass/partials/_popup.scss */
 .popup {
   position: relative;
   height: 100%;
   padding: 80px 54px 36px;
 }
-/* line 76, ../sass/partials/_popup.scss */
+/* line 77, ../sass/partials/_popup.scss */
 .popup--cut {
   padding-bottom: 186px;
   background: url("../img/popup-cut.png") no-repeat center bottom;
 }
-/* line 81, ../sass/partials/_popup.scss */
+/* line 82, ../sass/partials/_popup.scss */
 .popup__heading {
   font-size: 28px;
   color: #fff;
   margin: 16px auto;
 }
-/* line 86, ../sass/partials/_popup.scss */
+/* line 87, ../sass/partials/_popup.scss */
 .popup__heading .tm {
   vertical-align: top;
   text-transform: uppercase;
@@ -1275,38 +1280,38 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   font-style: normal;
   padding: 0 1px 0 2px;
 }
-/* line 96, ../sass/partials/_popup.scss */
+/* line 97, ../sass/partials/_popup.scss */
 .popup__caption {
   color: #ccc;
   margin-bottom: 24px;
   font-size: 14px;
 }
-/* line 102, ../sass/partials/_popup.scss */
+/* line 103, ../sass/partials/_popup.scss */
 .popup__media {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-/* line 107, ../sass/partials/_popup.scss */
+/* line 108, ../sass/partials/_popup.scss */
 .popup__media--blank {
   height: 165px;
 }
-/* line 111, ../sass/partials/_popup.scss */
+/* line 112, ../sass/partials/_popup.scss */
 .popup__media--video {
   min-height: 180px;
 }
-/* line 116, ../sass/partials/_popup.scss */
+/* line 117, ../sass/partials/_popup.scss */
 .popup__video, .popup__thumbnail {
   display: block;
   margin: 0 auto;
   height: 180px;
   width: 270px;
 }
-/* line 123, ../sass/partials/_popup.scss */
+/* line 124, ../sass/partials/_popup.scss */
 .popup__thumbnail {
   position: relative;
 }
-/* line 127, ../sass/partials/_popup.scss */
+/* line 128, ../sass/partials/_popup.scss */
 .popup__close-btn {
   position: absolute;
   right: 0;
@@ -1316,12 +1321,12 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   background: url("../img/close-ico.svg") no-repeat center center;
 }
 
-/* line 137, ../sass/partials/_popup.scss */
+/* line 138, ../sass/partials/_popup.scss */
 .video-play {
   width: 270px;
   height: 180px;
 }
-/* line 141, ../sass/partials/_popup.scss */
+/* line 142, ../sass/partials/_popup.scss */
 .video-play:before {
   content: '';
   position: absolute;
@@ -1346,7 +1351,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-bottom-right-radius: 50%;
   border: 2px solid #fff;
 }
-/* line 158, ../sass/partials/_popup.scss */
+/* line 159, ../sass/partials/_popup.scss */
 .video-play:after {
   content: '';
   position: absolute;
@@ -1358,7 +1363,7 @@ html.mdrnjs.mdrntouch [data-popup-id]:before {
   border-bottom: 12px solid transparent;
   border-left: 20px solid #fff;
 }
-/* line 170, ../sass/partials/_popup.scss */
+/* line 171, ../sass/partials/_popup.scss */
 .video-play--loading:before {
   border-bottom-color: transparent;
   -moz-animation: rotate 1s 0 linear infinite;

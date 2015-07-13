@@ -37,7 +37,7 @@ var dynamicText = {
             body: "Light symmetry is determined by the quality of a diamond's cut and the position of inclusions and blemishes, which may occur during the natural formation process. A well-cut diamond features optimal proportions for equal light distribution."
         },
         loupe: {
-            title: "Sarine Loupe<sup>Tm</sup> Imaging",
+            title: "Sarine Loupe<sup>TM</sup> Imaging",
             body: "The Sarine Loupe provides advanced virtual imaging of the diamond's top view, based on its unique cut and clarity. See an instant, accurate display of the diamond's actual appearance."
         },
         "loupe3d": {
