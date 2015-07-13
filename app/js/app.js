@@ -240,7 +240,7 @@
 
         function onViewersReady() {
             parseSarineInfos();
-
+            
             document.querySelector('.slider').style.display = '';
             document.querySelector('.preloader').style.display = 'none';
         }

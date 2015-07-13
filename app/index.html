@@ -263,9 +263,11 @@
             });
             vm.bind('body')
                     .then(function () {
+                        console.log(' * first_init start');
                         return vm.first_init();
                     })
                     .then(function () {
+                        console.log(' * first_init complete');
                         vm.play();
                         return vm.full_init();
                     })
