@@ -41,6 +41,22 @@ body {
     font: italic bold 36px/54px "Utopia Std", "Georgia", serif;
     margin: 36px 0 0;
     color: #3e3e3e; }
+  .dashboard section .powered {
+    text-align: center;
+    display: block; }
+    .dashboard section .powered a {
+      color: silver;
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 23px; }
+      .dashboard section .powered a:hover {
+        color: #000;
+        text-decoration: underline; }
+    .dashboard section .powered img {
+      display: inline-block;
+      vertical-align: middle;
+      width: 40px;
+      margin: 0 0 0 4px; }
   .dashboard section .dashboard-info {
     margin: 24px;
     border: 1px solid #e4e4e4;
@@ -132,6 +148,13 @@ body {
         height: 170px;
         right: -50px;
         top: -40px; }
+      .dashboard section .slide--loupe3d .slide__content .inspect-stone.large .viewport {
+        max-width: 280px;
+        max-height: 280px;
+        margin: 96px auto 0; }
+      .dashboard section .slide--loupe3d .slide__content .inspect-stone .buttons {
+        bottom: 36px;
+        width: 246px; }
     .dashboard section .slide--cut .slide__content {
       padding: 70px 36px 0; }
       .dashboard section .slide--cut .slide__content:before {
@@ -221,95 +244,6 @@ html.firefox .q-mark:before {
       right: 100%; }
     .total-grade__stars:after {
       left: 100%; }
-
-.specs {
-  padding-top: 32px; }
-  .specs__row {
-    position: relative;
-    height: 30px; }
-    .specs__row--line:before {
-      content: '';
-      position: absolute;
-      left: 16%;
-      top: 50%;
-      right: 0;
-      height: 1px;
-      background-color: #e3e3e3; }
-    .specs__row--foot {
-      margin-top: 5px; }
-  .specs__item {
-    float: left;
-    width: 21%;
-    height: 30px;
-    line-height: 30px; }
-    .specs__item--value {
-      width: 16%;
-      font-size: 10px;
-      color: #9c9b9a;
-      text-align: left; }
-    .specs__item .q-mark--small {
-      vertical-align: top;
-      top: 8px; }
-    .specs__item--foot {
-      text-align: center;
-      font-style: italic;
-      font-weight: 600;
-      font-size: 14px;
-      border-top: 1px solid #7d7d7d;
-      white-space: nowrap;
-      vertical-align: baseline; }
-    .specs__item--points-wrap {
-      position: relative; }
-  .specs__points {
-    overflow: hidden;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 10px;
-    margin-left: -5px; }
-    .specs__points--value-1 {
-      height: 30px; }
-    .specs__points--value-2 {
-      height: 60px; }
-    .specs__points--value-3 {
-      height: 90px; }
-    .specs__points--value-4 {
-      height: 120px; }
-    .specs__points--value-5 {
-      height: 150px; }
-    .specs__points--minimum {
-      height: 30px; }
-    .specs__points--standard {
-      height: 60px; }
-    .specs__points--high {
-      height: 90px; }
-    .specs__points--very-high {
-      height: 120px; }
-    .specs__points--exceptional {
-      height: 150px; }
-  .specs__points-list {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 10px;
-    height: 150px; }
-  .specs__point {
-    position: relative;
-    height: 30px;
-    margin: 0 auto; }
-    .specs__point:before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 5px;
-      height: 5px;
-      margin: -2.5px 0 0 -2.5px;
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-      background-color: #000; }
 
 .slider--loupe3d {
   background-color: #878787; }
@@ -469,6 +403,95 @@ html.firefox .q-mark:before {
     width: 70px !important; }
   .slide--loupe3d.ctrl-3d-3 .buttons .icon.focus_out {
     left: 277px; }
+
+.specs {
+  padding-top: 32px; }
+  .specs__row {
+    position: relative;
+    height: 30px; }
+    .specs__row--line:before {
+      content: '';
+      position: absolute;
+      left: 16%;
+      top: 50%;
+      right: 0;
+      height: 1px;
+      background-color: #e3e3e3; }
+    .specs__row--foot {
+      margin-top: 5px; }
+  .specs__item {
+    float: left;
+    width: 21%;
+    height: 30px;
+    line-height: 30px; }
+    .specs__item--value {
+      width: 16%;
+      font-size: 10px;
+      color: #9c9b9a;
+      text-align: left; }
+    .specs__item .q-mark--small {
+      vertical-align: top;
+      top: 8px; }
+    .specs__item--foot {
+      text-align: center;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 14px;
+      border-top: 1px solid #7d7d7d;
+      white-space: nowrap;
+      vertical-align: baseline; }
+    .specs__item--points-wrap {
+      position: relative; }
+  .specs__points {
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 10px;
+    margin-left: -5px; }
+    .specs__points--value-1 {
+      height: 30px; }
+    .specs__points--value-2 {
+      height: 60px; }
+    .specs__points--value-3 {
+      height: 90px; }
+    .specs__points--value-4 {
+      height: 120px; }
+    .specs__points--value-5 {
+      height: 150px; }
+    .specs__points--minimum {
+      height: 30px; }
+    .specs__points--standard {
+      height: 60px; }
+    .specs__points--high {
+      height: 90px; }
+    .specs__points--very-high {
+      height: 120px; }
+    .specs__points--exceptional {
+      height: 150px; }
+  .specs__points-list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 150px; }
+  .specs__point {
+    position: relative;
+    height: 30px;
+    margin: 0 auto; }
+    .specs__point:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 5px;
+      height: 5px;
+      margin: -2.5px 0 0 -2.5px;
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background-color: #000; }
 
 .popup-overlay {
   z-index: 4;
