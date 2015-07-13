@@ -24,6 +24,7 @@ body{
 	margin:0;
 	padding:0;
 }
+
 .dashboard{
 
 	header{
@@ -140,7 +141,6 @@ body{
 				&:before{
 					content:'';
 					position:absolute;
-
 					width: 300px;
 					height: 250px;
 					opacity: 0.15;
@@ -172,7 +172,6 @@ body{
 							height:220px;
 						}
 					}
-
 					.title-sub{
 						width:40%;
 						display:inline-block;
@@ -190,7 +189,9 @@ body{
 			&--loupe3d{
 				.slide__content{
 					background-color:#878787;
-					height:480px;
+					height:462px;
+					margin:0 18px 18px;
+
 					&:before{
 						background-image:url(./img/bg-loupe.png);
 						background-size:contain;
@@ -199,8 +200,8 @@ body{
 						top:-40px;
 					}
 					.inspect-stone.large .viewport{
-						max-width:280px;
-						max-height:280px;
+						max-width:240px;
+						max-height:240px;
 						margin:96px auto 0;
 					}
 					.inspect-stone .buttons{
@@ -234,6 +235,35 @@ body{
 						padding: 36px 36px 0;
 					}
 				}
+			}
+		}
+	}
+
+
+	footer{
+		height:126px;
+		max-width:1072px;
+		margin:0 auto;
+		line-height:126px;
+		a{
+			color: silver;
+			text-decoration: none;
+			font-size: 13px;
+			margin:0 18px;
+			&:hover{
+				color:#000;
+				text-decoration:underline;
+			}
+		}
+		.disclaimer{
+			float:left;
+		}
+		.powered{
+			float:right;
+			img{
+				display:inline-block;
+				vertical-align:middle;
+				margin:0 0 0 4px;
 			}
 		}
 	}
