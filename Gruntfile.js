@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 
     var appConfig = {
         widgetName: null,
-        dir: 'dist_test',
+        dir: 'dist',
         fsTargetDir: '',
         codeWidgetPath: './',
         shell_name: '',
@@ -20,6 +20,10 @@ module.exports = function (grunt) {
         version: {},
 
         copy: {
+            app: {
+                src: 'app/js/app.<%= project.type %>.js',
+                dest: 'tmp/app.js'
+            },
             dist_html: {
                 flatten: true,
                 src: ["app/widgets/<%= project.widgetName %>/template.html"],
@@ -65,11 +69,11 @@ module.exports = function (grunt) {
                     // order of elements is important!
                     'app/js/vendor/*.js',
                     'app/js/*.js',
-//                    'app/widgets/<%= project.widgetName %>/*.js',
+                    'tmp/app.js',
                     '!app/js/app.bundle.min.js',
                     '!app/js/text.js',
-                    '!app/js/app.js',
-                    'app/js/app.js'         // must be last in bundle
+                    '!app/js/app.widget.js',
+                    '!app/js/app.dashboard.js'
                 ],
                 dest: 'tmp/app.bundle.js'
             },
@@ -334,9 +338,20 @@ module.exports = function (grunt) {
         grunt.initConfig(promptConfig);
         grunt.task.run(['prompt']);
         thenCallback = function () {
-            grunt.task.run('build:dist:' + appConfig.widgetName);
+            grunt.task.run('build:widget:' + appConfig.widgetName);
         };
     });
+    
+    
+    
+    grunt.registerTask('build_dashboard', 'Build dashboard for production', function () {
+        grunt.initConfig(promptConfig);
+        grunt.task.run(['prompt']);
+        thenCallback = function () {
+            grunt.task.run('build:dashboard:' + appConfig.widgetName);
+        };
+    });
+    
     
     
     
@@ -345,26 +360,26 @@ module.exports = function (grunt) {
      * grunt build:dist_test:1.2
      */
     grunt.registerTask('build', 'Build specific widget for a specified target (release or test)', function () {
-        var isRelease = this.args[0] === 'dist';
-        appConfig.dir = this.args[0];
+        appConfig.type = this.args[0];
         appConfig.widgetName = this.args[1];
         
-        appConfig.fsTargetDir = 'app/' + appConfig.dir + '/' + appConfig.widgetName;
-        appConfig.shell_name = 'test_' + appConfig.widgetName + '.html';
+        appConfig.fsTargetDir = 'app/dist/' + appConfig.widgetName;
+//        appConfig.shell_name = 'test_' + appConfig.widgetName + '.html';
         fullConfig.version = grunt.file.readJSON('app/widgets/' + appConfig.widgetName + '/version.json');
         
         grunt.initConfig(fullConfig);
         
         conditionalExec([
             {task: 'clean:tmp',             exec: 1},
-            {task: 'concat',                exec: 1},
+            {task: 'copy:app',              exec: 1},
+            {task: 'concat:dist',           exec: 1},
             {task: 'uglify',                exec: 1},
             {task: 'copy',                  exec: 1},
             {task: 'replace:widget_html',   exec: 1},
             {task: 'replace:css_bundle',    exec: 1},
             {task: 'clean:tmp',             exec: 1},
-            {task: 'make_shell:dist_test:' + appConfig.widgetName,         exec: !isRelease},
-//            {task: 'appcache',              exec: isRelease},
+//            {task: 'make_shell:dist_test:' + appConfig.widgetName,         exec: !isRelease},
+//            {task: 'appcache',              exec: 1},
             {task: 'concat:banner_html',    exec: 1},
             {task: 'concat:banner_css',     exec: 1},
             {task: 'concat:banner_js',      exec: 1}

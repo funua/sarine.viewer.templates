@@ -98,7 +98,7 @@
             });
 
             if (totalViewers > 0) {
-                $(document).on("first_init_end", function (event, data) {
+                $(document).on('first_init_end', function (event, data) {
                     totalViewers--;
                     if (totalViewers <= 0) {
                         onViewersReady();
@@ -150,7 +150,6 @@
             playTriggers.forEach(function (element) {
                 videoPlay.initButton(element);
             });
-
         }
 
 
@@ -243,7 +242,7 @@
   
         function readConfig() {
             var elements = {
-                    storylineContainer: $('ul.storyline'),
+//                    storylineContainer: $('ul.storyline'),
                     sliderPagesContainer: $('ul.slider__list'),
                     summaryLinksContainer: $('ul.summary__stories'),
                     summarySpecsContainer: $('.summary__specs'),
@@ -266,16 +265,16 @@
             elements.tmpSlidesContainer.append(elements.sliderPagesContainer.find('> .slide'));
 
             // Add storyline items
-            if ($.isArray(wConfig.pages)) {
-                iterateConfigPages(function (page, i) {
-                    if (page.skip) return;
-                    $('<li />', {
-                        class: 'storyline__item',
-                        'data-target': i
-                    }).html(page.title).appendTo(elements.storylineContainer);
-                });
-            }
-            activeSlidesCount = $('.storyline__item').length;
+//            if ($.isArray(wConfig.pages)) {
+//                iterateConfigPages(function (page, i) {
+//                    if (page.skip) return;
+//                    $('<li />', {
+//                        class: 'storyline__item',
+//                        'data-target': i
+//                    }).html(page.title).appendTo(elements.storylineContainer);
+//                });
+//            }
+//            activeSlidesCount = $('.storyline__item').length;
             
                 
 
@@ -304,7 +303,7 @@
                 iterateConfigPages(function (page, i) {
                     if (page.code === 'summary' || page.skip) return;
 
-                    var svg = $("#summary__story--" + page.code).show();
+                    var svg = $('#summary__story--' + page.code).show();
 
                     $('<li/>', {
                         class: 'summary__story summary__story--' + page.code,
@@ -322,13 +321,13 @@
                 }
             });
                         
-            if (activeSlidesCount > 1) {
-                elements.storylineContainer
-                        .addClass('items-count-' + activeSlidesCount)
-                        .find('> .storyline__item').eq(0).addClass('storyline__item--active');
-            } else {
-                elements.storylineContainer.add('.slider__btn').hide();
-            }
+//            if (activeSlidesCount > 1) {
+//                elements.storylineContainer
+//                        .addClass('items-count-' + activeSlidesCount)
+//                        .find('> .storyline__item').eq(0).addClass('storyline__item--active');
+//            } else {
+//                elements.storylineContainer.add('.slider__btn').hide();
+//            }
 
 
             // Add classes to slider wrap element: color scheme and widget code
@@ -428,50 +427,3 @@
         }
     });
 })(window, window.document, window.jQuery, window.FastClick, window.classie, window.PopupService, window.videoPlay, window.jss);
-
-
-
-
-/**
- * Intercept console.log() calls and display their messages in floating element.
- * Add 'catch_log' string to url hash to enable this feature,
- * i.e. 'localhost:9003/#catch_log'.
- * 
- * May also be combined with 'debug' key to show another floating element for displaying viewers loading process.
- * For example:
- * localhost:9003/#debug--catch_log
- * The keys separator may be any valid character(s).
- * 
- * @returns {void}
- */
-(function () {
-    var consoleLog,
-        logSelector = 'console_log',
-        oldLog = console.log;
-    
-    if (window.location.hash.indexOf('catch_log') === -1) return;
-    
-    consoleLog = $('#' + logSelector);
-    if (consoleLog.length === 0) {
-        consoleLog = $('<div/>', {id: logSelector})
-                .css({
-                    position: 'absolute',
-                    right: '10px',
-                    bottom: '10px',
-                    padding: '10px 20px',
-                    border: '1px solid #999',
-                    background: '#ddd',
-                    maxHeight: '300px',
-                    maxWidth: '300px',
-                    overflowY: 'auto',
-                    fontFamily: 'monospace',
-                    fontSize: '92%',
-                    lineHeight: '130%'
-                })
-                .appendTo($('body'));
-    }
-    console.log = function (message) {
-        consoleLog.prepend($('<p/>', {text: message}).css({margin: '.7em 0'}));
-        oldLog.apply(console, arguments);
-    };
-})();
