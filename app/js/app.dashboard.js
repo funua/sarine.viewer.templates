@@ -317,7 +317,8 @@
                 if (page.code !== 'summary' || page.skip) return;
 
                 if (page.specs && page.specs.length) {
-                    setSummaryPageSpecs(page.specs, elements.summarySpecsContainer);
+                    // Uncomment for dynamic dashboard (stage 2)
+//                    setSummaryPageSpecs(page.specs, elements.summarySpecsContainer);
                 }
             });
                         
