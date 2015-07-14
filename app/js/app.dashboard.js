@@ -85,7 +85,7 @@
                         currentPopup.find('.popup__close-btn').on('click', function () {
                             popupService.close(currentPopup[0]);
                             window.setTimeout(function () {
-                                popupContainer.hide();
+                                popupContainer.hide().empty();
                             }, 500);
                         });
                     });

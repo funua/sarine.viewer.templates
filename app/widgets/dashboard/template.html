@@ -182,27 +182,31 @@
             <div class="popup-container"></div>
         </div>
         <div class="slide slide--hna">
-            <h2 class="title"><span>Hearts &amp; Arrows <span class="q-mark"></span></span></h2>
+            <h2 class="title"><span>Hearts &amp; Arrows 
+                    <!--<span class="q-mark"></span></span>-->
+            </h2>
             <div class="slide__content">
                 <sarine-viewer viewer="cutHeartsAndArrows" order="2"></sarine-viewer>
-                <h3 class="title-sub">Hearts <span class="q-mark"></span></h3>
-                <h3 class="title-sub">Arrows <span class="q-mark"></span></h3>
+                <h3 class="title-sub" data-popup-id="popup_hearts">Hearts <span class="q-mark"></span></h3>
+                <h3 class="title-sub" data-popup-id="popup_arrows">Arrows <span class="q-mark"></span></h3>
                 <p class="caption">Hearts & Arrows is a symmetrical optical pattern seen in round brilliant diamonds cut to the highest quality and precision.</p>
             </div>
+            <div class="popup-container"></div>
         </div>
         <div class="slide slide--loupe3d ctrl-3d-2">
-            <h2 class="title"><span>Diamond Imagery <span class="q-mark"></span></span></h2>
+            <h2 class="title" data-popup-id="popup_loupe"><span>Diamond Imagery <span class="q-mark"></span></span></h2>
             <div class="slide__content">
                 <sarine-viewer viewer="loupe3DFullInspection" order="3"></sarine-viewer>
             </div>
-
+            <div class="popup-container"></div>
         </div>
         <div class="slide slide--cut">
-            <h2 class="title"><span>Cut & Craftsmanship <span class="q-mark"></span></span></h2>
+            <h2 class="title" data-popup-id="popup_cut_n_sym"><span>Cut & Craftsmanship <span class="q-mark"></span></span></h2>
             <div class="slide__content">
                 <sarine-viewer viewer="cut2DView" order="4" version="v2"></sarine-viewer>
                 <p class="caption">View the diamond's geometrical measurements and angles to assess its proportions and symmetry.</p>
             </div>
+            <div class="popup-container"></div>
         </div>
     </section>
     <footer>
@@ -382,3 +386,16 @@
 <script type="text/javascript" src="/js/videoPlay.js" data-preserve-path="1"></script>
 <script type="text/javascript" src="/js/app.dashboard.js" data-preserve-path="1"></script>
 <!--end dist scripts replace-->
+
+
+<style type="text/css">
+    .popup-container {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: none;
+    }
+</style>
