@@ -1,0 +1,49 @@
+$q-mark-big-size: 16px;
+$q-mark-small-size: 14px;
+$q-mark-big-font-size: 12px;
+$q-mark-small-font-size: 10px;
+$q-mark-background-color: #ededed;
+$q-mark-border-color: #dfdfdf;
+
+.q-mark {
+	position: relative;
+	display: inline-block;
+	top: -1px;
+	width: $q-mark-big-size;
+	height: $q-mark-big-size;
+	font: normal 700 $q-mark-big-font-size $font-family-sans-serif;
+	line-height: $q-mark-big-size;
+	text-align: center;
+	background-color: $q-mark-background-color;
+	border: 1px solid $q-mark-border-color;
+	vertical-align: middle;
+	@include border-radius(50%);
+
+	&:before {
+		content: '?';
+		position: absolute;
+		top: 2px;
+		left: 4px;
+		line-height: 12px;
+	}
+
+	&--small {
+		width:$q-mark-small-size;
+		height: $q-mark-small-size;
+		margin: 0 2px;
+		line-height: $q-mark-big-font-size;
+		font-size: $q-mark-small-font-size;
+		top:2px;
+
+		&:before{
+			top: 1px;
+			left: 4px;
+			line-height: 10px;
+		}
+	}
+}
+html.firefox .q-mark{
+	&:before{
+		top:1px;
+	}
+}

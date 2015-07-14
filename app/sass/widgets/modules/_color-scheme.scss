@@ -1,0 +1,235 @@
+$scheme1-color1: #04218a;
+$scheme1-color2: #3d54a8;
+
+$scheme2-color1: #5A336C;
+//$scheme2-color2: #832183;
+
+$scheme3-color1: #000000;
+$scheme3-color2: #000000;
+
+//.slider{
+//
+//	.summary__story--light:before{
+//		background-position: 0 6px;
+//		width: 43px;
+//	}
+//
+//	.summary__story--loupe:before{
+//		background-position: -50px 5px;
+//		width: 47px;
+//	}
+//
+//	.summary__story--loupe3d:before{
+//		background-position: -50px 5px;
+//		width: 47px;
+//	}
+//
+//	.summary__story--hna:before{
+//		background-position: -100px 4px;
+//		width: 36px;
+//	}
+//
+//	.summary__story--cut:before{
+//		background-position: -150px 13px;
+//		width: 41px;
+//	}
+//
+//}
+
+.color-scheme{
+
+	//COLOR SETTING 1
+
+	&-1 .preloader__heading{
+		color:$scheme1-color1;
+	}
+
+	&-1 .preloader__dot{
+	    background-color:$scheme1-color1;
+    }
+
+	&-1 .q-mark{
+	    color:$scheme1-color1;
+    }
+
+	&-1 .q-mark--small{
+        color:$scheme1-color1;
+    }
+
+    &-1 .summary__story{
+        color:$scheme1-color1;
+
+        svg *{
+	        stroke:$scheme1-color1;
+//            background-image: url("../../img/summary-color-1.png");
+        }
+
+    }
+
+	&-1 .storyline__item--active:before{
+		background-color: $scheme1-color1;
+    }
+
+	&-1 .storyline__item:hover:before {
+		background-color: lighten($scheme1-color1, 20%);
+	}
+
+	&-1 .total-grade__grade{
+	    color: $scheme1-color1;
+    }
+
+	&-1 .total-grade__stars{
+	    color: $scheme1-color1;
+    }
+
+	&-1 .specs__item--foot{
+	    color: $scheme1-color1;
+    }
+
+	&-1 .specs__point{
+	    @for $i-index from 1 through 5 {
+		    &:nth-child(#{$i-index}):before {
+			    background-color: lighten($scheme1-color2, (($i-index - 1) / 4) * 35%);
+		    }
+	    }
+    }
+
+	&-1 h3{
+	    color: $scheme1-color1;
+    }
+
+    //COLOR SETTING 2
+
+	&-2 .preloader__heading{
+	    color:$scheme2-color1;
+    }
+
+	&-2 .preloader__dot{
+	    background-color:$scheme2-color1;
+    }
+
+	&-2 .q-mark{
+	    color:$scheme2-color1;
+    }
+
+	&-2 .q-mark--small{
+	    color:$scheme2-color1;
+    }
+
+	&-2 .summary__story{
+	    color:$scheme2-color1;
+
+	    &:before{
+		    background-image: url("../../img/summary-color-2.png");
+	    }
+
+    }
+
+	&-2 .storyline__item--active:before{
+	    background-color: $scheme2-color1;
+    }
+
+	&-2 .storyline__item:hover:before {
+	    background-color: lighten($scheme2-color1, 20%);
+    }
+
+    &-2 .total-grade__grade{
+		color: $scheme2-color1;
+    }
+
+	&-2 .total-grade__stars{
+	    color: $scheme2-color1;
+    }
+
+    &-2 .specs__item--foot{
+		color: $scheme2-color1;
+    }
+
+    &-2 .specs__point{
+        @for $i-index from 1 through 5 {
+	        &:nth-child(#{$i-index}):before {
+		        background-color: lighten($scheme2-color1, (($i-index - 1) / 4) * 35%);
+	        }
+        }
+    }
+
+    &-2 h3{
+		color: $scheme2-color1;
+    }
+
+	//COLOR SETTING 3
+
+	&-3 .preloader__heading{
+	    color:$scheme3-color1;
+    }
+
+	&-3 .preloader__dot{
+	    background-color:$scheme3-color1;
+    }
+
+	&-3 .q-mark{
+	    color:$scheme3-color1;
+    }
+
+	&-3 .q-mark--small{
+	    color:$scheme3-color1;
+    }
+
+
+	&-3 .storyline__item--active:before{
+	    background-color: $scheme3-color1;
+    }
+
+	&-3 .storyline__item:hover:before {
+	    background-color: lighten($scheme3-color1, 20%);
+    }
+
+	&-3 .total-grade__grade{
+	    color: $scheme3-color1;
+    }
+
+	&-3 .total-grade__stars{
+	    color: $scheme3-color1;
+    }
+
+	&-3 .specs__item--foot{
+	    color: $scheme3-color1;
+    }
+
+	&-3 .specs__point{
+	    @for $i-index from 1 through 5 {
+		    &:nth-child(#{$i-index}):before {
+			    background-color: lighten($scheme3-color2, (($i-index - 1) / 4) * 35%);
+		    }
+	    }
+	}
+}
+
+@media screen and (max-width:984px) {
+	// storyline https://github.com/SarineTechnologies/sarine.viewer.templates/issues/164
+	.color-scheme-1 .storyline__item:not(.storyline__item--active):hover:before {
+		background-color: #ddd;
+	}
+	.color-scheme-1 .storyline__item--active:hover:before {
+		background-color: $scheme1-color1 !important;
+	}
+}
+
+
+
+.brand-img{
+
+	svg{
+		width:50px;
+		height:50px;
+		display:block;
+		margin:0 auto 6px;
+	}
+
+	*{
+		fill:none;
+		stroke:#000000;
+		stroke-linecap:round;
+		stroke-miterlimit:10;
+	}
+}
