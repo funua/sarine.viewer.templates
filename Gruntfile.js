@@ -7,9 +7,9 @@ module.exports = function (grunt) {
         widgetName: null,
         dir: 'dist',
         fsTargetDir: '',
+        fsSourceDir: '',
         codeWidgetPath: './',
-        shell_name: '',
-        base_server: ''
+        getCssFilename: getCssFilename
     },
     
     thenCallback,
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
             },
             dist_html: {
                 flatten: true,
-                src: ["app/widgets/<%= project.widgetName %>/template.html"],
+                src: ['<%= project.fsSourceDir %>/template.html'],
                 dest: '<%= project.fsTargetDir %>/',
                 expand: true,
                 rename: function (dest, src) {
@@ -35,7 +35,12 @@ module.exports = function (grunt) {
             },
             dist_assets1: {
                 flatten: true,
-                src: ['tmp/app.bundle.min.js', 'app/css/main.min.css', 'app/widgets/<%= project.widgetName %>/widgetConfig.js'],
+                src: [
+                    'tmp/app.bundle.min.js',
+                    'app/css/<%= project.getCssFilename() %>',
+                    '<%= project.fsSourceDir %>/widgetConfig.js',
+                    '<%= project.fsSourceDir %>/version.json'
+                ],
                 dest: '<%= project.fsTargetDir %>/',
                 expand: true
             },
@@ -46,17 +51,10 @@ module.exports = function (grunt) {
                 rename: function (dest, src) {
                     return dest + src.replace('app\/', '');
                 }
-            },
-            version_json: {
-                flatten: true,
-                expand: true,
-                src: ["app/widgets/<%= project.widgetName %>/version.json"],
-                dest: '<%= project.fsTargetDir %>/'
             }
         },
 
         clean: {
-//            initial: ['app/dist'],
             tmp: ['tmp']
         },
 
@@ -64,7 +62,7 @@ module.exports = function (grunt) {
             options: {
                 separator: ';'
             },
-            dist: {
+            dist_js: {
                 src: [
                     // order of elements is important!
                     'app/js/vendor/*.js',
@@ -80,10 +78,7 @@ module.exports = function (grunt) {
             banner_html: {
                 options: {
                     stripBanners: true,
-                    banner: '<!-- \n\
-   ! <%= version.codename %> - v<%= version.full %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n\
--->\n\
-'
+                    banner: '<!-- \n   ! <%= version.codename %> - v<%= version.full %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n-->\n'
                 },
                 files: {
                     '<%= project.fsTargetDir %>/index.html': ['<%= project.fsTargetDir %>/index.html']
@@ -92,22 +87,16 @@ module.exports = function (grunt) {
             banner_css: {
                 options: {
                     stripBanners: true,
-                    banner: '/* \n\
-   ! <%= version.codename %> - v<%= version.full %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n\
-*/\n\
-'
+                    banner: '/* \n   ! <%= version.codename %> - v<%= version.full %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n*/\n'
                 },
                 files: {
-                    '<%= project.fsTargetDir %>/main.min.css': ['<%= project.fsTargetDir %>/main.min.css']
+                    '<%= project.fsTargetDir %>/<%= project.getCssFilename() %>': ['<%= project.fsTargetDir %>/<%= project.getCssFilename() %>']
                 }
             },
             banner_js: {
                 options: {
                     stripBanners: true,
-                    banner: '/* \n\
-   ! <%= version.codename %> - v<%= version.full %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n\
-*/\n\
-'
+                    banner: '/* \n   ! <%= version.codename %> - v<%= version.full %> - <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %>\n*/\n'
                 },
                 files: {
                     '<%= project.fsTargetDir %>/app.bundle.min.js': ['<%= project.fsTargetDir %>/app.bundle.min.js']
@@ -129,14 +118,20 @@ module.exports = function (grunt) {
                         {
                             match: /<!--dist scripts replace-->[\s\S]+<!--end dist scripts replace-->/,     // [\s\S]+ multiline match of any character
                             replacement: '<script type="text/javascript" src="app.bundle.min.js"></script>'
-                        }, {
-                            match: /<style>@import '[.\/]+css\/main\.min\.css';<\/style>/,
+                        },
+                        {
+                            match: /<style>@import '[\.\/]*css\/main\.min\.css';<\/style>/,
                             replacement: '<link type="text/css" rel="stylesheet" href="./main.min.css" />'
-                            //replacement: '<!--[if !IE]><!--><style>@import "./main.min.css";</style><!--<![endif]--> <!--[if IE]>--><link type="text/css" rel="stylesheet" href="./main.min.css" /><!--<![endif]-->'
-                        }, {
+                        },
+                        {
+                            match: /<style>@import '[\.\/]*css\/dashboard\.css';<\/style>/,
+                            replacement: '<link type="text/css" rel="stylesheet" href="./dashboard.css" />'
+                        },
+                        {
                             match: /src="[.\/]+img\//g,
                             replacement: 'src="<%= project.codeWidgetPath %>img/'
-                        }, {
+                        },
+                        {
                             match: /src="\/dist\/common\/text\.js"/,
                             replacement: 'src="http://dev.sarineplatform.com.s3.amazonaws.com/qa4/content/viewers/templates/common/text.js"'
                         }
@@ -149,11 +144,11 @@ module.exports = function (grunt) {
                 options: {
                     patterns: [
                         {
-                            match: /url\((\.[.\/]+|\/)fonts/g,
+                            match: /url\((\.[.\/]*|\/)fonts/g,
                             replacement: 'url(<%= project.codeWidgetPath %>fonts'
                         },
                         {
-                            match: /url\([.\/]+img/g,
+                            match: /url\([\.\/]*img/g,
                             replacement: 'url(<%= project.codeWidgetPath %>img'
                         },
                         {
@@ -163,7 +158,7 @@ module.exports = function (grunt) {
                         }
                     ]
                 },
-                src: '<%= project.fsTargetDir %>/main.min.css',
+                src: '<%= project.fsTargetDir %>/<%= project.getCssFilename() %>',
                 dest: '<%= replace.css_bundle.src %>'
             }
         },
@@ -316,14 +311,16 @@ module.exports = function (grunt) {
     
     
     
-    grunt.initConfig(watchConfig);
     grunt.registerTask('serve', 'Watch for changes in files', function () {
+        grunt.initConfig(watchConfig);
         grunt.task.run([
             'connect',
             'open',
             'watch:default'
         ]);
     });
+
+
 
     grunt.registerTask('dashboard', 'watching...', function () {
         grunt.task.run([
@@ -332,6 +329,7 @@ module.exports = function (grunt) {
             'watch:dashboard'
         ]);
     });
+
 
     
     grunt.registerTask('build_widget', 'Build widget for production', function () {
@@ -354,31 +352,33 @@ module.exports = function (grunt) {
     
     
     
-    
     /**
-     * grunt build:dist:w1.5
-     * grunt build:dist_test:1.2
+     * Examples:
+     * grunt build:widget:w1.5
+     * grunt build:dashboard:dashboard
      */
     grunt.registerTask('build', 'Build specific widget for a specified target (release or test)', function () {
         appConfig.type = this.args[0];
         appConfig.widgetName = this.args[1];
         
+        appConfig.fsSourceDir = 'app/widgets/' + appConfig.widgetName;
         appConfig.fsTargetDir = 'app/dist/' + appConfig.widgetName;
-//        appConfig.shell_name = 'test_' + appConfig.widgetName + '.html';
-        fullConfig.version = grunt.file.readJSON('app/widgets/' + appConfig.widgetName + '/version.json');
+        fullConfig.version = grunt.file.readJSON(appConfig.fsSourceDir + '/version.json');
+        appConfig.version = fullConfig.version;
         
         grunt.initConfig(fullConfig);
         
         conditionalExec([
-            {task: 'clean:tmp',             exec: 1},
+            {task: 'clean',                 exec: 1},
             {task: 'copy:app',              exec: 1},
-            {task: 'concat:dist',           exec: 1},
+            {task: 'concat:dist_js',        exec: 1},
             {task: 'uglify',                exec: 1},
-            {task: 'copy',                  exec: 1},
+            {task: 'copy:dist_html',        exec: 1},
+            {task: 'copy:dist_assets1',     exec: 1},
+            {task: 'copy:dist_assets2',     exec: 1},
             {task: 'replace:widget_html',   exec: 1},
             {task: 'replace:css_bundle',    exec: 1},
-            {task: 'clean:tmp',             exec: 1},
-//            {task: 'make_shell:dist_test:' + appConfig.widgetName,         exec: !isRelease},
+            {task: 'clean',                 exec: 1},
 //            {task: 'appcache',              exec: 1},
             {task: 'concat:banner_html',    exec: 1},
             {task: 'concat:banner_css',     exec: 1},
@@ -390,9 +390,10 @@ module.exports = function (grunt) {
     
     /**
      * 
-     * @param {Array} data     Pass the names of tasks and boolean values: {
-     *      taskName1: true, taskName2: false
-     * }
+     * @param {Array} data     Pass the names of tasks and boolean values: [
+     *      {task: 'taskName1', exec: true},
+     *      {task: 'taskName2', exec: false}
+     * ]
      * @returns {void}
      */
     function conditionalExec(data) {
@@ -419,5 +420,19 @@ module.exports = function (grunt) {
             widgets.push(wDirname);
         });
         return widgets;
+    }
+    
+    
+    /**
+     * Return filename for css bundle depending on task type (widget or dashboard)
+     */
+    function getCssFilename() {
+        var result;
+        if (appConfig.type === 'widget') {
+            result = 'main.min';
+        } else {
+            result = 'dashboard';
+        }
+        return result + '.css';
     }
 };
