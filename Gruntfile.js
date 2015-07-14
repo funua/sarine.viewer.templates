@@ -241,7 +241,7 @@ module.exports = function (grunt) {
                     update: true
                 },
                 files: {
-                    'app/css/dashboard.css': 'app/sass/dashboard.scss'
+                    'app/css/dashboard.css': 'app/sass/dashboard/main.scss'
                 }
             }
         },
@@ -263,17 +263,19 @@ module.exports = function (grunt) {
                 options: {
                     livereload: true
                 },
-                files: ['app/**/*'],
+                files: [
+                    'app/**/*'
+                ],
                 sass: {
                     options: {
                         livereload: false
                     },
-                    files: 'app/sass/**/*.scss',
+                    files: 'app/sass/widgets/**/*.scss',
                     tasks: ['compass:dev', 'cssmin']
                 }
             },
             dashboard: {
-                files: ['app/sass/dashboard.scss', 'app/index.html', 'app/widgets/dashboard/template.html'],
+                files: ['app/sass/dashboard/**/*.scss', 'app/index.html', 'app/widgets/dashboard/*', 'app/js/**/*.js'],
                 tasks: ['sass'],
                 options: {
                     livereload: true
@@ -323,6 +325,7 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('dashboard', 'watching...', function () {
+        grunt.initConfig(watchConfig);
         grunt.task.run([
             'connect',
             'open',
