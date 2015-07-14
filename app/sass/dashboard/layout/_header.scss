@@ -13,6 +13,7 @@ header{
 		font-weight:bold;
 		text-transform:uppercase;
 		font-family: $Utopia;
+		transition:color ease 300ms;
 
 		span{
 			font-size:30px;
@@ -23,6 +24,11 @@ header{
 				font-size:12px !important;
 				letter-spacing:0;
 			}
+		}
+
+		&:hover{
+			text-decoration:none;
+			color:#c0c0c0;
 		}
 	}
 

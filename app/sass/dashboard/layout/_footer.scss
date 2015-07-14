@@ -1,0 +1,26 @@
+footer{
+	height:126px;
+	line-height:126px;
+
+	a{
+		color: silver;
+		text-decoration: none;
+		font-size: 13px;
+		margin:0 18px;
+		&:hover{
+			color:#000;
+			text-decoration:underline;
+		}
+	}
+	.disclaimer{
+		float:left;
+	}
+	.powered{
+		float:right;
+		img{
+			display:inline-block;
+			vertical-align:middle;
+			margin:0 0 0 4px;
+		}
+	}
+}
