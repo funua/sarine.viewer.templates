@@ -1,0 +1,42 @@
+.slide{
+	width:500px;
+	min-height:500px;
+	border:1px solid #e6e6e6;
+	box-sizing:border-box;
+	float:left;
+	margin:18px;
+
+
+	.title{
+		margin:-18px 0 0;
+		font: italic 20px/36px $Utopia;
+		color:#413f41;
+		text-align:center;
+
+		span:not(.q-mark){
+			background:#fff;
+			padding:0 18px;
+		}
+
+	}
+	.caption{
+		color:#535353;
+		font:normal 14px/22px $OpenSans;
+		margin: 0;
+	}
+
+	&__content{
+		position:relative;
+		overflow:hidden;
+		text-align:center;
+		&:before{
+			content:'';
+			position:absolute;
+			width: 300px;
+			height: 250px;
+			opacity: 0.15;
+			background:100% 0 no-repeat;
+		}
+	}
+
+}

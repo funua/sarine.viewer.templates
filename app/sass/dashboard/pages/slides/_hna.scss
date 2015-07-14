@@ -1,0 +1,30 @@
+.slide--hna{
+	  .slide__content{
+		  padding:70px 0 0;
+
+		  &:before{
+			  background-image:url(../../../img/bg-hna.png);
+			  background-size:contain;
+			  right: -60px;
+			  top: 0;
+		  }
+		  .viewer{
+			  text-align:center;
+
+			  canvas{
+				  width:220px;
+				  height:220px;
+			  }
+		  }
+		  .title-sub{
+			  width:40%;
+			  display:inline-block;
+			  margin:0;
+			  font:italic 600 24px/28px $OpenSans;
+			  color:#04218a;
+		  }
+		  .caption{
+			  padding: 36px 90px 0;
+		  }
+	  }
+  }

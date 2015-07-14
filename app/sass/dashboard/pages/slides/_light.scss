@@ -1,3 +1,7 @@
+.slide--light{
+	padding:0 18px;
+}
+
 .slide__img-wrap--light {
 	padding-left: 24px;
 }
@@ -13,12 +17,12 @@
 
 	&__title {
 		color: #413f41;
-		font: italic 18px $font-family-sans-serif;
+		font: italic 18px $OpenSans;
 		line-height: 24px;
 	}
 
 	&__grade {
-		font: italic 30px $font-family-serif;
+		font: italic 30px $Utopia;
 		line-height: 32px;
 	}
 
@@ -32,7 +36,7 @@
 		position: relative;
 		display: inline-block;
 		letter-spacing: 3px;
-		font: 16px $font-family-serif;
+		font: 16px $Utopia;
 
 		&:before, &:after {
 			content: '';
