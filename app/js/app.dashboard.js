@@ -3,10 +3,11 @@
         'use strict';
 
         var popupService = new PopupService({
-                overlay: document.getElementById('popup_overlay')
+                overlay: null,
+                isDashboard: true
             }),
             openPopupTriggers,
-            closePopupTriggers,
+//            closePopupTriggers,
             sarineInfos,
             lightGrades,
             stone = window.stones && window.stones[0],
@@ -23,19 +24,6 @@
             dText = window.dynamicText,
             wConfig = window.widgetConfig;
         
-//        if ($('.slider__header')[0]) {
-//            $('.slider__header')[0].setVisibility = function (setVisible) {
-//                if (setVisible) {
-//                    classie.remove(this, 'slider__header--hide');
-//                    classie.add(this, 'slider__header--show');
-//                } else {
-//                    classie.add(this, 'slider__header--hide');
-//                    classie.remove(this, 'slider__header--show');
-//                }
-//            };
-//        }
-        
-        
         
         function main() {
             readConfig();
@@ -43,53 +31,14 @@
             setTexts();
             
             openPopupTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-popup-id]'), 0);
-            closePopupTriggers = Array.prototype.slice.call(document.querySelectorAll('.popup__close-btn'), 0);
+//            closePopupTriggers = Array.prototype.slice.call(document.querySelectorAll('.popup__close-btn'), 0);
             sarineInfos = Array.prototype.slice.call(document.querySelectorAll('[pages]'), 0);
             lightGrades = Array.prototype.slice.call(document.querySelectorAll('[data-light-grade]'), 0);
             totalViewers = $('.viewer').length;
             playTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-video-id]'), 0);
             canvases = Array.prototype.slice.call(document.querySelectorAll('canvas'), 0);
 
-//            slider = new WallopSlider(document.querySelector('.slider'), {
-//                btnPreviousClass: 'slider__btn--previous',
-//                btnNextClass: 'slider__btn--next',
-//                itemClass: 'slide',
-//                currentItemClass: 'slide--current',
-//                showPreviousClass: 'slide--show-previous',
-//                showNextClass: 'slide--show-next',
-//                hidePreviousClass: 'slide--hide-previous',
-//                hideNextClass: 'slide--hide-next'
-//            });
-//            storylineNav = new BulletNavigation({
-//                slider: slider,
-//                bulletsContainer: document.querySelector('.storyline'),
-//                bulletClassName: '.storyline__item',
-//                activeBulletClassName: 'storyline__item--active'
-//            });
-//            if ($('.summary__story-wrap').length) {
-//                summaryNav = new BulletNavigation({
-//                    slider: slider,
-//                    bulletsContainer: document.querySelector('.summary__story-wrap'),
-//                    bulletClassName: '.summary__story'
-//                });
-//            }
-
-
             FastClick.attach(document.body);
-
-//            slider.on('change', function (e) {
-//                var header = e.detail.parentSelector.querySelector('.slider__header'),
-//                    container = $(e.detail.parentSelector);
-//
-//                container.attr('class', 'slider');
-//                if (e.detail.currentItemIndex === 0) {
-//                    header.setVisibility(wConfig.pages[0].enableStoryline);
-//                } else {
-//                    header.setVisibility(true);
-//                }
-//
-//                container.addClass('slider--' + container.find('ul.slider__list > .slide').eq(e.detail.currentItemIndex).attr('data-slidename'));
-//            });
 
             canvases.forEach(function (element) {
                 if (classie.has(element, 'no_stone')) {
@@ -108,18 +57,6 @@
                 onViewersReady();
             }
 
-
-//            if (Hammer) {
-//                swipeRecognizer = new Hammer(document.getElementById('slider'));
-//                swipeRecognizer.on('swipeleft swiperight', function (e) {
-//                    if (e.type === 'swipeleft') {
-//                        slider.next();
-//                    } else {
-//                        slider.previous();
-//                    }
-//                });
-//            }
-
             setTotalGrade();
 
             lightGrades.forEach(function (element) {
@@ -136,16 +73,30 @@
 
                 if (popupWrap) {
                     element.addEventListener('click', function () {
-                        popupService.open(popupWrap);
+                        var popupContainer = $(this).closest('.slide').find('.popup-container').show(),
+                            currentPopup;
+                        $('<div class="popup-overlay popup-overlay--open"/>').appendTo(popupContainer);
+                        currentPopup = $(popupWrap)
+                                .clone()
+                                .appendTo(popupContainer)
+                                .attr('id', $(popupWrap).attr('id') + '_copy');
+                        popupService.open(currentPopup[0]);
+                        
+                        currentPopup.find('.popup__close-btn').on('click', function () {
+                            popupService.close(currentPopup[0]);
+                            window.setTimeout(function () {
+                                popupContainer.hide();
+                            }, 500);
+                        });
                     });
                 }
             });
 
-            closePopupTriggers.forEach(function (element) {
-                element.addEventListener('click', function () {
-                    popupService.close(element.parentNode.parentNode);
-                });
-            });
+//            closePopupTriggers.forEach(function (element) {
+//                element.addEventListener('click', function () {
+//                    popupService.close(element.parentNode.parentNode);
+//                });
+//            });
 
             playTriggers.forEach(function (element) {
                 videoPlay.initButton(element);
@@ -242,17 +193,14 @@
   
         function readConfig() {
             var elements = {
-//                    storylineContainer: $('ul.storyline'),
                     sliderPagesContainer: $('ul.slider__list'),
-                    summaryLinksContainer: $('ul.summary__stories'),
                     summarySpecsContainer: $('.summary__specs'),
                     tmpSlidesContainer: $('<div/>'),
                     customerLogo: $('.footer__customer__logo'),
                     sliderWrap: $('.slider-wrap'),
                     sliderHeader: $('.slider__header'),
                     aSlider: $('#slider')
-                },
-                activeSlidesCount;
+                };
 
             // Substitute fields from config
             $('[data-widgetconfig-value]').each(function (i, elem) {
@@ -264,19 +212,7 @@
 
             elements.tmpSlidesContainer.append(elements.sliderPagesContainer.find('> .slide'));
 
-            // Add storyline items
-//            if ($.isArray(wConfig.pages)) {
-//                iterateConfigPages(function (page, i) {
-//                    if (page.skip) return;
-//                    $('<li />', {
-//                        class: 'storyline__item',
-//                        'data-target': i
-//                    }).html(page.title).appendTo(elements.storylineContainer);
-//                });
-//            }
-//            activeSlidesCount = $('.storyline__item').length;
             
-                
 
             // Enable slides
             iterateConfigPages(function (page) {
@@ -295,22 +231,6 @@
             elements.aSlider.addClass('slider--' + $('.slide:first').attr('data-slidename'));
             $('.slide:first').addClass('slide--current');
 
-
-            // Add slides links for summary page
-            if (wConfig.pages[0].disableNavigation) {
-                elements.summaryLinksContainer.remove();
-            } else {
-                iterateConfigPages(function (page, i) {
-                    if (page.code === 'summary' || page.skip) return;
-
-                    var svg = $('#summary__story--' + page.code).show();
-
-                    $('<li/>', {
-                        class: 'summary__story summary__story--' + page.code,
-                        'data-target': i
-                    }).html(page.title).prepend(svg).appendTo(elements.summaryLinksContainer);
-                });
-            }
             
             // Add summary page specs
             iterateConfigPages(function (page) {
@@ -320,24 +240,12 @@
                     setSummaryPageSpecs(page.specs, elements.summarySpecsContainer);
                 }
             });
-                        
-//            if (activeSlidesCount > 1) {
-//                elements.storylineContainer
-//                        .addClass('items-count-' + activeSlidesCount)
-//                        .find('> .storyline__item').eq(0).addClass('storyline__item--active');
-//            } else {
-//                elements.storylineContainer.add('.slider__btn').hide();
-//            }
 
 
             // Add classes to slider wrap element: color scheme and widget code
             wConfig.color_scheme && elements.sliderWrap.addClass(wConfig.color_scheme);
             wConfig.widget_brief_code && elements.sliderWrap.addClass(wConfig.widget_brief_code);
 
-
-//            if (wConfig.pages[0].enableStoryline) {
-//                elements.sliderHeader[0].setVisibility(true);
-//            }
             $('.popup-wrap button').attr('tabindex', '-1');
         }
         

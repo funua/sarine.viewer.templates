@@ -8,6 +8,7 @@
         this._openClassName = args.openClassName || 'popup-wrap--open';
         this._closeClassName = args.closeClassName || 'popup-wrap--close';
         this._openOverlayClassName = args.openOverlayClassName || 'popup-overlay--open';
+        this._isDashboard = args.isDashboard || false;
     }
 
     PopupService.prototype.open = function (element) {
@@ -22,7 +23,11 @@
         }
 
         this.currentElement = element;
-        classie.add(this._overlay, this._openOverlayClassName);
+        
+        if (!this._isDashboard) {
+            classie.add(this._overlay, this._openOverlayClassName);
+        }
+        
         classie.remove(element, this._closeClassName);
         classie.add(element, this._openClassName);
 
@@ -33,7 +38,10 @@
         var videoElement;
 
         this.currentElement = null;
-        classie.remove(this._overlay, this._openOverlayClassName);
+        if (!this._isDashboard) {
+            classie.remove(this._overlay, this._openOverlayClassName);
+        }
+        
         classie.remove(element, this._openClassName);
         classie.add(element, this._closeClassName);
 
