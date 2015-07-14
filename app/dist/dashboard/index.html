@@ -1,5 +1,5 @@
 <!-- 
-   ! Dashboard - v1.24.1 - Tuesday, July 14th, 2015, 4:19:11 PM
+   ! Dashboard - v1.24.1 - Tuesday, July 14th, 2015, 7:46:39 PM
 -->
 <!-- HIDE CONTENT UNTIL MAIN.CSS IS LOADED -->
 <style type="text/css">
@@ -15,7 +15,7 @@
     <header>
         <div class="row">
             <div class="col-1-4">
-                <a class="logo" href="https://www.google.com.ua/search?q=da+jewels&oq=da+jewels&aqs=chrome..69i57j0l5.318j0j7&sourceid=chrome&es_sm=93&ie=UTF-8" target="_blank">
+                <a class="logo" href="http://www.dajewels.com/" target="_blank">
                     <span>d</span>a <span>j</span>ewels <span>sparkle in your eyes</span>
                 </a>
             </div>
@@ -51,31 +51,31 @@
         <div class="dashboard-info">
             <div class="unit">
                 <span>Stock ID</span>
-                <span>DA-313</span>
+                <span data-sarine-info="friendlyName"></span>
             </div>
             <div class="unit">
                 <span>Carat</span>
-                <span>1.51</span>
+                <span data-sarine-info="stoneProperties.carat"></span>
             </div>
             <div class="unit">
                 <span>Color</span>
-                <span>E</span>
+                <span data-sarine-info="stoneProperties.color"></span>
             </div>
             <div class="unit">
                 <span>Clarity</span>
-                <span>SI1</span>
+                <span data-sarine-info="stoneProperties.clarity"></span>
             </div>
             <div class="unit">
                 <span>Cut</span>
-                <span>EX</span>
+                <span data-sarine-info="stoneProperties.cutGrade"></span>
             </div>
             <div class="unit">
                 <span>GIA</span>
-                <span>1166903525</span>
+                <span data-sarine-info="stoneProperties.GIA"></span>
             </div>
         </div>
         <div class="slide slide--light">
-            <h2 class="title"><span>Light Performance <span class="q-mark"></span></span></h2>
+            <h2 class="title" data-popup-id="popup_light"><span>Light Performance <span class="q-mark"></span></span></h2>
             <div class="slide__content">
                 <div class="slide__img-wrap slide__img-wrap--light">
                     <div class="slide__img slide__img--light">
@@ -182,37 +182,48 @@
                     </div>
                 </div>
             </div>
+            <div class="popup-container"></div>
         </div>
         <div class="slide slide--hna">
-            <h2 class="title"><span>Hearts &amp; Arrows <span class="q-mark"></span></span></h2>
+            <h2 class="title"><span>Hearts &amp; Arrows 
+                    <!--<span class="q-mark"></span></span>-->
+            </h2>
             <div class="slide__content">
                 <sarine-viewer viewer="cutHeartsAndArrows" order="2"></sarine-viewer>
-                <h3 class="title-sub">Hearts <span class="q-mark"></span></h3>
-                <h3 class="title-sub">Arrows <span class="q-mark"></span></h3>
+                <h3 class="title-sub" data-popup-id="popup_hearts">Hearts <span class="q-mark"></span></h3>
+                <h3 class="title-sub" data-popup-id="popup_arrows">Arrows <span class="q-mark"></span></h3>
                 <p class="caption">Hearts & Arrows is a symmetrical optical pattern seen in round brilliant diamonds cut to the highest quality and precision.</p>
             </div>
+            <div class="popup-container"></div>
         </div>
         <div class="slide slide--loupe3d ctrl-3d-2">
-            <h2 class="title"><span>Diamond Imagery <span class="q-mark"></span></span></h2>
+            <h2 class="title" data-popup-id="popup_loupe"><span>Diamond Imagery <span class="q-mark"></span></span></h2>
             <div class="slide__content">
                 <sarine-viewer viewer="loupe3DFullInspection" order="3"></sarine-viewer>
             </div>
-
+            <div class="popup-container"></div>
         </div>
         <div class="slide slide--cut">
-            <h2 class="title"><span>Cut & Craftsmanship <span class="q-mark"></span></span></h2>
+            <h2 class="title" data-popup-id="popup_cut_n_sym"><span>Cut & Craftsmanship <span class="q-mark"></span></span></h2>
             <div class="slide__content">
                 <sarine-viewer viewer="cut2DView" order="4" version="v2"></sarine-viewer>
                 <p class="caption">View the diamond's geometrical measurements and angles to assess its proportions and symmetry.</p>
             </div>
+            <div class="popup-container"></div>
         </div>
     </section>
     <footer>
-        <a class="disclaimer" href="https://s3.amazonaws.com/sarineplatform.com/web-sites/legal/js/LegalJsSDK/PDFViewer/PDFViewerJs.html?file=https://s3.amazonaws.com/sarineplatform.com/content/legal/Sarine%20Profile/Disclaimer/1_0f3cb78a12564b72973bfe71982c0434.pdf" target="_blank">Conditions</a>
-        <a class="powered" href="http://www.sarine.com" target="_blank">Powered by<img class="footer__powered__logo" src="./img/sarine-logo-small.png"></a>
+        <div class="row">
+            <div class="col-1-2">
+                <a class="disclaimer" href="https://s3.amazonaws.com/sarineplatform.com/web-sites/legal/js/LegalJsSDK/PDFViewer/PDFViewerJs.html?file=https://s3.amazonaws.com/sarineplatform.com/content/legal/Sarine%20Profile/Disclaimer/1_0f3cb78a12564b72973bfe71982c0434.pdf" target="_blank">Conditions</a>
+            </div>
+            <div class="col-1-2">
+                <a class="powered" href="http://www.sarine.com" target="_blank">Powered by<img class="footer__powered__logo" src="./img/sarine-logo-small.png"></a>
+            </div>
+        </div>
     </footer>
 
-    <div class="popup-overlay" id="popup_overlay"></div>
+    <!--<div class="popup-overlay"></div>-->
 
     <div class="popup-wrap" id="popup_light">
         <div class="popup">
@@ -371,3 +382,16 @@
 
 
 <script type="text/javascript" src="app.bundle.min.js"></script>
+
+
+<style type="text/css">
+    .popup-container {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: none;
+    }
+</style>
