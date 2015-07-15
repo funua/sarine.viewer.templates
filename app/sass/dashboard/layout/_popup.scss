@@ -2,6 +2,16 @@
 
 $popup-skew-angle: 9deg;
 
+.popup-container {
+	display:none;
+	position: absolute;
+	top: -18px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
+	overflow: hidden;
+}
+
 .popup-overlay {
 	z-index: 4;
 	position: absolute;
