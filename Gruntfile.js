@@ -37,7 +37,6 @@ module.exports = function (grunt) {
                 flatten: true,
                 src: [
                     'tmp/app.bundle.min.js',
-                    'app/css/<%= project.getCssFilename() %>',
                     '<%= project.fsSourceDir %>/widgetConfig.js',
                     '<%= project.fsSourceDir %>/version.json'
                 ],
@@ -51,6 +50,18 @@ module.exports = function (grunt) {
                 rename: function (dest, src) {
                     return dest + src.replace('app\/', '');
                 }
+            },
+            dist_css_widget: {
+                flatten: true,
+                src: ['app/css/main.min.css'],
+                dest: '<%= project.fsTargetDir %>/',
+                expand: true
+            },
+            dist_css_dashboard: {
+                flatten: true,
+                src: ['tmp/dashboard.min.css'],
+                dest: '<%= project.fsTargetDir %>/',
+                expand: true
             }
         },
 
@@ -125,7 +136,7 @@ module.exports = function (grunt) {
                         },
                         {
                             match: /<style>@import '[\.\/]*css\/dashboard\.css';<\/style>/,
-                            replacement: '<link type="text/css" rel="stylesheet" href="./dashboard.css" />'
+                            replacement: '<link type="text/css" rel="stylesheet" href="./dashboard.min.css" />'
                         },
                         {
                             match: /src="[.\/]+img\//g,
@@ -169,6 +180,18 @@ module.exports = function (grunt) {
                     data: appConfig
                 },
                 files: {}
+            }
+        },
+        
+        cssmin: {
+            target: {
+                options: {
+                    report: 'min',
+                    roundingPrecision: -1
+                },
+                files: {
+                    'tmp/dashboard.min.css': 'app/css/dashboard.css'
+                }
             }
         },
         
@@ -374,11 +397,14 @@ module.exports = function (grunt) {
         conditionalExec([
             {task: 'clean',                 exec: 1},
             {task: 'copy:app',              exec: 1},
+            {task: 'cssmin',                exec: appConfig.type === 'dashboard'},
             {task: 'concat:dist_js',        exec: 1},
             {task: 'uglify',                exec: 1},
             {task: 'copy:dist_html',        exec: 1},
             {task: 'copy:dist_assets1',     exec: 1},
             {task: 'copy:dist_assets2',     exec: 1},
+            {task: 'copy:dist_css_widget',  exec: appConfig.type === 'widget'},
+            {task: 'copy:dist_css_dashboard', exec: appConfig.type === 'dashboard'},
             {task: 'replace:widget_html',   exec: 1},
             {task: 'replace:css_bundle',    exec: 1},
             {task: 'clean',                 exec: 1},
@@ -432,10 +458,10 @@ module.exports = function (grunt) {
     function getCssFilename() {
         var result;
         if (appConfig.type === 'widget') {
-            result = 'main.min';
+            result = 'main';
         } else {
             result = 'dashboard';
         }
-        return result + '.css';
+        return result + '.min.css';
     }
 };
