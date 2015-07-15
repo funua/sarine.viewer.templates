@@ -3,15 +3,17 @@ section{
 	margin-top:-208px !important;
 	overflow:hidden;
 
-	h1{
+	.title-main{
 		text-align:center;
 		font: italic bold 36px/54px $Utopia;
 		margin:36px 0 0;
 		color:#3e3e3e;
 	}
+
 	.powered{
 		text-align:center;
 		display:block;
+
 		a{
 			color:silver;
 			text-decoration:none;
@@ -22,6 +24,7 @@ section{
 				text-decoration:underline;
 			}
 		}
+
 		img{
 			display: inline-block;
 			vertical-align: middle;
@@ -72,3 +75,5 @@ section{
 		}
 	}
 }
+
+
