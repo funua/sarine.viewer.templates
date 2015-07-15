@@ -12,17 +12,21 @@
     }
 
     PopupService.prototype.open = function (element) {
-        var currentElement = this.currentElement;
+        var currentElement;
+        
+        if (!this._isDashboard) {
+            currentElement = this.currentElement;
+            
+            if (currentElement === element) {
+                return;
+            }
 
-        if (currentElement === element) {
-            return;
+            if (currentElement) {
+                this.close(currentElement);
+            }
+
+            this.currentElement = element;
         }
-
-        if (currentElement) {
-            this.close(currentElement);
-        }
-
-        this.currentElement = element;
         
         if (!this._isDashboard) {
             classie.add(this._overlay, this._openOverlayClassName);
