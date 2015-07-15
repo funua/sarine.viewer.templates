@@ -7,7 +7,6 @@
                 isDashboard: true
             }),
             openPopupTriggers,
-//            closePopupTriggers,
             sarineInfos,
             lightGrades,
             stone = window.stones && window.stones[0],
@@ -31,7 +30,6 @@
             setTexts();
             
             openPopupTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-popup-id]'), 0);
-//            closePopupTriggers = Array.prototype.slice.call(document.querySelectorAll('.popup__close-btn'), 0);
             sarineInfos = Array.prototype.slice.call(document.querySelectorAll('[pages]'), 0);
             lightGrades = Array.prototype.slice.call(document.querySelectorAll('[data-light-grade]'), 0);
             totalViewers = $('.viewer').length;
@@ -71,32 +69,35 @@
             openPopupTriggers.forEach(function (element) {
                 var popupWrap = document.getElementById(element.getAttribute('data-popup-id'));
 
-                if (popupWrap) {
-                    element.addEventListener('click', function () {
-                        var popupContainer = $(this).closest('.slide').find('.popup-container').show(),
-                            currentPopup;
-                        $('<div class="popup-overlay popup-overlay--open"/>').appendTo(popupContainer);
-                        currentPopup = $(popupWrap)
-                                .clone()
-                                .appendTo(popupContainer)
-                                .attr('id', $(popupWrap).attr('id') + '_copy');
-                        popupService.open(currentPopup[0]);
-                        
-                        currentPopup.find('.popup__close-btn').on('click', function () {
-                            popupService.close(currentPopup[0]);
-                            window.setTimeout(function () {
-                                popupContainer.hide().empty();
-                            }, 500);
-                        });
-                    });
-                }
-            });
+                if (!popupWrap) return;
+                
+                element.addEventListener('click', function () {
+                    var popupContainer = $(this).closest('.slide').find('.popup-container'),
+                        currentPopup;
 
-//            closePopupTriggers.forEach(function (element) {
-//                element.addEventListener('click', function () {
-//                    popupService.close(element.parentNode.parentNode);
-//                });
-//            });
+                    if (popupContainer[0].isActive) {
+                        return;
+                    } else {
+                        popupContainer[0].isActive = true;
+                        popupContainer.show();
+                    }
+
+                    $('<div class="popup-overlay popup-overlay--open"/>').appendTo(popupContainer);
+                    currentPopup = $(popupWrap)
+                            .clone()
+                            .appendTo(popupContainer)
+                            .attr('id', $(popupWrap).attr('id') + '_copy');
+                    popupService.open(currentPopup[0]);
+
+                    currentPopup.find('.popup__close-btn').on('click', function () {
+                        popupService.close(currentPopup[0]);
+                        popupContainer[0].isActive = false;
+                        window.setTimeout(function () {
+                            popupContainer.hide().empty();
+                        }, 500);
+                    });
+                });
+            });
 
             playTriggers.forEach(function (element) {
                 videoPlay.initButton(element);
